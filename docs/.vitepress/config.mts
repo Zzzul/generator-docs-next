@@ -4,11 +4,57 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
-  base: '/generator-docs-next/',
+  // base: '/generator-docs-next/',
   themeConfig: {
     i18nRouting: true,
     search: {
       provider: 'local',
+      options: {
+        locales: {
+          id: {
+            placeholder: 'Cari dokumentasi',
+            translations: {
+              button: {
+                buttonText: 'Pencarian',
+                buttonAriaLabel: 'Pencarian'
+              },
+              modal: {
+                searchBox: {
+                  resetButtonTitle: 'Bersihkan pencarian',
+                  resetButtonAriaLabel: 'Bersihkan pencarian',
+                  cancelButtonText: 'Batalkan',
+                  cancelButtonAriaLabel: 'Batalkan'
+                },
+                startScreen: {
+                  recentSearchesTitle: 'Riwayat pencarian',
+                  noRecentSearchesText: 'Tidak ada pencarian terbaru',
+                  saveRecentSearchButtonTitle: 'Simpan ke riwayat pencarian',
+                  removeRecentSearchButtonTitle: 'Hapus dari Riwayat pencarian',
+                  favoriteSearchesTitle: 'Favorit',
+                  removeFavoriteSearchButtonTitle: 'Hapus dari favorit'
+                },
+                errorScreen: {
+                  titleText: 'Tidak dapat mendapatkan hasil',
+                  helpText: 'Periksa koneksi internet Anda'
+                },
+                footer: {
+                  selectText: 'Pilih',
+                  navigateText: 'Navigasi',
+                  closeText: 'Tutup',
+                  searchByText: 'Cari dengan'
+                },
+                noResultsScreen: {
+                  noResultsText: 'Tidak dapat menemukan hasil',
+                  suggestedQueryText: 'Anda dapat mencoba kueri baru',
+                  reportMissingResultsText: 'Harusnya ada hasil untuk kueri ini?',
+                  reportMissingResultsLinkText: 'Klik untuk mengirim umpan balik'
+                }
+              }
+            }
+          }
+        }
+      }
+      
     }
     // // https://vitepress.dev/reference/default-theme-config
     // nav: [
@@ -72,7 +118,7 @@ export default defineConfig({
       title: "My Awesome Project ID",
       description: "A VitePress Site",
       label: 'Indonesia',
-      lang: 'id', // optional, will be added  as `lang` attribute on `html` tag
+      lang: 'id-ID', // optional, will be added  as `lang` attribute on `html` tag
       link: '/id/', // default /id/ -- shows on navbar translations menu, can be external
       themeConfig: {
         nav: [
@@ -123,7 +169,35 @@ export default defineConfig({
         footer: {
           message: 'Dirilis dibawah lisensi MIT.',
           copyright: 'Copyright © 2019-sekarang Mohammad Zulfahmi & Evdigi-INA'
-        }
+        },
+        editLink: {
+          pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
+          text: 'Ubah di GitHub'
+        },
+    
+        docFooter: {
+          prev: 'Sebelumnya',
+          next: 'Berikutnya'
+        },
+    
+        outline: {
+          label: 'Di Halaman Ini',
+        },
+    
+        lastUpdated: {
+          text: 'Terakhir diubah',
+          formatOptions: {
+            dateStyle: 'short',
+            timeStyle: 'medium'
+          }
+        },
+    
+        langMenuLabel: 'Ubah bahasa',
+        returnToTopLabel: 'Kembali ke atas',
+        sidebarMenuLabel: 'Navigasi sisi',
+        darkModeSwitchLabel: 'Tema Gelap',
+        lightModeSwitchTitle: 'Beralih ke Mode Terang',
+        darkModeSwitchTitle: 'Beralih ke Mode Gelap',
       },
     }
   }
