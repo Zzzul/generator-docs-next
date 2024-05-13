@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
-  // base: '/generator-docs-next/',
+  // base: '/generator-docs-next/'
   themeConfig: {
     i18nRouting: true,
     search: {
@@ -73,7 +73,7 @@ export default defineConfig({
     // ],
 
     // socialLinks: [
-    //   { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+    //   { icon: 'github', link: 'https://github.com/Evdigi-INA/generator' }
     // ],
     // footer: {
     //   message: 'Released under the MIT License.',
@@ -89,24 +89,39 @@ export default defineConfig({
       lang: 'en',
       themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
-        nav: [
-          { text: 'Home', link: '/' },
-          { text: 'Examples', link: '/markdown-examples' }
-        ],
+        // nav: [
+        //   { text: 'Get Started', link: '/' },
+        //   { text: 'Introduction', link: '/markdown-examples' }
+        // ],
 
         sidebar: [
           {
-            text: 'Examples',
+            text: 'Latest (0.3.x)',
+            items: [
+              { text: 'Introduction',  link: '/en/' },
+              { text: 'Getting Started',  link: '/en/getting-started' },
+              { text: 'Features',  link: '/en/features' },
+              { text: 'Usage',  link: '/en/usage' },
+              { text: 'How To Contribute',  link: '/en/how-to-contribute' },
+              { text: 'Sponsors/Support',  link: '/en/sponsors' }
+            ]
+          },
+          {
+            text: '0.2.3',
             collapsed: true,
             items: [
-              { text: 'Markdown Examples', link: '/markdown-examples' },
-              { text: 'Runtime API Examples', link: '/api-examples' }
+              { text: 'Introduction',  link: '/en/0.2.3/' },
+              { text: 'Getting Started',  link: '/en/0.2.3/getting-started' },
+              { text: 'Features',  link: '/en/0.2.3/features' },
+              { text: 'Usage',  link: '/en/0.2.3/usage' },
+              { text: 'How To Contribute',  link: '/en/0.2.3/how-to-contribute' },
+              { text: 'Sponsors/Support',  link: '/en/0.2.3/sponsors' }
             ]
           }
         ],
 
         socialLinks: [
-          { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+          { icon: 'github', link: 'https://github.com/Evdigi-INA/generator' }
         ],
         footer: {
           message: 'Released under the MIT License.',
@@ -146,32 +161,24 @@ export default defineConfig({
             text: '0.2.3',
             collapsed: true,
             items: [
-              {
-                text: 'Markdown contoh',
-                items: [
-                  {
-                    text: 'Markdown contoh',
-                    link: '/id/0.2.3/markdown-examples'
-                  },
-                  {
-                    text: 'API contoh',
-                    link: '/id/0.2.3/api-examples'
-                  }
-                ]
-              },
-              // { text: 'Runtime API contoh', link: '/id/api-examples' }
+              { text: 'Pengenalan',  link: '/id/0.2.3/' },
+              { text: 'Mari Mulai',  link: '/id/0.2.3/getting-started' },
+              { text: 'Fitur',  link: '/id/0.2.3/features' },
+              { text: 'Cara Pemakaian',  link: '/id/0.2.3/usage' },
+              { text: 'Cara Berkontribusi',  link: '/id/0.2.3/how-to-contribute' },
+              { text: 'Dukungan',  link: '/id/0.2.3/sponsors' }
             ]
           }
         ],
         socialLinks: [
-          { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+          { icon: 'github', link: 'https://github.com/Evdigi-INA/generator' }
         ],
         footer: {
           message: 'Dirilis dibawah lisensi MIT.',
           copyright: 'Copyright © 2019-sekarang Mohammad Zulfahmi & Evdigi-INA'
         },
         editLink: {
-          pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
+          pattern: 'https://github.com/Evdigi-INA/generator/edit/main/docs/:path',
           text: 'Ubah di GitHub'
         },
     
