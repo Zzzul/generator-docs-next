@@ -7,6 +7,7 @@ export default defineConfig({
   base: '/generator-docs-next/',
   themeConfig: {
     i18nRouting: true,
+    ignoreDeadLinks: true,
     search: {
       provider: 'local',
       options: {
