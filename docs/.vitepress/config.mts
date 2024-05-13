@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
-  // base: '/generator-docs-next/'
+  base: '/generator-docs-next/',
   themeConfig: {
     i18nRouting: true,
     search: {
