@@ -55,31 +55,8 @@ export default defineConfig({
           }
         }
       }
-      
+
     }
-    // // https://vitepress.dev/reference/default-theme-config
-    // nav: [
-    //   { text: 'Home', link: '/' },
-    //   { text: 'Examples', link: '/markdown-examples' }
-    // ],
-
-    // sidebar: [
-    //   {
-    //     text: 'Examples',
-    //     items: [
-    //       { text: 'Markdown Examples', link: '/markdown-examples' },
-    //       { text: 'Runtime API Examples', link: '/api-examples' }
-    //     ]
-    //   }
-    // ],
-
-    // socialLinks: [
-    //   { icon: 'github', link: 'https://github.com/Evdigi-INA/generator' }
-    // ],
-    // footer: {
-    //   message: 'Released under the MIT License.',
-    //   copyright: 'Copyright © 2019-present Evan You'
-    // }
   },
 
   locales: {
@@ -88,39 +65,43 @@ export default defineConfig({
       description: "A VitePress Site",
       label: 'English',
       lang: 'en',
+      link: '/en/',
       themeConfig: {
-        // https://vitepress.dev/reference/default-theme-config
-        // nav: [
-        //   { text: 'Get Started', link: '/' },
-        //   { text: 'Introduction', link: '/markdown-examples' }
-        // ],
+        nav: [
+          {
+            text: 'Version',
+            items: [
+              { text: '0.3.x (Latest)', link: '/en/' },
+              { text: '0.2.3', link: '/en/0.2.3/' },
+            ]
+          }
+        ],
 
         sidebar: [
           {
             text: 'Latest (0.3.x)',
             items: [
-              { text: 'Introduction',  link: '/en/' },
-              { text: 'Getting Started',  link: '/en/getting-started' },
-              { text: 'Features',  link: '/en/features' },
-              { text: 'Usage',  link: '/en/usage' },
-              { text: 'How To Contribute',  link: '/en/how-to-contribute' },
-              { text: 'Sponsors/Support',  link: '/en/sponsors' }
+              { text: 'Introduction', link: '/en/' },
+              { text: 'Getting Started', link: '/en/getting-started' },
+              { text: 'Features', link: '/en/features' },
+              { text: 'Usage', link: '/en/usage' },
+              { text: 'How To Contribute', link: '/en/how-to-contribute' },
+              { text: 'Sponsors/Support', link: '/en/sponsors' }
             ]
           },
           {
             text: '0.2.3',
             collapsed: true,
             items: [
-              { text: 'Introduction',  link: '/en/0.2.3/' },
-              { text: 'Getting Started',  link: '/en/0.2.3/getting-started' },
-              { text: 'Features',  link: '/en/0.2.3/features' },
-              { text: 'Usage',  link: '/en/0.2.3/usage' },
-              { text: 'How To Contribute',  link: '/en/0.2.3/how-to-contribute' },
-              { text: 'Sponsors/Support',  link: '/en/0.2.3/sponsors' }
+              { text: 'Introduction', link: '/en/0.2.3/' },
+              { text: 'Getting Started', link: '/en/0.2.3/getting-started' },
+              { text: 'Features', link: '/en/0.2.3/features' },
+              { text: 'Usage', link: '/en/0.2.3/usage' },
+              { text: 'How To Contribute', link: '/en/0.2.3/how-to-contribute' },
+              { text: 'Sponsors/Support', link: '/en/0.2.3/sponsors' }
             ]
           }
         ],
-
         socialLinks: [
           { icon: 'github', link: 'https://github.com/Evdigi-INA/generator' }
         ],
@@ -138,12 +119,17 @@ export default defineConfig({
       link: '/id/', // default /id/ -- shows on navbar translations menu, can be external
       themeConfig: {
         nav: [
-          { text: 'Rumah', link: '/' },
-          { text: 'Contoh', link: '/id/markdown-examples' }
+          {
+            text: 'Versi',
+            items: [
+              { text: '0.3.x (Terbaru)', link: '/id/' },
+              { text: '0.2.3', link: '/id/0.2.3/' },
+            ]
+          }
         ],
         sidebar: [
           {
-            text: 'Latest (0.3.x)',
+            text: '0.3.x (Terbaru)',
             // collapsed: true,
             items: [
               {
@@ -162,12 +148,12 @@ export default defineConfig({
             text: '0.2.3',
             collapsed: true,
             items: [
-              { text: 'Pengenalan',  link: '/id/0.2.3/' },
-              { text: 'Mari Mulai',  link: '/id/0.2.3/getting-started' },
-              { text: 'Fitur',  link: '/id/0.2.3/features' },
-              { text: 'Cara Pemakaian',  link: '/id/0.2.3/usage' },
-              { text: 'Cara Berkontribusi',  link: '/id/0.2.3/how-to-contribute' },
-              { text: 'Dukungan',  link: '/id/0.2.3/sponsors' }
+              { text: 'Pengenalan', link: '/id/0.2.3/' },
+              { text: 'Mari Mulai', link: '/id/0.2.3/getting-started' },
+              { text: 'Fitur', link: '/id/0.2.3/features' },
+              { text: 'Cara Pemakaian', link: '/id/0.2.3/usage' },
+              { text: 'Cara Berkontribusi', link: '/id/0.2.3/how-to-contribute' },
+              { text: 'Dukungan', link: '/id/0.2.3/sponsors' }
             ]
           }
         ],
@@ -182,16 +168,13 @@ export default defineConfig({
           pattern: 'https://github.com/Evdigi-INA/generator/edit/main/docs/:path',
           text: 'Ubah di GitHub'
         },
-    
         docFooter: {
           prev: 'Sebelumnya',
           next: 'Berikutnya'
         },
-    
         outline: {
           label: 'Di Halaman Ini',
         },
-    
         lastUpdated: {
           text: 'Terakhir diubah',
           formatOptions: {
@@ -199,7 +182,6 @@ export default defineConfig({
             timeStyle: 'medium'
           }
         },
-    
         langMenuLabel: 'Ubah bahasa',
         returnToTopLabel: 'Kembali ke atas',
         sidebarMenuLabel: 'Navigasi sisi',

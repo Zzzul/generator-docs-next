@@ -5,7 +5,7 @@ editLink: true
 ---
 
 ::: warning
-Kamu sedang menjelajahi dokumentasi untuk versi Generator yang lama. Pertimbangkan untuk memperbaharui proyek Kamu ke [Generator 0.3.x](/).
+Yahh, kamu sedang menjelajahi dokumentasi untuk versi Generator yang lama nih. Tolong pertimbangkan untuk memperbarui proyek Kamu ke versi [Generator 0.3.x](/) yaa.
 :::
 
 # Fitur
@@ -15,7 +15,7 @@ Kamu sedang menjelajahi dokumentasi untuk versi Generator yang lama. Pertimbangk
 - CRUD Generator
     - Mendukung lebih dari 15 [jenis kolom migrasi](https://laravel.com/docs/9.x/migrations#available-column-types), seperti `string, char, date, year`, dll.
     - Mendukung [Input HTML 5](https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types)
-    - Validasi Permintaan yang Didukung: `required, in, image, min, max, string, email, number, date, exists, nullable, unique, confirmed`  
+    - Validasi _Request_ yang didukung: `required, in, image, min, max, string, email, number, date, exists, nullable, unique, confirmed`  
      - Tabel Data ([Yajra Datatables](https://github.com/yajra/laravel-datatables))
     - [One To Many (Inverse) / Belongs To](https://laravel.com/docs/10.x/eloquent-relationships#one-to-many-inverse)
     - Pembuatan Model
@@ -23,10 +23,10 @@ Kamu sedang menjelajahi dokumentasi untuk versi Generator yang lama. Pertimbangk
 
 ### Versi Lengkap
   
-- Generator CRUD
-- Menu sisi yang dapat dikonfigurasi
-- Pengguna CRUD
-- Peran dan izin ([Spatie Permission](https://spatie.be/docs/laravel-permission/v5/introduction))
+- *Generator CRUD*
+- Menu _Sidebar_ yang dapat dikonfigurasi
+- _User_ CRUD
+- Hak akses ([Spatie Permission](https://spatie.be/docs/laravel-permission/v5/introduction))
 - Otentikasi ([Laravel Fortify](https://laravel.com/docs/9.x/fortify))
     - Masuk
     - Daftar
@@ -34,159 +34,165 @@ Kamu sedang menjelajahi dokumentasi untuk versi Generator yang lama. Pertimbangk
     - Otentikasi 2FA
     - Perbarui informasi profil 
 
-## Available Commands
+## Perintah Tersedia
 
-### Install The Generator
-Install Generator Variants (Simple/Full Version)
+### Instalasi Generator
+Instalasi varian Generator: Sederhana (_Simple version_) / Lengkap (_Full version_)
 
-For simple version
+Untuk versi sederhana
 ```sh
 php artisan generator:install simple
 ```
-For full version
+Untuk versi lengkap
 ```sh
 php artisan generator:install full
 ```
-> Warning! That will overwrite several files, so use caution while using this command and avoid using it more than once.
 
-### Set the sidebar menu
-Set the sidebar menu to fully blade code (static) or use a list from config (dynamic)
+::: danger
+Ini akan menimpa beberapa berkas, jadi harap gunakan dengan hati-hati saat menjalankan perintah ini dan hindari menjalankannya lebih dari sekali.
+:::
 
-Sidebar configuration place in ```config/generator.php```
+### Tetapkan menu _Sidebar_
+Tetapkan menu _Sidebar_ menjadi kode `.blade` (statis) atau gunakan daftar dari konfigurasi (dinamis)
+
+Tempat konfigurasi menu _Sidebar_ berada di ```config/generator.php```
 
 ```sh
 php artisan generator:sidebar dynamic
 ```
 
-While using static sidebar menu, you feel free to edit the sidebar menus on ```resources/views/layouts/sidebar.blade.php```
+Saat menggunakan menu _Sidebar_ statis, Kamu bebas untuk mengubah menu _Sidebar_ yang berada di  ```resources/views/layouts/sidebar.blade.php```
 
 ```sh
 php artisan generator:sidebar static
 ```
-> After you create a new module using the generator, sidebar will automatically comeback to set dynamic
+::: info
+Setelah Kamu membuat modul baru menggunakan Generator, _Sidebar_ akan otomatis kembali ke dinamis
+:::
 
-## Utilities/Helpers
+## Utilitas/Helper
 
-### Check sidebar active menus
+### Helper
+#### Periksa menu aktif pada _Sidebar_
 
 ```php
 is_active_menu(string|array $menu): boolean;
 ```
 
-### Utility class
+### Kelas Utilitas
 
-All utility functions that you maybe need, are available in ```App\Generators\GeneratorUtils```
+Semua fungsi utilitas yang mungkin Kamu butuhkan, tersedia berada di ```App\Generators\GeneratorUtils```
 
 ```php
 use App\Generators\GeneratorUtils;
 
 /**
- * Get template/file.
+ * Dapatkan template/berkas.
 */
 public static function getTemplate(string $path): string;
 
 /**
-* Get published files.
+* Dapatkan berkas yang diterbitkan.
 */
-public static function getPublishedFiles(string $path): string;
+public static function getPublishedberkass(string $path): string;
 
 /**
-* Check folder if not exist, then make folder.
+* Periksa folder jika tidak ada, lalu buat folder.
 */
 public static function checkFolder(string $path): void;
 
 /**
-* Convert string to singular pascal case.
+* Ubah teks ke singular pascal case.
 */
 public static function singularPascalCase(string $string): string;
 
 /**
-* Convert string to singular pascal case.
+* Ubah teks ke singular pascal case.
 */
 public static function pascalCase(string $string): string;
 
 /**
-* Convert string to plural pascal case.
+* Ubah teks ke plural pascal case.
 */
 public static function pluralPascalCase(string $string): string;
 
 /**
-* Convert string to plural snake case.
+* Ubah teks ke plural snake case.
 */
 public static function pluralSnakeCase(string $string): string;
 
 /**
-* Convert string to singular snake case.
+* Ubah teks ke singular snake case.
 */
 public static function singularSnakeCase(string $string): string;
 
 /**
-* Convert string to plural pascal case.
+* Ubah teks ke plural pascal case.
 */
 public static function pluralCamelCase(string $string): string;
 
 /**
-* Convert string to singular pascal case.
+* Ubah teks ke singular pascal case.
 */
 public static function singularCamelCase(string $string): string;
 
 /**
-* Convert string to plural, kebab case, and lowercase.
+* Ubah teks ke plural, kebab case, dan huruf kecil.
 */
 public static function pluralKebabCase(string $string): string;
 
 /**
-* Convert string to kebab case, and lowercase.
+* Ubah teks ke kebab case, dan huruf kecil.
 */
 public static function kebabCase(string $string): string;
 
 /**
-* Convert string to singular, kebab case, and lowercase.
+* Ubah teks ke singular, kebab case, dan huruf kecil.
 */
 public static function singularKebabCase(string $string): string;
 
 /**
-* Convert string to singular, remove special characters, and lowercase.
+* Ubah teks ke singular, hapus karakter khusus, dan huruf kecil.
 */
 public static function cleanSingularLowerCase(string $string): string;
 
 /**
-* Remove special characters, and lowercase.
+* Hapus karakter khusus, dan huruf kecil.
 */
 public static function cleanLowerCase(string $string): string;
 
 /**
-* Convert string to plural, remove special characters, and uppercase every first letters.
+* Ubah teks ke plural, hapus karakter khusus, dan huruf besar setiap huruf pertama.
 */
 public static function cleanPluralUcWords(string $string): string;
 
 /**
-* Convert string to singular, remove special characters, and uppercase every first letters.
+* Ubah teks ke singular, hapus karakter khusus, dan huruf besar setiap huruf pertama.
 */
 public static function cleanSingularUcWords(string $string): string;
 
 /**
-* Remove special characters, and uppercase every first letters.
+* Hapus karakter khusus, dan huruf besar setiap huruf pertama.
 */
 public static function cleanUcWords(string $string): string;
 
 /**
-* Convert string to plural, remove special characters, and lowercase.
+* Ubah teks ke plural, hapus karakter khusus, dan huruf kecil.
 */
 public static function cleanPluralLowerCase(string $string): string;
 
 /**
-* Get 1 column after id on the table.
+* Dapatkan 1 kolom setelah id berada di tabel.
 */
 public static function getColumnAfterId(string $table): string;
 
 /**
-* Select id and column after id on the table.
+* Pilih id dan kolom setelah id berada di tabel.
 */
 public static function selectColumnAfterIdAndIdItself(string $table): string;
 
 /**
-* Get model location or path if contains '/'.
+* Dapatkan lokasi model atau path jika mengandung '/'.
 */
 public static function getModelLocation(string $model): string;
 
@@ -195,66 +201,69 @@ public static function getModelLocation(string $model): string;
 */
 public static function fromCamelCase(string $string): string;
 /**
-* Set model name from the latest of array(if exists).
+* Tetapkan nama model dari yang terakhir dari array (jika ada).
 */
 public static function setModelName(string $model, string $style = 'pascal case'): string;
 
 /**
-* Set default image and code to controller.
+* Tetapkan gambar default dan kode ke controller.
 */
 public static function setDefaultImage(null|string $default, string $field, string $model): array;
 
 /**
-* Convert array from config to string like array.
+* Ubah array dari konfigurasi menjadi string seperti array.
 */
 public static function convertArraySidebarToString(array $sidebars): string;
 
 /**
-* Check if menu is active.
+* Periksa apakah menu aktif.
 */
 public static function isActiveMenu(string|array $route): string;
+
 ```
 
-### Things that we want to add in the future
-- API CRUD generator
-- API docs
-- Can create more relation type
-- Upload file except image
-- CRUD with desain pattern(Service/Repository Pattern)
-- Laravel table pagination
-- Import/Export csv
-- Input for custom table name
-- Change request validation as an array
-- Add a checkbox for whether to use route model binding or not
-- Add a checkbox to turn off automatic pluralization
-- If the time zone is set to Indonesia, then disable pluralization
-- Add username to users table
-- New template admin
-- Option to auto migrate table or not
-- Add config for showing an image in the data table or not
-- ability to hide/show the field on the view page
-- Configuration to limit showing fields in the index page
-- Can select the field that will be showing in belongsTo the relation
-- The generator can make seeder and factory
-- Add default config for minimum & maximum length to column type string
-- The generator can make subfolders for request class validation
-- Add configuration for image type rounded or square
-- Add support for diffForHumans() to input type date.
-- Can custom validation(write-in input)
-- The generator can use caching
-- The generator can create policy
-- The generator can create model observer
-- Use database transaction
-- The generator can create mutator & casting
-- Configuration for upload file to S3
-- Add soft delete option
-- If the model is in a subfolder then the route will use the sub-route
-- Add unit test for the generator
-- The generator can create unit test
-- Add notification if the user changed their email or password (package)
-- Add activity log (package)
-- Add backup database (package)
-- The Generator uses enum class for column type enum
-- Refactor code
+### Yang ingin kami tambahkan di masa depan
+- Generator _CRUD API_ [(added in 0.3.0)](/id/)
+- Dokumentasi _API_
+- Dapat membuat lebih banyak jenis relasi
+- Unggah berkas selain gambar
+- _CRUD_ dengan _Design pattern (Service/Repository)_
+- _Laravel Pagination_
+- Impor/Ekspor csv
+- _Input_ untuk nama tabel kustom
+- Ubah validasi _Request_ sebagai _Array_
+- Menambahkan kotak centang untuk apakah menggunakan _Route model binding_
+- Menambahkan kotak centang untuk mematikan _Pluralization_ otomatis
+- Jika zona waktu diatur ke Indonesia, maka nonaktifkan _Pluralization_
+- Menambahkan nama pengguna ke tabel _Users_
+- _Template_ admin baru
+- Pilihan untuk otomatisasi tabel migrasi atau tidak
+- Menambahkan konfigurasi untuk menampilkan gambar dalam tabel data atau tidak
+- kemampuan untuk menyembunyikan/menampilkan _Field_ pada halaman detail
+- Konfigurasi untuk membatasi _Field_ yang ditampilkan pada halaman indeks
+- Dapat memilih _Field_ yang akan ditampilkan dalam relasi _belongsTo_
+- Generator dapat membuat _Seeder_ dan _Factory_
+- Menambahkan konfigurasi bawaan untuk panjang minimum & maksimum untuk jenis kolom _String_
+- Generator dapat membuat subfolder untuk validasi _Request_
+- Menambahkan konfigurasi untuk jenis gambar, bulat atau persegi
+- Menambahkan dukungan untuk `diffForHumans()` ke jenis _Input_ tanggal.
+- Validasi kustom yang dapat ditulis pada _Input_
+- Generator dapat menggunakan penyimpanan _Cache_
+- Generator dapat membuat kebijakan
+- Generator dapat membuat pengamat model
+- Gunakan _Database Transaction_
+- Generator dapat membuat mutator & pengecoran
+- Konfigurasi untuk unggah berkas ke _S3_
+- Menambahkan opsi _Soft Delete_
+- Jika model berada dalam subfolder maka rute akan menggunakan _sub-rute_
+- Menambahkan _Unit Test_ untuk Generator
+- Generator dapat membuat _Unit Test_
+- Menambahkan pemberitahuan jika pengguna mengubah email atau kata sandi mereka
+- Menambahkan log aktivitas
+- Menambahkan cadangan basis data
+- Generator menggunakan _enum_ untuk jenis kolom _enum_
+- Refaktor kode
 
-> The list is subject to change at any time and features may be added in any order.
+::: info
+Daftar diatas berubah kapan saja dan fitur mungkin ditambahkan dalam urutan acak.
+:::
