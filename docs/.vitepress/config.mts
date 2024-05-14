@@ -82,17 +82,17 @@ export default defineConfig({
         },
         nav: [
           {
-            text: 'Version',
+            text: '🔖 Version',
             items: [
-              { text: '0.3.x (Latest)', link: '/introduction' },
-              { text: '0.2.3', link: '/0.2.3/' },
+              { text: '⚡ 0.3.x (Latest)', link: '/introduction' },
+              { text: '🔒 0.2.3', link: '/0.2.3/' },
             ]
           }
         ],
 
         sidebar: [
           {
-            text: 'Latest (0.3.x)',
+            text: '🚧 Latest (0.3.x)',
             items: [
               { text: 'Introduction', link: '/introduction' },
               { text: 'Get Started', link: '/get-started' },
@@ -100,7 +100,8 @@ export default defineConfig({
               { text: 'Features', link: '/features' },
               { text: 'Usage', link: '/usage' },
               { text: 'Contributions', link: '/contributions' },
-              { text: 'Supports', link: '/sponsors' }
+              { text: 'Supports', link: '/sponsors' },
+              { text: 'To Do', link: '/todo' }
             ]
           },
           {
@@ -137,16 +138,16 @@ export default defineConfig({
         },
         nav: [
           {
-            text: 'Versi',
+            text: '🔖 Versi',
             items: [
-              { text: '0.3.x (Terbaru)', link: '/id/introduction' },
-              { text: '0.2.3', link: '/id/0.2.3/' },
+              { text: '⚡ 0.3.x (Terbaru)', link: '/id/introduction' },
+              { text: '🔒 0.2.3', link: '/id/0.2.3/' },
             ]
           }
         ],
         sidebar: [
           {
-            text: '0.3.x (Terbaru)',
+            text: '🚧 0.3.x (Terbaru)',
             items: [
               { text: 'Pengenalan', link: '/id/introduction' },
               { text: 'Mari Mulai', link: '/id/get-started' },
@@ -154,7 +155,8 @@ export default defineConfig({
               { text: 'Fitur', link: '/id/features' },
               { text: 'Pemakaian', link: '/id/usage' },
               { text: 'Kontribusi', link: '/id/contributions' },
-              { text: 'Dukungan', link: '/id/sponsors' }
+              { text: 'Dukungan', link: '/id/sponsors' },
+              { text: 'Daftar Rencana', link: '/id/todo' }
             ]
           },
           {

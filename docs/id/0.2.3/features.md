@@ -12,8 +12,8 @@ Kamu sedang menjelajahi dokumentasi untuk versi Generator yang lama nih. Tolong 
 
 ### Versi Sederhana
  
-- CRUD Generator
-    - Mendukung lebih dari 15 [jenis kolom migrasi](https://laravel.com/docs/9.x/migrations#available-column-types), seperti `string, char, date, year`, dll.
+- _CRUD Generator_
+    - Mendukung lebih dari 15 [jenis kolom migrasi](https://laravel.com/docs/10.x/migrations#available-column-types), seperti `string, char, date, year`, dll.
     - Mendukung [Input HTML 5](https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types)
     - Validasi _Request_ yang didukung: `required, in, image, min, max, string, email, number, date, exists, nullable, unique, confirmed`  
      - Tabel Data ([Yajra Datatables](https://github.com/yajra/laravel-datatables))
@@ -23,11 +23,11 @@ Kamu sedang menjelajahi dokumentasi untuk versi Generator yang lama nih. Tolong 
 
 ### Versi Lengkap
   
-- *Generator CRUD*
+- _CRUD Generator_
 - Menu _Sidebar_ yang dapat dikonfigurasi
 - _User_ CRUD
 - Hak akses ([Spatie Permission](https://spatie.be/docs/laravel-permission/v5/introduction))
-- Otentikasi ([Laravel Fortify](https://laravel.com/docs/9.x/fortify))
+- Otentikasi ([Laravel Fortify](https://laravel.com/docs/10.x/fortify))
     - Masuk
     - Daftar
     - Lupa Kata Sandi
@@ -49,7 +49,7 @@ php artisan generator:install full
 ```
 
 ::: danger
-Perintah ini akan menimpa beberapa berkas, jadi harap gunakan dengan hati-hati saat menjalankan perintah ini dan hindari menjalankannya lebih dari sekali.
+Perintah ini akan menimpa beberapa berkas, jadi Kamu harus berhati-hati saat menjalankan perintah ini dan hindari menjalankannya lebih dari sekali.
 :::
 
 ### Tetapkan menu _Sidebar_
@@ -67,7 +67,7 @@ Saat menggunakan menu _Sidebar_ statis, Kamu bebas untuk mengubah menu _Sidebar_
 php artisan generator:sidebar static
 ```
 ::: info
-Setelah Kamu membuat modul baru menggunakan Generator, _Sidebar_ akan otomatis kembali ke dinamis
+Setelah Kamu membuat modul baru menggunakan Generator, _Sidebar_ akan otomatis kembali ke dinamis. Tapi tenang Kamu dapat mengubahnya kembali seperti semula.
 :::
 
 ## Utilitas/Helper
@@ -92,9 +92,9 @@ use App\Generators\GeneratorUtils;
 public static function getTemplate(string $path): string;
 
 /**
-* Dapatkan berkas yang diterbitkan.
+* Dapatkan berkas yang telah dibuat.
 */
-public static function getPublishedberkass(string $path): string;
+public static function getPublishedStub(string $path): string;
 
 /**
 * Periksa folder jika tidak ada, lalu buat folder.
@@ -223,45 +223,45 @@ public static function isActiveMenu(string|array $route): string;
 ```
 
 ### Yang ingin kami tambahkan di masa depan
-- Generator _CRUD API_ [(added in v0.3.0)](/id/features)
+- Generator _CRUD API_ [(tersedia pada v0.3.0)](/id/features)
 - Dokumentasi _API_
-- Dapat membuat lebih banyak jenis relasi
+- Dapat membuat lebih banyak jenis model relasi
 - Unggah berkas selain gambar
 - _CRUD_ dengan _Design pattern (Service/Repository)_
 - _Laravel Pagination_
-- Impor/Ekspor csv
+- Impor/Ekspor _csv_
 - _Input_ untuk nama tabel kustom
 - Ubah validasi _Request_ sebagai _Array_
-- Menambahkan kotak centang untuk apakah menggunakan _Route model binding_
-- Menambahkan kotak centang untuk mematikan _Pluralization_ otomatis
+- Menambahkan pilihan untuk apakah menggunakan _Route model binding_
+- Menambahkan pilihan untuk mematikan _Pluralization_ otomatis
 - Jika zona waktu diatur ke Indonesia, maka nonaktifkan _Pluralization_
 - Menambahkan nama pengguna ke tabel _Users_
-- _Template_ admin baru
+- _Template Admin_  baru
 - Pilihan untuk otomatisasi tabel migrasi atau tidak
 - Menambahkan konfigurasi untuk menampilkan gambar dalam tabel data atau tidak
 - kemampuan untuk menyembunyikan/menampilkan _Field_ pada halaman detail
 - Konfigurasi untuk membatasi _Field_ yang ditampilkan pada halaman indeks
 - Dapat memilih _Field_ yang akan ditampilkan dalam relasi _belongsTo_
-- Generator dapat membuat _Seeder_ dan _Factory_
+- _Generator_ dapat membuat _Seeder_ dan _Factory_ [(tersedia pada v0.3.0)](/id/features)
 - Menambahkan konfigurasi bawaan untuk panjang minimum & maksimum untuk jenis kolom _String_
-- Generator dapat membuat subfolder untuk validasi _Request_
-- Menambahkan konfigurasi untuk jenis gambar, bulat atau persegi
+- _Generator_ dapat membuat _subfolder_ untuk validasi _Request_
+- Menambahkan konfigurasi untuk jenis gambar, tampilkan dalam bentuk bulat atau kotak
 - Menambahkan dukungan untuk `diffForHumans()` ke jenis _Input_ tanggal.
 - Validasi kustom yang dapat ditulis pada _Input_
-- Generator dapat menggunakan penyimpanan _Cache_
-- Generator dapat membuat kebijakan
-- Generator dapat membuat pengamat model
+- _Generator_ dapat menggunakan penyimpanan _Cache_
+- _Generator_ dapat membuat kebijakan
+- _Generator_ dapat membuat pengamat model
 - Gunakan _Database Transaction_
-- Generator dapat membuat mutator & pengecoran
+- _Generator_ dapat membuat mutator & pengecoran
 - Konfigurasi untuk unggah berkas ke _S3_
 - Menambahkan opsi _Soft Delete_
-- Jika model berada dalam subfolder maka rute akan menggunakan _sub-rute_
-- Menambahkan _Unit Test_ untuk Generator
-- Generator dapat membuat _Unit Test_
+- Jika model berada dalam _subfolder_ maka rute akan menggunakan _sub-rute_
+- Menambahkan _Unit Test_ untuk _Generator_
+- _Generator_ dapat membuat _Unit Test_
 - Menambahkan pemberitahuan jika pengguna mengubah email atau kata sandi mereka
 - Menambahkan log aktivitas
 - Menambahkan cadangan basis data
-- Generator menggunakan _enum_ untuk jenis kolom _enum_
+- _Generator_ dapat membuat kelas _enum_ untuk jenis kolom  tipe _enum_
 - Refaktor kode
 
 ::: info
