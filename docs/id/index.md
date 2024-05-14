@@ -12,7 +12,7 @@ hero:
       link: /id/introduction
     - theme: alt
       text: Get Started
-      link: /id/getting-started
+      link: /id/get-started
 
 features:
   - title: Feature A

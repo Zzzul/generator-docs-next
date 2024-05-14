@@ -4,7 +4,10 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
-  base: '/generator-docs-next/',
+  // base: '/generator-docs-next/',
+  editLink: {
+    pattern: 'https://github.com/Zzzul/generator-docs-next/edit/main/docs/:path'
+  },
   themeConfig: {
     i18nRouting: true,
     ignoreDeadLinks: true,
@@ -61,6 +64,9 @@ export default defineConfig({
     //   code: 'your-carbon-code',
     //   placement: 'your-carbon-placement'
     // }
+    editLink: {
+      pattern: 'https://github.com/Zzzul/generator-docs-next/edit/main/docs/:path'
+    }
   },
 
   locales: {
@@ -71,6 +77,9 @@ export default defineConfig({
       // lang: 'en',
       // link: '/',
       themeConfig: {
+        editLink: {
+          pattern: 'https://github.com/Zzzul/generator-docs-next/edit/main/docs/:path'
+        },
         nav: [
           {
             text: 'Version',
@@ -86,11 +95,11 @@ export default defineConfig({
             text: 'Latest (0.3.x)',
             items: [
               { text: 'Introduction', link: '/introduction' },
-              { text: 'Get Started', link: '/getting-started' },
+              { text: 'Get Started', link: '/get-started' },
               { text: 'Upgrade Guide', link: '/upgrade-guide' },
               { text: 'Features', link: '/features' },
               { text: 'Usage', link: '/usage' },
-              { text: 'Contributions', link: '/how-to-contribute' },
+              { text: 'Contributions', link: '/contributions' },
               { text: 'Supports', link: '/sponsors' }
             ]
           },
@@ -123,6 +132,9 @@ export default defineConfig({
       // link: '/id/', 
       // lang: 'id', 
       themeConfig: {
+        editLink: {
+          pattern: 'https://github.com/Zzzul/generator-docs-next/edit/main/docs/:path'
+        },
         nav: [
           {
             text: 'Versi',
@@ -137,11 +149,11 @@ export default defineConfig({
             text: '0.3.x (Terbaru)',
             items: [
               { text: 'Pengenalan', link: '/id/introduction' },
-              { text: 'Mari Mulai', link: '/id/getting-started' },
+              { text: 'Mari Mulai', link: '/id/get-started' },
               { text: 'Pembaharuan', link: '/id/upgrade-guide' },
               { text: 'Fitur', link: '/id/features' },
               { text: 'Pemakaian', link: '/id/usage' },
-              { text: 'Kontribusi', link: '/id/how-to-contribute' },
+              { text: 'Kontribusi', link: '/id/contributions' },
               { text: 'Dukungan', link: '/id/sponsors' }
             ]
           },
@@ -164,10 +176,6 @@ export default defineConfig({
         footer: {
           message: 'Dirilis dibawah lisensi MIT.',
           copyright: 'Hak cipta © 2021-sekarang Mohammad Zulfahmi & Evdigi-INA'
-        },
-        editLink: {
-          pattern: 'https://github.com/Evdigi-INA/generator/edit/main/docs/:path',
-          text: 'Ubah di GitHub'
         },
         docFooter: {
           prev: 'Sebelumnya',
