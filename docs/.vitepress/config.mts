@@ -56,7 +56,11 @@ export default defineConfig({
         }
       }
 
-    }
+    },
+    // carbonAds: {
+    //   code: 'your-carbon-code',
+    //   placement: 'your-carbon-placement'
+    // }
   },
 
   locales: {
@@ -64,15 +68,15 @@ export default defineConfig({
       title: "My Awesome Project",
       description: "A VitePress Site",
       label: 'English',
-      lang: 'en',
-      link: '/en/',
+      // lang: 'en',
+      // link: '/',
       themeConfig: {
         nav: [
           {
             text: 'Version',
             items: [
-              { text: '0.3.x (Latest)', link: '/en/' },
-              { text: '0.2.3', link: '/en/0.2.3/' },
+              { text: '0.3.x (Latest)', link: '/introduction' },
+              { text: '0.2.3', link: '/0.2.3/' },
             ]
           }
         ],
@@ -81,24 +85,25 @@ export default defineConfig({
           {
             text: 'Latest (0.3.x)',
             items: [
-              { text: 'Introduction', link: '/en/' },
-              { text: 'Getting Started', link: '/en/getting-started' },
-              { text: 'Features', link: '/en/features' },
-              { text: 'Usage', link: '/en/usage' },
-              { text: 'How To Contribute', link: '/en/how-to-contribute' },
-              { text: 'Sponsors/Support', link: '/en/sponsors' }
+              { text: 'Introduction', link: '/introduction' },
+              { text: 'Get Started', link: '/getting-started' },
+              { text: 'Upgrade Guide', link: '/upgrade-guide' },
+              { text: 'Features', link: '/features' },
+              { text: 'Usage', link: '/usage' },
+              { text: 'Contributions', link: '/how-to-contribute' },
+              { text: 'Supports', link: '/sponsors' }
             ]
           },
           {
             text: '0.2.3',
             collapsed: true,
             items: [
-              { text: 'Introduction', link: '/en/0.2.3/' },
-              { text: 'Getting Started', link: '/en/0.2.3/getting-started' },
-              { text: 'Features', link: '/en/0.2.3/features' },
-              { text: 'Usage', link: '/en/0.2.3/usage' },
-              { text: 'How To Contribute', link: '/en/0.2.3/how-to-contribute' },
-              { text: 'Sponsors/Support', link: '/en/0.2.3/sponsors' }
+              { text: 'Introduction', link: '/0.2.3/' },
+              { text: 'Getting Started', link: '/0.2.3/getting-started' },
+              { text: 'Features', link: '/0.2.3/features' },
+              { text: 'Usage', link: '/0.2.3/usage' },
+              { text: 'How To Contribute', link: '/0.2.3/how-to-contribute' },
+              { text: 'Sponsors/Support', link: '/0.2.3/sponsors' }
             ]
           }
         ],
@@ -107,7 +112,7 @@ export default defineConfig({
         ],
         footer: {
           message: 'Released under the MIT License.',
-          copyright: 'Copyright © 2019-present Evan You'
+          copyright: 'Copyright © 2021-present Mohammad Zulfahmi & Evdigi-INA'
         }
       },
     },
@@ -115,14 +120,14 @@ export default defineConfig({
       title: "My Awesome Project ID",
       description: "A VitePress Site",
       label: 'Indonesia',
-      lang: 'id-ID', // optional, will be added  as `lang` attribute on `html` tag
-      link: '/id/', // default /id/ -- shows on navbar translations menu, can be external
+      // link: '/id/', 
+      // lang: 'id', 
       themeConfig: {
         nav: [
           {
             text: 'Versi',
             items: [
-              { text: '0.3.x (Terbaru)', link: '/id/' },
+              { text: '0.3.x (Terbaru)', link: '/id/introduction' },
               { text: '0.2.3', link: '/id/0.2.3/' },
             ]
           }
@@ -130,18 +135,14 @@ export default defineConfig({
         sidebar: [
           {
             text: '0.3.x (Terbaru)',
-            // collapsed: true,
             items: [
-              {
-                text: 'Markdown contoh',
-                items: [
-                  {
-                    text: 'Markdown contoh',
-                    link: '/id/markdown-examples'
-                  }
-                ]
-              },
-              // { text: 'Runtime API contoh', link: '/id/api-examples' }
+              { text: 'Pengenalan', link: '/id/introduction' },
+              { text: 'Mari Mulai', link: '/id/getting-started' },
+              { text: 'Pembaharuan', link: '/id/upgrade-guide' },
+              { text: 'Fitur', link: '/id/features' },
+              { text: 'Pemakaian', link: '/id/usage' },
+              { text: 'Kontribusi', link: '/id/how-to-contribute' },
+              { text: 'Dukungan', link: '/id/sponsors' }
             ]
           },
           {
@@ -151,8 +152,8 @@ export default defineConfig({
               { text: 'Pengenalan', link: '/id/0.2.3/' },
               { text: 'Mari Mulai', link: '/id/0.2.3/getting-started' },
               { text: 'Fitur', link: '/id/0.2.3/features' },
-              { text: 'Cara Pemakaian', link: '/id/0.2.3/usage' },
-              { text: 'Cara Berkontribusi', link: '/id/0.2.3/how-to-contribute' },
+              { text: 'Pemakaian', link: '/id/0.2.3/usage' },
+              { text: 'Kontribusi', link: '/id/0.2.3/how-to-contribute' },
               { text: 'Dukungan', link: '/id/0.2.3/sponsors' }
             ]
           }
@@ -162,7 +163,7 @@ export default defineConfig({
         ],
         footer: {
           message: 'Dirilis dibawah lisensi MIT.',
-          copyright: 'Copyright © 2019-sekarang Mohammad Zulfahmi & Evdigi-INA'
+          copyright: 'Hak cipta © 2021-sekarang Mohammad Zulfahmi & Evdigi-INA'
         },
         editLink: {
           pattern: 'https://github.com/Evdigi-INA/generator/edit/main/docs/:path',

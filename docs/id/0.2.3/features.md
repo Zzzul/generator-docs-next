@@ -5,7 +5,7 @@ editLink: true
 ---
 
 ::: warning
-Yahh, kamu sedang menjelajahi dokumentasi untuk versi Generator yang lama nih. Tolong pertimbangkan untuk memperbarui proyek Kamu ke versi [Generator 0.3.x](/) yaa.
+Kamu sedang menjelajahi dokumentasi untuk versi Generator yang lama nih. Tolong pertimbangkan untuk memperbaharui proyek Kamu ke versi [Generator 0.3.x](/id/) yaa.
 :::
 
 # Fitur
@@ -32,7 +32,7 @@ Yahh, kamu sedang menjelajahi dokumentasi untuk versi Generator yang lama nih. T
     - Daftar
     - Lupa Kata Sandi
     - Otentikasi 2FA
-    - Perbarui informasi profil 
+    - Pembaharuan informasi profil 
 
 ## Perintah Tersedia
 
@@ -49,7 +49,7 @@ php artisan generator:install full
 ```
 
 ::: danger
-Ini akan menimpa beberapa berkas, jadi harap gunakan dengan hati-hati saat menjalankan perintah ini dan hindari menjalankannya lebih dari sekali.
+Perintah ini akan menimpa beberapa berkas, jadi harap gunakan dengan hati-hati saat menjalankan perintah ini dan hindari menjalankannya lebih dari sekali.
 :::
 
 ### Tetapkan menu _Sidebar_
@@ -223,7 +223,7 @@ public static function isActiveMenu(string|array $route): string;
 ```
 
 ### Yang ingin kami tambahkan di masa depan
-- Generator _CRUD API_ [(added in 0.3.0)](/id/)
+- Generator _CRUD API_ [(added in v0.3.0)](/id/features)
 - Dokumentasi _API_
 - Dapat membuat lebih banyak jenis relasi
 - Unggah berkas selain gambar

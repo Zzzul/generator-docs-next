@@ -3,16 +3,16 @@
 layout: home
 
 hero:
-  name: "My Awesome Project ID"
+  name: "My Awesome Project INDONESIA VER."
   text: "A VitePress Site"
   tagline: My great project tagline
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /id/markdown-examples
+      text: Introduction
+      link: /id/introduction
     - theme: alt
-      text: API Examples
-      link: /id/api-examples
+      text: Get Started
+      link: /id/getting-started
 
 features:
   - title: Feature A
