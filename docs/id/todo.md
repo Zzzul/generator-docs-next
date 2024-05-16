@@ -17,4 +17,4 @@ head:
 
 # Daftar Rencana
 
-#### Hal-hal yang ingin kami buat dimasa depan
+Hal-hal yang sudah kami rencanakan dan akan dibuat diwaktu mendatang

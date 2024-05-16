@@ -3,55 +3,54 @@ outline: deep
 ---
 
 ::: warning
-Kamu sedang menjelajahi dokumentasi untuk versi Generator yang lama nih. Tolong pertimbangkan untuk memperbaharui proyek Kamu ke versi [Generator 0.3.x](/id/) yaa.
+Kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbaharui proyek Kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
 :::
+# Cara Berkontribusi
 
-# How to Contribute
+### Kamu dapat berkontribusi pada proyek ini, dengan mengikuti langkah-langkah berikut:
 
-### To contribute to this project, please follow the following steps:
+1. [Beri bintang & _fork_ repositori](https://github.com/Evdigi-INA/generator)
 
-1. [Star & fork the repository](https://github.com/Evdigi-INA/generator)
-
-2. Create a new laravel project using the following command:
+2. Buat proyek Laravel baru:
 
     ```sh
     composer create-project laravel/laravel generator-dev
     ```
 
-    or
+    atau
 
     ```sh
     laravel new generator-dev
     ```
 
-4. Install the dependencies using the following command:
+4. Lakukan instalasi pustaka yang diperlukan:
 
     ```sh
     composer require laravel/fortify spatie/laravel-permission intervention/image "^2.0" yajra/laravel-datatables-oracle
     ```
 
-5. Publish `fortify` resources
+5. Publikasiki pustaka `fortify`
 
     ```sh
     php artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"
     ```
 
-6. Create folder `packages/evdigi-ina` in the root of the project
+6. Buat folder `packages/evdigi-ina` di folder utama proyek
 
-7. CD into `packages/evdigi-ina`, clone the repository
+7. Pindah ke folder `packages/evdigi-ina`, dan klon repositori
 
     ```bash
     git clone https://github.com/Evdigi-INA/generator.git
     ```
 
-    and install the dependency
+    dan lakukan instalasi
 
     ```sh
     composer i
     ```
-    then back again into root project
+    kemudian kembali ke folder utama proyek
 
-8. Add the following code to the `composer.json`
+8. Tambahkan kode berikut ke `composer.json`
 
     ```json
     "autoload": {
@@ -64,13 +63,13 @@ Kamu sedang menjelajahi dokumentasi untuk versi Generator yang lama nih. Tolong 
     },
     ```
 
-9. Run the following command
+9. Jalankan perintah berikut
 
     ```sh
     composer dump-autoload
     ```
 
-10. Add the following code to the `config/app.php`
+10. Tambahkan kode berikut ke `config/app.php`
 
     ```php
     /*
@@ -84,13 +83,13 @@ Kamu sedang menjelajahi dokumentasi untuk versi Generator yang lama nih. Tolong 
     // App\Providers\ViewComposerServiceProvider::class,
     ```
 
-11. Publish required file for the generator
+11. Publikasikan file yang diperlukan untuk Generator
 
     ```sh
     php artisan generator:install full
     ```
 
-12. Add the following code to the `composer.json` (autoload files)
+12. Tambahkan kode berikut pada `composer.json`
 
     ```json
     "autoload": {
@@ -106,45 +105,45 @@ Kamu sedang menjelajahi dokumentasi untuk versi Generator yang lama nih. Tolong 
     },
     ```
 
-13. Uncomment `App\Providers\ViewComposerServiceProvider::class` in `config/app.php`
+13. Hapus komentar `App\Providers\ViewComposerServiceProvider::class` di `config/app.php`
 
-14. Then run for a second time 
+14. Kemudian jalankan perintah berikut untuk kedua kalinya 
     ```sh
     composer dump-autoload
     ``` 
 
-15. Migrate the database 
+15. Migrasi basis data 
     ```sh
     php artisan migrate --seed
     ```
 
-16. Start local development server and go to `/generators/create` 
+16. Jalankan server pengembangan lokal dan buka `/generators/create` 
     ```sh
     php artisan serve
     ```
 
-17. Make changes code as you wish in `packages/evdigi-ina/generator`
+17. Lakukan perubahan kode sesuai keinginan Kamu di `packages/evdigi-ina/generator`
 
-18. Make sure the code is working properly
+18. Pastikan kode berfungsi dengan baik
 
-19. Checkout to a new branch
+19. Pindah ke _Branch_ baru
     ```bash
-     git branch your_name
+     git branch update-generator
     ```
     ```bash
-    git checkout your_name
+    git checkout update-generator
     ```
     ```bash
     git add .
     ```
     ```bash
-    git commit -m "describe your changes"
+    git commit -m "jelaskan perubahan Kamu"
     ```
 
-20. Push the code to the repository
+20. Unggah kode ke repositori
 
     ```bash
-    git push origin your_name
+    git push origin update-generator
     ```
 
-21. Create a pull request.
+21. Buat _Pull Request_.

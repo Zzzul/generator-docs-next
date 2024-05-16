@@ -3,41 +3,40 @@ outline: deep
 ---
 
 ::: warning
-Kamu sedang menjelajahi dokumentasi untuk versi Generator yang lama nih. Tolong pertimbangkan untuk memperbaharui proyek Kamu ke versi [Generator 0.3.x](/id/) yaa.
+Kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbaharui proyek Kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
 :::
 
-# Get Started
+# Mari Mulai
 
-### Requirements
+### Persyaratan
 
-All you need is 
+Yang Kamu butuhkan adalah:
  - [Composer ^2.x](https://getcomposer.org/)
  - [PHP ^8.1.x](https://www.php.net/releases/8.1/en.php)
  - [Laravel ^9.x](http://laravel.com/)
 
-## Installation
+## Instalasi
 
 ```sh
-composer require evdigiina/generator --dev
+composer require evdigiina/generator:0.2.3 --dev
 ```
-> For this package, there are two variations: [Simple Version](#simple-version) and [Full Version](#full-version)
+> Pustaka ini memiliki dua variasi, yaitu: [Versi Sederhana](#simple-version) dan [Versi Lengkap](#full-version)
 
-### Simple Version
+### Versi Sederhana
 
  ![image](https://user-images.githubusercontent.com/62506582/219941448-94c46fca-6a9f-422b-bdd1-29f642c3ccf6.png)
 
+_Generator_, yang sudah termasuk: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v2), dan [Bootstrap 5](https://getbootstrap.com/).
 
-Only the generator, includes: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v2), and [Bootstrap 5](https://getbootstrap.com/).
-
-[View all features](features.md)
+[Lihat fitur yang tersedia](features.md)
   
-Publish assets
+Instalasi pustaka
 
 ```sh
 php artisan generator:install simple
 ```
 
-Register the provider in `config/app.php`
+Daftarkan _Service Provider_ pada `config/app.php`
 
 ```php
 /*
@@ -46,38 +45,42 @@ Register the provider in `config/app.php`
 App\Providers\ViewComposerServiceProvider::class,
 ```
   
-Then go to ```/simple-generators/create/```
+Lalu pada _browser_ Kamu, menuju ```/simple-generators/create/```
   
 <hr>
 
-### Full Version
+### Versi Lengkap
 
 ![image](https://user-images.githubusercontent.com/62506582/219942571-63c42764-1702-4df3-b165-4217e5558713.png)
 
-The generator + starter app, includes: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v2), [Laravel Fortify](https://laravel.com/docs/9.x/fortify), [Spatie Permission](https://spatie.be/docs/laravel-permission/v5/installation-laravel), and [Mazer Template](https://github.com/zuramai/mazer).
+_Generator + Starter App_, yang sudah termasuk: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v2), [Laravel Fortify](https://laravel.com/docs/9.x/fortify), [Spatie Permission](https://spatie.be/docs/laravel-permission/v5/installation-laravel), dan [Mazer Template](https://github.com/zuramai/mazer).
 
-[View all features](features.md#full-version).
+[Lihat fitur yang tersedia](features.md#full-version).
 
 
-> Installing this package after a brand-new Laravel installation is necessary if you want to use the full version of it. because several files will be overwritten.
+::: warning
+Jika Kamu ingin menggunakan versi lengkap, memasang pustaka ini setelah instalasi proyek Laravel baru sangat disarankan, karena beberapa file akan ditimpa.
+:::
 
-  
-Install [Laravel Fortify](https://laravel.com/docs/9.x/fortify) & [Spatie Permission](https://spatie.be/docs/laravel-permission/v5/installation-laravel)
+Instalasi [Laravel Fortify](https://laravel.com/docs/9.x/fortify) & [Spatie Permission](https://spatie.be/docs/laravel-permission/v5/installation-laravel)
 
 
 ```sh
 composer require laravel/fortify spatie/laravel-permission
 ```
 
-Publish assets
+Publikasikan berkas
 
 ```sh
 php artisan generator:install full
 ```
 
-> Warning! Be careful with this command, it will overwrite several files, don't run it multiple times.
+::: danger
+Perintah ini akan menimpa beberapa berkas, jadi Kamu harus berhati-hati saat menjalankan perintah ini dan hindari menjalankannya lebih dari sekali.
+:::
  
-Register the provider in `config/app.php`
+
+Daftarkan kelas _Provider_ pada `config/app.php`
 
 ```php
 /*
@@ -88,28 +91,28 @@ Spatie\Permission\PermissionServiceProvider::class,
 App\Providers\ViewComposerServiceProvider::class,
 ```
 
-Run migration and seeder
+Jalankan migrasi dan _Seeder_
 
 ```sh
 php artisan migrate --seed
 ```
 
-Then go to ```/generators/create```
+Lalu akses ```/generators/create```
 
-Account
+Akun
 
 - Email: admin@example.com
-- Password: password
+- Kata sandi: password
 
-## What's inside?  
+## Pustaka apa saja sih yang digunakan? 
 
-#### Simple Version
+#### Versi Sederhana
 
 - [Yajra datatable - ^10.x](https://yajrabox.com/docs/laravel-datatables/master/installation)
 - [Intervention Image - ^2.x](https://image.intervention.io/v2)
 - [Bootstrap - ^5.x](https://getbootstrap.com/)
   
-#### Full Version
+#### Versi Lengkap
 
 - [Yajra datatable - ^10.x](https://yajrabox.com/docs/laravel-datatables/master/installation)
 - [Intervention Image - ^2.x](https://image.intervention.io/v2)

@@ -3,16 +3,16 @@ outline: deep
 ---
 
 ::: warning
-Kamu sedang menjelajahi dokumentasi untuk versi Generator yang lama nih. Tolong pertimbangkan untuk memperbaharui proyek Kamu ke versi [Generator 0.3.x](/id/) yaa.
+Kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbaharui proyek Kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
 :::
 
-# Sponsor/supporter
+# Dukungan
 
-Generator is an MIT-licensed open-source project and is completely free to use. The tremendous amount of effort needed to maintain and develop new features for the project is only made sustainable thanks to the generous financial backing of our sponsors or supporters.
+_Generator_ adalah proyek _Open-ource_ berlisensi _MIT_ dan sepenuhnya gratis untuk digunakan. Banyaknya tenaga dan waktu yang dibutuhkan untuk melakukan pemeliharaan serta mengembangkan fitur baru untuk proyek ini secara berkelanjutan berkat dukungan finansial yang dari para donatur atau pendukung kami.
 
-### Give it personally to our core team member
+### Berikan dukunganmu kepada tim inti kami
 
-- [Mohammad Zulfahmi (Author)](https://zzzul.me)
+- [Mohammad Zulfahmi (Creator)](https://zzzul.me)
   - [GitHub Sponsor](https://github.com/sponsors/Zzzul)
   - [Buymeacoffe](https://www.buymeacoffee.com/mzulfahmi)
   - [Ko-fi](https://ko-fi.com/mzulfahmi)
@@ -22,13 +22,42 @@ Generator is an MIT-licensed open-source project and is completely free to use. 
 
 - [Rachmad Nur Hayat](https://rnh-is.me/)
   - [GitHub](https://github.com/rachyharkov)
-  - [Buymeacoffe](#)
-  - [Ko-fi](#)
-  - [Saweria](#)
 
-<!-- ### Sponsor as a company
+<script setup>
+import { VPTeamMembers } from 'vitepress/theme'
 
-Your company logo will appear on our website and GitHub project READMEs. Furthermore, supporting OSS increases your brand's reputation. To do so, please contact us using the details provided below.
+const members = [
+  {
+    avatar: 'https://www.github.com/Zzzul.png',
+    name: 'Mohammad Zulfahmi',
+    title: 'Creator',
+    links: [
+      { icon: 'github', link: 'https://github.com/sponsors/Zzzul' },
+      { icon: 'linkedin', link: 'https://www.linkedin.com/in/mohammad-zulfahmi/' },
+    ]
+  },
+   {
+    avatar: 'https://www.github.com/rachyharkov.png',
+    name: 'Rachmad Nur Hayat',
+    title: 'Core Team Member',
+    links: [
+      { icon: 'github', link: 'https://github.com/rachyharkov' },
+    ]
+  },
+]
+</script>
 
-- [mohammad.zulfahmi03@gmail.com](mailto:mohammad.zulfahmi03@gmail.com)
-- [Rahmat Nur Hayat](#) -->
+## Tim Kami
+
+Berikut adalah tim terbaik kami
+
+<VPTeamMembers size="small" :members="members" />
+
+## Para Kontributor
+
+Terima kasih kepada semua rekan kontributor kami
+
+<a  href="https://github.com/Evdigi-INA/generator/graphs/contributors">
+<img  src="https://contrib.rocks/image?repo=Evdigi-INA/generator&anon=1&columns=10"  />
+</a>
+

@@ -5,7 +5,7 @@ editLink: true
 ---
 
 ::: warning
-Kamu sedang menjelajahi dokumentasi untuk versi Generator yang lama nih. Tolong pertimbangkan untuk memperbaharui proyek Kamu ke versi [Generator 0.3.x](/id/) yaa.
+Kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbaharui proyek Kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
 :::
 
 # Fitur
@@ -25,7 +25,7 @@ Kamu sedang menjelajahi dokumentasi untuk versi Generator yang lama nih. Tolong 
   
 - _CRUD Generator_
 - Menu _Sidebar_ yang dapat dikonfigurasi
-- _User_ CRUD
+- _CRUD User_
 - Hak akses ([Spatie Permission](https://spatie.be/docs/laravel-permission/v5/introduction))
 - Otentikasi ([Laravel Fortify](https://laravel.com/docs/10.x/fortify))
     - Masuk

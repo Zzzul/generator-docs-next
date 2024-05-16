@@ -26,9 +26,41 @@ Generator is an MIT-licensed open-source project and is completely free to use. 
   - [Ko-fi](#)
   - [Saweria](#)
 
-<!-- ### Sponsor as a company
+<script setup>
+import { VPTeamMembers } from 'vitepress/theme'
 
-Your company logo will appear on our website and GitHub project READMEs. Furthermore, supporting OSS increases your brand's reputation. To do so, please contact us using the details provided below.
+const members = [
+  {
+    avatar: 'https://www.github.com/Zzzul.png',
+    name: 'Mohammad Zulfahmi',
+    title: 'Creator',
+    links: [
+      { icon: 'github', link: 'https://github.com/Zzzul' },
+    ]
+  },
+   {
+    avatar: 'https://www.github.com/rachyharkov.png',
+    name: 'Rachmad Nur Hayat',
+    title: 'Core Team Member',
+    links: [
+      { icon: 'github', link: 'https://github.com/rachyharkov' },
+    ]
+  },
+]
+</script>
 
-- [mohammad.zulfahmi03@gmail.com](mailto:mohammad.zulfahmi03@gmail.com)
-- [Rahmat Nur Hayat](#) -->
+# Introduction
+
+## Our Teams
+
+Say hello to our awesome team.
+
+<VPTeamMembers size="small" :members="members" />
+
+## Contributors
+
+Thank you to all our fellow contributors.
+
+<a  href="https://github.com/Evdigi-INA/generator/graphs/contributors">
+<img  src="https://contrib.rocks/image?repo=Evdigi-INA/generator&anon=1&columns=10"  />
+</a>

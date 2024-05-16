@@ -3,20 +3,18 @@ outline: deep
 ---
 
 ::: warning
-Kamu sedang menjelajahi dokumentasi untuk versi Generator yang lama nih. Tolong pertimbangkan untuk memperbaharui proyek Kamu ke versi [Generator 0.3.x](/id/) yaa.
+Kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbaharui proyek Kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
 :::
 
-# Usage
+# Cara Pemakaian
 
-### Create your first CRUD
+### Buat _CRUD_ pertama kali
 
-Go to ```/generators/create``` if yo're using [Full Version](features.md#full-version) 
+Akses pada _browser_ Kamu `/generators/create` jika Kamu menggunkan [versi lengkap](features.md#versi-lengkap) `/simple-generators/create` untuk [versi sederhana](features.md)
 
-```/simple-generators/create``` for [Simple Version](features.md)
+Di bawah ini adalah tabel tentang jenis input & validasi yang didukung saat Kamu menggunakan beberapa jenis kolom.
 
-Below is table about supported input type & validation when you are using some column type.
-
-|Column Type|Input Type|Validation|Length (min & max)|
+|Jenis Kolom|Jenis Input|Validasi|Panjang (min & maks)|
 |-----------|----------|----------|------------------|
 |`string`|`text, textarea, email, telephone, password url, search, file, hidden`| `required, string`| ✅ |
 |`integer`|`number, range, hidden`|`required, numeric`| ✅ |
@@ -39,89 +37,99 @@ Below is table about supported input type & validation when you are using some c
 |`mediumText`|`text, textarea, email, telephone, password url, search, file, hidden`|`required, string`| ✅ |
 |`longText`|`text, textarea, email, telephone, password url, search, file, hidden`|`required, string`| ✅ |
 
-> `required` validation will change to `nullable` if you uncheck required switch in the form, if any input type `password` will automatically added `confirmed` validation, `min:1|max:100` for supported length column and `email|unique` for `email` input type.
+
+:::info
+Validasi `required` akan berubah menjadi `nullable` jika Kamu tidak mencentang _checkbox_ yang terdapat pada _form_, jika ada jenis input `password` akan otomatis ditambahkan validasi `confirmed`, `min:1|max:100` untuk teks dan `email|unique` untuk jenis input `email`.
+:::
 
 
-## Create a Relation
+## Membuat relasi model
 
-![Create Relation](https://user-images.githubusercontent.com/62506582/230761648-1ef36018-2486-424b-831f-ae5f74a66705.png)
+![Pembuatan Relasi](https://user-images.githubusercontent.com/62506582/230761648-1ef36018-2486-424b-831f-ae5f74a66705.png)
 
-For now is only support [One To Many (Inverse) / Belongs To](https://laravel.com/docs/10.x/eloquent-relationships#one-to-many-inverse).
+Sayangnya _Generator_ saat ini hanya mendukung [One To Many (Inverse) / Belongs To](https://laravel.com/docs/10.x/eloquent-relationships#one-to-many-inverse).
 
-There is rules you must be followed if you want create a a relation:
+Terdapat beberapa aturan yang harus diikuti jika Kamu ingin membuat relasi:
 
-- Field name: 
-    - Must be the table name but in singular + `_id`, eg: if we have a `users` table then it must be a `user_id`.
-- Column Type:
-    - Change to `foreignId`.
-    - For constrain or related model name, you can fill with table name (automatically change to plural).
-    - Action on update & delete:
-        - On update: `nothing, cascade, restrict`
-        - On delete: `nothing, cascade, restrict, null`
+- Nama Kolom: 
+    - Harus merupakan nama tabel tetapi dalam bentuk tunggal + `_id`, misalnya: jika kita memiliki tabel `users` maka harus `user_id`.
+- Jenis Kolom:
+    - Diubah menjadi `foreignId`.
+    - Untuk _constrains_ atau nama model terkait, Kamu bisa mengisi dengan nama tabel (secara otomatis berubah menjadi jamak).
+    - Aksi pada ubah/edit & penghapusan:
+        - Pada ubah/edit: `nothing, cascade, restrict`
+        - Pada penghapusan: `nothing, cascade, restrict, null`
 
+> Pastikan tabel & model terkait sudah ada, jika tidak maka kolom yang dipilih untuk ditampilkan di `select`/`datalist` adalah `id`, secara _default_ kolom yang dipilih adalah kolom kedua di tabel terkait.
 
-> Make sure the related table & model already exist, if its no then the selected field for showing in `select`/`datalist` is an `id`, by default selected field is second column in related table.
+## Membuat Unggah File
 
-## Create an Upload File
+![Unggah File](https://user-images.githubusercontent.com/62506582/231070943-cc1f13fd-0ee5-47f1-baaf-fb1e66e93ab5.png)
 
-![Upload File](https://user-images.githubusercontent.com/62506582/231070943-cc1f13fd-0ee5-47f1-baaf-fb1e66e93ab5.png)
+Atur jenis kolom menjadi `string`, jenis input menjadi `file`, pilih jenis file (saat ini hanya mendukung gambar), isi ukuran maksimal (opsional), dan nilai _default_ (harus berupa tautan yang valid), juga kami menggunakan [Intervention Image](https://image.intervention.io/v2) untuk memanipulasi gambar yang diunggah. semua konfigurasi untuk gambar tersedia di `config/generator.php`.
 
-Set column type to `string`, input type to `file`, select file type (for now only support image), fill the max size(optional), and default value (must be a valid link), also we use [Intervention Image](https://image.intervention.io/v2) for manipulating uploaded image. all setting for images are available at `config/generator.php`.
-
-Default image configuration:
+Konfigurasi gambar default:
 ```php
 'image' => [
     /**
-    * Path for store the image.
+    * Tempat untuk menyimpan gambar.
     *
-    * available options:
+    * opsi yang tersedia:
     * 1. public
     * 2. storage
     */
     'path' => 'storage',
 
     /**
-    * Will used if image is nullable and default value is null.
+    * Akan digunakan jika gambar nullable dan nilai default adalah null.
     */
     'default' => 'https://via.placeholder.com/350?text=No+Image+available',
 
-    /**
-    * Crop the uploaded image using intervention image.
+     /**
+    * Memotong gambar yang diunggah menggunakan Intervention Image.
     */
     'crop' => true,
 
-    /**
-    * When set to true the uploaded image aspect ratio will still original.
+      /**
+    * Jika diatur ke true, rasio aspek gambar yang diunggah akan tetap asli.
     */
     'aspect_ratio' => true,
 
     /**
-    * Crop image size.
+    * Potong ukuran gambar.
     */
     'width' => 500,
     'height' => 500,
 ],
 ```
 
-> if you are using `storage` for store the image, make sure you run `php artisan storage:link`
+:::info
+Jika Kamu menggunakan `storage` untuk menyimpan gambar, pastikan Kamu menjalankan 
+```sh
+php artisan storage:link
+```
+:::
 
 
-## Create a Sidebar Menu
+## Membuat menu _Sidebar_
 
-![Create sidebar menu](https://user-images.githubusercontent.com/62506582/230722893-f11aae2c-4407-4eaf-803e-3b8491269e40.png)
+![Membuat menu Sidebar](https://user-images.githubusercontent.com/62506582/230722893-f11aae2c-4407-4eaf-803e-3b8491269e40.png)
 
-> This feature only available in full version.
+:::info
+Fitur ini hanya tersedia di versi lengkap.
+:::
 
-You can easily create a dynamic sidebar menu with just a few inputs. all sidebar menus configuration are placed in `config/generator.php`
-
-How about I don't need a dynamic sidebar menu, I just want to create my menu in `blade`. yeah, we provide it, [click here how to do it](/id/0.2.3/features.md#set-the-sidebar-menu).
+Kamu dapat dengan mudah membuat menu sidebar dinamis dengan hanya beberapa input. semua konfigurasi menu sidebar berada di `config/generator.php`
 
 
-## Role & Permissions
+Bagaimana jika Kamu tidak membutuhkan menu sidebar dinamis, Kamu hanya ingin membuat menu Kamu langusng pada `.blade`. ya, tenang kami sudah menyediakannya, [kamu dapat melihatnya disni](features.md#tetapkan-menu-sidebar).
 
-While you are using the full version, after creating a new module will automatically generate some permissions and assign them to the role `admin`. all permissions are stored in `config/permission.php`
 
-Here an example:
+## Hak Akses (Role & Permissions)
+
+Saat Kamu menggunakan versi lengkap, setelah membuat modul baru akan secara otomatis membuatkan beberapa _permissions_ dan mengaitkannya ke _Role_ admin. semua konfigurasi _permissions_ disimpan di `config/permission.php`
+
+Berikut contohnya:
 ```php
 [
     'group' => 'products',
@@ -134,59 +142,57 @@ Here an example:
 ],
 ```
 
-## Configuration
+## Konfigurasi
 
-Below is the default config for the generator and sidebar menus:
+Di bawah ini adalah konfigurasi _default_ untuk generator dan menu sidebar:
 
 ```php
-<?php
-
 return [
-    /**
-     * If any input file(image) as default will used options below.
+     /**
+     * Jika ada file input (gambar) sebagai default akan digunakan opsi di bawah ini.
      */
     'image' => [
         /**
-         * Path for store the image.
+         * Tempat untuk menyimpan gambar.
          *
-         * available options:
+         * opsi yang tersedia:
          * 1. public
          * 2. storage
          */
         'path' => 'storage',
 
-        /**
-         * Will used if image is nullable and default value is null.
+       /**
+         * Akan digunakan jika gambar nullable dan nilai default adalah null.
          */
         'default' => 'https://via.placeholder.com/350?text=No+Image+available',
 
         /**
-         * Crop the uploaded image using intervention image.
+         * Memotong gambar yang diunggah menggunakan intervention image.
          */
         'crop' => true,
 
-        /**
-         * When set to true the uploaded image aspect ratio will still original.
+       /**
+         * Jika diatur ke true, rasio aspek gambar yang diunggah akan tetap asli.
          */
         'aspect_ratio' => true,
 
         /**
-         * Crop image size.
+         * Potong ukuran gambar.
          */
         'width' => 500,
         'height' => 500,
     ],
 
     'format' => [
-        /**
-         * Will used to first year on select, if any column type year.
+         /**
+         * Akan digunakan untuk tahun pertama pada select, jika ada jenis kolom tahun.
          */
         'first_year' => 1900,
 
-        /**
-         * If any date column type will cast and display used this format, but for input date still will used Y-m-d format.
+         /**
+         * Jika ada jenis kolom tanggal akan di-cast dan ditampilkan menggunakan format ini, tetapi untuk input tanggal masih akan digunakan format Y-m-d.
          *
-         * another most common format:
+         * format umum lainnya:
          * - M d Y
          * - d F Y
          * - Y m d
@@ -194,34 +200,34 @@ return [
         'date' => 'd/m/Y',
 
         /**
-         * If any input type month will cast and display used this format.
+         * Jika ada jenis input bulan akan di-cast dan ditampilkan menggunakan format ini.
          */
         'month' => 'm/Y',
 
-        /**
-         * If any input type time will cast and display used this format.
+       /**
+         * Jika ada jenis input waktu akan di-cast dan ditampilkan menggunakan format ini.
          */
         'time' => 'H:i',
 
         /**
-         * If any datetime column type or datetime-local on input, will cast and display used this format.
+         * Jika ada jenis kolom datetime atau datetime-local pada input, akan di-cast dan ditampilkan menggunakan format ini.
          */
         'datetime' => 'd/m/Y H:i',
 
-        /**
-         * Limit string on index view for any column type text or longtext.
+         /**
+         * Batas string pada tampilan indeks untuk jenis kolom text atau longtext.
          */
         'limit_text' => 100,
     ],
 
-    /**
-     * It will used for generator to manage and showing menus on sidebar views.
+     /**
+     * Ini akan digunakan untuk generator untuk mengelola dan menampilkan menu di tampilan sidebar.
      *
-     * Example:
+     * Contoh:
      * [
      *   'header' => 'Main',
      *
-     *   // All permissions in menus[] and submenus[]
+     *   // Semua izin di menus[] dan submenus[]
      *   'permissions' => ['test view'],
      *
      *   menus' => [
@@ -230,10 +236,10 @@ return [
      *          'icon' => '<i class="bi bi-collection-fill"></i>',
      *          'route' => null,
      *
-     *          // permission always null when isset submenus
+     *          // izin selalu null ketika ada submenus
      *          'permission' => null,
      *
-     *          // All permissions on submenus[] and will empty[] when submenus equals to []
+     *          // Semua izin di submenus[] dan akan kosong[] ketika submenus sama dengan []
      *          'permissions' => ['test view'],
      *
      *          'submenus' => [
@@ -247,7 +253,7 @@ return [
      *       ],
      *  ],
      *
-     * This code below always changes when you use a generator and maybe you must lint or format the code.
+     * Kode di bawah ini selalu berubah ketika Kamu menggunakan generator dan terkadang Kamu harus merapikan atau mmem-format kodenya.
      */
     'sidebars' => [
         [
@@ -304,11 +310,11 @@ return [
 
 ```
 
-## Production Setup
+## Pengaturan _Production_
 
-Because this package is only installed in development, so some files will not be included in the production environment. so you must do the following steps:
+Karena pustaka ini hanya di-_instal_ dalam proses pengembangan, maka beberapa file tidak akan disertakan dalam lingkungan produksi. jadi Kamu harus melakukan langkah-langkah berikut yaa:
 
-In `composer.json` add this code below:
+Di `composer.json` tambahkan kode di bawah ini:
 
 ```json
 "autoload": {
@@ -325,7 +331,7 @@ In `composer.json` add this code below:
 }
 ```
 
-Then run 
+Lalu jalankan
 ```sh
 composer dump-autoload
 ```

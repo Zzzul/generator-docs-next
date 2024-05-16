@@ -1,1 +1,1 @@
-# Pemakaian
+# Cara Pakai yang <s>Semoga</s> Benar

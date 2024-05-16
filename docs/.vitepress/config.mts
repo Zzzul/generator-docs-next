@@ -92,7 +92,7 @@ export default defineConfig({
 
         sidebar: [
           {
-            text: '🚧 Latest (0.3.x)',
+            text: '⚡  Latest (0.3.x)',
             items: [
               { text: 'Introduction', link: '/introduction' },
               { text: 'Get Started', link: '/get-started' },
@@ -105,7 +105,7 @@ export default defineConfig({
             ]
           },
           {
-            text: '0.2.3',
+            text: '🔒 0.2.3',
             collapsed: true,
             items: [
               { text: 'Introduction', link: '/0.2.3/' },
@@ -147,20 +147,20 @@ export default defineConfig({
         ],
         sidebar: [
           {
-            text: '🚧 0.3.x (Terbaru)',
+            text: '⚡  0.3.x (Terbaru)',
             items: [
-              { text: 'Pengenalan', link: '/id/introduction' },
-              { text: 'Mari Mulai', link: '/id/get-started' },
+              { text: 'Tak Kenal Maka Tak Sayang', link: '/id/introduction' },
+              { text: 'Mari Kita Mulai', link: '/id/get-started' },
               { text: 'Pembaharuan', link: '/id/upgrade-guide' },
-              { text: 'Fitur', link: '/id/features' },
-              { text: 'Pemakaian', link: '/id/usage' },
+              { text: 'Fitur yang Tersedia', link: '/id/features' },
+              { text: 'Cara Pemakaian', link: '/id/usage' },
               { text: 'Kontribusi', link: '/id/contributions' },
               { text: 'Dukungan', link: '/id/sponsors' },
               { text: 'Daftar Rencana', link: '/id/todo' }
             ]
           },
           {
-            text: '0.2.3',
+            text: '🔒 0.2.3',
             collapsed: true,
             items: [
               { text: 'Pengenalan', link: '/id/0.2.3/' },
