@@ -12,7 +12,7 @@ head:
   - - meta
     - name: keywords
       content: Generator Upcoming features
-
+next: false
 ---
 
 # Daftar Rencana
