@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
-  // base: '/generator-docs-next/',
+  base: '/generator-docs-next/',
   editLink: {
     pattern: 'https://github.com/Zzzul/generator-docs-next/edit/main/docs/:path'
   },
