@@ -2,9 +2,7 @@
 
 Berikut adalah beberapa fitur yang dapat kamu coba.
 
-### Versi Sederhana
- 
-- _CRUD Generator_
+1. _CRUD Generator_
     - Mendukung lebih dari 15 [jenis kolom migrasi](https://laravel.com/docs/10.x/migrations#available-column-types), seperti `string, char, date, year`, dll.
     - Mendukung [Input HTML 5](https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types)
     - Validasi _Request_ yang didukung: `required, in, image, min, max, string, email, number, date, exists, nullable, unique, confirmed`  
@@ -14,14 +12,10 @@ Berikut adalah beberapa fitur yang dapat kamu coba.
     - Unggah Gambar ([Intervention Image](https://image.intervention.io/v2))
     - _Single Form CRUD_
     - _CRUD API Generator_
-
-### Versi Lengkap
-  
-- _CRUD Generator_ (sama seperti diatas :arrow_up:)
-- Menu _Sidebar_ yang dapat dikonfigurasi
-- _CRUD User_
-- Hak akses ([Spatie Permission](https://spatie.be/docs/laravel-permission/v5/introduction))
-- Otentikasi ([Laravel Fortify](https://laravel.com/docs/10.x/fortify))
+2. Menu _Sidebar_ yang dapat dikonfigurasi ([versi lengkap](get-started.md))
+3. _CRUD User_ ([versi lengkap](get-started.md))
+4. Hak akses (_Role & permissions_) menggunakan [Spatie Permission](https://spatie.be/docs/laravel-permission/v5/introduction) ([versi lengkap](get-started.md))
+5. Otentikasi menggunakan [Laravel Fortify](https://laravel.com/docs/10.x/fortify) ([versi lengkap](get-started.md))
     - Masuk
     - Daftar
     - Lupa Kata Sandi

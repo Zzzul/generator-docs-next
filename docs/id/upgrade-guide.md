@@ -111,11 +111,13 @@ Fitur-fitur baru yang ditambahkan pada _Generator v0.3.x_
 
 3. _Single Form_
 
-    Melakukan operasi _CRU_ dalam 1 halaman dan 1 form, fitur ini cocok bagi Kamu yang ingin membuat halaman seperti _Setting_, web profil, dan fitur lain yang hanya memiliki 1 data saja.
+    Melakukan operasi _CRU_<s>D</s>  dalam 1 halaman dan 1 form, fitur ini cocok bagi Kamu yang ingin membuat halaman seperti _Setting_, web profil, dan fitur lain yang hanya memiliki 1 data saja.
 
-4. Menambahkan beberapa kelas utilitas terbaru `ImageService` dan `GeneratorUtils` kelas.
+4. Menambahkan kelas utilitas terbaru [ImageService](features.md#imageservice) kelas.
 
-5. Memambahkan opsi baru pada konfigurasi `generator.image.disk`, sekarang Kamu bisa menggunakan opsi `public`, `storage` atau `s3`.
+    Kelas ini digunakan untuk melakukan fungsi unggah dan manipulasi gambar menggunakan [Intervention Image](#)
+
+5. Memambahkan opsi baru pada konfigurasi `generator.image.disk` sebelumnya `generator.image.path`, sekarang Kamu bisa menggunakan opsi `public`, `storage` atau `s3`.
 berikut contohnya:
 ```php
 "image" => [
@@ -126,6 +128,8 @@ berikut contohnya:
      * 1. public
      * 2. storage
      * 3. S3
+     *
+     * ganti path menjadi disk
     */
     "disk" => "storage",
     
