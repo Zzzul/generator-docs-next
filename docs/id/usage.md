@@ -6,7 +6,7 @@ outline: deep
 
 ### Buat _CRUD_ untuk pertama kali
 
-Akses pada _browser_ Kamu `/generators/create` jika Kamu menggunkan [versi lengkap](features.md#versi-lengkap) `/simple-generators/create` untuk [versi sederhana](features.md)
+Akses pada _browser_ Kamu `/generators/create` jika Kamu menggunkan [versi lengkap](features.md#versi-lengkap) `/simple-generators/create` untuk [versi sederhana](features.md#versi-sederhana)
 
 Di bawah ini adalah tabel tentang jenis input & validasi yang didukung saat Kamu menggunakan beberapa jenis kolom.
 
@@ -158,13 +158,13 @@ Di bawah ini adalah konfigurasi _default_ untuk generator dan menu sidebar:
 ```php
 return [
     /**
-     * If any input file(image) as default will use options below.
+     * Jika ada file input (gambar) sebagai default akan digunakan opsi di bawah ini.
      */
     "image" => [
         /**
-         * Path for store the image.
+         * Tempat untuk menyimpan gambar.
          *
-         * Available options:
+         * Opsi tersedia:
          * 1. public
          * 2. storage
          * 3. S3
@@ -172,22 +172,22 @@ return [
         "disk" => "storage",
 
         /**
-         * Will be used if image is nullable and default value is null.
+         * Akan digunakan jika gambar nullable dan nilai default adalah null.
          */
-        "default" => "https://via.placeholder.com/350?text=No+Image+Avaiable",
+        "default" => 'https://via.placeholder.com/350?text=No+Image+available',
 
         /**
-         * Crop the uploaded image using intervention image.
+         * Memotong gambar yang diunggah menggunakan intervention image.
          */
         "crop" => true,
 
-        /**
-         * When set to true the uploaded image aspect ratio will still original.
+       /**
+         * Jika diatur ke true, rasio aspek gambar yang diunggah akan tetap asli.
          */
         "aspect_ratio" => true,
 
         /**
-         * Crop image size.
+         * Potong ukuran gambar.
          */
         "width" => 500,
         "height" => 500,
@@ -195,14 +195,14 @@ return [
 
     "format" => [
         /**
-         * Will be used to first year on select, if any column type year.
+         * Akan digunakan untuk tahun pertama pada select, jika ada jenis kolom tahun.
          */
         "first_year" => 1970,
 
-        /**
-         * If any date column type will cast and display used this format, but for input date still will used Y-m-d format.
+         /**
+         * Jika ada jenis kolom tanggal akan di-cast dan ditampilkan menggunakan format ini, tetapi untuk input tanggal masih akan digunakan format Y-m-d.
          *
-         * another most common format:
+         * format umum lainnya:
          * - M d Y
          * - d F Y
          * - Y m d
@@ -210,34 +210,34 @@ return [
         "date" => "Y-m-d",
 
         /**
-         * If any input type month will cast and display used this format.
+         * Jika ada jenis input bulan akan di-cast dan ditampilkan menggunakan format ini.
          */
         "month" => "Y/m",
 
-        /**
-         * If any input type time will cast and display used this format.
+         /**
+         * Jika ada jenis input waktu akan di-cast dan ditampilkan menggunakan format ini.
          */
         "time" => "H:i",
 
-        /**
-         * If any datetime column type or datetime-local on input, will cast and display used this format.
+       /**
+         * Jika ada jenis kolom datetime atau datetime-local pada input, akan di-cast dan ditampilkan menggunakan format ini.
          */
         "datetime" => "Y-m-d H:i:s",
 
         /**
-         * Limit string on index view for any column type text or long text.
+         * Batas string pada tampilan indeks untuk jenis kolom text atau longtext.
          */
         "limit_text" => 100,
     ],
 
     /**
-     * It will be used for generator to manage and showing menus on sidebar views.
+     * Ini akan digunakan untuk generator untuk mengelola dan menampilkan menu di tampilan sidebar.
      *
-     * Example:
+     * Contoh:
      * [
      *   'header' => 'Main',
      *
-     *   // All permissions in menus[] and submenus[]
+     *   // Semua izin di menus[] dan submenus[]
      *   'permissions' => ['test view'],
      *
      *   menus' => [
@@ -246,10 +246,10 @@ return [
      *          'icon' => '<i class="bi bi-collection-fill"></i>',
      *          'route' => null,
      *
-     *          // permission always null when isset submenus
+     *          // izin selalu null ketika ada submenus
      *          'permission' => null,
      *
-     *          // All permissions on submenus[] and will empty[] when submenus equals to []
+     *          // Semua izin di submenus[] dan akan kosong[] ketika submenus sama dengan []
      *          'permissions' => ['test view'],
      *
      *          'submenus' => [
@@ -263,7 +263,7 @@ return [
      *       ],
      *  ],
      *
-     * This code below always changes when you use a generator, and maybe you must format the code.
+     * Kode di bawah ini selalu berubah ketika Kamu menggunakan generator dan terkadang Kamu harus merapikan atau mmem-format kodenya.
      */
     "sidebars" => [
         [

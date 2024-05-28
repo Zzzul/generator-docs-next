@@ -42,10 +42,6 @@ Nggak perlu khawatir, ini 100% gratis dengan sumber terbuka.
 
 MIT.
 
-## Dukungan
-
-<s>Menerima sponsor, wkwk.</s>
-
 ## Kontributor
 
 Terima kasih kepada semua kontributor kami.

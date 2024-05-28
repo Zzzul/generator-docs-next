@@ -101,7 +101,7 @@ export default defineConfig({
               { text: 'Usage', link: '/usage' },
               { text: 'Contributions', link: '/contributions' },
               { text: 'Supports', link: '/sponsors' },
-              { text: 'To Do', link: '/todo' }
+              // { text: 'To Do', link: '/todo' }
             ]
           },
           {
@@ -149,14 +149,14 @@ export default defineConfig({
           {
             text: '⚡  0.3.x (Terbaru)',
             items: [
-              { text: 'Tak Kenal Maka Tak Sayang', link: '/id/introduction' },
+              { text: 'Pengenalan', link: '/id/introduction' },
               { text: 'Mari Kita Mulai', link: '/id/get-started' },
               { text: 'Pembaharuan', link: '/id/upgrade-guide' },
               { text: 'Fitur yang Tersedia', link: '/id/features' },
               { text: 'Cara Pemakaian', link: '/id/usage' },
               { text: 'Kontribusi', link: '/id/contributions' },
               { text: 'Dukungan', link: '/id/sponsors' },
-              { text: 'Daftar Rencana', link: '/id/todo' }
+              // { text: 'Daftar Rencana', link: '/id/todo' }
             ]
           },
           {

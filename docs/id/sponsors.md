@@ -1,5 +1,18 @@
 ---
 outline: deep
+lastUpdated: true
+editLink: true
+title: Berikan Dukungan
+titleTemplate: Berikan Dukunganmu
+description: Berikkan dukunganmu kepada pada kontributor
+head:
+  - - meta
+    - name: description
+      content: Berikkan dukunganmu kepada pada kontributor
+  - - meta
+    - name: keywords
+      content: Berikan Dukungan di Generator
+next: false
 ---
 
 # Berikan Dukungan Kamu
