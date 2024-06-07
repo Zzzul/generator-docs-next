@@ -21,7 +21,7 @@ For the most recent and complete changelog, please visit [Github Releases](https
 
 ## How to Update
 
-1. If you are still using [Laravel version 10.x](#), please upgrade to [Laravel 11.x](#).
+1. If you are still using [Laravel version 10.x](https://laravel.com/docs/10.x), please upgrade to [Laravel 11.x](https://laravel.com/docs/).
 2. Execute the following commands
 
     ```sh

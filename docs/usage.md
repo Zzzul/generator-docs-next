@@ -109,7 +109,7 @@ Default image configuration:
 
 You can easily create a dynamic sidebar menu with just a few inputs. all sidebar menus configuration are placed in `config/generator.php`
 
-How about I don't need a dynamic sidebar menu, I just want to create my menu in `blade`. yeah, we provide it, [click here how to do it](/0.2.3/features.md#set-the-sidebar-menu).
+How about I don't need a dynamic sidebar menu, I just want to create my menu in `blade`. yeah, we provide it, [click here how to do it](features.md#configure-the-menu-on-the-sidebar).
 
 
 ## Role & Permissions
@@ -130,7 +130,7 @@ Here an example:
 ```
 
 ## Creating API CRUD
-Before you use this feature, make sure you have installed and read the latest documentation of [Laravel 11](#) regarding APIs.
+Before you use this feature, make sure you have installed and read the latest documentation of [Laravel 11](https://laravel.com/docs/11.x/sanctum#introduction) regarding APIs.
 
 Execute the following command:
 

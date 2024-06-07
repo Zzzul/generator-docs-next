@@ -139,22 +139,22 @@ Berikut contohnya:
 ```
 ## Membuat _API CRUD_
 
-Sebelum Kamu menggunakan fitur ini, pastikan kamu sudah meng-_install_ dan membaca dokumentasi terbaru [Laravel 11](laravel.com) mengenai _API_
+Sebelum Kamu menggunakan fitur ini, pastikan kamu sudah meng-_install_ dan membaca dokumentasi terbaru [Laravel 11](https://laravel.com/) mengenai _API_
 
 Jalankan perintah berikut
 ```sh
 php artisan api:install
 ```
-Lalu menuju `/generators-api/create` untuk [versi lengkap](#) lalu `/simple-generators/create` untuk [versi sederhana](#), dan sisanya lakukan hal yang sama seperti kamu membuat _CRUD_ diatas.
+Lalu menuju `/generators-api/create` untuk [versi lengkap](#versi-lengkap) lalu `/simple-generators/create` untuk [versi sederhana](#vers-sederhana), dan sisanya lakukan hal yang sama seperti kamu membuat _CRUD_ diatas.
 
 :::info
-Jika kamu menggunakan _Generator API_ dan [versi lengkap](#), kamu tidak dapat membuat menu _Sidebar_
+Jika kamu menggunakan _Generator API_ dan [versi lengkap](#versi-lengkap), kamu tidak dapat membuat menu _Sidebar_
 :::
 
 ## Konfigurasi
 
 Di bawah ini adalah konfigurasi _default_ untuk generator dan menu sidebar:
-
+```php
 return [
     /**
      * Jika ada file input (gambar) sebagai default akan digunakan opsi di bawah ini.
