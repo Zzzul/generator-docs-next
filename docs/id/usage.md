@@ -139,7 +139,7 @@ Berikut contohnya:
 ```
 ## Membuat _API CRUD_
 
-Sebelum Kamu menggunakan fitur ini, pastikan kamu sudah meng-_install_ dan membaca dokumentasi terbaru [Laravel 11](#) mengenai _API_
+Sebelum Kamu menggunakan fitur ini, pastikan kamu sudah meng-_install_ dan membaca dokumentasi terbaru [Laravel 11](laravel.com) mengenai _API_
 
 Jalankan perintah berikut
 ```sh
@@ -155,7 +155,6 @@ Jika kamu menggunakan _Generator API_ dan [versi lengkap](#), kamu tidak dapat m
 
 Di bawah ini adalah konfigurasi _default_ untuk generator dan menu sidebar:
 
-```php
 return [
     /**
      * Jika ada file input (gambar) sebagai default akan digunakan opsi di bawah ini.

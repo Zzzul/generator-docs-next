@@ -1,25 +1,38 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
-  name: "My Awesome Project INDONESIA VER."
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  name: "Generator"
+  text: "CRUD untuk Laravel"
+  tagline: Cepat, ringan, dan kode yang mudah dikostumisasi
+  image:
+    src: https://github.com/SAWARATSUKI/KawaiiLogos/blob/main/Laravel/LaravelTransparent.png?raw=true
+    alt: Laravel kawaii logo 
   actions:
     - theme: brand
-      text: Introduction
+      text: Pengenalan
       link: /id/introduction
     - theme: alt
-      text: Get Started
-      link: /id/get-started
-
+      text: Lihat di GitHub
+      link: https://github.com/Evdigi-INA/generator
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Sederhana namun (sangat) berguna
+    icon: ✨
+    details: Dirancang untuk mempercepat proses pengembangan proyekmu
+  - title: Yang Kamu butuhkan sudah tersedia
+    icon: 🔋
+    details: Mulai dari starter kit, user manajemen, autentikasi dan hak akses (role permission)
+  - title: Mudah untuk dikostumisasi
+    icon: 👌
+    details: Mudah digunakan dan kode yang dihasilkan dapat Kamu ubah sesuai kebutuhanmu
 ---
+
+<script setup>
+// Heavily inspired by React
+// https://github.com/reactjs/react.dev/pull/6817
+import { onMounted } from 'vue'
+onMounted(() => {
+  console.log('logo credits to @sawaratsuki1004 via https://github.com/SAWARATSUKI/ServiceLogos');
+})
+</script>
 

@@ -14,7 +14,8 @@ head:
       content: Pengenalan Generator
 ---
 
-# Tak Kenal Maka Tak Sayang
+# Pengenalan
+Tak Kenal Maka Tak Sayang
 
 ![image](https://user-images.githubusercontent.com/62506582/219942571-63c42764-1702-4df3-b165-4217e5558713.png)
 

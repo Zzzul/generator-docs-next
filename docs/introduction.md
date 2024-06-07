@@ -1,38 +1,27 @@
-<script setup>
-import { VPTeamMembers } from 'vitepress/theme'
-
-const members = [
-  {
-    avatar: 'https://www.github.com/Zzzul.png',
-    name: 'Mohammad Zulfahmi',
-    title: 'Creator',
-    links: [
-      { icon: 'github', link: 'https://github.com/Zzzul' },
-    ]
-  },
-   {
-    avatar: 'https://www.github.com/rachyharkov.png',
-    name: 'Rachmad Nur Hayat',
-    title: 'Core Team Member',
-    links: [
-      { icon: 'github', link: 'https://github.com/rachyharkov' },
-    ]
-  },
-]
-</script>
+---
+outline: deep
+---
 
 # Introduction
 
-## Our Teams
+![image](https://user-images.githubusercontent.com/62506582/219942571-63c42764-1702-4df3-b165-4217e5558713.png)
 
-Say hello to our awesome team.
+![image](https://user-images.githubusercontent.com/62506582/219941448-94c46fca-6a9f-422b-bdd1-29f642c3ccf6.png)
 
-<VPTeamMembers size="small" :members="members" />
+[Generator](https://github.com/Evdigi-INA/generator) is a Laravel-based open-source toolkit for building basic needs for administration interface setup like Create, Read, Update, and Delete. It's the minimalistic template or a starting point for developing CMS system, admin panel, or any other web application that requires CRUD functionality.
 
-## Contributors
+## The Reason
 
-Thank you to all our fellow contributors.
+We have a bit of time to build <s>master</s> main data over and over again, therefore this package may let you focus on your core features application, Instead, you might use that time to sleep, play video games, or touch some grass.
 
-<a  href="https://github.com/Evdigi-INA/generator/graphs/contributors">
-<img  src="https://contrib.rocks/image?repo=Evdigi-INA/generator&anon=1&columns=10"  />
-</a>
+## Who We Are
+
+We're just bunch of people working on side project (freelance) developer based in Bekasi, Indonesia. We want to make a difference in the world by helping people making their own projects via open source and free software such like our creation.
+
+## Pricing
+
+Dont worry, it's 100% free & open source.
+
+## License
+
+MIT.

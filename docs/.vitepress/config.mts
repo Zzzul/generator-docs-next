@@ -71,8 +71,8 @@ export default defineConfig({
 
   locales: {
     root: {
-      title: "My Awesome Project",
-      description: "A VitePress Site",
+      title: "Generator",
+      description: "CRUD for Laravel",
       label: 'English',
       // lang: 'en',
       // link: '/',
@@ -122,13 +122,13 @@ export default defineConfig({
         ],
         footer: {
           message: 'Released under the MIT License.',
-          copyright: 'Copyright © 2021-present Mohammad Zulfahmi & Evdigi-INA'
+          copyright: 'Copyright © 2021-present Mohammad Zulfahmi & Evdigi-INA, "kawaii" logo by https://github.com/SAWARATSUKI/KawaiiLogos'
         }
       },
     },
     id: {
-      title: "My Awesome Project ID",
-      description: "A VitePress Site",
+      title: "Generator",
+      description: "CRUD untuk Laravel",
       label: 'Indonesia',
       // link: '/id/', 
       // lang: 'id', 
@@ -177,7 +177,7 @@ export default defineConfig({
         ],
         footer: {
           message: 'Dirilis dibawah lisensi MIT.',
-          copyright: 'Hak cipta © 2021-sekarang Mohammad Zulfahmi & Evdigi-INA'
+          copyright: 'Hak cipta © 2021-sekarang Mohammad Zulfahmi & Evdigi-INA, "kawaii" logo oleh https://github.com/SAWARATSUKI/KawaiiLogos'
         },
         docFooter: {
           prev: 'Sebelumnya',

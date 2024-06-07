@@ -49,8 +49,6 @@ const members = [
 ]
 </script>
 
-# Introduction
-
 ## Our Teams
 
 Say hello to our awesome team.
