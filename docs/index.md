@@ -35,4 +35,3 @@ onMounted(() => {
   console.log('logo credits to @sawaratsuki1004 via https://github.com/SAWARATSUKI/ServiceLogos');
 })
 </script>
-
