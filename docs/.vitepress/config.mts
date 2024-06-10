@@ -96,10 +96,10 @@ export default defineConfig({
             items: [
               { text: 'Introduction', link: '/introduction' },
               { text: 'Get Started', link: '/get-started' },
-              { text: 'Upgrade Guide', link: '/upgrade-guide' },
-              { text: 'Features', link: '/features' },
               { text: 'Usage', link: '/usage' },
+              { text: 'Features', link: '/features' },
               { text: 'Contributions', link: '/contributions' },
+              { text: 'Upgrade Guide', link: '/upgrade-guide' },
               { text: 'Supports', link: '/sponsors' },
               // { text: 'To Do', link: '/todo' }
             ]
@@ -151,9 +151,9 @@ export default defineConfig({
             items: [
               { text: 'Pengenalan', link: '/id/introduction' },
               { text: 'Mari Kita Mulai', link: '/id/get-started' },
-              { text: 'Pembaharuan', link: '/id/upgrade-guide' },
-              { text: 'Fitur yang Tersedia', link: '/id/features' },
               { text: 'Cara Pemakaian', link: '/id/usage' },
+              { text: 'Fitur yang Tersedia', link: '/id/features' },
+              { text: 'Pembaharuan', link: '/id/upgrade-guide' },
               { text: 'Kontribusi', link: '/id/contributions' },
               { text: 'Dukungan', link: '/id/sponsors' },
               // { text: 'Daftar Rencana', link: '/id/todo' }

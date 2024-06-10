@@ -60,7 +60,7 @@ Both scripts will overwrite some files, so proceed with caution and avoid runnin
 
 #### Publish utility classes
 ```sh
-php artisan generator:publish utils
+php artisan generator:publish-utils
 ```
 
 ### Configure the menu on the sidebar.
@@ -90,22 +90,8 @@ Checks whether the menu on the Sidebar matches the accessed uri.
 ```php
 is_active_menu(string|array $menu): boolean;
 ```
-### Utility Classes
-
-All utility functions you might need are available in `App\Generators\GeneratorUtils`
-
-#### `GeneratorUtils`
-```php
-namespace App\Generators;
-
-class GeneratorUtils 
-{
-
-}
-```
-
 #### `ImageService`
-This class is used to perform image upload and manipulation functions using [Intervention Image v3.x](https://image.intervention.io/v3)
+This class is used to perform image upload and manipulation functions using [Intervention Image v3.x](https://image.intervention.io/v3), it's placed in `App\Generators\Services`
 
 ```php
 namespace App\Generators\Services;
@@ -115,9 +101,6 @@ use Illuminate\Support\Facades\Storage;
 
 class ImageService implements ImageServiceInterface
 {
-    /**
-     * @throws \Exception
-     */
     public function upload(string $name, string $path, string|null $defaultImage = null, string $disk = 'local', int $width = 500, int $height = 500, bool $isCustomUpload = false): string|null
     {
         if (request()->file($name) && request()->file($name)->isValid()) {

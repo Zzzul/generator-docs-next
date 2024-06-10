@@ -33,34 +33,28 @@ You can contribute to this project by following these steps:
     laravel new generator-dev
     ```
 
-4. Install the required libraries:
+3. Install the required libraries:
 
     ```sh
-    composer require laravel/fortify spatie/laravel-permission intervention/image "^2.0" yajra/laravel-datatables-oracle
+   composer require laravel/fortify spatie/laravel-permission intervention/image-laravel  yajra/laravel-datatables-oracle
     ```
 
-5. Publish the `fortify` library
+4. Create the `packages/evdigi-ina` folder in the main project directory
 
-    ```sh
-    php artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"
-    ```
-
-6. Create the `packages/evdigi-ina` folder in the main project directory
-
-7. Enter the `packages/evdigi-ina` folder and clone the repository
+5. CD into `packages/evdigi-ina` folder and clone the repository
 
     ```bash
     git clone https://github.com/Evdigi-INA/generator.git
     ```
 
-    and install it
+6. CD into `/generator`and install the dependencies
 
     ```sh
     composer i
     ```
     then return to the main project directory
 
-8. Add the following code to `composer.json`
+7. Add the following code to `composer.json`
 
     ```json
     "autoload": {
@@ -73,32 +67,28 @@ You can contribute to this project by following these steps:
     },
     ```
 
-9. Run the following command
+8. Run the following command
 
     ```sh
     composer dump-autoload
     ```
 
-10. Add the following code to `bootstrap/app.php`
+9. Add the following code to `bootstrap/app.php`
 
     ```php
     ->withProviders([
-        \EvdigiIna\Generator\Providers\GeneratorServiceProvider::class,
-        \Yajra\DataTables\DataTablesServiceProvider::class,
-        \Spatie\Permission\PermissionServiceProvider::class,
-        \Intervention\Image\ImageServiceProvider::class,
-        \App\Providers\FortifyServiceProvider::class,
-        // App\Providers\ViewComposerServiceProvider::class,
+        EvdigiIna\Generator\Providers\GeneratorServiceProvider::class,
+        //...
     ])
     ```
 
-11. Publish the necessary files for Generator
+10. Publish the necessary files for Generator
 
     ```sh
     php artisan generator:install full
     ```
 
-12. Add the following code to `composer.json`
+11. Add the following code to `composer.json`
 
     ```json
     "autoload": {
@@ -114,30 +104,30 @@ You can contribute to this project by following these steps:
     },
     ```
 
-13. Uncomment `App\Providers\ViewComposerServiceProvider::class` in `bootstrap/app.php`
+12. Uncomment `App\Providers\ViewComposerServiceProvider::class` and add `EvdigiIna\Generator\Providers\GeneratorServiceProvider::class` in `bootstrap/app.php` 
 
-14. Then run the following command again
+13. Then execute the following command again
     ```sh
     composer dump-autoload
     ```
 
-15. Migrate the database
+14. Migrate the database
     ```sh
     php artisan migrate --seed
     ```
 
-16. Run the local development server and open `/generators/create`
+15. Run the local development server and open `/generators/create`
     ```sh
     php artisan serve
     ```
 
-17. Make the desired code changes in `packages/evdigi-ina/generator`
+16. Make the desired code changes in `packages/evdigi-ina/generator`
 
-18. Ensure the code works well
+17. Ensure the code works well
 
-19. It would be better if you create unit tests as well
+18. It would be better if you create unit tests as well
 
-20. Switch to a new branch
+19. Switch to a new branch
     ```bash
      git branch update-generator
     ```
@@ -151,10 +141,10 @@ You can contribute to this project by following these steps:
     git commit -m "describe your changes"
     ```
 
-21. Push the code to the repository
+20. Push the code to the repository
 
     ```bash
     git push origin update-generator
     ```
 
-22. Create a Pull Request to the repository
+21. Create a Pull Request to the repository

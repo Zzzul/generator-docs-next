@@ -19,6 +19,10 @@ Setiap perubahan itu pasti ada dan wajar, jadi Kami harap Kamu dapat menerima pe
 
 Untuk melihat _Changelog_ yang terbaru dan lebih lengkap, silahkan kunjungi [Github Releases](https://github.com/evdigiina/generator/releases)
 
+3. Menghapus `App\Generators\GeneratorUtils` kelas dan memperbarui _helper_ kelas, [here for more info](#cara-memperbaharui).
+
+4. Memperbaiki _bug_ dan _error_
+
 ## Cara Memperbaharui
 
 1. Jika Kamu masih menggunakan [Laravel v10.x](#), silahkan memperbaharui Laravel Kamu ke versi [11.x](#)
@@ -30,7 +34,7 @@ Untuk melihat _Changelog_ yang terbaru dan lebih lengkap, silahkan kunjungi [Git
 3. Publikasikan beberapa berkas terbaru
 
     ```sh
-    php artisan generator:publish utils
+    php artisan generator:publish-utils
     ```
 4. Tambahkan beberapa baris kode berikut pada `resources/views/layouts/sidebar.blade.php`
     ```blade
@@ -99,8 +103,49 @@ Untuk melihat _Changelog_ yang terbaru dan lebih lengkap, silahkan kunjungi [Git
     @endauth
 
     ```    
+6. Menghapus kelas `App\Generators\GeneratorUtils` juga memperbarui kelas _helper_
+    
+    Berikut adalah kelas _helper_ terbaru dan kami sarankan Kamu untuk mengubah kode pada fugsi `is_active_menu`
 
-## Fitur Terbaru
+```php
+/**
+ * Check the sidebar menu with the current Uri
+ */
+if (!function_exists('is_active_menu')) {
+    function is_active_menu(string|array $route): string
+    {
+        $activeClass = ' active';
+
+        if (is_string($route)) {
+            if (request()->is(substr($route . '*', 1))) return $activeClass;
+
+            if (request()->is(str($route)->slug() . '*')) return $activeClass;
+
+            if (request()->segment(2) == str($route)->before('/')) return $activeClass;
+
+            if (request()->segment(3) == str($route)->after('/')) return $activeClass;
+        }
+
+        if (is_array($route)) {
+            foreach ($route as $value) {
+                $actualRoute = str($value)->remove(' view')->plural();
+
+                if (request()->is(substr($actualRoute . '*', 1))) return $activeClass;
+
+                if (request()->is(str($actualRoute)->slug() . '*')) return $activeClass;
+
+                if (request()->segment(2) == $actualRoute) return $activeClass;
+
+                if (request()->segment(3) == $actualRoute) return $activeClass;
+            }
+        }
+
+        return '';
+    }
+}
+```
+
+## Fitur Terbaru :fire:
 Fitur-fitur baru yang ditambahkan pada _Generator v0.3.x_
 
 1. <small>(beta)</small> _Generator_ dapat membuat _Seeder_ dan _Factory_
@@ -302,7 +347,7 @@ return [
 
 ```
 
-5. Web dokumentasi terbaru :book:
+6. Web dokumentasi terbaru :book:
 
     Karena Kami merasa kesulitan untuk membuat beberapa dokumentasi dalam beberapa versi (_versioning_) dan multi bahasa menggunakan [MkDocs](https://www.mkdocs.org/), oleh karena itu Kami memutuskan untuk membuat dokumentasi terbaru menggunakan [Vitepress](https://vitepress.dev/).
 

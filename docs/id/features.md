@@ -42,7 +42,7 @@ Kedua perintah diatas akan menimpa beberapa berkas, jadi Kamu harus berhati-hati
 
 #### Publikasikan kelas utilitas
 ```sh
-php artisan generator:publish utils
+php artisan generator:publish-utils
 ```
 
 ### Tetapkan menu _Sidebar_
@@ -75,22 +75,8 @@ Memerikan menu pada _Sidebar_ apakah sesuai dengan _uri_ yang sedang diakses.
 is_active_menu(string|array $menu): boolean;
 ```
 
-### Kelas Utilitas
-
-Semua fungsi utilitas yang mungkin Kamu butuhkan, tersedia berada di `App\Generators\GeneratorUtils`
-
-#### `GeneratorUtils`
-```php
-namespace App\Generators;
-
-class GeneratorUtils 
-{
-
-}
-```
-
 #### `ImageService`
-Kelas ini digunakan untuk melakukan fungsi unggah dan manipulasi gambar menggunakan [Intervention Image v3.x](https://image.intervention.io/v3)
+Kelas ini digunakan untuk melakukan fungsi unggah dan manipulasi gambar menggunakan [Intervention Image v3.x](https://image.intervention.io/v3), jika Kamu ingin melihatnya, kelas ini dapat diakses pada `App\Generator\Services`
 
 ```php
 namespace App\Generators\Services;
@@ -100,9 +86,6 @@ use Illuminate\Support\Facades\Storage;
 
 class ImageService implements ImageServiceInterface
 {
-    /**
-     * @throws \Exception
-     */
     public function upload(string $name, string $path, string|null $defaultImage = null, string $disk = 'local', int $width = 500, int $height = 500, bool $isCustomUpload = false): string|null
     {
         if (request()->file($name) && request()->file($name)->isValid()) {

@@ -17,6 +17,10 @@ Every change is natural, therefore we hope you will accept them.
     - [PHPinsights v2.x](#)
     - [Testbench v9.x](#)
 
+3. Remove `App\Generators\GeneratorUtils` class and update the helper class, [here for more info](#how-to-update).
+
+4. Bug and error fixing.
+
 For the most recent and complete changelog, please visit [Github Releases](https://github.com/evdigiina/generator/releases)
 
 ## How to Update
@@ -31,7 +35,7 @@ For the most recent and complete changelog, please visit [Github Releases](https
 3. Publish the latest files
 
     ```sh
-    php artisan generator:publish utils
+    php artisan generator:publish-utils
     ```
 
 4. Add the following lines of code to `resources/views/layouts/sidebar.blade.php`
@@ -102,6 +106,47 @@ For the most recent and complete changelog, please visit [Github Releases](https
     @endauth
 
     ```    
+
+5. Delete the `App\Generators\GeneratorUtils` class additionally updates the helper class.
+Here is the newest helper class, and we recommend changing the code in the `is_active_menu` function.
+
+```php
+/**
+ * Check the sidebar menu with the current Uri
+ */
+if (!function_exists('is_active_menu')) {
+    function is_active_menu(string|array $route): string
+    {
+        $activeClass = ' active';
+
+        if (is_string($route)) {
+            if (request()->is(substr($route . '*', 1))) return $activeClass;
+
+            if (request()->is(str($route)->slug() . '*')) return $activeClass;
+
+            if (request()->segment(2) == str($route)->before('/')) return $activeClass;
+
+            if (request()->segment(3) == str($route)->after('/')) return $activeClass;
+        }
+
+        if (is_array($route)) {
+            foreach ($route as $value) {
+                $actualRoute = str($value)->remove(' view')->plural();
+
+                if (request()->is(substr($actualRoute . '*', 1))) return $activeClass;
+
+                if (request()->is(str($actualRoute)->slug() . '*')) return $activeClass;
+
+                if (request()->segment(2) == $actualRoute) return $activeClass;
+
+                if (request()->segment(3) == $actualRoute) return $activeClass;
+            }
+        }
+
+        return '';
+    }
+}
+```
 
 ## New Features :fire:
 New features added in _Generator v0.3.x_:
@@ -305,7 +350,7 @@ return [
 
 ```
 
-5. New documentation :book:
+6. New documentation :book:
 
     Since we found it difficult to create documentation for multiple versions and languages using [MkDocs](https://www.mkdocs.org/), we decided to create the new documentation using [Vitepress](https://vitepress.dev/).
 
