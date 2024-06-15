@@ -56,7 +56,9 @@ Terdapat beberapa aturan yang harus diikuti jika Kamu ingin membuat relasi:
         - Pada ubah/edit: `nothing, cascade, restrict`
         - Pada penghapusan: `nothing, cascade, restrict, null`
 
-> Pastikan tabel & model terkait sudah ada, jika tidak maka kolom yang dipilih untuk ditampilkan di `select`/`datalist` adalah `id`, secara _default_ kolom yang dipilih adalah kolom kedua di tabel terkait.
+:::info
+Pastikan tabel & model terkait sudah ada, jika tidak maka kolom yang dipilih untuk ditampilkan di `<select>|<datalist>` adalah `id` dan akan mendapati error ketika kamu mengakses halaman terkait, secara _default_ kolom yang dipilih adalah kolom kedua di tabel relasi.
+:::
 
 ## Membuat Unggah File
 
@@ -145,10 +147,10 @@ Jalankan perintah berikut
 ```sh
 php artisan api:install
 ```
-Lalu menuju `/generators-api/create` untuk [versi lengkap](#versi-lengkap) lalu `/simple-generators/create` untuk [versi sederhana](#vers-sederhana), dan sisanya lakukan hal yang sama seperti kamu membuat _CRUD_ diatas.
+Lalu menuju `/generators-api/create` untuk [versi lengkap](get-started#versi-lengkap) lalu `/simple-generators/create` untuk [versi sederhana](get-started#versi-sederhana), dan sisanya lakukan hal yang sama seperti kamu membuat _CRUD_ diatas.
 
 :::info
-Jika kamu menggunakan _Generator API_ dan [versi lengkap](#versi-lengkap), kamu tidak dapat membuat menu _Sidebar_
+Jika kamu menggunakan _Generator API_ dan [versi lengkap](get-started#versi-lengkap), kamu tidak dapat membuat menu _Sidebar_
 :::
 
 <!-- ## Konfigurasi

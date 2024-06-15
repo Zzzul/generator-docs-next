@@ -34,7 +34,9 @@ Below is table about supported input type & validation when you are using some c
 |`mediumText`|`text, textarea, email, telephone, password url, search, file, hidden`|`required, string`| ✅ |
 |`longText`|`text, textarea, email, telephone, password url, search, file, hidden`|`required, string`| ✅ |
 
-> `required` validation will change to `nullable` if you uncheck required switch in the form, if any input type `password` will automatically added `confirmed` validation, `min:1|max:100` for supported length column and `email|unique` for `email` input type.
+:::info
+`required` validation will change to `nullable` if you uncheck required switch in the form, if any input type `password` will automatically added `confirmed` validation, `min:1|max:100` for supported length column and `email|unique` for `email` input type.
+:::
 
 
 ## Create a Relation
@@ -55,7 +57,9 @@ There is rules you must be followed if you want create a a relation:
         - On delete: `nothing, cascade, restrict, null`
 
 
-> Make sure the related table & model already exist, if its no then the selected field for showing in `select`/`datalist` is an `id`, by default selected field is second column in related table.
+:::warning
+Check that the related table and model are already present. If not, an `id` is the field that has been chosen to appear in the `<select>|<datalist> `by default and will produce an error when you access the page. The selected field is the second column in the relevant table.
+:::
 
 ## Create an Upload File
 
@@ -98,14 +102,18 @@ Default image configuration:
 ],
 ```
 
-> if you are using `storage` for store the image, make sure you run `php artisan storage:link`
+:::info
+if you are using `storage` for store the image, make sure you run `php artisan storage:link`
+:::
 
 
 ## Create a Sidebar Menu
 
 ![Create sidebar menu](https://user-images.githubusercontent.com/62506582/230722893-f11aae2c-4407-4eaf-803e-3b8491269e40.png)
 
-> This feature only available in full version.
+:::info
+This feature only available in full version.
+:::
 
 You can easily create a dynamic sidebar menu with just a few inputs. all sidebar menus configuration are placed in `config/generator.php`
 
@@ -138,10 +146,10 @@ Execute the following command:
 php artisan api:install
 ```
 
-Then, for the full version, go to `/generators-api/create`, and for the simple version, go to `/simple-generators/create`, and repeat the methods you used to create CRUD above.
+Then, for the [full version](get-started#full-version), go to `/generators-api/create`, and for the [simple version](get-started#simple-version), go to `/simple-generators/create`, and repeat the methods you used to create CRUD above.
 
 :::info
-If you use the API Generator and the full version, you cannot create a Sidebar menu.
+If you use the API Generator and the [full version](get-started#full-version), you cannot create a Sidebar menu.
 :::
 <!-- 
 ## Configuration
