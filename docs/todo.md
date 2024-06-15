@@ -12,7 +12,6 @@ head:
   - - meta
     - name: keywords
       content: Generator Upcoming features
-
 ---
 
 # To Do

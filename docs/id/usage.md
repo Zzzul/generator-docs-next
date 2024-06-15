@@ -62,7 +62,7 @@ Terdapat beberapa aturan yang harus diikuti jika Kamu ingin membuat relasi:
 
 ![Unggah File](https://user-images.githubusercontent.com/62506582/231070943-cc1f13fd-0ee5-47f1-baaf-fb1e66e93ab5.png)
 
-Atur jenis kolom menjadi `string`, jenis input menjadi `file`, pilih jenis file (saat ini hanya mendukung gambar), isi ukuran maksimal (opsional), dan nilai _default_ (harus berupa tautan yang valid), juga kami menggunakan [Intervention Image](https://image.intervention.io/v2) untuk memanipulasi gambar yang diunggah. semua konfigurasi untuk gambar tersedia di `config/generator.php`.
+Atur jenis kolom menjadi `string`, jenis input menjadi `file`, pilih jenis file (saat ini hanya mendukung gambar), isi ukuran maksimal, dan nilai _default_ bersifat opsional (harus berupa tautan yang valid), juga kami menggunakan [Intervention Image](https://image.intervention.io/v2) untuk memanipulasi gambar yang diunggah. semua konfigurasi untuk gambar tersedia di `config/generator.php`.
 
 Konfigurasi gambar default:
 ```php
@@ -151,7 +151,7 @@ Lalu menuju `/generators-api/create` untuk [versi lengkap](#versi-lengkap) lalu 
 Jika kamu menggunakan _Generator API_ dan [versi lengkap](#versi-lengkap), kamu tidak dapat membuat menu _Sidebar_
 :::
 
-## Konfigurasi
+<!-- ## Konfigurasi
 
 Di bawah ini adalah konfigurasi _default_ untuk generator dan menu sidebar:
 ```php
@@ -310,4 +310,4 @@ return [
     ],
 ];
 
-```
+``` -->

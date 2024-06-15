@@ -98,8 +98,8 @@ export default defineConfig({
               { text: 'Get Started', link: '/get-started' },
               { text: 'Usage', link: '/usage' },
               { text: 'Features', link: '/features' },
-              { text: 'Contributions', link: '/contributions' },
               { text: 'Upgrade Guide', link: '/upgrade-guide' },
+              { text: 'Contributions', link: '/contributions' },
               { text: 'Supports', link: '/sponsors' },
               // { text: 'To Do', link: '/todo' }
             ]

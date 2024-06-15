@@ -99,9 +99,9 @@ Start the local development server `php artisan serve`
 Account
 
 - Email: admin@example.com
-- Kata sandi: password
+- Password: password
 
-## Which libraries are used?
+## What's inside?
 
 ### Simple Version
 

@@ -1,5 +1,18 @@
 ---
 outline: deep
+lastUpdated: true
+editLink: true
+title: Support
+titleTemplate: Your support is important
+description: Support to this project
+head:
+  - - meta
+    - name: description
+      content: Support to this project
+  - - meta
+    - name: keywords
+      content: Support to Generator
+next: false
 ---
 
 # Sponsor/supporter
@@ -18,9 +31,9 @@ Generator is an MIT-licensed open-source project and is completely free to use. 
 
 - [Rachmad Nur Hayat](https://rnh-is.me/)
   - [GitHub](https://github.com/rachyharkov)
-  - [Buymeacoffe](#)
+  <!-- - [Buymeacoffe](#)
   - [Ko-fi](#)
-  - [Saweria](#)
+  - [Saweria](#) -->
 
 <script setup>
 import { VPTeamMembers } from 'vitepress/theme'

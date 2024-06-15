@@ -6,17 +6,16 @@ Berikut adalah beberapa fitur yang tersedia saat ini dan dapat kamu coba.
     - Mendukung lebih dari 15 [jenis kolom migrasi](https://laravel.com/docs/10.x/migrations#available-column-types), seperti `string, char, date, year`, dll.
     - Mendukung [Input HTML 5](https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types)
     - Validasi _Request_ yang didukung: `required, in, image, min, max, string, email, number, date, exists, nullable, unique, confirmed`  
-     - _Datatable_ ([Yajra Datatables](https://github.com/yajra/laravel-datatables))
-    - [One To Many (Inverse) / Belongs To](https://laravel.com/docs/10.x/eloquent-relationships#one-to-many-inverse)
-    - Pembuatan Model
-    - Unggah Gambar ([Intervention Image](https://image.intervention.io/v2))
+     - _Datatable_ - [Yajra Datatables](https://github.com/yajra/laravel-datatables)
+    - Pembuatan Model dan relasi [One To Many (Inverse) / Belongs To](https://laravel.com/docs/10.x/eloquent-relationships#one-to-many-inverse)
+    - Unggah Gambar - [Intervention Image](https://image.intervention.io/v2)
     - _Single Form CRUD_
     - _CRUD API Generator_
     - _Seeder & Factory Generator_
 2. Menu _Sidebar_ yang dapat dikonfigurasi ([versi lengkap](get-started.md#versi-lengkap))
 3. _CRUD User_ ([versi lengkap](get-started.md#versi-lengkap))
-4. Hak akses (_Role & permissions_) menggunakan [Spatie Permission](https://spatie.be/docs/laravel-permission/v5/introduction) ([versi lengkap](get-started.md#versi-lengkap))
-5. Otentikasi menggunakan [Laravel Fortify](https://laravel.com/docs/10.x/fortify) ([versi lengkap](get-started.md#versi-lengkap))
+4. Hak akses (_Role & permissions_) - [Spatie Permission](https://spatie.be/docs/laravel-permission/v5/introduction) ([versi lengkap](get-started.md#versi-lengkap))
+5. Otentikasi - [Laravel Fortify](https://laravel.com/docs/10.x/fortify) ([versi lengkap](get-started.md#versi-lengkap))
     - Masuk
     - Daftar
     - Lupa Kata Sandi

@@ -16,7 +16,7 @@ hero:
       text: Lihat di GitHub
       link: https://github.com/Evdigi-INA/generator
 features:
-  - title: Sederhana namun (sangat) berguna
+  - title: Sederhana namun (semoga) berguna
     icon: ✨
     details: Dirancang untuk mempercepat proses pengembangan proyekmu
   - title: Yang Kamu butuhkan sudah tersedia

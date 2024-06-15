@@ -61,7 +61,7 @@ There is rules you must be followed if you want create a a relation:
 
 ![Upload File](https://user-images.githubusercontent.com/62506582/231070943-cc1f13fd-0ee5-47f1-baaf-fb1e66e93ab5.png)
 
-Set column type to `string`, input type to `file`, select file type (for now only support image), fill the max size(optional), and default value (must be a valid link), also we use [Intervention Image](https://image.intervention.io/v2) for manipulating uploaded image. all setting for images are available at `config/generator.php`.
+Set column type to `string`, input type to `file`, select file type (for now only support image), fill the max size, and default value is optional (must be a valid link), also we use [Intervention Image](https://image.intervention.io/v2) for manipulating uploaded image. all setting for images are available at `config/generator.php`.
 
 Default image configuration:
 ```php
@@ -69,11 +69,11 @@ Default image configuration:
     /**
     * Path for store the image.
     *
-    * available options:
+    * Available options:
     * 1. public
     * 2. storage
     */
-    'path' => 'storage',
+    'disk' => 'storage',
 
     /**
     * Will used if image is nullable and default value is null.
@@ -143,7 +143,7 @@ Then, for the full version, go to `/generators-api/create`, and for the simple v
 :::info
 If you use the API Generator and the full version, you cannot create a Sidebar menu.
 :::
-
+<!-- 
 ## Configuration
 
 Below is the default config for the generator and sidebar menus:
@@ -159,7 +159,7 @@ return [
         /**
          * Path for store the image.
          *
-         * available options:
+         * Available options:
          * 1. public
          * 2. storage
          * 3. S3
@@ -313,5 +313,5 @@ return [
     ],
 ];
 
-```
+``` -->
 

@@ -16,12 +16,12 @@ hero:
       text: View on GitHub
       link: https://github.com/Evdigi-INA/generator
 features:
-  - title: Simple yet powerful
+  - title: (Hopefully) Simple yet powerful
     icon: ✨
     details: Is designed to streamline your development process with simplicity and efficiency
   - title: Batteries Included
     icon: 🔋
-    details: Built-in with starter kit, user, authentication and role permissions
+    details: Built-in with starter kit, user management, authentication and role permissions
   - title: Easy to customize
     icon: 👌
     details: It's easy to get started and customize the outcome code.
