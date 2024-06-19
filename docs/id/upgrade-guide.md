@@ -103,13 +103,13 @@ Untuk melihat _Changelog_ yang terbaru dan lebih lengkap, silahkan kunjungi [Git
     @endauth
 
     ```    
-6. Menghapus kelas `App\Generators\GeneratorUtils` juga memperbarui kelas _helper_
+6. Menghapus kelas `App\Generators\GeneratorUtils` dan juga memperbarui kelas _helper_
     
-    Berikut adalah kelas _helper_ terbaru dan kami sarankan Kamu untuk mengubah kode pada fugsi `is_active_menu`
+    Berikut adalah kelas _helper_ terbaru, kami sarankan Kamu untuk mengubah kode pada fugsi `is_active_menu`
 
 ```php
 /**
- * Check the sidebar menu with the current Uri
+ * Check the sidebar menu with the current uri
  */
 if (!function_exists('is_active_menu')) {
     function is_active_menu(string|array $route): string

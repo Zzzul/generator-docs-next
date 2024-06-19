@@ -38,6 +38,12 @@ Di bawah ini adalah tabel tentang jenis input & validasi yang didukung saat Kamu
 Validasi `required` akan berubah menjadi `nullable` jika Kamu tidak mencentang _checkbox_ yang terdapat pada _form_, jika ada jenis input `password` akan otomatis ditambahkan validasi `confirmed`, `min:1|max:100` untuk teks dan `email|unique` untuk jenis input `email`.
 :::
 
+:::info
+<img src="./../public/404.PNG" alt="404 Laravel" style="display: block; margin-left: auto; margin-right: auto; width: 50%; border-radius: 5px"/>
+
+Setelah membuat modul baru terkadang mungkin kamu akan mendapati `404`, jika iya, kamu hanya perlu melakukan _refresh_ pada _browser_ mu.
+:::
+
 
 ## Membuat relasi model
 

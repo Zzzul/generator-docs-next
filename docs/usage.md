@@ -38,6 +38,12 @@ Below is table about supported input type & validation when you are using some c
 `required` validation will change to `nullable` if you uncheck required switch in the form, if any input type `password` will automatically added `confirmed` validation, `min:1|max:100` for supported length column and `email|unique` for `email` input type.
 :::
 
+:::info
+<img src="./public/404.PNG" alt="404 Laravel" style="display: block; margin-left: auto; margin-right: auto; width: 50%; border-radius: 5px"/>
+
+After creating the new module, the `404` error may show, if this occurs, simply refresh the browser.
+:::
+
 
 ## Create a Relation
 

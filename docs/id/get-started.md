@@ -28,14 +28,6 @@ Instalasi pustaka
 php artisan generator:install simple
 ```
 
-Daftarkan _Service Provider_ pada `bootstrap/app.php`
-
-```php
-->withProviders([
-    \App\Providers\ViewComposerServiceProvider::class,
-])
-```
-  
 jalankan server pengembangan lokal `php artisan serve` lalu pada _browser_ Kamu dapat menuju ```/simple-generators/create/```
   
 <hr>
@@ -69,23 +61,6 @@ php artisan generator:install full
 ::: danger
 Perintah ini akan menimpa beberapa berkas, jadi Kamu harus berhati-hati saat menjalankan perintah ini dan hindari menjalankannya lebih dari sekali.
 :::
- 
-
-Daftarkan kelas _Provider_ pada `bootstrap/app.php`
-
-```php
-->withProviders([
-    \App\Providers\FortifyServiceProvider::class,
-    \App\Providers\ViewComposerServiceProvider::class,
-])
-->withMiddleware(function (Middleware $middleware) {
-    $middleware->alias([
-        'role' => \Spatie\Permission\Middleware\RoleMiddleware::class,
-        'permission' => \Spatie\Permission\Middleware\PermissionMiddleware::class,
-        'role_or_permission' => \Spatie\Permission\Middleware\RoleOrPermissionMiddleware::class,
-    ]);
-})
-```
 
 Jalankan perintah migrasi dan _Seeder_
 

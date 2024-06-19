@@ -17,9 +17,9 @@ head:
 # Pengenalan
 Tak Kenal Maka Tak Sayang
 
-![image](https://user-images.githubusercontent.com/62506582/219942571-63c42764-1702-4df3-b165-4217e5558713.png)
+![image](./../public/full-version.PNG)
 
-![image](https://user-images.githubusercontent.com/62506582/219941448-94c46fca-6a9f-422b-bdd1-29f642c3ccf6.png)
+![image](./../public/simple-version.PNG)
 
 [Generator](https://github.com/Evdigi-INA/generator) adalah pustaka berbasis Laravel yang dapat digunakan untuk membangun kebutuhan dasar aplikasi seperti Baca, Tulis, Ubah, dan Hapus (_CRUD_). Ini adalah _Starter Template_ sederhana yang kami harap dapat membantu Kamu dalam mengembangkan _CMS_, _Admin Panel_, atau aplikasi web lainnya yang mempunyai fungsionalitas _CRUD_.
 

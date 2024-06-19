@@ -14,7 +14,7 @@ composer require evdigiina/generator --dev
 ```
 
 :::info
-This library has two variants: [Simple Version](#simple-version) dan [Full Version](#full-version)
+This package has two variants: [Simple Version](#simple-version) dan [Full Version](#full-version)
 :::
 
 ### Simple Version
@@ -25,20 +25,12 @@ Which includes: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/
 
 [See available features](features.md)
   
-Library installation
+Publish files
 
 ```sh
 php artisan generator:install simple
 ```
 
-Register the Service Provider in `bootstrap/app.php`
-
-```php
-->withProviders([
-    \App\Providers\ViewComposerServiceProvider::class,
-])
-```
-  
 Run the local development server `php artisan serve` and then in your browser navigate to  `/simple-generators/create/`
   
 
@@ -71,23 +63,6 @@ php artisan generator:install full
 This command will overwrite some files, so you should be careful when running this command and avoid running it more than once.
 :::
  
-
-Register the _Service Provider_ classes in `bootstrap/app.php`
-
-```php
-->withProviders([
-    \App\Providers\FortifyServiceProvider::class,
-    \App\Providers\ViewComposerServiceProvider::class,
-])
-->withMiddleware(function (Middleware $middleware) {
-    $middleware->alias([
-        'role' => \Spatie\Permission\Middleware\RoleMiddleware::class,
-        'permission' => \Spatie\Permission\Middleware\PermissionMiddleware::class,
-        'role_or_permission' => \Spatie\Permission\Middleware\RoleOrPermissionMiddleware::class,
-    ]);
-})
-```
-
 Run migration and Seeder commands
 
 ```sh
