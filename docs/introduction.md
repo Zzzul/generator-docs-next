@@ -4,9 +4,9 @@ outline: deep
 
 # Introduction
 
-![image](./public/full-version.PNG)
+![image](./public/full-version.png)
 
-![image](./public/simple-version.PNG)
+![image](./public/simple-version.png)
 
 [Generator](https://github.com/Evdigi-INA/generator) is a Laravel-based open-source toolkit for building basic needs for administration interface setup like Create, Read, Update, and Delete. It's the minimalistic template or a starting point for developing CMS system, admin panel, or any other web application that requires CRUD functionality.
 

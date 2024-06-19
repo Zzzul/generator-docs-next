@@ -36,7 +36,7 @@ You can contribute to this project by following these steps:
 3. Install the required libraries:
 
     ```sh
-   composer require laravel/fortify spatie/laravel-permission intervention/image-laravel  yajra/laravel-datatables-oracle
+   composer require laravel/fortify spatie/laravel-permission intervention/image-laravel yajra/laravel-datatables-oracle
     ```
 
 4. Create the `packages/evdigi-ina` folder in the main project directory
@@ -53,6 +53,16 @@ You can contribute to this project by following these steps:
     
     ```bash
     git clone https://github.com/Evdigi-INA/generator.git
+    ```
+
+    Checkout to `dev` branch for newest changes
+
+    ```bash
+    git checkout -b dev
+    ```
+
+    ```bash
+    git pull origin dev
     ```
 
 6. CD into `/generator`and install the dependencies
@@ -119,12 +129,12 @@ You can contribute to this project by following these steps:
 
 12. Update the following code to `bootstrap/app.php`
 
-```php
-->withProviders([
-    \EvdigiIna\Generator\Providers\GeneratorServiceProvider::class,
-    \App\Providers\ViewComposerServiceProvider::class
-])
-```
+    ```php
+    ->withProviders([
+        \EvdigiIna\Generator\Providers\GeneratorServiceProvider::class,
+        \App\Providers\ViewComposerServiceProvider::class
+    ])
+    ```
 
 
 13. Then execute the following command again
@@ -140,7 +150,7 @@ You can contribute to this project by following these steps:
 :::info
 If you are getting an error like this below
 
-![Error migration](./public/error-migration.PNG)
+![Error migration](./public/error-migration.png)
 
 Please consider to update `app\Models\User.php` code
 
@@ -214,6 +224,9 @@ class User extends Authenticatable
     ```
     ```bash
     git add .
+    ```
+     ```bash
+    git pull origin dev
     ```
     ```bash
     git commit -m "describe your changes"

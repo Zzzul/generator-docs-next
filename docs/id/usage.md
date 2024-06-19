@@ -39,7 +39,7 @@ Validasi `required` akan berubah menjadi `nullable` jika Kamu tidak mencentang _
 :::
 
 :::info
-<img src="./../public/404.PNG" alt="404 Laravel" style="display: block; margin-left: auto; margin-right: auto; width: 50%; border-radius: 5px"/>
+<img src="./../public/404.png" alt="404 Laravel" style="display: block; margin-left: auto; margin-right: auto; width: 50%; border-radius: 5px"/>
 
 Setelah membuat modul baru terkadang mungkin kamu akan mendapati `404`, jika iya, kamu hanya perlu melakukan _refresh_ pada _browser_ mu.
 :::

@@ -39,7 +39,7 @@ Below is table about supported input type & validation when you are using some c
 :::
 
 :::info
-<img src="./public/404.PNG" alt="404 Laravel" style="display: block; margin-left: auto; margin-right: auto; width: 50%; border-radius: 5px"/>
+<img src="./public/404.png" alt="404 Laravel" style="display: block; margin-left: auto; margin-right: auto; width: 50%; border-radius: 5px"/>
 
 After creating the new module, the `404` error may show, if this occurs, simply refresh the browser.
 :::
