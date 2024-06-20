@@ -12,27 +12,17 @@ Di bawah ini adalah tabel tentang jenis input & validasi yang didukung saat Kamu
 
 |Jenis Kolom|Jenis Input|Validasi|Panjang (min & maks)|
 |-----------|----------|----------|------------------|
-|`string`|`text, textarea, email, telephone, password url, search, file, hidden`| `required, string`| ✅ |
-|`integer`|`number, range, hidden`|`required, numeric`| ✅ |
-|`text`|`text, textarea, email, telephone, password url, search, file, hidden`|`required, string`| ✅ |
+|`string`|`text, textarea, email, telephone, password, url, search, file, hidden`| `required, string`| ✅ |
 |`boolean`|`radio, select, datalist`|`required, boolean`| ❌ |
-|`char`|`text, color, week, email, telephone, password url, search, file, hidden`|`required, string`| ✅ |
+|`char`|`text, color, week, email, telephone, password, url, search, file, hidden`|`required, string`| ✅ |
 |`date`|`date, month`|`required, date`| ❌ |
 |`time`|`time`|`required, date`| ❌ |
-|`year`|`select, datalist`|`required, numeric`| ❌ |
+|`year, foreignId`|`select, datalist`|`required, numeric`| ❌ |
 |`dateTime`|`datetime-local`|`required, date`| ❌ |
-|`decimal`|`number, range, hidden`|`required, numeric`| ❌ |
-|`double`|`number, range, hidden`|`required, numeric`| ❌ |
+|`float, decimal, double`|`number, range, hidden`|`required, numeric`| ❌ |
 |`enum`|`select, radio, datalist`|`required, in`| ❌ |
-|`float`|`number, range, hidden`|`required, numeric`| ❌ |
-|`foreignId`|`select, datalist`|`required, exist`| ❌ |
-|`tinyInteger`|`number, range, hidden`|`required, numeric`| ❌ |
-|`mediumInteger`|`number, range, hidden`|`required, numeric`| ❌ |
-|`bigInteger`|`number, range, hidden`|`required, numeric`| ❌ |
-|`tinyText`|`text, textarea, email, telephone, password url, search, file, hidden`|`required, string`| ✅ |
-|`mediumText`|`text, textarea, email, telephone, password url, search, file, hidden`|`required, string`| ✅ |
-|`longText`|`text, textarea, email, telephone, password url, search, file, hidden`|`required, string`| ✅ |
-
+|`integer, tinyInteger, mediumInteger, bigInteger`|`number, range, hidden`|`required, numeric`| ❌ |
+|`text, tinyText, mediumText, longText`|`text, textarea, email, telephone, password, url, search, file, hidden`|`required, string`| ✅ |
 
 :::info
 Validasi `required` akan berubah menjadi `nullable` jika Kamu tidak mencentang _checkbox_ yang terdapat pada _form_, jika ada jenis input `password` akan otomatis ditambahkan validasi `confirmed`, `min:1|max:100` untuk teks dan `email|unique` untuk jenis input `email`.
@@ -54,7 +44,7 @@ Sayangnya _Generator_ saat ini hanya mendukung [One To Many (Inverse) / Belongs 
 Terdapat beberapa aturan yang harus diikuti jika Kamu ingin membuat relasi:
 
 - Nama Kolom: 
-    - Harus merupakan nama tabel tetapi dalam bentuk tunggal + `_id`, misalnya: jika kita memiliki tabel `users` maka harus `user_id`.
+    - Harus merupakan nama tabel tetapi dalam bentuk tunggal + `_id`, misalnya: jika Kamu memiliki tabel `users` maka harus `user_id`.
 - Jenis Kolom:
     - Diubah menjadi `foreignId`.
     - Untuk _constrains_ atau nama model terkait, Kamu bisa mengisi dengan nama tabel (secara otomatis berubah menjadi jamak).
@@ -63,7 +53,7 @@ Terdapat beberapa aturan yang harus diikuti jika Kamu ingin membuat relasi:
         - Pada penghapusan: `nothing, cascade, restrict, null`
 
 :::info
-Pastikan tabel & model terkait sudah ada, jika tidak maka kolom yang dipilih untuk ditampilkan di `<select>|<datalist>` adalah `id` dan akan mendapati error ketika kamu mengakses halaman terkait, secara _default_ kolom yang dipilih adalah kolom kedua di tabel relasi.
+Pastikan tabel & model terkait sudah ada, jika tidak maka kolom yang dipilih untuk ditampilkan di `<select>` atau `<datalist>` adalah `id` dan akan mendapati error ketika kamu mengakses halaman terkait, secara _default_ kolom yang dipilih adalah kolom kedua di tabel relasi.
 :::
 
 ## Membuat Unggah File

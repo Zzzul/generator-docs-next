@@ -52,7 +52,7 @@ Sayangnya _Generator_ saat ini hanya mendukung [One To Many (Inverse) / Belongs 
 Terdapat beberapa aturan yang harus diikuti jika Kamu ingin membuat relasi:
 
 - Nama Kolom: 
-    - Harus merupakan nama tabel tetapi dalam bentuk tunggal + `_id`, misalnya: jika kita memiliki tabel `users` maka harus `user_id`.
+    - Harus merupakan nama tabel tetapi dalam bentuk tunggal + `_id`, misalnya: jika Kamu memiliki tabel `users` maka harus `user_id`.
 - Jenis Kolom:
     - Diubah menjadi `foreignId`.
     - Untuk _constrains_ atau nama model terkait, Kamu bisa mengisi dengan nama tabel (secara otomatis berubah menjadi jamak).

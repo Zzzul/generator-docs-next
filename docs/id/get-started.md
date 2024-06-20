@@ -12,7 +12,9 @@ Berikut adalah beberapa persyaratan minumum yang harus Kamu diperhatikan:
 ```sh
 composer require evdigiina/generator --dev
 ```
-> Pustaka ini memiliki dua variasi, yaitu: [Versi Sederhana](#versi-sederhana) dan [Versi Lengkap](#versi-lengkap)
+:::info
+Pustaka ini memiliki dua variasi, yaitu: [Versi Sederhana](#versi-sederhana) dan [Versi Lengkap](#versi-lengkap)
+:::
 
 ### Versi Sederhana
 

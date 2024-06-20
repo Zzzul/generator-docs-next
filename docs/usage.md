@@ -13,26 +13,17 @@ Below is table about supported input type & validation when you are using some c
 
 |Column Type|Input Type|Validation|Length (min & max)|
 |-----------|----------|----------|------------------|
-|`string`|`text, textarea, email, telephone, password url, search, file, hidden`| `required, string`| ✅ |
-|`integer`|`number, range, hidden`|`required, numeric`| ✅ |
-|`text`|`text, textarea, email, telephone, password url, search, file, hidden`|`required, string`| ✅ |
+|`string`|`text, textarea, email, telephone, password, url, search, file, hidden`| `required, string`| ✅ |
 |`boolean`|`radio, select, datalist`|`required, boolean`| ❌ |
-|`char`|`text, color, week, email, telephone, password url, search, file, hidden`|`required, string`| ✅ |
+|`char`|`text, color, week, email, telephone, password, url, search, file, hidden`|`required, string`| ✅ |
 |`date`|`date, month`|`required, date`| ❌ |
 |`time`|`time`|`required, date`| ❌ |
-|`year`|`select, datalist`|`required, numeric`| ❌ |
+|`year, foreignId`|`select, datalist`|`required, numeric`| ❌ |
 |`dateTime`|`datetime-local`|`required, date`| ❌ |
-|`decimal`|`number, range, hidden`|`required, numeric`| ❌ |
-|`double`|`number, range, hidden`|`required, numeric`| ❌ |
+|`float, decimal, double`|`number, range, hidden`|`required, numeric`| ❌ |
 |`enum`|`select, radio, datalist`|`required, in`| ❌ |
-|`float`|`number, range, hidden`|`required, numeric`| ❌ |
-|`foreignId`|`select, datalist`|`required, exist`| ❌ |
-|`tinyInteger`|`number, range, hidden`|`required, numeric`| ❌ |
-|`mediumInteger`|`number, range, hidden`|`required, numeric`| ❌ |
-|`bigInteger`|`number, range, hidden`|`required, numeric`| ❌ |
-|`tinyText`|`text, textarea, email, telephone, password url, search, file, hidden`|`required, string`| ✅ |
-|`mediumText`|`text, textarea, email, telephone, password url, search, file, hidden`|`required, string`| ✅ |
-|`longText`|`text, textarea, email, telephone, password url, search, file, hidden`|`required, string`| ✅ |
+|`integer, tinyInteger, mediumInteger, bigInteger`|`number, range, hidden`|`required, numeric`| ❌ |
+|`text, tinyText, mediumText, longText`|`text, textarea, email, telephone, password, url, search, file, hidden`|`required, string`| ✅ |
 
 :::info
 `required` validation will change to `nullable` if you uncheck required switch in the form, if any input type `password` will automatically added `confirmed` validation, `min:1|max:100` for supported length column and `email|unique` for `email` input type.
@@ -64,7 +55,7 @@ There is rules you must be followed if you want create a a relation:
 
 
 :::warning
-Check that the related table and model are already present. If not, an `id` is the field that has been chosen to appear in the `<select>|<datalist> `by default and will produce an error when you access the page. The selected field is the second column in the relevant table.
+Check that the related table and model are already present. If not, an `id` is the field that has been chosen to appear in the `<select>` or `<datalist> `by default and will produce an error when you access the page. The selected field is the second column in the relevant table.
 :::
 
 ## Create an Upload File

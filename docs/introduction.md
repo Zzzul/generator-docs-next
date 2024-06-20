@@ -16,7 +16,7 @@ We have a bit of time to build <s>master</s> main data over and over again, ther
 
 ## Who We Are
 
-We're just bunch of people working on side project (freelance) developer based in Bekasi, Indonesia. We want to make a difference in the world by helping people making their own projects via open source and free software such like our creation.
+We're just bunch of people working on side project (freelance) developer based in Bekasi, Indonesia 🇮🇩. We want to make a difference in the world by helping people making their own projects via open source and free software such like our creation.
 
 ## Pricing
 

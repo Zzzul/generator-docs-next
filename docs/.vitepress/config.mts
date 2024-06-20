@@ -101,7 +101,7 @@ export default defineConfig({
               { text: 'Features 🕹', link: '/features' },
               { text: 'Upgrade Guide 📢', link: '/upgrade-guide' },
               { text: 'Contributions 🛠', link: '/contributions' },
-              { text: 'Supports 👨‍💻', link: '/sponsors' },
+              { text: 'Supports ☕', link: '/sponsors' },
               // { text: 'To Do', link: '/todo' }
             ]
           },
@@ -150,13 +150,13 @@ export default defineConfig({
           {
             text: '⚡  0.3.x (Terbaru)',
             items: [
-              { text: 'Pengenalan', link: '/id/introduction' },
-              { text: 'Mari Kita Mulai', link: '/id/get-started' },
-              { text: 'Cara Pemakaian', link: '/id/usage' },
-              { text: 'Fitur yang Tersedia', link: '/id/features' },
-              { text: 'Pembaharuan', link: '/id/upgrade-guide' },
-              { text: 'Kontribusi', link: '/id/contributions' },
-              { text: 'Dukungan', link: '/id/sponsors' },
+              { text: 'Pengenalan 👋', link: '/id/introduction' },
+              { text: 'Mari Kita Mulai 🎬', link: '/id/get-started' },
+              { text: 'Cara Pemakaian 👀', link: '/id/usage' },
+              { text: 'Fitur yang Tersedia 🕹', link: '/id/features' },
+              { text: 'Pembaruan 📢', link: '/id/upgrade-guide' },
+              { text: 'Kontribusi 🛠', link: '/id/contributions' },
+              { text: 'Dukungan ☕', link: '/id/sponsors' },
               // { text: 'Daftar Rencana', link: '/id/todo' }
             ]
           },

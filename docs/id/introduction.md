@@ -29,7 +29,7 @@ Kami memiliki sedikit waktu untuk membuat <s>Master</s> _Main Data_ berulang kal
 
 ## Siapa Kami
 
-Kami hanyalah sekumpulan orang yang bekerja pada proyek sampingan (_Freelance_) di Bekasi, Indonesia. Kami ingin membantu pengembang lain mempercepat pembuatuan proyek mereka melalui perangkat lunak gratis yang kami buat.
+Kami hanyalah sekumpulan orang yang bekerja pada proyek sampingan (_Freelance_) di Bekasi, Indonesia 🇮🇩. Kami ingin membantu pengembang lain mempercepat pembuatuan proyek mereka melalui perangkat lunak gratis yang kami buat.
 
 ## Harga
 

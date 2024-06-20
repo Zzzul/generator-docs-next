@@ -1,7 +1,5 @@
 # What's New?
 
-Every change is natural, therefore we hope you will accept them.
-
 ## Changes in the Latest Version
 1. Minimum [Laravel 11.x](#)
 
