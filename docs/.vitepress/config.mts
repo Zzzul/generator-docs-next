@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
+  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
   base: '/generator-docs-next/',
   editLink: {
     pattern: 'https://github.com/Zzzul/generator-docs-next/edit/main/docs/:path'
@@ -94,13 +95,13 @@ export default defineConfig({
           {
             text: '⚡  Latest (0.3.x)',
             items: [
-              { text: 'Introduction', link: '/introduction' },
-              { text: 'Get Started', link: '/get-started' },
-              { text: 'Usage', link: '/usage' },
-              { text: 'Features', link: '/features' },
-              { text: 'Upgrade Guide', link: '/upgrade-guide' },
-              { text: 'Contributions', link: '/contributions' },
-              { text: 'Supports', link: '/sponsors' },
+              { text: 'Introduction 👋', link: '/introduction' },
+              { text: 'Get Started 🎬', link: '/get-started' },
+              { text: 'Usage 👀', link: '/usage' },
+              { text: 'Features 🕹', link: '/features' },
+              { text: 'Upgrade Guide 📢', link: '/upgrade-guide' },
+              { text: 'Contributions 🛠', link: '/contributions' },
+              { text: 'Supports 👨‍💻', link: '/sponsors' },
               // { text: 'To Do', link: '/todo' }
             ]
           },

@@ -16,7 +16,7 @@ composer require evdigiina/generator --dev
 
 ### Versi Sederhana
 
- ![image](https://user-images.githubusercontent.com/62506582/219941448-94c46fca-6a9f-422b-bdd1-29f642c3ccf6.png)
+![Versi Sederhana](/simple-version.png)
 
 _Generator_, yang sudah termasuk: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v2), dan [Bootstrap 5](https://getbootstrap.com/).
 
@@ -34,7 +34,7 @@ jalankan server pengembangan lokal `php artisan serve` lalu pada _browser_ Kamu 
 
 ### Versi Lengkap
 
-![image](https://user-images.githubusercontent.com/62506582/219942571-63c42764-1702-4df3-b165-4217e5558713.png)
+![Versi Lengkap](/full-version.png)
 
 _Generator + Starter App_, yang sudah termasuk: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v3), [Laravel Fortify](https://laravel.com/docs/11.x/fortify), [Spatie Permission](https://spatie.be/docs/laravel-permission/v6/installation-laravel), dan [Mazer Template](https://github.com/zuramai/mazer).
 

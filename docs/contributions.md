@@ -76,7 +76,6 @@ You can contribute to this project by following these steps:
     cd ../../../
     ```
 
-
 7. Add the following code to `composer.json`
 
     ```json
@@ -147,63 +146,6 @@ You can contribute to this project by following these steps:
     php artisan migrate --seed
     ```
 
-:::info
-If you are getting an error like this below
-
-![Error migration](./public/error-migration.png)
-
-Please consider to update `app\Models\User.php` code
-
-```php
-namespace App\Models;
-
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Fortify\TwoFactorAuthenticatable;
-use Spatie\Permission\Traits\HasRoles;
-
-class User extends Authenticatable
-{
-    // https://laravel.com/docs/11.x/sanctum#api-token-authentication
-    // use \Laravel\Sanctum\HasApiTokens;
-
-    use HasFactory, Notifiable, TwoFactorAuthenticatable, HasRoles;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var string[]
-     */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'avatar'
-    ];
-
-    /**
-     * The attributes that should be hidden for serialization.
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
-
-    /**
-     * The attributes that should be cast.
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime:Y-m-d H:i',
-        'created_at' => 'datetime:Y-m-d H:i',
-        'updated_at' => 'datetime:Y-m-d H:i',
-    ];
-}
-
-```
-:::
-
 15. Run the local development server
     ```sh
     php artisan serve
@@ -217,17 +159,17 @@ class User extends Authenticatable
 
 19. Switch to a new branch
     ```bash
-     git branch update-generator
+     git checkout -b update-generator
     ```
-    ```bash
-    git checkout update-generator
-    ```
+
     ```bash
     git add .
     ```
-     ```bash
+    
+    ```bash
     git pull origin dev
     ```
+    
     ```bash
     git commit -m "describe your changes"
     ```

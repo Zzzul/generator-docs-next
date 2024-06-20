@@ -19,7 +19,7 @@ This package has two variants: [Simple Version](#simple-version) dan [Full Versi
 
 ### Simple Version
 
- ![image](https://user-images.githubusercontent.com/62506582/219941448-94c46fca-6a9f-422b-bdd1-29f642c3ccf6.png)
+![Simple Version](/simple-version.png)
 
 Which includes: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v2), dan [Bootstrap 5](https://getbootstrap.com/).
 
@@ -36,7 +36,7 @@ Run the local development server `php artisan serve` and then in your browser na
 
 ### Full Version
 
-![image](https://user-images.githubusercontent.com/62506582/219942571-63c42764-1702-4df3-b165-4217e5558713.png)
+![Full Version](/full-version.png)
 
 _Generator + Starter App_, which includes: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v3), [Laravel Fortify](https://laravel.com/docs/11.x/fortify), [Spatie Permission](https://spatie.be/docs/laravel-permission/v6/installation-laravel), dan [Mazer Template](https://github.com/zuramai/mazer).
 

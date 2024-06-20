@@ -10,10 +10,10 @@ hero:
     alt: Laravel kawaii logo 
   actions:
     - theme: brand
-      text: Introduction
+      text: Introduction 🎉
       link: /introduction
     - theme: alt
-      text: View on GitHub
+      text: View on GitHub 🌊
       link: https://github.com/Evdigi-INA/generator
 features:
   - title: (Hopefully) Simple yet powerful
