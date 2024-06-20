@@ -20,7 +20,7 @@ Berikut adalah beberapa fitur yang tersedia saat ini dan dapat kamu coba.
     - Daftar
     - Lupa Kata Sandi
     - Otentikasi _2FA_
-    - Pembaharuan informasi profil 
+    - Pembaruan informasi profil 
 
 ## Perintah Tersedia
 

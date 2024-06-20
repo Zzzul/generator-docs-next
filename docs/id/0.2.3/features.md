@@ -5,7 +5,7 @@ editLink: true
 ---
 
 ::: warning
-Kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbaharui proyek Kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
+Kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbarui proyek Kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
 :::
 
 # Fitur
@@ -32,7 +32,7 @@ Kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolon
     - Daftar
     - Lupa Kata Sandi
     - Otentikasi 2FA
-    - Pembaharuan informasi profil 
+    - Pembaruan informasi profil 
 
 ## Perintah Tersedia
 

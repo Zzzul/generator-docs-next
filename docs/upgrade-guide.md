@@ -1,9 +1,9 @@
 # What's New?
 
 ## Changes in the Latest Version
-1. Minimum [Laravel 11.x](#)
+1. Minimum [Laravel 11.x](https://laravel.com/docs/11.x/upgrade)
 
-   Because [Laravel 11.x](#) differs significantly from earlier versions, we decided to terminate support for [Laravel 10](#). The lowest supported version is currently [Laravel 11.x](#).
+   Because [Laravel 11.x](#) differs significantly from earlier versions, we decided to terminate support for [Laravel 10](https://laravel.com/docs/10.x). The lowest supported version is currently [Laravel 11](https://laravel.com/docs/11.x/upgrade).
 
 2. Updated numerous necessary libraries, including:
     - [Intervention Image v3.x](#)
@@ -30,6 +30,14 @@ For the most recent and complete changelog, please visit [Github Releases](https
     composer update evdigiina/generator:0.3.0 --dev
     ```
 
+
+:::warning
+if you are getting an error like this
+![Error update](/error-update.png)
+
+Remove or uncomment `Spatie\Permission\PermissionServiceProvider::class` from `config/app.php`
+:::
+
 3. Publish the latest files
 
     ```sh
@@ -39,112 +47,230 @@ For the most recent and complete changelog, please visit [Github Releases](https
 4. Add the following lines of code to `resources/views/layouts/sidebar.blade.php`
 
     ```blade
-    {{-- New Code --}}
-    @auth
-        <li class="sidebar-item{{ request()->is('/') || request()->is('dashboard') ? ' active' : '' }}">
-            <a class="sidebar-link" href="/">
-                <i class="bi bi-speedometer"></i>
-                <span> {{ __('Dashboard') }}</span>
-            </a>
-        </li>
-    @endauth
+    <ul class="menu">
+        {{-- New code --}}
+        @auth
+            <li class="sidebar-item{{ request()->is('/') || request()->is('dashboard') ? ' active' : '' }}">
+                <a class="sidebar-link" href="/">
+                    <i class="bi bi-speedometer"></i>
+                    <span> {{ __('Dashboard') }}</span>
+                </a>
+            </li>
+        @endauth
 
-    @foreach (config('generator.sidebars') as $sidebar)
-        {{-- Your sidebar menu code --}}
-    @endforeach
+        @foreach (config('generator.sidebars') as $sidebar)
+            {{-- ... --}}
+        @endforeach
 
-    {{-- New Code --}}
-    @if (env('APP_ENV') === 'local')
-        <li class="sidebar-title">{{ __('Generators') }}</li>
+        {{-- New code --}}
+        @if (env('APP_ENV') === 'local')
+            <li class="sidebar-title">{{ __('Generators') }}</li>
 
-        <li class="sidebar-item{{ request()->is('generators/create') ? ' active' : '' }}">
-            <a class="sidebar-link" href="{{ route('generators.create') }}">
-                <i class="bi bi-fire"></i>
-                <span>{{ __('CRUD Generator') }}</span>
-            </a>
-        </li>
+            <li class="sidebar-item{{ request()->is('generators/create') ? ' active' : '' }}">
+                <a class="sidebar-link" href="{{ route('generators.create') }}">
+                    <i class="bi bi-fire"></i>
+                    <span>{{ __('CRUD Generator') }}</span>
+                </a>
+            </li>
 
-        <li class="sidebar-item{{ request()->is('api-generators/create') ? ' active' : '' }}">
-            <a class="sidebar-link" href="/api-generators/create">
-                <i class="bi bi-rocket"></i>
-                <span>{{ __('API CRUD Generator') }}</span>
-            </a>
-        </li>
+            <li class="sidebar-item{{ request()->is('api-generators/create') ? ' active' : '' }}">
+                <a class="sidebar-link" href="/api-generators/create">
+                    <i class="bi bi-rocket"></i>
+                    <span>{{ __('API CRUD Generator') }}</span>
+                </a>
+            </li>
 
-        <li class="sidebar-item{{ request()->is('simple-generators/create') ? ' active' : '' }}">
-            <a class="sidebar-link" href="/simple-generators/create">
-                <i class="bi bi-droplet"></i>
-                <span>{{ __('Simple CRUD Generator') }}</span>
-            </a>
-        </li>
-    @endif
+            <li class="sidebar-item{{ request()->is('simple-generators/create') ? ' active' : '' }}">
+                <a class="sidebar-link" href="/simple-generators/create">
+                    <i class="bi bi-droplet"></i>
+                    <span>{{ __('Simple CRUD Generator') }}</span>
+                    </a>
+                </li>
+            @endif
 
-    {{-- New Code --}}
-    @auth
-        <li class="sidebar-title">Account</li>
+        {{-- New code --}}
+        @auth
+            <li class="sidebar-title">Account</li>
 
-        <li class="sidebar-item{{ request()->is('profile') ? ' active' : '' }}">
-            <a class="sidebar-link" href="{{ route('profile') }}">
-                <i class="bi bi-person-badge-fill"></i>
-                <span>{{ __('Profile') }}</span>
-            </a>
-        </li>
+            <li class="sidebar-item{{ request()->is('profile') ? ' active' : '' }}">
+                <a class="sidebar-link" href="{{ route('profile') }}">
+                    <i class="bi bi-person-badge-fill"></i>
+                    <span>{{ __('Profile') }}</span>
+                </a>
+            </li>
 
-        <li class="sidebar-item">
-            <a class="sidebar-link" href="{{ route('logout') }}"
-            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                <i class="bi bi-door-open-fill"></i>
-                <span>{{ __('Logout') }}</span>
-            </a>
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <i class="bi bi-door-open-fill"></i>
+                    <span>{{ __('Logout') }}</span>
+                </a>
 
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                @csrf
-            </form>
-        </li>
-    @endauth
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
+            </li>
+        @endauth
+    </ul>
 
     ```    
 
-5. Delete the `App\Generators\GeneratorUtils` class additionally updates the helper class.
-Here is the newest helper class, and we recommend changing the code in the `is_active_menu` function.
+5. Remove or uncomment `HasRoles` and `use HasApiTokens` trait in `app\Models\User.php`
 
 ```php
-/**
- * Check the sidebar menu with the current Uri
- */
-if (!function_exists('is_active_menu')) {
-    function is_active_menu(string|array $route): string
-    {
-        $activeClass = ' active';
+namespace App\Models;
 
-        if (is_string($route)) {
-            if (request()->is(substr($route . '*', 1))) return $activeClass;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+// use Laravel\Sanctum\HasApiTokens;
+use Laravel\Fortify\TwoFactorAuthenticatable;
+// use Spatie\Permission\Traits\HasRoles;
 
-            if (request()->is(str($route)->slug() . '*')) return $activeClass;
+class User extends Authenticatable
+{
+    use HasFactory, Notifiable, TwoFactorAuthenticatable;
 
-            if (request()->segment(2) == str($route)->before('/')) return $activeClass;
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var string[]
+     */
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+        'avatar'
+    ];
 
-            if (request()->segment(3) == str($route)->after('/')) return $activeClass;
-        }
+    /**
+     * The attributes that should be hidden for serialization.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
 
-        if (is_array($route)) {
-            foreach ($route as $value) {
-                $actualRoute = str($value)->remove(' view')->plural();
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'email_verified_at' => 'datetime:d/m/Y H:i',
+        'created_at' => 'datetime:d/m/Y H:i',
+        'updated_at' => 'datetime:d/m/Y H:i',
+    ];
+}
 
-                if (request()->is(substr($actualRoute . '*', 1))) return $activeClass;
+```
 
-                if (request()->is(str($actualRoute)->slug() . '*')) return $activeClass;
+6. Update code in `resources/views/layouts/header.blade.php`
 
-                if (request()->segment(2) == $actualRoute) return $activeClass;
+```blade
+@auth
+                                <div class="dropdown">
+                                    <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <div class="user-menu d-flex">
+                                            <div class="user-name text-end me-3">
+                                                <h6 class="mb-0 text-gray-600">{{ auth()?->user()?->name }}</h6>
+                                                <p class="mb-0 text-sm text-gray-600">
+                                                    {{ isset(auth()?->user()?->roles) ? implode(auth()?->user()?->roles?->map(fn ($role) => $role->name)->toArray()) : '-' }}
+                                                </p>
+                                            </div>
+                                            <div class="user-img d-flex align-items-center">
+                                                <div class="avatar avatar-md">
+                                                    @if (auth()?->user()?->avatar == null)
+                                                        <img src="https://www.gravatar.com/avatar/{{ md5(strtolower(trim(auth()?->user()?->email))) }}&s=500"
+                                                            alt="Avatar">
+                                                    @else
+                                                        <img src="{{ asset('storage/uploads/avatars/' . auth()?->user()?->avatar) }}"
+                                                            alt="Avatar">
+                                                    @endif
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton"
+                                        style="min-width: 11rem;">
+                                        <li>
+                                            <h6 class="dropdown-header">{{ __('Hello') }}, {{ auth()?->user()?->name }}!
+                                            </h6>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="{{ route('profile') }}"><i
+                                                    class="icon-mid bi bi-person-fill me-2"></i>{{ __('My Profile') }}</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                                onclick="event.preventDefault();document.getElementById('logout-form-nav').submit();">
+                                                <i class="bi bi-door-open-fill"></i>
+                                                {{ __('Logout') }}
+                                            </a>
 
-                if (request()->segment(3) == $actualRoute) return $activeClass;
-            }
-        }
+                                            <form id="logout-form-nav" action="{{ route('logout') }}" method="POST"
+                                                class="d-none">
+                                                @csrf
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </div>
+                            @endauth
+```
 
-        return '';
-    }
+7. It's not a better way to modify the vendor folder, but lets forget it. create file `generator.cache` in `vendor/evdigiina/generator` then copy code below
+
+```json
+{"simple_version_publish_count":0,"full_version_publish_count":1}
+```
+:::info
+Change `simple_version_publish_count` or `full_version_publish_count` to `1`, specify which version (simple or full version) are you using
+:::
+
+8. If you are getting an error below, please read the documentation about new Laravel 11 middleware in controller [here](https://laravel.com/docs/11.x/controllers#controller-middleware)
+
+![Error middleware](/error-middleware.png)
+
+If you are not used a middleware just simply uncomment those code or using Laravel 10 like middleware below.
+
+```php
+// comment code below
+public static function middleware(): array
+{
+    return [
+        'auth',
+
+        // TODO: uncomment this code if you are using spatie permission
+        new Middleware('permission:permission_name view', only: ['index', 'show']),
+        new Middleware('permission:permission_name create', only: ['create', 'store']),
+        new Middleware('permission:permission_name edit', only: ['edit', 'update']),
+        new Middleware('permission:permission_name delete', only: ['destroy']),
+    ];
 }
 ```
+And change to Laravel 10 like middleware
+```php
+public function __construct()
+{
+    $this->middleware('permission:permission_name view')->only('index', 'show');
+    $this->middleware('permission:permission_name create')->only('create', 'store');
+    $this->middleware('permission:permission_name edit')->only('edit', 'update');
+    $this->middleware('permission:permission_name delete')->only('destroy');
+}
+```
+
+Change 
+```php 
+class YourController extends Controller implements HasMiddleware
+```
+to 
+```php
+class YourController extends Controller
+```
+
+And in header remove `use Illuminate\Routing\Controllers\{HasMiddleware, Middleware};`
 
 ## New Features :fire:
 New features added in _Generator v0.3.x_:

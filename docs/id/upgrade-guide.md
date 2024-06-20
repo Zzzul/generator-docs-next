@@ -3,11 +3,11 @@
 Setiap perubahan itu pasti ada dan wajar, jadi Kami harap Kamu dapat menerima perubahan ini yaa.
 
 ## Perubahan dengan Versi Terbaru
-1. Minimal [Laravel 11.x](#)
+1. Minimal [Laravel 11.x](https://laravel.com/docs/11.x/upgrade)
 
-    Karena [Laravel 11.x](#) memiliki perbedaan yang sangat signifikan dengan versi sebelumya, maka Kami memutuskan untuk tidak melanjutkan dukungan ke [Laravel 10.x](#), dan minimal Laravel yang didukung adalah [Laravel 11.x](#)
+    Karena [Laravel 11.x](https://laravel.com/docs/11.x/upgrade) memiliki perbedaan yang sangat signifikan dengan versi sebelumya, maka Kami memutuskan untuk tidak melanjutkan dukungan ke [Laravel 10.x](#), dan minimal Laravel yang didukung adalah [Laravel 11.x](https://laravel.com/docs/11.x/upgrade)
 
-2. Memperbaharui beberapa pustaka yang diperlukan, antara lain:
+2. Memperbarui beberapa pustaka yang diperlukan, antara lain:
     - [Intervention Image v3.x](#)
     - [Yajra Datatable v11.x](#)
     - [Spatie Permission v6.x](#)
@@ -19,18 +19,19 @@ Setiap perubahan itu pasti ada dan wajar, jadi Kami harap Kamu dapat menerima pe
 
 Untuk melihat _Changelog_ yang terbaru dan lebih lengkap, silahkan kunjungi [Github Releases](https://github.com/evdigiina/generator/releases)
 
-3. Menghapus `App\Generators\GeneratorUtils` kelas dan memperbarui _helper_ kelas, [here for more info](#cara-memperbaharui).
+3. Menghapus `App\Generators\GeneratorUtils` kelas dan memperbarui _helper_ kelas, [here for more info](#cara-memperbarui).
 
 4. Memperbaiki _bug_ dan _error_
 
-## Cara Memperbaharui
+## Cara Memperbarui
 
-1. Jika Kamu masih menggunakan [Laravel v10.x](#), silahkan memperbaharui Laravel Kamu ke versi [11.x](#)
+1. Jika Kamu masih menggunakan [Laravel v10.x](https://laravel.com/docs/10.x), silahkan memperbarui Laravel Kamu ke versi [11.x](#)
 2. Menjalankan perintah berikut:
 
     ```sh
     composer update evdigiina/generator:0.3.0 --dev
     ```
+
 3. Publikasikan beberapa berkas terbaru
 
     ```sh
