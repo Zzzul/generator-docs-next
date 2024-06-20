@@ -15,46 +15,73 @@ head:
 next: true
 ---
 
-# Cara Berkontribusi
+# Cara berkontribusi
 
 Kamu dapat berkontribusi pada proyek ini, dengan mengikuti langkah-langkah berikut:
 
-1. [_Star & fork_ repositori](https://github.com/Evdigi-INA/generator)
+1. _[Star & fork the repositori](https://github.com/Evdigi-INA/generator)_
 
-2. Buat proyek Laravel baru:
+2. Buat proyek Laravel baru
 
     ```sh
     composer create-project laravel/laravel generator-dev
     ```
 
-    or
+    atau
 
     ```sh
     laravel new generator-dev
     ```
 
-3. _Instal_ pustaka yang dibutuhkan:
+3. _Instal_ pustaka yang diperlukan
 
     ```sh
-   composer require laravel/fortify spatie/laravel-permission intervention/image-laravel  yajra/laravel-datatables-oracle
+   composer require laravel/fortify spatie/laravel-permission intervention/image-laravel yajra/laravel-datatables-oracle
     ```
 
-4. Buat folder `packages/evdigi-ina` dalam proyek utama
+4. Buat folder `packages/evdigi-ina` pada folder utama
 
-5. Pindah ke folder `packages/evdigi-ina` and _clone_ repositori
+    ```sh
+    mkdir packages/evdigi-ina
+    ```
 
+5. Pindah ke folder `packages/evdigi-ina` dan _Clone_ repositori 
+
+    ```sh
+    cd packages/evdigi-ina
+    ```
+    
     ```bash
     git clone https://github.com/Evdigi-INA/generator.git
     ```
 
-6. Pindah lagi ke folder `/generator` dan _instal_ pustaka yang diperlukan
+6. Pindah ke folder `/generator`dan _Instal_ pustaka yang diperlukan
+
+    ```sh
+    cd generator
+    ```
+
+    Pindah ke _Branch_ `dev` untuk perubahan terbaru
+
+    ```bash
+    git checkout -b dev
+    ```
+
+    ```bash
+    git pull origin dev
+    ```
+    _Instal_ pustaka yang dibutuhkan
 
     ```sh
     composer i
     ```
-    Lalu kembali ke folder utama
+    Kembali ke folder utama
 
-7. Tambahkan kode berikut ke `composer.json`
+    ```sh
+    cd ../../../
+    ```
+
+7. Tambahkan kode berikut ini pada `composer.json`
 
     ```json
     "autoload": {
@@ -82,13 +109,13 @@ Kamu dapat berkontribusi pada proyek ini, dengan mengikuti langkah-langkah berik
     ])
     ```
 
-10. Publikasikan berkas yang dibutuhkan
+10. Publikasikan berkasi yang diperlukan
 
     ```sh
     php artisan generator:install full
     ```
 
-11. Tambahan kode berikut ke `composer.json`
+11. Tambahkan kode berikut pada `composer.json` _(folder utama/root)_
 
     ```json
     "autoload": {
@@ -104,54 +131,57 @@ Kamu dapat berkontribusi pada proyek ini, dengan mengikuti langkah-langkah berik
     },
     ```
 
-12. Hapus komenter `ViewComposerServiceProvider::class` dan tambahkan kode berikut `\EvdigiIna\Generator\Providers\GeneratorServiceProvider::class` pada `bootstrap/app.php` 
+12. Ubah kode pada `bootstrap/app.php`
 
-```php
-->withProviders([
-    \EvdigiIna\Generator\Providers\GeneratorServiceProvider::class,
-    ViewComposerServiceProvider::class
-])
-```
+    ```php
+    ->withProviders([
+        \EvdigiIna\Generator\Providers\GeneratorServiceProvider::class,
+        //..
+    ])
+    ```
 
-13. Lalu jalankan perintah berikut sekali lagi
+13. Jalankan perintah berikut sekali lagi
     ```sh
     composer dump-autoload
     ```
 
-14. Migrasi _Database_
+14. Migrasi basis data
     ```sh
     php artisan migrate --seed
     ```
 
-15. Jalankan server pengembangan lokal
+15. Jalankan _Server_ pengembangan lokal
     ```sh
     php artisan serve
     ```
 
-16. Lakukan perubahan kode pada `packages/evdigi-ina/generator`
+16. Lakukan perubahan pada `packages/evdigi-ina/generator`
 
-17. Pastikan kode berjalan dengan baik
+17. Pastikan kode kamu berjalan dengan normal
 
-18. Akan lebih baik jika kamu membuat _Unit Test_
+18. Akan lebih baik jika kamu membuat _Unit Tests_
 
-19. Pindah ke _Branch_ baru
+19. Pindah ke branch baru
     ```bash
-     git branch update-generator
+     git checkout -b update-generator
     ```
-    ```bash
-    git checkout update-generator
-    ```
+
     ```bash
     git add .
     ```
+    
+    ```bash
+    git pull origin dev
+    ```
+    
     ```bash
     git commit -m "describe your changes"
     ```
 
-20. _Push_ ke repositori
+20. _Push_ perubahan kamu ke repositori
 
     ```bash
     git push origin update-generator
     ```
 
-21. Buat _Pull Request_ pada repositori
+21. Buat _Pull Request_ pada [Repositori](https://github.com/Evdigi-INA/generator)

@@ -55,6 +55,12 @@ You can contribute to this project by following these steps:
     git clone https://github.com/Evdigi-INA/generator.git
     ```
 
+6. CD into `/generator`and install the dependencies
+
+    ```sh
+    cd generator
+    ```
+
     Checkout to `dev` branch for newest changes
 
     ```bash
@@ -64,8 +70,6 @@ You can contribute to this project by following these steps:
     ```bash
     git pull origin dev
     ```
-
-6. CD into `/generator`and install the dependencies
 
     ```sh
     composer i
@@ -131,10 +135,9 @@ You can contribute to this project by following these steps:
     ```php
     ->withProviders([
         \EvdigiIna\Generator\Providers\GeneratorServiceProvider::class,
-        \App\Providers\ViewComposerServiceProvider::class
+        //..
     ])
     ```
-
 
 13. Then execute the following command again
     ```sh

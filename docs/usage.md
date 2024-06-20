@@ -143,7 +143,7 @@ Execute the following command:
 php artisan api:install
 ```
 
-Then, for the [full version](get-started#full-version), go to `/generators-api/create`, and for the [simple version](get-started#simple-version), go to `/simple-generators/create`, and repeat the methods you used to create CRUD above.
+Then, for the [full version](get-started#full-version), go to `/generators-api/create`, and for the [simple version](get-started#simple-version), go to `/simple-generators/create`, then repeat the methods you used to create CRUD above.
 
 :::info
 If you use the API Generator and the [full version](get-started#full-version), you cannot create a Sidebar menu.

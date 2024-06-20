@@ -143,7 +143,7 @@ Jalankan perintah berikut
 ```sh
 php artisan api:install
 ```
-Lalu menuju `/generators-api/create` untuk [versi lengkap](get-started#versi-lengkap) lalu `/simple-generators/create` untuk [versi sederhana](get-started#versi-sederhana), dan sisanya lakukan hal yang sama seperti kamu membuat _CRUD_ diatas.
+Lalu menuju `/generators-api/create` untuk [versi lengkap](get-started#versi-lengkap) dan `/simple-generators/create` untuk [versi sederhana](get-started#versi-sederhana), sisanya lakukan hal yang sama seperti kamu membuat _CRUD_ diatas.
 
 :::info
 Jika kamu menggunakan _Generator API_ dan [versi lengkap](get-started#versi-lengkap), kamu tidak dapat membuat menu _Sidebar_
