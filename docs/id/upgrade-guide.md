@@ -1,195 +1,337 @@
-# Apa Aja sih, yang Baru?
-
+# Apa aja sih yang baru?
 Setiap perubahan itu pasti ada dan wajar, jadi Kami harap Kamu dapat menerima perubahan ini yaa.
 
-## Perubahan dengan Versi Terbaru
+## Perubahan dengan versi terbau
+
 1. Minimal [Laravel 11.x](https://laravel.com/docs/11.x/upgrade)
 
-    Karena [Laravel 11.x](https://laravel.com/docs/11.x/upgrade) memiliki perbedaan yang sangat signifikan dengan versi sebelumya, maka Kami memutuskan untuk tidak melanjutkan dukungan ke [Laravel 10.x](#), dan minimal Laravel yang didukung adalah [Laravel 11.x](https://laravel.com/docs/11.x/upgrade)
+   Karena [Laravel 11.x](https://laravel.com) berbeda secara signifikan dari versi sebelumnya, kami memutuskan untuk menghentikan dukungan untuk [Laravel 10](https://laravel.com/docs/10.x). Versi terendah yang didukung saat ini adalah [Laravel 11](https://laravel.com/docs/11.x/upgrade)
 
-2. Memperbarui beberapa pustaka yang diperlukan, antara lain:
-    - [Intervention Image v3.x](#)
-    - [Yajra Datatable v11.x](#)
-    - [Spatie Permission v6.x](#)
+2. Memperbarui beberapa pustaka yang dibutuhkan:
 
-        dan untuk pustaka yang diguanakan dalam proses pengembangan, yaitu:
-    - [Larastan v2.x](#)
-    - [PHPinsights v2.x](#)
-    - [Testbench v9.x](#)
+   - [Intervention Image v3.x](https://image.intervention.io/v3)
+   - [Yajra Datatable v11.x](https://yajrabox.com/docs/laravel-datatables/11.0)
+   - [Spatie Permission v6.x](https://spatie.be/docs/laravel-permission/v6/introduction)
 
-Untuk melihat _Changelog_ yang terbaru dan lebih lengkap, silahkan kunjungi [Github Releases](https://github.com/evdigiina/generator/releases)
+   An Dan yang dibutuhkan untuk proses pengembangan:
 
-3. Menghapus `App\Generators\GeneratorUtils` kelas dan memperbarui _helper_ kelas, [here for more info](#cara-memperbarui).
+   - [Larastan v2.x](https://github.com/larastan/larastan)
+   - [PHPinsights v2.x](https://phpinsights.com/)
+   - [Testbench v9.x](https://packages.tools/testbench.html)
 
-4. Memperbaiki _bug_ dan _error_
+3. Menghapus `App\Generators\GeneratorUtils` kelas dan melakukan perubahan pada _helper_ kelas, [Disini untuk lebih lanjut](#how-to-update)
 
-## Cara Memperbarui
+4. Memperbaiki _Bug_ dan _Error_
 
-1. Jika Kamu masih menggunakan [Laravel v10.x](https://laravel.com/docs/10.x), silahkan memperbarui Laravel Kamu ke versi [11.x](#)
-2. Menjalankan perintah berikut:
+Untuk daftar perubahan terbaru dan lebih lengkap, silakan kunjungi [GitHub Rilis](https://github.com/evdigiina/generator/releases)
 
-    ```sh
-    composer update evdigiina/generator:0.3.0 --dev
-    ```
+## Cara memperbarui
 
-3. Publikasikan beberapa berkas terbaru
+1. Jika Kamu masih menggunakan [Laravel 10.x](https://laravel.com/docs/10.x), harap pertimbangkan untuk membaca [Panduan peningkatan Laravel 11.x](https://laravel.com/docs/11.x/updgrade)
 
-    ```sh
-    php artisan generator:publish-utils
-    ```
-4. Tambahkan beberapa baris kode berikut pada `resources/views/layouts/sidebar.blade.php`
-    ```blade
-    {{-- Kode baru --}}
-    @auth
-        <li class="sidebar-item{{ request()->is('/') || request()->is('dashboard') ? ' active' : '' }}">
-            <a class="sidebar-link" href="/">
-                <i class="bi bi-speedometer"></i>
-                <span> {{ __('Dashboard') }}</span>
-            </a>
-        </li>
-    @endauth
+2. Ubah pustaka berikut pada `composer.json`
 
-    @foreach (config('generator.sidebars') as $sidebar)
-        {{-- Kode menu sidebar kamu --}}
-    @enforeach
+   ```json
+   "laravel/framework to": "^11.0",
 
-    {{-- Kode baru --}}
-    @if (env('APP_ENV') === 'local')
-        <li class="sidebar-title">{{ __('Generators') }}</li>
+   // require-dev
+   "nunomaduro/collision": "^8.1",
+   "evdigiina/generator": "^0.3.0",
+   ```
 
-        <li class="sidebar-item{{ request()->is('generators/create') ? ' active' : '' }}">
-            <a class="sidebar-link" href="{{ route('generators.create') }}">
-                <i class="bi bi-fire"></i>
-                <span>{{ __('CRUD Generator') }}</span>
-            </a>
-        </li>
+   Optional (if installed).
 
-        <li class="sidebar-item{{ request()->is('api-generators/create') ? ' active' : '' }}">
-            <a class="sidebar-link" href="/api-generators/create">
-                <i class="bi bi-rocket"></i>
-                <span>{{ __('API CRUD Generator') }}</span>
-            </a>
-        </li>
+   ```json
+   "spatie/laravel-permission": "^6.0",
+   "laravel/fortify": "^1.21"
+   ```
 
-        <li class="sidebar-item{{ request()->is('simple-generators/create') ? ' active' : '' }}">
-            <a class="sidebar-link" href="/simple-generators/create">
-                <i class="bi bi-droplet"></i>
-                <span>{{ __('Simple CRUD Generator') }}</span>
-            </a>
-        </li>
-    @endif
+   Lalu jalankan perintah berikut
 
-    {{-- Kode baru --}}
-    @auth
-        <li class="sidebar-title">Account</li>
+   ```sh
+   composer update
+   ```
 
-        <li class="sidebar-item{{ request()->is('profile') ? ' active' : '' }}">
-            <a class="sidebar-link" href="{{ route('profile') }}">
-                <i class="bi bi-person-badge-fill"></i>
-                <span>{{ __('Profile') }}</span>
-            </a>
-        </li>
+3. Publikasikan berkas terbaru
 
-        <li class="sidebar-item">
-            <a class="sidebar-link" href="{{ route('logout') }}"
-            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                <i class="bi bi-door-open-fill"></i>
-                <span>{{ __('Logout') }}</span>
-            </a>
+   ```sh
+   php artisan generator:publish-utils
+   ```
 
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                @csrf
-            </form>
-        </li>
-    @endauth
+4. Tambahkan kode berikut pada `resources/views/layouts/sidebar.blade.php`
 
-    ```    
-6. Menghapus kelas `App\Generators\GeneratorUtils` dan juga memperbarui kelas _helper_
-    
-    Berikut adalah kelas _helper_ terbaru, kami sarankan Kamu untuk mengubah kode pada fugsi `is_active_menu`
+   ```blade
+   <ul class="menu">
+       {{-- New code --}}
+       @auth
+           <li class="sidebar-item{{ request()->is('/') || request()->is('dashboard') ? ' active' : '' }}">
+               <a class="sidebar-link" href="/">
+                   <i class="bi bi-speedometer"></i>
+                   <span> {{ __('Dashboard') }}</span>
+               </a>
+           </li>
+       @endauth
 
-```php
-/**
- * Check the sidebar menu with the current uri
- */
-if (!function_exists('is_active_menu')) {
-    function is_active_menu(string|array $route): string
-    {
-        $activeClass = ' active';
+       {{-- Your sidebar code --}}
+       @foreach (config('generator.sidebars') as $sidebar)
+           {{-- ... --}}
+       @endforeach
 
-        if (is_string($route)) {
-            if (request()->is(substr($route . '*', 1))) return $activeClass;
+       {{-- New code --}}
+       @if (env('APP_ENV') === 'local')
+           <li class="sidebar-title">{{ __('Generators') }}</li>
 
-            if (request()->is(str($route)->slug() . '*')) return $activeClass;
+           <li class="sidebar-item{{ request()->is('generators/create') ? ' active' : '' }}">
+               <a class="sidebar-link" href="{{ route('generators.create') }}">
+                   <i class="bi bi-fire"></i>
+                   <span>{{ __('CRUD Generator') }}</span>
+               </a>
+           </li>
 
-            if (request()->segment(2) == str($route)->before('/')) return $activeClass;
+           <li class="sidebar-item{{ request()->is('api-generators/create') ? ' active' : '' }}">
+               <a class="sidebar-link" href="/api-generators/create">
+                   <i class="bi bi-rocket"></i>
+                   <span>{{ __('API CRUD Generator') }}</span>
+               </a>
+           </li>
 
-            if (request()->segment(3) == str($route)->after('/')) return $activeClass;
-        }
+           <li class="sidebar-item{{ request()->is('simple-generators/create') ? ' active' : '' }}">
+               <a class="sidebar-link" href="/simple-generators/create">
+                   <i class="bi bi-droplet"></i>
+                   <span>{{ __('Simple CRUD Generator') }}</span>
+                   </a>
+               </li>
+           @endif
 
-        if (is_array($route)) {
-            foreach ($route as $value) {
-                $actualRoute = str($value)->remove(' view')->plural();
+       {{-- New code --}}
+       @auth
+           <li class="sidebar-title">Account</li>
 
-                if (request()->is(substr($actualRoute . '*', 1))) return $activeClass;
+           <li class="sidebar-item{{ request()->is('profile') ? ' active' : '' }}">
+               <a class="sidebar-link" href="{{ route('profile') }}">
+                   <i class="bi bi-person-badge-fill"></i>
+                   <span>{{ __('Profile') }}</span>
+               </a>
+           </li>
 
-                if (request()->is(str($actualRoute)->slug() . '*')) return $activeClass;
+           <li class="sidebar-item">
+               <a class="sidebar-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                   <i class="bi bi-door-open-fill"></i>
+                   <span>{{ __('Logout') }}</span>
+               </a>
 
-                if (request()->segment(2) == $actualRoute) return $activeClass;
+               <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                   @csrf
+               </form>
+           </li>
+       @endauth
+   </ul>
 
-                if (request()->segment(3) == $actualRoute) return $activeClass;
-            }
-        }
+   ```
 
-        return '';
-    }
-}
-```
+5. Ubah kode pada `resources/views/layouts/header.blade.php` menjadi seperti dibawah ini
+
+   ```blade
+   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav ms-auto mb-lg-0">
+           {{-- Your code --}}
+       </ul>
+
+       {{-- New code --}}
+       @auth
+           <div class="dropdown">
+               <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                   <div class="user-menu d-flex">
+                       <div class="user-name text-end me-3">
+                           <h6 class="mb-0 text-gray-600">{{ auth()?->user()?->name }}</h6>
+                           <p class="mb-0 text-sm text-gray-600">
+                               {{ isset(auth()?->user()?->roles) ? implode(auth()?->user()?->roles?->map(fn ($role) => $role->name)->toArray()) : '-' }}
+                           </p>
+                       </div>
+                       <div class="user-img d-flex align-items-center">
+                           <div class="avatar avatar-md">
+                               @if (auth()?->user()?->avatar == null)
+                                   <img src="https://www.gravatar.com/avatar/{{ md5(strtolower(trim(auth()?->user()?->email))) }}&s=500" alt="Avatar">
+                               @else
+                                   <img src="{{ asset('storage/uploads/avatars/' . auth()?->user()?->avatar) }}" alt="Avatar">
+                               @endif
+                           </div>
+                       </div>
+                   </div>
+               </a>
+
+               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="min-width: 11rem;">
+                   <li>
+                       <h6 class="dropdown-header">{{ __('Hello') }}, {{ auth()?->user()?->name }}!</h6>
+                   </li>
+                   <li>
+                       <a class="dropdown-item" href="{{ route('profile') }}"><i class="icon-mid bi bi-person-fill me-2"></i>{{ __('My Profile') }}</a>
+                   </li>
+                   <li>
+                       <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form-nav').submit();">
+                           <i class="bi bi-door-open-fill"></i>
+                           {{ __('Logout') }}
+                       </a>
+
+                       <form id="logout-form-nav" action="{{ route('logout') }}" method="POST" class="d-none">
+                           @csrf
+                       </form>
+                   </li>
+               </ul>
+           </div>
+       @endauth
+   </div>
+   ```
+
+6. Bukan cara yang bagus untuk mengubah folder `vendor`, tapi untuk sekarang tolong abaikan saja. Buat file `generator.cache` di `vendor/evdigiina/generator` lalu _copy_ kode di bawah ini
+
+   ```json
+   { "simple_version_publish_count": 0, "full_version_publish_count": 1 }
+   ```
+
+:::info
+Ubah `simple_version_publish_count` atau `full_version_publish_count` menjadi `1` sesuaikan dengan versi yang Kamu gunakan
+:::
+
+7. Ubah `config/generator.php` dari `image.path` menjadi `image.disk`
+
+   ```php
+   'image' => [
+       /**
+        * Path for store the image.
+        *
+        * available options:
+        * 1. public
+        * 2. storage
+       */
+       'path' => 'storage',
+       // ... another configuration
+   ]
+   ```
+
+   ```php
+   "image" => [
+       /**
+        * Image storage location
+        *
+        * Available options:
+        * 1. public
+        * 2. storage
+        * 3. S3
+       */
+       "disk" => "storage",
+       // ... another configuration
+   ]
+   ```
+
+   Untuk informasi tambahan tentang perubahan ini, [buka di sini](#fitur-terbaru)
+
+8. Jika Kamu mendapation masalah berikut setelah membuat modul baru, silakan baca dokumentasi mengenai _Middleware_ Laravel 11 baru di _Controller_ [di sini](https://laravel.com/docs/11.x/controllers#controller-middleware)
+
+   ![Error middleware](/error-middleware.png)
+
+   Jika Kamu tidak memerlukan _Middleware_, cukup hapus komentar pada kode tersebut atau gunakan gaya _Middleware_ Laravel 10 di bawah ini.
+
+   ```php
+   // Koment kode dibawah ini
+   public static function middleware(): array
+   {
+       return [
+           'auth',
+
+           // TODO: uncomment this code if you are using spatie permission
+           // new Middleware('permission:permission_name view', only: ['index', 'show']),
+           // new Middleware('permission:permission_name create', only: ['create', 'store']),
+           // new Middleware('permission:permission_name edit', only: ['edit', 'update']),
+           // new Middleware('permission:permission_name delete', only: ['destroy']),
+       ];
+   }
+   ```
+
+   Dan ubah seperti gaya _Middleware_ Laravel 10
+
+   ```php
+   public function __construct()
+   {
+       $this->middleware('permission:permission_name view')->only('index', 'show');
+       $this->middleware('permission:permission_name create')->only('create', 'store');
+       $this->middleware('permission:permission_name edit')->only('edit', 'update');
+       $this->middleware('permission:permission_name delete')->only('destroy');
+   }
+   ```
+
+   Dari
+
+   ```php
+   use Illuminate\Routing\Controllers\{HasMiddleware, Middleware};
+
+   class YourController extends Controller implements HasMiddleware
+   {
+       //...
+   }
+   ```
+
+   Diubah menjadi
+
+   ```php
+   // use Illuminate\Routing\Controllers\{HasMiddleware, Middleware};
+
+   class YourController extends Controller
+   {
+       //...
+   }
+   ```
+
+   Jangan lupa hapus atau berikan komentar pada kode `use Illuminate\Routing\Controllers\{HasMiddleware, Middleware};`
 
 ## Fitur Terbaru :fire:
-Fitur-fitur baru yang ditambahkan pada _Generator v0.3.x_
 
-1. <small>(beta)</small> _Generator_ dapat membuat _Seeder_ dan _Factory_
+Fitur terbaru yang ditambahkan pada versi _Generator ^0.3.x_:
 
-2. <small>(beta)</small> _CRUD API Generator_ :fire:
+1. <small>(beta)</small> Generator dapat membuat kelas _Seeder_ dan _Factory_
 
-    Sekarang Kamu dapat membuat API dengan cepat dan mudah dengan menggunakan _CRUD API Generator_.
+2. <small>(beta)</small> _CRUD API Generator_ :rocket:
+
+   Sekarang Kamu dapat membuat API yang cepat dan mudah menggunakan _CRUD API Generator_
 
 3. _Single Form_
 
-    Melakukan operasi _CRU_<s>D</s>  dalam 1 halaman dan 1 form, fitur ini cocok bagi Kamu yang ingin membuat halaman seperti _Setting_, web profil, dan fitur lain yang hanya memiliki 1 data saja.
+   Buat CRU<s>D</s> dalam satu halaman dan _Form_. Fitur ini ideal untuk membuat halaman seperti pengaturan, profil web, dan fitur lainnya yang hanya memiliki 1 data saja.
 
-4. Menambahkan kelas utilitas terbaru [ImageService](features.md#imageservice) kelas.
+4. Menambahkan kelas terbaru [ImageService](features.md#imageservice)
 
-    Kelas ini digunakan untuk melakukan fungsi unggah dan manipulasi gambar menggunakan [Intervention Image](#)
+   Kelas ini digunakan untuk melakukan unggah gambar dan manipulasi gambar menggunakan [Intervention Image](https://image.intervention.io/v3)
 
-5. Memambahkan opsi baru pada konfigurasi `generator.image.disk` sebelumnya `generator.image.path`, sekarang Kamu bisa menggunakan opsi `public`, `storage` atau `s3`.
-berikut contohnya:
+5. Menambahkan opsi baru ke konfigurasi `generator.image.disk`, yang sebelumnya adalah `generator.image.path`, kini Kamu dapat menggunakan opsi `public, storage, atau s3`. Berikut ini contohnya
+
 ```php
 "image" => [
     /**
-     * Lokasi penyimpanan gambar
+     * Tempat penyimpanan gambar
      *
      * Opsi tersedia:
      * 1. public
      * 2. storage
      * 3. S3
      *
-     * ganti path menjadi disk
+     * Ubah 'path' to 'disk'
     */
     "disk" => "storage",
-    
-    // kode konfigurasi lainnya.
+
+    // konfigurasi lainnya
 ]
 ```
-Untuk menggunakan opsi `s3` kamu harus membaca dokumentasi terkait [disni](https://laravel.com/docs/11.x/filesystem#amazon-s3-compatible-filesystems).
 
-Dan jika Kamu menggunakan opsi `storage` untuk menyimpan gambar, pastikan Kamu menjalankan 
+Untuk menggunakan opsi `s3`, Kamu harus membaca dokumentasi terkait [di sini](https://laravel.com/docs/11.x/filesystem#amazon-s3-kompatibel-filesystems)
+
+Dan jika Kamu menggunakan opsi `storage`, pastikan Kamu menjalankan perintah berikut
+
 ```sh
 php artisan storage:link
 ```
 
-Jika kamu ingin melihat konfigurasi terbaru ada dibawah berikut:
+Jika ingin melihat konfigurasi terbarunya ada di bawah ini yaa:
+
 ```php
 return [
     /**
@@ -348,9 +490,6 @@ return [
 
 ```
 
-6. Web dokumentasi terbaru :book:
+6. Dokumentasi terbaru :book:
 
-    Karena Kami merasa kesulitan untuk membuat beberapa dokumentasi dalam beberapa versi (_versioning_) dan multi bahasa menggunakan [MkDocs](https://www.mkdocs.org/), oleh karena itu Kami memutuskan untuk membuat dokumentasi terbaru menggunakan [Vitepress](https://vitepress.dev/).
-
-
-
+   We found it challenging to generate documentation for many versions and languages using [MkDocs](https://www.mkdocs.org/), so we chose to build the new documentation using [Vitepress](https://vitepress.dev/).

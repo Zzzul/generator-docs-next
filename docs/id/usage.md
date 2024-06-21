@@ -4,7 +4,7 @@ outline: deep
 
 # Cara Pakai yang <s>Semoga</s> Benar
 
-### Buat _CRUD_ untuk pertama kali
+### Buat _CRUD_ untuk pertama kalinya
 
 Akses pada _browser_ Kamu `/generators/create` jika Kamu menggunkan [versi lengkap](features.md#versi-lengkap) `/simple-generators/create` untuk [versi sederhana](features.md#versi-sederhana)
 

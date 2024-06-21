@@ -6,14 +6,14 @@
    Because [Laravel 11.x](#) differs significantly from earlier versions, we decided to terminate support for [Laravel 10](https://laravel.com/docs/10.x). The lowest supported version is currently [Laravel 11](https://laravel.com/docs/11.x/upgrade)
 
 2. Updated numerous necessary libraries, including:
-    - [Intervention Image v3.x](#)
-    - [Yajra Datatable v11.x](#)
-    - [Spatie Permission v6.x](#)
+    - [Intervention Image v3.x](https://image.intervention.io/v3)
+    - [Yajra Datatable v11.x](https://yajrabox.com/docs/laravel-datatables/11.0)
+    - [Spatie Permission v6.x](https://spatie.be/docs/laravel-permission/v6/introduction)
 
     And for development process libraries:
-    - [Larastan v2.x](#)
-    - [PHPinsights v2.x](#)
-    - [Testbench v9.x](#)
+    - [Larastan v2.x](https://github.com/larastan/larastan)
+    - [PHPinsights v2.x](https://phpinsights.com/)
+    - [Testbench v9.x](https://packages.tools/testbench.html)
 
 3. Remove `App\Generators\GeneratorUtils` class and update the helper class, [here for more info](#how-to-update)
 
@@ -23,7 +23,7 @@ For the most recent and complete changelog, please visit [Github Releases](https
 
 ## How to Update
 
-1. If you are still using [Laravel version 10.x](https://laravel.com/docs/10.x), please consider to read [Laravel 11.x upgrade guide](https://laravel.com/docs/11.x/upgrade)
+1. If you are still using [Laravel 10.x](https://laravel.com/docs/10.x), please consider reading the [Laravel 11.x upgrade guide](https://laravel.com/docs/11.x/upgrade)
 
 
 2. Update `composer.json` file
@@ -35,20 +35,20 @@ For the most recent and complete changelog, please visit [Github Releases](https
     "nunomaduro/collision": "^8.1",
     "evdigiina/generator": "^0.3.0",
     ```
-    Optionally (if installed)
+    Optional (if installed).
 
     ```json
     "spatie/laravel-permission": "^6.0",
     "laravel/fortify": "^1.21"
     ```
 
-3. Publish the latest files
+3. Publish new files
 
     ```sh
     php artisan generator:publish-utils
     ```
 
-4. Add the following lines of code to `resources/views/layouts/sidebar.blade.php`
+4. Add the following code to `resources/views/layouts/sidebar.blade.php`
 
     ```blade
     <ul class="menu">
@@ -173,17 +173,17 @@ For the most recent and complete changelog, please visit [Github Releases](https
         @endauth
     </div>
     ```
-7. It's not a better way to modify the vendor folder, but lets forget it. create file `generator.cache` in `vendor/evdigiina/generator` then copy code below
+7. It's not the best technique to alter the vendor folder, but let's ignore it. Create a file `generator.cache` in `vendor/evdigiina/generator` then copy the code below
 
     ```json
     {"simple_version_publish_count":0,"full_version_publish_count":1}
     ```
 
 :::info
-Change `simple_version_publish_count` or `full_version_publish_count` to `1`, specify which version (simple or full version) are you using
+Change `simple_version_publish_count` or `full_version_publish_count` to `1` and specify the version you're using
 :::
 
-7. Change `config/generator.php` from `image.path` to `image.disk`
+7. Convert `config/generator.php` from `image.path` to `image.disk`
 
     ```php
     'image' => [
@@ -214,15 +214,15 @@ Change `simple_version_publish_count` or `full_version_publish_count` to `1`, sp
     ]
     ```
 
-    For more info about this changes, [here](#new-features)
+    For additional information on these changes, [go here](#new-features)
 
 
-8. When after generating a new module, if you are getting an error below, please read the documentation about new Laravel 11 middleware in controller [here](https://laravel.com/docs/11.x/controllers#controller-middleware)
+8. If you see the following problem after creating a new module, please read the documentation regarding the new Laravel 11 middleware in controller [here](https://laravel.com/docs/11.x/controllers#controller-middleware)
 
     ![Error middleware](/error-middleware.png)
 
-    If you are don't need a middleware just simply uncomment those code or using Laravel 10 like middleware below
-    
+    If you don't need a middleware, simply uncomment those codes or use the Laravel 10 like middleware below.
+
 
     ```php
     // comment code below
@@ -273,7 +273,7 @@ Change `simple_version_publish_count` or `full_version_publish_count` to `1`, sp
     }
     ```
 
-    And in header remove or comment `use Illuminate\Routing\Controllers\{HasMiddleware, Middleware};`
+    And in the header remove or comment.`use Illuminate\Routing\Controllers\{HasMiddleware, Middleware};`
 
 ## New Features :fire:
 New features added in _Generator v0.3.x_:
@@ -290,7 +290,7 @@ New features added in _Generator v0.3.x_:
 
 4. Added a new utility class called [ImageService](features.md#imageservice)
 
-    This class is used to upload and manipulate images via [Intervention Image](#)
+    This class is used to upload and manipulate images via [Intervention Image](https://image.intervention.io/v3)
 
 5. Added a new option to the configuration `generator.image.disk`, previously known as `generator.image.path`, you can now select `public, storage, or s3`. Here's an example.
 ```php
