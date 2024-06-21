@@ -10,7 +10,7 @@ Berikut adalah beberapa persyaratan minumum yang harus Kamu diperhatikan:
 ## Instalasi
 
 ```sh
-composer require evdigiina/generator --dev
+composer require evdigiina/generator:^0.3.0 --dev
 ```
 :::info
 Pustaka ini memiliki dua variasi, yaitu: [Versi Sederhana](#versi-sederhana) dan [Versi Lengkap](#versi-lengkap)

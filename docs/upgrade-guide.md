@@ -3,7 +3,7 @@
 ## Changes in the Latest Version
 1. Minimum [Laravel 11.x](https://laravel.com/docs/11.x/upgrade)
 
-   Because [Laravel 11.x](#) differs significantly from earlier versions, we decided to terminate support for [Laravel 10](https://laravel.com/docs/10.x). The lowest supported version is currently [Laravel 11](https://laravel.com/docs/11.x/upgrade).
+   Because [Laravel 11.x](#) differs significantly from earlier versions, we decided to terminate support for [Laravel 10](https://laravel.com/docs/10.x). The lowest supported version is currently [Laravel 11](https://laravel.com/docs/11.x/upgrade)
 
 2. Updated numerous necessary libraries, including:
     - [Intervention Image v3.x](#)
@@ -15,28 +15,32 @@
     - [PHPinsights v2.x](#)
     - [Testbench v9.x](#)
 
-3. Remove `App\Generators\GeneratorUtils` class and update the helper class, [here for more info](#how-to-update).
+3. Remove `App\Generators\GeneratorUtils` class and update the helper class, [here for more info](#how-to-update)
 
-4. Bug and error fixing.
+4. Fix bug and error.
 
 For the most recent and complete changelog, please visit [Github Releases](https://github.com/evdigiina/generator/releases)
 
 ## How to Update
 
-1. If you are still using [Laravel version 10.x](https://laravel.com/docs/10.x), please upgrade to [Laravel 11.x](https://laravel.com/docs/).
-2. Execute the following commands
+1. If you are still using [Laravel version 10.x](https://laravel.com/docs/10.x), please consider to read [Laravel 11.x upgrade guide](https://laravel.com/docs/11.x/upgrade)
 
-    ```sh
-    composer update evdigiina/generator:0.3.0 --dev
+
+2. Update `composer.json` file
+
+    ```json
+    "laravel/framework to": "^11.0",
+
+    // require-dev
+    "nunomaduro/collision": "^8.1",
+    "evdigiina/generator": "^0.3.0",
     ```
+    Optionally (if installed)
 
-
-:::warning
-if you are getting an error like this
-![Error update](/error-update.png)
-
-Remove or uncomment `Spatie\Permission\PermissionServiceProvider::class` from `config/app.php`
-:::
+    ```json
+    "spatie/laravel-permission": "^6.0",
+    "laravel/fortify": "^1.21"
+    ```
 
 3. Publish the latest files
 
@@ -58,6 +62,7 @@ Remove or uncomment `Spatie\Permission\PermissionServiceProvider::class` from `c
             </li>
         @endauth
 
+        {{-- Your sidebar code --}}
         @foreach (config('generator.sidebars') as $sidebar)
             {{-- ... --}}
         @endforeach
@@ -114,180 +119,178 @@ Remove or uncomment `Spatie\Permission\PermissionServiceProvider::class` from `c
 
     ```    
 
-5. Remove or uncomment `HasRoles` and `use HasApiTokens` trait in `app\Models\User.php`
-
-```php
-namespace App\Models;
-
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-// use Laravel\Sanctum\HasApiTokens;
-use Laravel\Fortify\TwoFactorAuthenticatable;
-// use Spatie\Permission\Traits\HasRoles;
-
-class User extends Authenticatable
-{
-    use HasFactory, Notifiable, TwoFactorAuthenticatable;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var string[]
-     */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'avatar'
-    ];
-
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
-
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime:d/m/Y H:i',
-        'created_at' => 'datetime:d/m/Y H:i',
-        'updated_at' => 'datetime:d/m/Y H:i',
-    ];
-}
-
-```
-
 6. Update code in `resources/views/layouts/header.blade.php`
 
-```blade
-@auth
-                                <div class="dropdown">
-                                    <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <div class="user-menu d-flex">
-                                            <div class="user-name text-end me-3">
-                                                <h6 class="mb-0 text-gray-600">{{ auth()?->user()?->name }}</h6>
-                                                <p class="mb-0 text-sm text-gray-600">
-                                                    {{ isset(auth()?->user()?->roles) ? implode(auth()?->user()?->roles?->map(fn ($role) => $role->name)->toArray()) : '-' }}
-                                                </p>
-                                            </div>
-                                            <div class="user-img d-flex align-items-center">
-                                                <div class="avatar avatar-md">
-                                                    @if (auth()?->user()?->avatar == null)
-                                                        <img src="https://www.gravatar.com/avatar/{{ md5(strtolower(trim(auth()?->user()?->email))) }}&s=500"
-                                                            alt="Avatar">
-                                                    @else
-                                                        <img src="{{ asset('storage/uploads/avatars/' . auth()?->user()?->avatar) }}"
-                                                            alt="Avatar">
-                                                    @endif
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton"
-                                        style="min-width: 11rem;">
-                                        <li>
-                                            <h6 class="dropdown-header">{{ __('Hello') }}, {{ auth()?->user()?->name }}!
-                                            </h6>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="{{ route('profile') }}"><i
-                                                    class="icon-mid bi bi-person-fill me-2"></i>{{ __('My Profile') }}</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="{{ route('logout') }}"
-                                                onclick="event.preventDefault();document.getElementById('logout-form-nav').submit();">
-                                                <i class="bi bi-door-open-fill"></i>
-                                                {{ __('Logout') }}
-                                            </a>
 
-                                            <form id="logout-form-nav" action="{{ route('logout') }}" method="POST"
-                                                class="d-none">
-                                                @csrf
-                                            </form>
-                                        </li>
-                                    </ul>
-                                </div>
-                            @endauth
-```
+    ```blade
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-lg-0">
+            {{-- Your code --}}
+        </ul>
 
+        {{-- New code --}}
+        @auth
+            <div class="dropdown">
+                <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="user-menu d-flex">
+                        <div class="user-name text-end me-3">
+                            <h6 class="mb-0 text-gray-600">{{ auth()?->user()?->name }}</h6>
+                            <p class="mb-0 text-sm text-gray-600">
+                                {{ isset(auth()?->user()?->roles) ? implode(auth()?->user()?->roles?->map(fn ($role) => $role->name)->toArray()) : '-' }}
+                            </p>
+                        </div>
+                        <div class="user-img d-flex align-items-center">
+                            <div class="avatar avatar-md">
+                                @if (auth()?->user()?->avatar == null)
+                                    <img src="https://www.gravatar.com/avatar/{{ md5(strtolower(trim(auth()?->user()?->email))) }}&s=500" alt="Avatar">
+                                @else
+                                    <img src="{{ asset('storage/uploads/avatars/' . auth()?->user()?->avatar) }}" alt="Avatar">
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="min-width: 11rem;">
+                    <li>
+                        <h6 class="dropdown-header">{{ __('Hello') }}, {{ auth()?->user()?->name }}!</h6>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{{ route('profile') }}"><i class="icon-mid bi bi-person-fill me-2"></i>{{ __('My Profile') }}</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form-nav').submit();">
+                            <i class="bi bi-door-open-fill"></i>
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form-nav" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        @endauth
+    </div>
+    ```
 7. It's not a better way to modify the vendor folder, but lets forget it. create file `generator.cache` in `vendor/evdigiina/generator` then copy code below
 
-```json
-{"simple_version_publish_count":0,"full_version_publish_count":1}
-```
+    ```json
+    {"simple_version_publish_count":0,"full_version_publish_count":1}
+    ```
+
 :::info
 Change `simple_version_publish_count` or `full_version_publish_count` to `1`, specify which version (simple or full version) are you using
 :::
 
-8. If you are getting an error below, please read the documentation about new Laravel 11 middleware in controller [here](https://laravel.com/docs/11.x/controllers#controller-middleware)
+7. Change `config/generator.php` from `image.path` to `image.disk`
 
-![Error middleware](/error-middleware.png)
+    ```php
+    'image' => [
+        /**
+         * Path for store the image.
+         *
+         * available options:
+         * 1. public
+         * 2. storage
+        */
+        'path' => 'storage',
+        // ... another configuration
+    ]
+    ```
 
-If you are not used a middleware just simply uncomment those code or using Laravel 10 like middleware below.
+    ```php
+    "image" => [
+        /**
+         * Image storage location
+         *
+         * Available options:
+         * 1. public
+         * 2. storage
+         * 3. S3
+        */
+        "disk" => "storage",
+        // ... another configuration
+    ]
+    ```
 
-```php
-// comment code below
-public static function middleware(): array
-{
-    return [
-        'auth',
+    For more info about this changes, [here](#new-features)
 
-        // TODO: uncomment this code if you are using spatie permission
-        new Middleware('permission:permission_name view', only: ['index', 'show']),
-        new Middleware('permission:permission_name create', only: ['create', 'store']),
-        new Middleware('permission:permission_name edit', only: ['edit', 'update']),
-        new Middleware('permission:permission_name delete', only: ['destroy']),
-    ];
-}
-```
-And change to Laravel 10 like middleware
-```php
-public function __construct()
-{
-    $this->middleware('permission:permission_name view')->only('index', 'show');
-    $this->middleware('permission:permission_name create')->only('create', 'store');
-    $this->middleware('permission:permission_name edit')->only('edit', 'update');
-    $this->middleware('permission:permission_name delete')->only('destroy');
-}
-```
 
-Change 
-```php 
-class YourController extends Controller implements HasMiddleware
-```
-to 
-```php
-class YourController extends Controller
-```
+8. When after generating a new module, if you are getting an error below, please read the documentation about new Laravel 11 middleware in controller [here](https://laravel.com/docs/11.x/controllers#controller-middleware)
 
-And in header remove `use Illuminate\Routing\Controllers\{HasMiddleware, Middleware};`
+    ![Error middleware](/error-middleware.png)
+
+    If you are don't need a middleware just simply uncomment those code or using Laravel 10 like middleware below
+    
+
+    ```php
+    // comment code below
+    public static function middleware(): array
+    {
+        return [
+            'auth',
+
+            // TODO: uncomment this code if you are using spatie permission
+            new Middleware('permission:permission_name view', only: ['index', 'show']),
+            new Middleware('permission:permission_name create', only: ['create', 'store']),
+            new Middleware('permission:permission_name edit', only: ['edit', 'update']),
+            new Middleware('permission:permission_name delete', only: ['destroy']),
+        ];
+    }
+    ```
+
+    And change to Laravel 10 like middleware
+
+    ```php
+    public function __construct()
+    {
+        $this->middleware('permission:permission_name view')->only('index', 'show');
+        $this->middleware('permission:permission_name create')->only('create', 'store');
+        $this->middleware('permission:permission_name edit')->only('edit', 'update');
+        $this->middleware('permission:permission_name delete')->only('destroy');
+    }
+    ```
+
+    From 
+
+    ```php 
+    use Illuminate\Routing\Controllers\{HasMiddleware, Middleware};
+
+    class YourController extends Controller implements HasMiddleware
+    {
+        //...
+    }
+    ```
+    To
+
+    ```php
+    // use Illuminate\Routing\Controllers\{HasMiddleware, Middleware};
+
+    class YourController extends Controller 
+    {
+        //...
+    }
+    ```
+
+    And in header remove or comment `use Illuminate\Routing\Controllers\{HasMiddleware, Middleware};`
 
 ## New Features :fire:
 New features added in _Generator v0.3.x_:
 
-1. <small>(beta)</small> Generator may generate Seeder and Factory.
+1. <small>(beta)</small> Generator may generate Seeder and Factory
 
 2. <small>(beta)</small> _CRUD API Generator_ :rocket:
 
-    Now you can create APIs quickly and easily using the _CRUD API Generator_.
+    Now you can create APIs quickly and easily using the _CRUD API Generator_
 
 3. _Single Form_
 
     Perform CRU <s>D</s> tasks using a single page and form. This functionality is ideal for generating pages such as settings, web profiles, and other features with only one data item.
 
-4. Added a new utility class called [ImageService](features.md#imageservice).
+4. Added a new utility class called [ImageService](features.md#imageservice)
 
-    This class is used to upload and manipulate images via [Intervention Image](#).
+    This class is used to upload and manipulate images via [Intervention Image](#)
 
 5. Added a new option to the configuration `generator.image.disk`, previously known as `generator.image.path`, you can now select `public, storage, or s3`. Here's an example.
 ```php
@@ -308,7 +311,7 @@ New features added in _Generator v0.3.x_:
 ]
 ```
 
-To use the `s3` option, you should read the related documentation[here](https://laravel.com/docs/11.x/filesystem#amazon-s3-compatible-filesystems).
+To use the `s3` option, you should read the related documentation[here](https://laravel.com/docs/11.x/filesystem#amazon-s3-compatible-filesystems)
 
 And if you use the `storage` option for image, make sure you run
 ```sh
@@ -476,6 +479,6 @@ return [
 
 6. New documentation :book:
 
-    Since we found it difficult to create documentation for multiple versions and languages using [MkDocs](https://www.mkdocs.org/), we decided to create the new documentation using [Vitepress](https://vitepress.dev/).
+    Since we found it difficult to create documentation for multiple versions and languages using [MkDocs](https://www.mkdocs.org/), we decided to create the new documentation using [Vitepress](https://vitepress.dev/)
 
 

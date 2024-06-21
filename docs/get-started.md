@@ -10,7 +10,7 @@ Here are some minimum requirements you need to consider:
 ## Installation
 
 ```sh
-composer require evdigiina/generator --dev
+composer require evdigiina/generator:^0.3.0 --dev
 ```
 
 :::info
