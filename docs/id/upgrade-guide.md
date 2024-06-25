@@ -61,73 +61,73 @@ Untuk daftar perubahan terbaru dan lebih lengkap, silakan kunjungi [GitHub Rilis
 4. Tambahkan kode berikut pada `resources/views/layouts/sidebar.blade.php`
 
    ```blade
-   <ul class="menu">
-       {{-- New code --}}
-       @auth
-           <li class="sidebar-item{{ request()->is('/') || request()->is('dashboard') ? ' active' : '' }}">
-               <a class="sidebar-link" href="/">
-                   <i class="bi bi-speedometer"></i>
-                   <span> {{ __('Dashboard') }}</span>
-               </a>
-           </li>
-       @endauth
+    <ul class="menu">
+        {{-- New code --}}
+        @auth // [!code focus]
+            <li class="sidebar-item{{ request()->is('/') || request()->is('dashboard') ? ' active' : '' }}"> // [!code focus]
+                <a class="sidebar-link" href="/"> // [!code focus]
+                    <i class="bi bi-speedometer"></i> // [!code focus]
+                    <span> {{ __('Dashboard') }}</span> // [!code focus]
+                </a> // [!code focus]
+            </li> // [!code focus]
+        @endauth // [!code focus]
 
-       {{-- Your sidebar code --}}
-       @foreach (config('generator.sidebars') as $sidebar)
-           {{-- ... --}}
-       @endforeach
+        {{-- Your sidebar code --}}
+        @foreach (config('generator.sidebars') as $sidebar)
+            {{-- ... --}}
+        @endforeach
 
-       {{-- New code --}}
-       @if (env('APP_ENV') === 'local')
-           <li class="sidebar-title">{{ __('Generators') }}</li>
+        {{-- New code --}}
+        @if (env('APP_ENV') === 'local') // [!code focus]
+            <li class="sidebar-title">{{ __('Generators') }}</li> // [!code focus]
 
-           <li class="sidebar-item{{ request()->is('generators/create') ? ' active' : '' }}">
-               <a class="sidebar-link" href="{{ route('generators.create') }}">
-                   <i class="bi bi-fire"></i>
-                   <span>{{ __('CRUD Generator') }}</span>
-               </a>
-           </li>
+            <li class="sidebar-item{{ request()->is('generators/create') ? ' active' : '' }}"> // [!code focus]
+                <a class="sidebar-link" href="{{ route('generators.create') }}"> // [!code focus]
+                    <i class="bi bi-fire"></i> // [!code focus]
+                    <span>{{ __('CRUD Generator') }}</span> // [!code focus]
+                </a> // [!code focus]
+            </li> // [!code focus]
 
-           <li class="sidebar-item{{ request()->is('api-generators/create') ? ' active' : '' }}">
-               <a class="sidebar-link" href="/api-generators/create">
-                   <i class="bi bi-rocket"></i>
-                   <span>{{ __('API CRUD Generator') }}</span>
-               </a>
-           </li>
+            <li class="sidebar-item{{ request()->is('api-generators/create') ? ' active' : '' }}"> // [!code focus]
+                <a class="sidebar-link" href="/api-generators/create"> // [!code focus]
+                    <i class="bi bi-rocket"></i> // [!code focus]
+                    <span>{{ __('API CRUD Generator') }}</span> // [!code focus]
+                </a> // [!code focus]
+            </li> // [!code focus]
 
-           <li class="sidebar-item{{ request()->is('simple-generators/create') ? ' active' : '' }}">
-               <a class="sidebar-link" href="/simple-generators/create">
-                   <i class="bi bi-droplet"></i>
-                   <span>{{ __('Simple CRUD Generator') }}</span>
-                   </a>
-               </li>
-           @endif
+            <li class="sidebar-item{{ request()->is('simple-generators/create') ? ' active' : '' }}"> // [!code focus]
+                <a class="sidebar-link" href="/simple-generators/create"> // [!code focus]
+                    <i class="bi bi-droplet"></i> // [!code focus]
+                    <span>{{ __('Simple CRUD Generator') }}</span> // [!code focus]
+                    </a> // [!code focus]
+                </li> // [!code focus]
+            @endif // [!code focus]
 
-       {{-- New code --}}
-       @auth
-           <li class="sidebar-title">Account</li>
+        {{-- New code --}}
+        @auth // [!code focus]
+            <li class="sidebar-title">Account</li>// [!code focus]
 
-           <li class="sidebar-item{{ request()->is('profile') ? ' active' : '' }}">
-               <a class="sidebar-link" href="{{ route('profile') }}">
-                   <i class="bi bi-person-badge-fill"></i>
-                   <span>{{ __('Profile') }}</span>
-               </a>
-           </li>
+            <li class="sidebar-item{{ request()->is('profile') ? ' active' : '' }}"> // [!code focus]
+                <a class="sidebar-link" href="{{ route('profile') }}"> // [!code focus]
+                    <i class="bi bi-person-badge-fill"></i> // [!code focus]
+                    <span>{{ __('Profile') }}</span> // [!code focus]
+                </a> // [!code focus]
+            </li> // [!code focus]
 
-           <li class="sidebar-item">
-               <a class="sidebar-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                   <i class="bi bi-door-open-fill"></i>
-                   <span>{{ __('Logout') }}</span>
-               </a>
+            <li class="sidebar-item"> // [!code focus]
+                <a class="sidebar-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> // [!code focus]
+                    <i class="bi bi-door-open-fill"></i> // [!code focus]
+                    <span>{{ __('Logout') }}</span> // [!code focus]
+                </a> // [!code focus]
 
-               <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                   @csrf
-               </form>
-           </li>
-       @endauth
-   </ul>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none"> // [!code focus]
+                    @csrf // [!code focus]
+                </form> // [!code focus]
+            </li> // [!code focus]
+        @endauth // [!code focus]
+    </ul>
 
-   ```
+    ```    
 
 5. Ubah kode pada `resources/views/layouts/header.blade.php` menjadi seperti dibawah ini
 
@@ -195,34 +195,34 @@ Ubah `simple_version_publish_count` atau `full_version_publish_count` menjadi `1
 
 7. Ubah `config/generator.php` dari `image.path` menjadi `image.disk`
 
-   ```php
-   'image' => [
-       /**
-        * Path for store the image.
-        *
-        * available options:
-        * 1. public
-        * 2. storage
-       */
-       'path' => 'storage',
-       // ... another configuration
-   ]
-   ```
+  ```php
+    'image' => [
+        /**
+         * Path for store the image.
+         *
+         * available options:
+         * 1. public
+         * 2. storage
+        */
+        'path' => 'storage', // [!code focus]
+        // ... another configuration
+    ]
+    ```
 
-   ```php
-   "image" => [
-       /**
-        * Image storage location
-        *
-        * Available options:
-        * 1. public
-        * 2. storage
-        * 3. S3
-       */
-       "disk" => "storage",
-       // ... another configuration
-   ]
-   ```
+    ```php
+    "image" => [
+        /**
+         * Image storage location
+         *
+         * Available options:
+         * 1. public
+         * 2. storage
+         * 3. S3
+        */
+        "disk" => "storage", // [!code focus]
+        // ... another configuration
+    ]
+    ```
 
    Untuk informasi tambahan tentang perubahan ini, [buka di sini](#fitur-terbaru)
 
@@ -233,54 +233,53 @@ Ubah `simple_version_publish_count` atau `full_version_publish_count` menjadi `1
    Jika Kamu tidak memerlukan _Middleware_, cukup hapus komentar pada kode tersebut atau gunakan gaya _Middleware_ Laravel 10 di bawah ini.
 
    ```php
-   // Koment kode dibawah ini
-   public static function middleware(): array
-   {
-       return [
-           'auth',
+    // comment code below
+    public static function middleware(): array
+    {
+        return [
+            // 'auth',
 
-           // TODO: uncomment this code if you are using spatie permission
-           // new Middleware('permission:permission_name view', only: ['index', 'show']),
-           // new Middleware('permission:permission_name create', only: ['create', 'store']),
-           // new Middleware('permission:permission_name edit', only: ['edit', 'update']),
-           // new Middleware('permission:permission_name delete', only: ['destroy']),
-       ];
-   }
-   ```
+            // TODO: uncomment this code if you are using spatie permission
+            // new Middleware('permission:permission_name view', only: ['index', 'show']),
+            // new Middleware('permission:permission_name create', only: ['create', 'store']),
+            // new Middleware('permission:permission_name edit', only: ['edit', 'update']),
+            // new Middleware('permission:permission_name delete', only: ['destroy']),
+        ];
+    }
+    ```
 
-   Dan ubah seperti gaya _Middleware_ Laravel 10
+    And change to Laravel 10 like middleware
 
-   ```php
-   public function __construct()
-   {
-       $this->middleware('permission:permission_name view')->only('index', 'show');
-       $this->middleware('permission:permission_name create')->only('create', 'store');
-       $this->middleware('permission:permission_name edit')->only('edit', 'update');
-       $this->middleware('permission:permission_name delete')->only('destroy');
-   }
-   ```
+    ```php 
+    public function __construct()
+    {
+        $this->middleware('permission:permission_name view')->only('index', 'show');
+        $this->middleware('permission:permission_name create')->only('create', 'store');
+        $this->middleware('permission:permission_name edit')->only('edit', 'update');
+        $this->middleware('permission:permission_name delete')->only('destroy');
+    }
+    ```
 
-   Dari
+    From 
 
-   ```php
-   use Illuminate\Routing\Controllers\{HasMiddleware, Middleware};
+    ```php 
+    use Illuminate\Routing\Controllers\{HasMiddleware, Middleware}; // [!code focus]
 
-   class YourController extends Controller implements HasMiddleware
-   {
-       //...
-   }
-   ```
+    class YourController extends Controller implements HasMiddleware // [!code focus]
+    {
+        //...
+    }
+    ```
+    To
 
-   Diubah menjadi
+    ```php
+    // use Illuminate\Routing\Controllers\{HasMiddleware, Middleware}; // [!code focus]
 
-   ```php
-   // use Illuminate\Routing\Controllers\{HasMiddleware, Middleware};
-
-   class YourController extends Controller
-   {
-       //...
-   }
-   ```
+    class YourController extends Controller  // [!code focus]
+    { 
+        //...
+    } 
+    ```
 
    Jangan lupa hapus atau berikan komentar pada kode `use Illuminate\Routing\Controllers\{HasMiddleware, Middleware};`
 
@@ -307,18 +306,18 @@ Fitur terbaru yang ditambahkan pada versi _Generator ^0.3.x_:
 ```php
 "image" => [
     /**
-     * Tempat penyimpanan gambar
+     * Image storage location
      *
-     * Opsi tersedia:
+     * Available options:
      * 1. public
      * 2. storage
      * 3. S3
      *
-     * Ubah 'path' to 'disk'
+     * change path to disk
     */
-    "disk" => "storage",
-
-    // konfigurasi lainnya
+    "disk" => "storage", // [!code focus]
+    
+    // other configuration codes.
 ]
 ```
 

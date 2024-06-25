@@ -88,7 +88,7 @@ You can contribute to this project by following these steps:
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "EvdigiIna\\Generator\\": "packages/evdigi-ina/generator/src/"
+            "EvdigiIna\\Generator\\": "packages/evdigi-ina/generator/src/"  // [!code focus]
         }
     },
     ```
@@ -103,7 +103,7 @@ You can contribute to this project by following these steps:
 
     ```php
     ->withProviders([
-        \EvdigiIna\Generator\Providers\GeneratorServiceProvider::class,
+        \EvdigiIna\Generator\Providers\GeneratorServiceProvider::class,  // [!code focus]
         //...
     ])
     ```
@@ -122,11 +122,11 @@ You can contribute to this project by following these steps:
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "EvdigiIna\\Generator\\": "packages/evdigi-ina/generator/src/"
-        },
-        "files": [
-            "App/Generators/helper.php"
-        ]
+            "EvdigiIna\\Generator\\": "packages/evdigi-ina/generator/src/"  // [!code focus]
+        }, // [!code focus]
+        "files": [ // [!code focus]
+            "App/Generators/helper.php" // [!code focus]
+        ] // [!code focus]
     },
     ```
 
@@ -134,7 +134,7 @@ You can contribute to this project by following these steps:
 
     ```php
     ->withProviders([
-        \EvdigiIna\Generator\Providers\GeneratorServiceProvider::class,
+        \EvdigiIna\Generator\Providers\GeneratorServiceProvider::class, // [!code focus]
         //..
     ])
     ```

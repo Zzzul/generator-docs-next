@@ -10,7 +10,7 @@ Akses pada _browser_ Kamu `/generators/create` jika Kamu menggunkan [versi lengk
 
 Di bawah ini adalah tabel tentang jenis input & validasi yang didukung saat Kamu menggunakan beberapa jenis kolom.
 
-|Jenis Kolom|Jenis Input|Validasi|Panjang (min & maks)|
+|Jenis Kolom|Jenis Input|Validasi|Besaran (min & maks)|
 |-----------|----------|----------|------------------|
 |`string`|`text, textarea, email, telephone, password, url, search, file, hidden`| `required, string`| ✅ |
 |`boolean`|`radio, select, datalist`|`required, boolean`| ❌ |

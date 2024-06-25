@@ -53,14 +53,14 @@ For the most recent and complete changelog, please visit [Github Releases](https
     ```blade
     <ul class="menu">
         {{-- New code --}}
-        @auth
-            <li class="sidebar-item{{ request()->is('/') || request()->is('dashboard') ? ' active' : '' }}">
-                <a class="sidebar-link" href="/">
-                    <i class="bi bi-speedometer"></i>
-                    <span> {{ __('Dashboard') }}</span>
-                </a>
-            </li>
-        @endauth
+        @auth // [!code focus]
+            <li class="sidebar-item{{ request()->is('/') || request()->is('dashboard') ? ' active' : '' }}"> // [!code focus]
+                <a class="sidebar-link" href="/"> // [!code focus]
+                    <i class="bi bi-speedometer"></i> // [!code focus]
+                    <span> {{ __('Dashboard') }}</span> // [!code focus]
+                </a> // [!code focus]
+            </li> // [!code focus]
+        @endauth // [!code focus]
 
         {{-- Your sidebar code --}}
         @foreach (config('generator.sidebars') as $sidebar)
@@ -68,58 +68,58 @@ For the most recent and complete changelog, please visit [Github Releases](https
         @endforeach
 
         {{-- New code --}}
-        @if (env('APP_ENV') === 'local')
-            <li class="sidebar-title">{{ __('Generators') }}</li>
+        @if (env('APP_ENV') === 'local') // [!code focus]
+            <li class="sidebar-title">{{ __('Generators') }}</li> // [!code focus]
 
-            <li class="sidebar-item{{ request()->is('generators/create') ? ' active' : '' }}">
-                <a class="sidebar-link" href="{{ route('generators.create') }}">
-                    <i class="bi bi-fire"></i>
-                    <span>{{ __('CRUD Generator') }}</span>
-                </a>
-            </li>
+            <li class="sidebar-item{{ request()->is('generators/create') ? ' active' : '' }}"> // [!code focus]
+                <a class="sidebar-link" href="{{ route('generators.create') }}"> // [!code focus]
+                    <i class="bi bi-fire"></i> // [!code focus]
+                    <span>{{ __('CRUD Generator') }}</span> // [!code focus]
+                </a> // [!code focus]
+            </li> // [!code focus]
 
-            <li class="sidebar-item{{ request()->is('api-generators/create') ? ' active' : '' }}">
-                <a class="sidebar-link" href="/api-generators/create">
-                    <i class="bi bi-rocket"></i>
-                    <span>{{ __('API CRUD Generator') }}</span>
-                </a>
-            </li>
+            <li class="sidebar-item{{ request()->is('api-generators/create') ? ' active' : '' }}"> // [!code focus]
+                <a class="sidebar-link" href="/api-generators/create"> // [!code focus]
+                    <i class="bi bi-rocket"></i> // [!code focus]
+                    <span>{{ __('API CRUD Generator') }}</span> // [!code focus]
+                </a> // [!code focus]
+            </li> // [!code focus]
 
-            <li class="sidebar-item{{ request()->is('simple-generators/create') ? ' active' : '' }}">
-                <a class="sidebar-link" href="/simple-generators/create">
-                    <i class="bi bi-droplet"></i>
-                    <span>{{ __('Simple CRUD Generator') }}</span>
-                    </a>
-                </li>
-            @endif
+            <li class="sidebar-item{{ request()->is('simple-generators/create') ? ' active' : '' }}"> // [!code focus]
+                <a class="sidebar-link" href="/simple-generators/create"> // [!code focus]
+                    <i class="bi bi-droplet"></i> // [!code focus]
+                    <span>{{ __('Simple CRUD Generator') }}</span> // [!code focus]
+                    </a> // [!code focus]
+                </li> // [!code focus]
+            @endif // [!code focus]
 
         {{-- New code --}}
-        @auth
-            <li class="sidebar-title">Account</li>
+        @auth // [!code focus]
+            <li class="sidebar-title">Account</li>// [!code focus]
 
-            <li class="sidebar-item{{ request()->is('profile') ? ' active' : '' }}">
-                <a class="sidebar-link" href="{{ route('profile') }}">
-                    <i class="bi bi-person-badge-fill"></i>
-                    <span>{{ __('Profile') }}</span>
-                </a>
-            </li>
+            <li class="sidebar-item{{ request()->is('profile') ? ' active' : '' }}"> // [!code focus]
+                <a class="sidebar-link" href="{{ route('profile') }}"> // [!code focus]
+                    <i class="bi bi-person-badge-fill"></i> // [!code focus]
+                    <span>{{ __('Profile') }}</span> // [!code focus]
+                </a> // [!code focus]
+            </li> // [!code focus]
 
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    <i class="bi bi-door-open-fill"></i>
-                    <span>{{ __('Logout') }}</span>
-                </a>
+            <li class="sidebar-item"> // [!code focus]
+                <a class="sidebar-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> // [!code focus]
+                    <i class="bi bi-door-open-fill"></i> // [!code focus]
+                    <span>{{ __('Logout') }}</span> // [!code focus]
+                </a> // [!code focus]
 
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                    @csrf
-                </form>
-            </li>
-        @endauth
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none"> // [!code focus]
+                    @csrf // [!code focus]
+                </form> // [!code focus]
+            </li> // [!code focus]
+        @endauth // [!code focus]
     </ul>
 
     ```    
 
-6. Update code in `resources/views/layouts/header.blade.php`
+5. Update code in `resources/views/layouts/header.blade.php`
 
 
     ```blade
@@ -129,51 +129,51 @@ For the most recent and complete changelog, please visit [Github Releases](https
         </ul>
 
         {{-- New code --}}
-        @auth
-            <div class="dropdown">
-                <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                    <div class="user-menu d-flex">
-                        <div class="user-name text-end me-3">
-                            <h6 class="mb-0 text-gray-600">{{ auth()?->user()?->name }}</h6>
-                            <p class="mb-0 text-sm text-gray-600">
-                                {{ isset(auth()?->user()?->roles) ? implode(auth()?->user()?->roles?->map(fn ($role) => $role->name)->toArray()) : '-' }}
-                            </p>
-                        </div>
-                        <div class="user-img d-flex align-items-center">
-                            <div class="avatar avatar-md">
-                                @if (auth()?->user()?->avatar == null)
-                                    <img src="https://www.gravatar.com/avatar/{{ md5(strtolower(trim(auth()?->user()?->email))) }}&s=500" alt="Avatar">
-                                @else
-                                    <img src="{{ asset('storage/uploads/avatars/' . auth()?->user()?->avatar) }}" alt="Avatar">
-                                @endif
-                            </div>
-                        </div>
-                    </div>
-                </a>
+        @auth // [!code focus]
+            <div class="dropdown"> // [!code focus]
+                <a href="#" data-bs-toggle="dropdown" aria-expanded="false"> // [!code focus]
+                    <div class="user-menu d-flex"> // [!code focus]
+                        <div class="user-name text-end me-3"> // [!code focus]
+                            <h6 class="mb-0 text-gray-600">{{ auth()?->user()?->name }}</h6> // [!code focus]
+                            <p class="mb-0 text-sm text-gray-600"> // [!code focus]
+                                {{ isset(auth()?->user()?->roles) ? implode(auth()?->user()?->roles?->map(fn ($role) => $role->name)->toArray()) : '-' }} // [!code focus]
+                            </p> // [!code focus]
+                        </div> // [!code focus]
+                        <div class="user-img d-flex align-items-center"> // [!code focus]
+                            <div class="avatar avatar-md"> // [!code focus]
+                                @if (auth()?->user()?->avatar == null) // [!code focus]
+                                    <img src="https://www.gravatar.com/avatar/{{ md5(strtolower(trim(auth()?->user()?->email))) }}&s=500" alt="Avatar"> // [!code focus]
+                                @else // [!code focus]
+                                    <img src="{{ asset('storage/uploads/avatars/' . auth()?->user()?->avatar) }}" alt="Avatar"> // [!code focus]
+                                @endif // [!code focus]
+                            </div> // [!code focus]
+                        </div> // [!code focus]
+                    </div> // [!code focus]
+                </a> // [!code focus]
                 
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="min-width: 11rem;">
-                    <li>
-                        <h6 class="dropdown-header">{{ __('Hello') }}, {{ auth()?->user()?->name }}!</h6>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="{{ route('profile') }}"><i class="icon-mid bi bi-person-fill me-2"></i>{{ __('My Profile') }}</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form-nav').submit();">
-                            <i class="bi bi-door-open-fill"></i>
-                            {{ __('Logout') }}
-                        </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="min-width: 11rem;"> // [!code focus]
+                    <li> // [!code focus]
+                        <h6 class="dropdown-header">{{ __('Hello') }}, {{ auth()?->user()?->name }}!</h6> // [!code focus]
+                    </li> // [!code focus]
+                    <li> // [!code focus]
+                        <a class="dropdown-item" href="{{ route('profile') }}"><i class="icon-mid bi bi-person-fill me-2"></i>{{ __('My Profile') }}</a> // [!code focus]
+                    </li> // [!code focus]
+                    <li> // [!code focus]
+                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form-nav').submit();"> // [!code focus]
+                            <i class="bi bi-door-open-fill"></i> // [!code focus]
+                            {{ __('Logout') }} // [!code focus]
+                        </a> // [!code focus]
 
-                        <form id="logout-form-nav" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </li>
-                </ul>
-            </div>
-        @endauth
+                        <form id="logout-form-nav" action="{{ route('logout') }}" method="POST" class="d-none"> // [!code focus]
+                            @csrf // [!code focus]
+                        </form>  // [!code focus]
+                    </li>  // [!code focus]
+                </ul>  // [!code focus]
+            </div>  // [!code focus]
+        @endauth   // [!code focus]
     </div>
     ```
-7. It's not the best technique to alter the vendor folder, but let's ignore it. Create a file `generator.cache` in `vendor/evdigiina/generator` then copy the code below
+6. It's not the best technique to alter the vendor folder, but let's ignore it. Create a file `generator.cache` in `vendor/evdigiina/generator` then copy the code below
 
     ```json
     {"simple_version_publish_count":0,"full_version_publish_count":1}
@@ -194,7 +194,7 @@ Change `simple_version_publish_count` or `full_version_publish_count` to `1` and
          * 1. public
          * 2. storage
         */
-        'path' => 'storage',
+        'path' => 'storage', // [!code focus]
         // ... another configuration
     ]
     ```
@@ -209,7 +209,7 @@ Change `simple_version_publish_count` or `full_version_publish_count` to `1` and
          * 2. storage
          * 3. S3
         */
-        "disk" => "storage",
+        "disk" => "storage", // [!code focus]
         // ... another configuration
     ]
     ```
@@ -229,20 +229,20 @@ Change `simple_version_publish_count` or `full_version_publish_count` to `1` and
     public static function middleware(): array
     {
         return [
-            'auth',
+            // 'auth',
 
             // TODO: uncomment this code if you are using spatie permission
-            new Middleware('permission:permission_name view', only: ['index', 'show']),
-            new Middleware('permission:permission_name create', only: ['create', 'store']),
-            new Middleware('permission:permission_name edit', only: ['edit', 'update']),
-            new Middleware('permission:permission_name delete', only: ['destroy']),
+            // new Middleware('permission:permission_name view', only: ['index', 'show']),
+            // new Middleware('permission:permission_name create', only: ['create', 'store']),
+            // new Middleware('permission:permission_name edit', only: ['edit', 'update']),
+            // new Middleware('permission:permission_name delete', only: ['destroy']),
         ];
     }
     ```
 
     And change to Laravel 10 like middleware
 
-    ```php
+    ```php 
     public function __construct()
     {
         $this->middleware('permission:permission_name view')->only('index', 'show');
@@ -255,9 +255,9 @@ Change `simple_version_publish_count` or `full_version_publish_count` to `1` and
     From 
 
     ```php 
-    use Illuminate\Routing\Controllers\{HasMiddleware, Middleware};
+    use Illuminate\Routing\Controllers\{HasMiddleware, Middleware}; // [!code focus]
 
-    class YourController extends Controller implements HasMiddleware
+    class YourController extends Controller implements HasMiddleware // [!code focus]
     {
         //...
     }
@@ -265,12 +265,12 @@ Change `simple_version_publish_count` or `full_version_publish_count` to `1` and
     To
 
     ```php
-    // use Illuminate\Routing\Controllers\{HasMiddleware, Middleware};
+    // use Illuminate\Routing\Controllers\{HasMiddleware, Middleware}; // [!code focus]
 
-    class YourController extends Controller 
-    {
+    class YourController extends Controller  // [!code focus]
+    { 
         //...
-    }
+    } 
     ```
 
     And in the header remove or comment.`use Illuminate\Routing\Controllers\{HasMiddleware, Middleware};`
@@ -305,7 +305,7 @@ New features added in _Generator v0.3.x_:
      *
      * change path to disk
     */
-    "disk" => "storage",
+    "disk" => "storage", // [!code focus]
     
     // other configuration codes.
 ]

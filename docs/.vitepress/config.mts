@@ -9,6 +9,9 @@ export default defineConfig({
   editLink: {
     pattern: 'https://github.com/Zzzul/generator-docs-next/edit/main/docs/:path'
   },
+  markdown: {
+    lineNumbers: false
+  },
   themeConfig: {
     i18nRouting: true,
     ignoreDeadLinks: true,

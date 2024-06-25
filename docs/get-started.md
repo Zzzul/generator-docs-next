@@ -36,7 +36,7 @@ Run the local development server `php artisan serve` and then in your browser na
 
 ### Full Version
 
-![Full Version](/full-version.png)
+![Full Version](/full-version-2.png)
 
 _Generator + Starter App_, which includes: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v3), [Laravel Fortify](https://laravel.com/docs/11.x/fortify), [Spatie Permission](https://spatie.be/docs/laravel-permission/v6/installation-laravel), dan [Mazer Template](https://github.com/zuramai/mazer).
 

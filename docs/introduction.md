@@ -4,7 +4,7 @@ outline: deep
 
 # Introduction
 
-![Full Version](/full-version.png)
+![Full Version](/full-version-2.png)
 
 ![Simple Version](/simple-version.png)
 

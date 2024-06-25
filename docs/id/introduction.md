@@ -17,7 +17,7 @@ head:
 # Pengenalan
 Tak Kenal Maka Tak Sayang
 
-![Versi Lengkap](/full-version.png)
+![Versi Lengkap](/full-version-2.png)
 
 ![Versi Sederhana](/simple-version.png)
 
@@ -25,7 +25,7 @@ Tak Kenal Maka Tak Sayang
 
 ## Alasan
 
-Kami memiliki sedikit waktu untuk membuat <s>Master</s> _Main Data_ berulang kali, oleh karena itu pustaka ini mungkin dapat membantu Kamu fokus pada fitur utama aplikasi Kamu, Alih-alih, Kamu bisa menggunakan waktu tersebut untuk tidur, bermain video gim, atau keluar dan menghabiskan waktu di dunia nyata.
+Kami memiliki sedikit waktu untuk membuat <s>Master</s> _Main Data_ berulang kali, oleh karena itu pustaka ini mungkin dapat membantu Kamu fokus pada fitur utama aplikasi Kamu, Alih-alih, Kamu bisa menggunakan waktu tersebut untuk tidur, berkumpul bersama teman atau keluarga, bermain video gim, atau keluar dan "menyentuh rumput".
 
 ## Siapa Kami
 

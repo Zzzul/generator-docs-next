@@ -36,7 +36,7 @@ jalankan server pengembangan lokal `php artisan serve` lalu pada _browser_ Kamu 
 
 ### Versi Lengkap
 
-![Versi Lengkap](/full-version.png)
+![Versi Lengkap](/full-version-2.png)
 
 _Generator + Starter App_, yang sudah termasuk: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v3), [Laravel Fortify](https://laravel.com/docs/11.x/fortify), [Spatie Permission](https://spatie.be/docs/laravel-permission/v6/installation-laravel), dan [Mazer Template](https://github.com/zuramai/mazer).
 
