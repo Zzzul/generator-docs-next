@@ -21,15 +21,15 @@ Tak Kenal Maka Tak Sayang
 
 ![Versi Sederhana](/simple-version.png)
 
-[Generator](https://github.com/Evdigi-INA/generator) adalah pustaka berbasis Laravel yang dapat digunakan untuk membangun kebutuhan dasar aplikasi seperti Baca, Tulis, Ubah, dan Hapus (_CRUD_). Ini adalah _Starter Template_ sederhana yang kami harap dapat membantu Kamu dalam mengembangkan _CMS_, _Admin Panel_, atau aplikasi web lainnya yang mempunyai fungsionalitas _CRUD_.
+[Generator](https://github.com/Evdigi-INA/generator) adalah pustaka berbasis Laravel yang dapat digunakan untuk membangun kebutuhan dasar aplikasi seperti Baca, Tulis, Ubah, dan Hapus (_CRUD_). Ini adalah _Starter Template_ sederhana yang kami harap dapat membantu kamu dalam mengembangkan _CMS_, _Admin Panel_, atau aplikasi web lainnya yang mempunyai fungsionalitas _CRUD_.
 
 ## Alasan
 
-Kami memiliki sedikit waktu untuk membuat <s>Master</s> _Main Data_ berulang kali, oleh karena itu pustaka ini mungkin dapat membantu Kamu fokus pada fitur utama aplikasi Kamu, Alih-alih, Kamu bisa menggunakan waktu tersebut untuk tidur, berkumpul bersama teman atau keluarga, bermain video gim, atau keluar dan "menyentuh rumput".
+kami memiliki sedikit waktu untuk membuat <s>Master</s> _Main Data_ berulang kali, oleh karena itu pustaka ini mungkin dapat membantu kamu fokus pada fitur utama aplikasi kamu, Alih-alih, kamu bisa menggunakan waktu tersebut untuk tidur, berkumpul bersama teman atau keluarga, bermain video gim, atau keluar dan "menyentuh rumput".
 
-## Siapa Kami
+## Siapa kami
 
-Kami hanyalah sekumpulan orang yang bekerja pada proyek sampingan (_Freelance_) di Bekasi, Indonesia 🇮🇩. Kami ingin membantu pengembang lain mempercepat pembuatuan proyek mereka melalui perangkat lunak gratis yang kami buat.
+kami hanyalah sekumpulan orang yang bekerja pada proyek sampingan (_Freelance_) di Bekasi, Indonesia 🇮🇩. kami ingin membantu pengembang lain mempercepat pembuatuan proyek mereka melalui perangkat lunak gratis yang kami buat.
 
 ## Harga
 

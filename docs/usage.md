@@ -11,19 +11,19 @@ Go to ```/generators/create``` if yo're using [Full Version](features.md#full-ve
 
 Below is table about supported input type & validation when you are using some column type.
 
-|Column Type|Input Type|Validation|Length (min & max)|
-|-----------|----------|----------|------------------|
-|`string`|`text, textarea, email, telephone, password, url, search, file, hidden`| `required, string`| ✅ |
-|`boolean`|`radio, select, datalist`|`required, boolean`| ❌ |
-|`char`|`text, color, week, email, telephone, password, url, search, file, hidden`|`required, string`| ✅ |
-|`date`|`date, month`|`required, date`| ❌ |
-|`time`|`time`|`required, date`| ❌ |
-|`year, foreignId`|`select, datalist`|`required, numeric`| ❌ |
-|`dateTime`|`datetime-local`|`required, date`| ❌ |
-|`float, decimal, double`|`number, range, hidden`|`required, numeric`| ❌ |
-|`enum`|`select, radio, datalist`|`required, in`| ❌ |
-|`integer, tinyInteger, mediumInteger, bigInteger`|`number, range, hidden`|`required, numeric`| ❌ |
-|`text, tinyText, mediumText, longText`|`text, textarea, email, telephone, password, url, search, file, hidden`|`required, string`| ✅ |
+|Column Type|Input Type|Validation|
+|-----------|----------|----------|
+|`string`|`text, textarea, email, telephone, password, url, search, file, hidden`| `required, string, min, max`|
+|`boolean`|`radio, select, datalist`|`required, boolean`|
+|`char`|`text, color, week, email, telephone, password, url, search, file, hidden`|`required, string, min, max`|
+|`date`|`date, month`|`required, date`|
+|`time`|`time`|`required, date`|
+|`year, foreignId`|`select, datalist`|`required, numeric`|
+|`dateTime`|`datetime-local`|`required, date`|
+|`float, decimal, double`|`number, range, hidden`|`required, numeric`|
+|`enum`|`select, radio, datalist`|`required, in`|
+|`integer, tinyInteger, mediumInteger, bigInteger`|`number, range, hidden`|`required, numeric`|
+|`text, tinyText, mediumText, longText`|`text, textarea, email, telephone, password, url, search, file, hidden`|`required, string, min, max`|
 
 :::info
 `required` validation will change to `nullable` if you uncheck required switch in the form, if any input type `password` will automatically added `confirmed` validation, `min:1|max:100` for supported length column and `email|unique` for `email` input type.
@@ -74,28 +74,28 @@ Default image configuration:
     * 1. public
     * 2. storage
     */
-    'disk' => 'storage',
+    'disk' => 'storage',  // [!code focus]
 
     /**
     * Will used if image is nullable and default value is null.
     */
-    'default' => 'https://via.placeholder.com/350?text=No+Image+available',
+    'default' => 'https://via.placeholder.com/350?text=No+Image+available',  // [!code focus]
 
     /**
     * Crop the uploaded image using intervention image.
     */
-    'crop' => true,
+    'crop' => true,  // [!code focus]
 
     /**
     * When set to true the uploaded image aspect ratio will still original.
     */
-    'aspect_ratio' => true,
+    'aspect_ratio' => true, // [!code focus]
 
     /**
     * Crop image size.
     */
-    'width' => 500,
-    'height' => 500,
+    'width' => 500, // [!code focus]
+    'height' => 500, // [!code focus]
 ],
 ```
 
@@ -124,13 +124,13 @@ While you are using the full version, after creating a new module will automatic
 Here an example:
 ```php
 [
-    'group' => 'products',
-    'access' => [
-        'product view',
-        'product create',
-        'product edit',
-        'product delete'
-    ]
+    'group' => 'products',  // [!code focus]
+    'access' => [  // [!code focus]
+        'product view',  // [!code focus]
+        'product create',  // [!code focus]
+        'product edit',  // [!code focus]
+        'product delete'  // [!code focus]
+    ] // [!code focus]
 ],
 ```
 
@@ -148,175 +148,3 @@ Then, for the [full version](get-started#full-version), go to `/generators-api/c
 :::info
 If you use the API Generator and the [full version](get-started#full-version), you cannot create a Sidebar menu.
 :::
-<!-- 
-## Configuration
-
-Below is the default config for the generator and sidebar menus:
-
-```php
-<?php
-
-return [
-    /**
-     * If any input file(image) as default will used options below.
-     */
-    'image' => [
-        /**
-         * Path for store the image.
-         *
-         * Available options:
-         * 1. public
-         * 2. storage
-         * 3. S3
-         */
-        'disk' => 'storage',
-
-        /**
-         * Will used if image is nullable and default value is null.
-         */
-        'default' => 'https://via.placeholder.com/350?text=No+Image+available',
-
-        /**
-         * Crop the uploaded image using intervention image.
-         */
-        'crop' => true,
-
-        /**
-         * When set to true the uploaded image aspect ratio will still original.
-         */
-        'aspect_ratio' => true,
-
-        /**
-         * Crop image size.
-         */
-        'width' => 500,
-        'height' => 500,
-    ],
-
-    'format' => [
-        /**
-         * Will used to first year on select, if any column type year.
-         */
-        'first_year' => 1900,
-
-        /**
-         * If any date column type will cast and display used this format, but for input date still will used Y-m-d format.
-         *
-         * another most common format:
-         * - M d Y
-         * - d F Y
-         * - Y m d
-         */
-        'date' => 'd/m/Y',
-
-        /**
-         * If any input type month will cast and display used this format.
-         */
-        'month' => 'm/Y',
-
-        /**
-         * If any input type time will cast and display used this format.
-         */
-        'time' => 'H:i',
-
-        /**
-         * If any datetime column type or datetime-local on input, will cast and display used this format.
-         */
-        'datetime' => 'd/m/Y H:i',
-
-        /**
-         * Limit string on index view for any column type text or longtext.
-         */
-        'limit_text' => 100,
-    ],
-
-    /**
-     * It will used for generator to manage and showing menus on sidebar views.
-     *
-     * Example:
-     * [
-     *   'header' => 'Main',
-     *
-     *   // All permissions in menus[] and submenus[]
-     *   'permissions' => ['test view'],
-     *
-     *   menus' => [
-     *       [
-     *          'title' => 'Main Data',
-     *          'icon' => '<i class="bi bi-collection-fill"></i>',
-     *          'route' => null,
-     *
-     *          // permission always null when isset submenus
-     *          'permission' => null,
-     *
-     *          // All permissions on submenus[] and will empty[] when submenus equals to []
-     *          'permissions' => ['test view'],
-     *
-     *          'submenus' => [
-     *                 [
-     *                     'title' => 'Tests',
-     *                     'route' => '/tests',
-     *                     'permission' => 'test view'
-     *                  ]
-     *               ],
-     *           ],
-     *       ],
-     *  ],
-     *
-     * This code below always changes when you use a generator and maybe you must lint or format the code.
-     */
-    'sidebars' => [
-        [
-            'header' => 'Main',
-            'permissions' => [
-                'test view'
-            ],
-            'menus' => [
-                [
-                    'title' => 'Main Data',
-                    'icon' => '<i class="bi bi-collection-fill"></i>',
-                    'route' => null,
-                    'permission' => null,
-                    'permissions' => [
-                        'test view'
-                    ],
-                    'submenus' => [
-                        [
-                            'title' => 'Tests',
-                            'route' => '/tests',
-                            'permission' => 'test view'
-                        ]
-                    ]
-                ]
-            ]
-        ],
-        [
-            'header' => 'Users',
-            'permissions' => [
-                'user view',
-                'role & permission view'
-            ],
-            'menus' => [
-                [
-                    'title' => 'Users',
-                    'icon' => '<i class="bi bi-people-fill"></i>',
-                    'route' => '/users',
-                    'permission' => 'user view',
-                    'permissions' => [],
-                    'submenus' => []
-                ],
-                [
-                    'title' => 'Roles & permissions',
-                    'icon' => '<i class="bi bi-person-check-fill"></i>',
-                    'route' => '/roles',
-                    'permission' => 'role & permission view',
-                    'permissions' => [],
-                    'submenus' => []
-                ],
-            ]
-        ],
-    ],
-];
-
-``` -->
-

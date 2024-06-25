@@ -15,7 +15,7 @@ head:
 next: false
 ---
 
-# Berikan Dukungan Kamu
+# Berikan Dukungan kamu
 
 
 _Generator_ adalah proyek _Open-ource_ berlisensi _MIT_ dan sepenuhnya gratis untuk digunakan. Banyaknya tenaga dan waktu yang dibutuhkan untuk melakukan pemeliharaan serta mengembangkan fitur baru untuk proyek ini secara berkelanjutan berkat dukungan finansial yang dari para donatur atau pendukung kami.
@@ -57,7 +57,7 @@ const members = [
 ]
 </script>
 
-## Tim Kami
+## Tim kami
 
 Berikut adalah tim terbaik kami
 

@@ -3,16 +3,16 @@ outline: deep
 ---
 
 ::: warning
-Kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbarui proyek Kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
+kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbarui proyek kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
 :::
 
 # Cara Pemakaian
 
 ### Buat _CRUD_ pertama kali
 
-Akses pada _browser_ Kamu `/generators/create` jika Kamu menggunkan [versi lengkap](features.md#versi-lengkap) `/simple-generators/create` untuk [versi sederhana](features.md)
+Akses pada _browser_ kamu `/generators/create` jika kamu menggunkan [versi lengkap](features.md#versi-lengkap) `/simple-generators/create` untuk [versi sederhana](features.md)
 
-Di bawah ini adalah tabel tentang jenis input & validasi yang didukung saat Kamu menggunakan beberapa jenis kolom.
+Di bawah ini adalah tabel tentang jenis input & validasi yang didukung saat kamu menggunakan beberapa jenis kolom.
 
 |Jenis Kolom|Jenis Input|Validasi|Panjang (min & maks)|
 |-----------|----------|----------|------------------|
@@ -39,7 +39,7 @@ Di bawah ini adalah tabel tentang jenis input & validasi yang didukung saat Kamu
 
 
 :::info
-Validasi `required` akan berubah menjadi `nullable` jika Kamu tidak mencentang _checkbox_ yang terdapat pada _form_, jika ada jenis input `password` akan otomatis ditambahkan validasi `confirmed`, `min:1|max:100` untuk teks dan `email|unique` untuk jenis input `email`.
+Validasi `required` akan berubah menjadi `nullable` jika kamu tidak mencentang _checkbox_ yang terdapat pada _form_, jika ada jenis input `password` akan otomatis ditambahkan validasi `confirmed`, `min:1|max:100` untuk teks dan `email|unique` untuk jenis input `email`.
 :::
 
 
@@ -49,13 +49,13 @@ Validasi `required` akan berubah menjadi `nullable` jika Kamu tidak mencentang _
 
 Sayangnya _Generator_ saat ini hanya mendukung [One To Many (Inverse) / Belongs To](https://laravel.com/docs/10.x/eloquent-relationships#one-to-many-inverse).
 
-Terdapat beberapa aturan yang harus diikuti jika Kamu ingin membuat relasi:
+Terdapat beberapa aturan yang harus diikuti jika kamu ingin membuat relasi:
 
 - Nama Kolom: 
-    - Harus merupakan nama tabel tetapi dalam bentuk tunggal + `_id`, misalnya: jika Kamu memiliki tabel `users` maka harus `user_id`.
+    - Harus merupakan nama tabel tetapi dalam bentuk tunggal + `_id`, misalnya: jika kamu memiliki tabel `users` maka harus `user_id`.
 - Jenis Kolom:
     - Diubah menjadi `foreignId`.
-    - Untuk _constrains_ atau nama model terkait, Kamu bisa mengisi dengan nama tabel (secara otomatis berubah menjadi jamak).
+    - Untuk _constrains_ atau nama model terkait, kamu bisa mengisi dengan nama tabel (secara otomatis berubah menjadi jamak).
     - Aksi pada ubah/edit & penghapusan:
         - Pada ubah/edit: `nothing, cascade, restrict`
         - Pada penghapusan: `nothing, cascade, restrict, null`
@@ -104,7 +104,7 @@ Konfigurasi gambar default:
 ```
 
 :::info
-Jika Kamu menggunakan `storage` untuk menyimpan gambar, pastikan Kamu menjalankan 
+Jika kamu menggunakan `storage` untuk menyimpan gambar, pastikan kamu menjalankan 
 ```sh
 php artisan storage:link
 ```
@@ -119,15 +119,15 @@ php artisan storage:link
 Fitur ini hanya tersedia di versi lengkap.
 :::
 
-Kamu dapat dengan mudah membuat menu sidebar dinamis dengan hanya beberapa input. semua konfigurasi menu sidebar berada di `config/generator.php`
+kamu dapat dengan mudah membuat menu sidebar dinamis dengan hanya beberapa input. semua konfigurasi menu sidebar berada di `config/generator.php`
 
 
-Bagaimana jika Kamu tidak membutuhkan menu sidebar dinamis, Kamu hanya ingin membuat menu Kamu langusng pada `.blade`. ya, tenang kami sudah menyediakannya, [kamu dapat melihatnya disni](features.md#tetapkan-menu-sidebar).
+Bagaimana jika kamu tidak membutuhkan menu sidebar dinamis, kamu hanya ingin membuat menu kamu langusng pada `.blade`. ya, tenang kami sudah menyediakannya, [kamu dapat melihatnya disni](features.md#tetapkan-menu-sidebar).
 
 
 ## Hak Akses (Role & Permissions)
 
-Saat Kamu menggunakan versi lengkap, setelah membuat modul baru akan secara otomatis membuatkan beberapa _permissions_ dan mengaitkannya ke _Role_ admin. semua konfigurasi _permissions_ disimpan di `config/permission.php`
+Saat kamu menggunakan versi lengkap, setelah membuat modul baru akan secara otomatis membuatkan beberapa _permissions_ dan mengaitkannya ke _Role_ admin. semua konfigurasi _permissions_ disimpan di `config/permission.php`
 
 Berikut contohnya:
 ```php
@@ -253,7 +253,7 @@ return [
      *       ],
      *  ],
      *
-     * Kode di bawah ini selalu berubah ketika Kamu menggunakan generator dan terkadang Kamu harus merapikan atau mmem-format kodenya.
+     * Kode di bawah ini selalu berubah ketika kamu menggunakan generator dan terkadang kamu harus merapikan atau mmem-format kodenya.
      */
     'sidebars' => [
         [
@@ -312,7 +312,7 @@ return [
 
 ## Pengaturan _Production_
 
-Karena pustaka ini hanya di-_instal_ dalam proses pengembangan, maka beberapa file tidak akan disertakan dalam lingkungan produksi. jadi Kamu harus melakukan langkah-langkah berikut yaa:
+Karena pustaka ini hanya di-_instal_ dalam proses pengembangan, maka beberapa file tidak akan disertakan dalam lingkungan produksi. jadi kamu harus melakukan langkah-langkah berikut yaa:
 
 Di `composer.json` tambahkan kode di bawah ini:
 

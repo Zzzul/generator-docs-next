@@ -3,7 +3,7 @@ outline: deep
 ---
 
 ::: warning
-Kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbarui proyek Kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
+kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbarui proyek kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
 :::
 
 # Dukungan
@@ -47,7 +47,7 @@ const members = [
 ]
 </script>
 
-## Tim Kami
+## Tim kami
 
 Berikut adalah tim terbaik kami
 

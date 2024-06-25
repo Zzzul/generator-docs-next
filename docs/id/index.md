@@ -19,12 +19,12 @@ features:
   - title: Sederhana namun (semoga) berguna
     icon: ✨
     details: Dirancang untuk mempercepat proses pengembangan proyekmu
-  - title: Yang Kamu butuhkan sudah tersedia
+  - title: Yang kamu butuhkan sudah tersedia
     icon: 🔋
     details: Mulai dari starter kit, user manajemen, autentikasi dan hak akses (role permission)
   - title: Mudah untuk dikostumisasi
     icon: 👌
-    details: Mudah digunakan dan kode yang dihasilkan dapat Kamu ubah sesuai kebutuhanmu
+    details: Mudah digunakan dan kode yang dihasilkan dapat kamu ubah sesuai kebutuhanmu
 ---
 
 <script setup>

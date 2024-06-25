@@ -324,7 +324,7 @@ return [
     /**
      * If any input file(image) as default will use options below.
      */
-    "image" => [
+    "image" => [  // [!code focus]
         /**
          * Path for store the image.
          *
@@ -333,35 +333,35 @@ return [
          * 2. storage
          * 3. S3
          */
-        "disk" => "storage",
+        "disk" => "storage",  // [!code focus]
 
         /**
          * Will be used if image is nullable and default value is null.
          */
-        "default" => "https://via.placeholder.com/350?text=No+Image+Avaiable",
+        "default" => "https://via.placeholder.com/350?text=No+Image+Avaiable",  // [!code focus]
 
         /**
          * Crop the uploaded image using intervention image.
          */
-        "crop" => true,
+        "crop" => true,  // [!code focus]
 
         /**
          * When set to true the uploaded image aspect ratio will still original.
          */
-        "aspect_ratio" => true,
+        "aspect_ratio" => true,  // [!code focus]
 
         /**
          * Crop image size.
          */
-        "width" => 500,
-        "height" => 500,
+        "width" => 500,  // [!code focus]
+        "height" => 500,  // [!code focus]
     ],
 
-    "format" => [
+    "format" => [  // [!code focus]
         /**
          * Will be used to first year on select, if any column type year.
          */
-        "first_year" => 1970,
+        "first_year" => 1970,  // [!code focus]
 
         /**
          * If any date column type will cast and display used this format, but for input date still will used Y-m-d format.
@@ -371,27 +371,27 @@ return [
          * - d F Y
          * - Y m d
          */
-        "date" => "Y-m-d",
+        "date" => "Y-m-d",  // [!code focus]
 
         /**
          * If any input type month will cast and display used this format.
          */
-        "month" => "Y/m",
+        "month" => "Y/m",  // [!code focus]
 
         /**
          * If any input type time will cast and display used this format.
          */
-        "time" => "H:i",
+        "time" => "H:i",  // [!code focus]
 
         /**
          * If any datetime column type or datetime-local on input, will cast and display used this format.
          */
-        "datetime" => "Y-m-d H:i:s",
+        "datetime" => "Y-m-d H:i:s",  // [!code focus]
 
         /**
          * Limit string on index view for any column type text or long text.
          */
-        "limit_text" => 100,
+        "limit_text" => 100,  // [!code focus]
     ],
 
     /**
@@ -429,51 +429,51 @@ return [
      *
      * This code below always changes when you use a generator, and maybe you must format the code.
      */
-    "sidebars" => [
-        [
-            "header" => "Main",
-            "permissions" => ["test view"],
-            "menus" => [
-                [
-                    "title" => "Main Data",
-                    "icon" => '<i class="bi bi-collection-fill"></i>',
-                    "route" => null,
-                    "permission" => null,
-                    "permissions" => ["test view"],
-                    "submenus" => [
+    "sidebars" => [  // [!code focus]
+        [ // [!code focus]
+            "header" => "Main",  // [!code focus]
+            "permissions" => ["test view"],  // [!code focus]
+            "menus" => [  // [!code focus]
+                [  // [!code focus]
+                    "title" => "Main Data",  // [!code focus]
+                    "icon" => '<i class="bi bi-collection-fill"></i>',  // [!code focus]
+                    "route" => null,  // [!code focus]
+                    "permission" => null,  // [!code focus]
+                    "permissions" => ["test view"],  // [!code focus]
+                    "submenus" => [  // [!code focus]
                         [
-                            "title" => "Tests",
-                            "route" => "/tests",
-                            "permission" => "test view",
-                        ],
-                    ],
-                ],
-            ],
-        ],
-        [
-            "header" => "Users",
-            "permissions" => ["user view", "role & permission view"],
-            "menus" => [
+                            "title" => "Tests",  // [!code focus]
+                            "route" => "/tests",  // [!code focus]
+                            "permission" => "test view",  // [!code focus]
+                        ],  // [!code focus]
+                    ],  // [!code focus]
+                ],  // [!code focus]
+            ],  // [!code focus]
+        ],  // [!code focus]
+        [  // [!code focus]
+            "header" => "Users",  // [!code focus]
+            "permissions" => ["user view", "role & permission view"],  // [!code focus]
+            "menus" => [  // [!code focus]
                 [
-                    "title" => "Users",
-                    "icon" => '<i class="bi bi-people-fill"></i>',
-                    "route" => "/users",
-                    "permission" => "user view",
-                    "permissions" => [],
-                    "submenus" => [],
-                ],
-                [
-                    "title" => "Roles & permissions",
-                    "icon" => '<i class="bi bi-person-check-fill"></i>',
-                    "route" => "/roles",
-                    "permission" => "role & permission view",
-                    "permissions" => [],
-                    "submenus" => [],
-                ],
-            ],
-        ],
-    ],
-];
+                    "title" => "Users",  // [!code focus]
+                    "icon" => '<i class="bi bi-people-fill"></i>',  // [!code focus]
+                    "route" => "/users",  // [!code focus]
+                    "permission" => "user view",  // [!code focus]
+                    "permissions" => [],  // [!code focus]
+                    "submenus" => [],  // [!code focus]
+                ],  // [!code focus]
+                [  // [!code focus]
+                    "title" => "Roles & permissions",  // [!code focus]
+                    "icon" => '<i class="bi bi-person-check-fill"></i>',  // [!code focus]
+                    "route" => "/roles",  // [!code focus]
+                    "permission" => "role & permission view",  // [!code focus]
+                    "permissions" => [],  // [!code focus]
+                    "submenus" => [],  // [!code focus]
+                ],  // [!code focus]
+            ],  // [!code focus]
+        ],  // [!code focus]
+    ],  // [!code focus]
+];  // [!code focus]
 
 ```
 

@@ -17,7 +17,7 @@ next: true
 
 # Cara berkontribusi
 
-Kamu dapat berkontribusi pada proyek ini, dengan mengikuti langkah-langkah berikut:
+kamu dapat berkontribusi pada proyek ini, dengan mengikuti langkah-langkah berikut:
 
 1. _[Star & fork the repositori](https://github.com/Evdigi-INA/generator)_
 

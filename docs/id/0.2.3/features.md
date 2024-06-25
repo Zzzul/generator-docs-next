@@ -5,7 +5,7 @@ editLink: true
 ---
 
 ::: warning
-Kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbarui proyek Kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
+kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbarui proyek kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
 :::
 
 # Fitur
@@ -49,7 +49,7 @@ php artisan generator:install full
 ```
 
 ::: danger
-Perintah ini akan menimpa beberapa berkas, jadi Kamu harus berhati-hati saat menjalankan perintah ini dan hindari menjalankannya lebih dari sekali.
+Perintah ini akan menimpa beberapa berkas, jadi kamu harus berhati-hati saat menjalankan perintah ini dan hindari menjalankannya lebih dari sekali.
 :::
 
 ### Tetapkan menu _Sidebar_
@@ -61,13 +61,13 @@ Tempat konfigurasi menu _Sidebar_ berada di ```config/generator.php```
 php artisan generator:sidebar dynamic
 ```
 
-Saat menggunakan menu _Sidebar_ statis, Kamu bebas untuk mengubah menu _Sidebar_ yang berada di  ```resources/views/layouts/sidebar.blade.php```
+Saat menggunakan menu _Sidebar_ statis, kamu bebas untuk mengubah menu _Sidebar_ yang berada di  ```resources/views/layouts/sidebar.blade.php```
 
 ```sh
 php artisan generator:sidebar static
 ```
 ::: info
-Setelah Kamu membuat modul baru menggunakan Generator, _Sidebar_ akan otomatis kembali ke dinamis. Tapi tenang Kamu dapat mengubahnya kembali seperti semula.
+Setelah kamu membuat modul baru menggunakan Generator, _Sidebar_ akan otomatis kembali ke dinamis. Tapi tenang kamu dapat mengubahnya kembali seperti semula.
 :::
 
 ## Utilitas/Helper
@@ -81,7 +81,7 @@ is_active_menu(string|array $menu): boolean;
 
 ### Kelas Utilitas
 
-Semua fungsi utilitas yang mungkin Kamu butuhkan, tersedia berada di ```App\Generators\GeneratorUtils```
+Semua fungsi utilitas yang mungkin kamu butuhkan, tersedia berada di ```App\Generators\GeneratorUtils```
 
 ```php
 use App\Generators\GeneratorUtils;

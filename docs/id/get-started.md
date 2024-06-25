@@ -2,7 +2,7 @@
 
 ### Persyaratan
 
-Berikut adalah beberapa persyaratan minumum yang harus Kamu diperhatikan:
+Berikut adalah beberapa persyaratan minumum yang harus kamu diperhatikan:
  - [Composer ^2.x](https://getcomposer.org/)
  - [PHP ^8.2.x](https://www.php.net/releases/8.1/en.php)
  - [Laravel ^11.x](http://laravel.com/)
@@ -30,7 +30,7 @@ Instalasi pustaka
 php artisan generator:install simple
 ```
 
-jalankan server pengembangan lokal `php artisan serve` lalu pada _browser_ Kamu dapat menuju ```/simple-generators/create/```
+jalankan server pengembangan lokal `php artisan serve` lalu pada _browser_ kamu dapat menuju ```/simple-generators/create/```
   
 <hr>
 
@@ -44,7 +44,7 @@ _Generator + Starter App_, yang sudah termasuk: [Yajra Datatables](https://yajra
 
 
 ::: warning
-Jika Kamu ingin menggunakan versi lengkap, memasang pustaka ini setelah instalasi proyek Laravel baru sangat disarankan, karena beberapa file akan ditimpa.
+Jika kamu ingin menggunakan versi lengkap, memasang pustaka ini setelah instalasi proyek Laravel baru sangat disarankan, karena beberapa file akan ditimpa.
 :::
 
 Instalasi [Laravel Fortify](https://laravel.com/docs/11.x/fortify) & [Spatie Permission](https://spatie.be/docs/laravel-permission/v6/installation-laravel)
@@ -61,7 +61,7 @@ php artisan generator:install full
 ```
 
 ::: danger
-Perintah ini akan menimpa beberapa berkas, jadi Kamu harus berhati-hati saat menjalankan perintah ini dan hindari menjalankannya lebih dari sekali.
+Perintah ini akan menimpa beberapa berkas, jadi kamu harus berhati-hati saat menjalankan perintah ini dan hindari menjalankannya lebih dari sekali.
 :::
 
 Jalankan perintah migrasi dan _Seeder_

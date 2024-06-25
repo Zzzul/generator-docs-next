@@ -3,11 +3,11 @@ outline: deep
 ---
 
 ::: warning
-Kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbarui proyek Kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
+kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbarui proyek kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
 :::
 # Cara Berkontribusi
 
-### Kamu dapat berkontribusi pada proyek ini, dengan mengikuti langkah-langkah berikut:
+### kamu dapat berkontribusi pada proyek ini, dengan mengikuti langkah-langkah berikut:
 
 1. [Beri bintang & _fork_ repositori](https://github.com/Evdigi-INA/generator)
 
@@ -122,7 +122,7 @@ Kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolon
     php artisan serve
     ```
 
-17. Lakukan perubahan kode sesuai keinginan Kamu di `packages/evdigi-ina/generator`
+17. Lakukan perubahan kode sesuai keinginan kamu di `packages/evdigi-ina/generator`
 
 18. Pastikan kode berfungsi dengan baik
 
@@ -137,7 +137,7 @@ Kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolon
     git add .
     ```
     ```bash
-    git commit -m "jelaskan perubahan Kamu"
+    git commit -m "jelaskan perubahan kamu"
     ```
 
 20. Unggah kode ke repositori

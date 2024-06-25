@@ -3,14 +3,14 @@ outline: deep
 ---
 
 ::: warning
-Kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbarui proyek Kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
+kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbarui proyek kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
 :::
 
 # Mari Mulai
 
 ### Persyaratan
 
-Yang Kamu butuhkan adalah:
+Yang kamu butuhkan adalah:
  - [Composer ^2.x](https://getcomposer.org/)
  - [PHP ^8.1.x](https://www.php.net/releases/8.1/en.php)
  - [Laravel ^9.x](http://laravel.com/)
@@ -45,7 +45,7 @@ Daftarkan _Service Provider_ pada `config/app.php`
 App\Providers\ViewComposerServiceProvider::class,
 ```
   
-Lalu pada _browser_ Kamu, menuju ```/simple-generators/create/```
+Lalu pada _browser_ kamu, menuju ```/simple-generators/create/```
   
 <hr>
 
@@ -59,7 +59,7 @@ _Generator + Starter App_, yang sudah termasuk: [Yajra Datatables](https://yajra
 
 
 ::: warning
-Jika Kamu ingin menggunakan versi lengkap, memasang pustaka ini setelah instalasi proyek Laravel baru sangat disarankan, karena beberapa file akan ditimpa.
+Jika kamu ingin menggunakan versi lengkap, memasang pustaka ini setelah instalasi proyek Laravel baru sangat disarankan, karena beberapa file akan ditimpa.
 :::
 
 Instalasi [Laravel Fortify](https://laravel.com/docs/9.x/fortify) & [Spatie Permission](https://spatie.be/docs/laravel-permission/v5/installation-laravel)
@@ -76,7 +76,7 @@ php artisan generator:install full
 ```
 
 ::: danger
-Perintah ini akan menimpa beberapa berkas, jadi Kamu harus berhati-hati saat menjalankan perintah ini dan hindari menjalankannya lebih dari sekali.
+Perintah ini akan menimpa beberapa berkas, jadi kamu harus berhati-hati saat menjalankan perintah ini dan hindari menjalankannya lebih dari sekali.
 :::
  
 

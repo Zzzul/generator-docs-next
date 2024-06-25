@@ -36,7 +36,7 @@ Untuk versi lengkap
 php artisan generator:install full
 ```
 ::: danger
-Kedua perintah diatas akan menimpa beberapa berkas, jadi Kamu harus berhati-hati saat menjalankan perintah tersebut dan hindari menjalankannya lebih dari sekali.
+Kedua perintah diatas akan menimpa beberapa berkas, jadi kamu harus berhati-hati saat menjalankan perintah tersebut dan hindari menjalankannya lebih dari sekali.
 :::
 
 #### Publikasikan kelas utilitas
@@ -53,13 +53,13 @@ Tempat konfigurasi menu _Sidebar_ berada di ```config/generator.php```
 php artisan generator:sidebar dynamic
 ```
 
-Saat menggunakan menu _Sidebar_ statis, Kamu bebas untuk mengubah menu _Sidebar_ yang berada di  ```resources/views/layouts/sidebar.blade.php```
+Saat menggunakan menu _Sidebar_ statis, kamu bebas untuk mengubah menu _Sidebar_ yang berada di  ```resources/views/layouts/sidebar.blade.php```
 
 ```sh
 php artisan generator:sidebar static
 ```
 ::: info
-Setelah Kamu membuat modul baru menggunakan Generator, _Sidebar_ akan otomatis kembali ke dinamis. Tapi tenang Kamu dapat mengubahnya kembali seperti semula.
+Setelah kamu membuat modul baru menggunakan Generator, _Sidebar_ akan otomatis kembali ke dinamis. Tapi tenang kamu dapat mengubahnya kembali seperti semula.
 :::
 
 ## Utilitas/Helper
@@ -75,7 +75,7 @@ is_active_menu(string|array $menu): boolean;
 ```
 
 #### `ImageService`
-Kelas ini digunakan untuk melakukan fungsi unggah dan manipulasi gambar menggunakan [Intervention Image v3.x](https://image.intervention.io/v3), jika Kamu ingin melihatnya, kelas ini dapat diakses pada `App\Generator\Services`
+Kelas ini digunakan untuk melakukan fungsi unggah dan manipulasi gambar menggunakan [Intervention Image v3.x](https://image.intervention.io/v3), jika kamu ingin melihatnya, kelas ini dapat diakses pada `App\Generator\Services`
 
 ```php
 namespace App\Generators\Services;
