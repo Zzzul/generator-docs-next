@@ -144,7 +144,7 @@ Sebelum kamu menggunakan fitur ini, pastikan kamu sudah meng-_install_ dan memba
 
 Jalankan perintah berikut
 ```sh
-php artisan api:install
+php artisan install:api
 ```
 Lalu menuju `/generators-api/create` untuk [versi lengkap](get-started#versi-lengkap) dan `/simple-generators/create` untuk [versi sederhana](get-started#versi-sederhana), sisanya lakukan hal yang sama seperti kamu membuat _CRUD_ diatas.
 

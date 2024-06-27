@@ -140,7 +140,7 @@ Before you use this feature, make sure you have installed and read the latest do
 Execute the following command:
 
 ```sh
-php artisan api:install
+php artisan install:api
 ```
 
 Then, for the [full version](get-started#full-version), go to `/generators-api/create`, and for the [simple version](get-started#simple-version), go to `/simple-generators/create`, then repeat the methods you used to create CRUD above.
