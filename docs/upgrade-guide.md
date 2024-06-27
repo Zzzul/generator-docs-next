@@ -311,9 +311,9 @@ New features added in _Generator v0.3.x_:
 ]
 ```
 
-To use the `s3` option, you should read the related documentation[here](https://laravel.com/docs/11.x/filesystem#amazon-s3-compatible-filesystems)
+To use the `s3` option, you should read the related documentation [here](https://laravel.com/docs/11.x/filesystem#amazon-s3-compatible-filesystems)
 
-And if you use the `storage` option for image, make sure you run
+And if you use the `storage` option, make sure you run
 ```sh
 php artisan storage:link
 ```
@@ -441,7 +441,7 @@ return [
                     "permission" => null,  // [!code focus]
                     "permissions" => ["test view"],  // [!code focus]
                     "submenus" => [  // [!code focus]
-                        [
+                        [  // [!code focus]
                             "title" => "Tests",  // [!code focus]
                             "route" => "/tests",  // [!code focus]
                             "permission" => "test view",  // [!code focus]
@@ -454,7 +454,7 @@ return [
             "header" => "Users",  // [!code focus]
             "permissions" => ["user view", "role & permission view"],  // [!code focus]
             "menus" => [  // [!code focus]
-                [
+                [  // [!code focus]
                     "title" => "Users",  // [!code focus]
                     "icon" => '<i class="bi bi-people-fill"></i>',  // [!code focus]
                     "route" => "/users",  // [!code focus]
