@@ -142,9 +142,22 @@ Berikut contohnya:
 
 Sebelum kamu menggunakan fitur ini, pastikan kamu sudah meng-_install_ dan membaca dokumentasi terbaru [Laravel 11](https://laravel.com/) mengenai _API_
 
-Jalankan perintah berikut
+1. Jalankan perintah berikut
+
 ```sh
 php artisan install:api
+```
+
+2. Pastikan _file_ `routes/api.php` ada
+3. Tambahkan kode berikut pada `bootstrap/app.php` _file_
+
+```php
+->withRouting(
+    api: __DIR__ . '/../routes/api.php', // [!code focus]
+    web: __DIR__ . '/../routes/web.php',
+    commands: __DIR__ . '/../routes/console.php',
+    health: '/up',
+)
 ```
 Lalu menuju `/generators-api/create` untuk [versi lengkap](get-started#versi-lengkap) dan `/simple-generators/create` untuk [versi sederhana](get-started#versi-sederhana), sisanya lakukan hal yang sama seperti kamu membuat _CRUD_ diatas.
 

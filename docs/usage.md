@@ -137,13 +137,26 @@ Here an example:
 ## Creating API CRUD
 Before you use this feature, make sure you have installed and read the latest documentation of [Laravel 11](https://laravel.com/docs/11.x/sanctum#introduction) regarding APIs.
 
-Execute the following command:
+1. Execute the following command
 
 ```sh
 php artisan install:api
 ```
 
+2. Check if the `routes/api.php` file exists
+3. Go to `bootstrap/app.php` and add the following code
+
+```php
+->withRouting(
+    api: __DIR__ . '/../routes/api.php', // [!code focus]
+    web: __DIR__ . '/../routes/web.php',
+    commands: __DIR__ . '/../routes/console.php',
+    health: '/up',
+)
+```
+
 Then, for the [full version](get-started#full-version), go to `/generators-api/create`, and for the [simple version](get-started#simple-version), go to `/simple-generators/create`, then repeat the methods you used to create CRUD above.
+
 
 :::info
 If you use the API Generator and the [full version](get-started#full-version), you cannot create a Sidebar menu.
