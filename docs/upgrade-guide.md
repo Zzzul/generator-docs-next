@@ -173,6 +173,7 @@ For the most recent and complete changelog, please visit [Github Releases](https
         @endauth   // [!code focus]
     </div>
     ```
+
 6. It's not the best technique to alter the vendor folder, but let's ignore it. Create a file `generator.cache` in `vendor/evdigiina/generator` then copy the code below
 
     ```json
@@ -186,7 +187,7 @@ Change `simple_version_publish_count` or `full_version_publish_count` to `1` and
 7. Convert `config/generator.php` from `image.path` to `image.disk`
 
     ```php
-    'image' => [
+    "image" => [
         /**
          * Path for store the image.
          *
@@ -194,8 +195,7 @@ Change `simple_version_publish_count` or `full_version_publish_count` to `1` and
          * 1. public
          * 2. storage
         */
-        'path' => 'storage', // [!code focus]
-        // ... another configuration
+        "path" => "storage", // [!code focus]
     ]
     ```
 

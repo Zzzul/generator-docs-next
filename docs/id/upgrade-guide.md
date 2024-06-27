@@ -131,57 +131,57 @@ Untuk daftar perubahan terbaru dan lebih lengkap, silakan kunjungi [GitHub Rilis
 
 5. Ubah kode pada `resources/views/layouts/header.blade.php` menjadi seperti dibawah ini
 
-   ```blade
-   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-       <ul class="navbar-nav ms-auto mb-lg-0">
-           {{-- Your code --}}
-       </ul>
+    ```blade
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-lg-0">
+            {{-- Your code --}}
+        </ul>
 
-       {{-- New code --}}
-       @auth
-           <div class="dropdown">
-               <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                   <div class="user-menu d-flex">
-                       <div class="user-name text-end me-3">
-                           <h6 class="mb-0 text-gray-600">{{ auth()?->user()?->name }}</h6>
-                           <p class="mb-0 text-sm text-gray-600">
-                               {{ isset(auth()?->user()?->roles) ? implode(auth()?->user()?->roles?->map(fn ($role) => $role->name)->toArray()) : '-' }}
-                           </p>
-                       </div>
-                       <div class="user-img d-flex align-items-center">
-                           <div class="avatar avatar-md">
-                               @if (auth()?->user()?->avatar == null)
-                                   <img src="https://www.gravatar.com/avatar/{{ md5(strtolower(trim(auth()?->user()?->email))) }}&s=500" alt="Avatar">
-                               @else
-                                   <img src="{{ asset('storage/uploads/avatars/' . auth()?->user()?->avatar) }}" alt="Avatar">
-                               @endif
-                           </div>
-                       </div>
-                   </div>
-               </a>
+        {{-- New code --}}
+        @auth // [!code focus]
+            <div class="dropdown"> // [!code focus]
+                <a href="#" data-bs-toggle="dropdown" aria-expanded="false"> // [!code focus]
+                    <div class="user-menu d-flex"> // [!code focus]
+                        <div class="user-name text-end me-3"> // [!code focus]
+                            <h6 class="mb-0 text-gray-600">{{ auth()?->user()?->name }}</h6> // [!code focus]
+                            <p class="mb-0 text-sm text-gray-600"> // [!code focus]
+                                {{ isset(auth()?->user()?->roles) ? implode(auth()?->user()?->roles?->map(fn ($role) => $role->name)->toArray()) : '-' }} // [!code focus]
+                            </p> // [!code focus]
+                        </div> // [!code focus]
+                        <div class="user-img d-flex align-items-center"> // [!code focus]
+                            <div class="avatar avatar-md"> // [!code focus]
+                                @if (auth()?->user()?->avatar == null) // [!code focus]
+                                    <img src="https://www.gravatar.com/avatar/{{ md5(strtolower(trim(auth()?->user()?->email))) }}&s=500" alt="Avatar"> // [!code focus]
+                                @else // [!code focus]
+                                    <img src="{{ asset('storage/uploads/avatars/' . auth()?->user()?->avatar) }}" alt="Avatar"> // [!code focus]
+                                @endif // [!code focus]
+                            </div> // [!code focus]
+                        </div> // [!code focus]
+                    </div> // [!code focus]
+                </a> // [!code focus]
+                
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="min-width: 11rem;"> // [!code focus]
+                    <li> // [!code focus]
+                        <h6 class="dropdown-header">{{ __('Hello') }}, {{ auth()?->user()?->name }}!</h6> // [!code focus]
+                    </li> // [!code focus]
+                    <li> // [!code focus]
+                        <a class="dropdown-item" href="{{ route('profile') }}"><i class="icon-mid bi bi-person-fill me-2"></i>{{ __('My Profile') }}</a> // [!code focus]
+                    </li> // [!code focus]
+                    <li> // [!code focus]
+                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form-nav').submit();"> // [!code focus]
+                            <i class="bi bi-door-open-fill"></i> // [!code focus]
+                            {{ __('Logout') }} // [!code focus]
+                        </a> // [!code focus]
 
-               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="min-width: 11rem;">
-                   <li>
-                       <h6 class="dropdown-header">{{ __('Hello') }}, {{ auth()?->user()?->name }}!</h6>
-                   </li>
-                   <li>
-                       <a class="dropdown-item" href="{{ route('profile') }}"><i class="icon-mid bi bi-person-fill me-2"></i>{{ __('My Profile') }}</a>
-                   </li>
-                   <li>
-                       <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form-nav').submit();">
-                           <i class="bi bi-door-open-fill"></i>
-                           {{ __('Logout') }}
-                       </a>
-
-                       <form id="logout-form-nav" action="{{ route('logout') }}" method="POST" class="d-none">
-                           @csrf
-                       </form>
-                   </li>
-               </ul>
-           </div>
-       @endauth
-   </div>
-   ```
+                        <form id="logout-form-nav" action="{{ route('logout') }}" method="POST" class="d-none"> // [!code focus]
+                            @csrf // [!code focus]
+                        </form>  // [!code focus]
+                    </li>  // [!code focus]
+                </ul>  // [!code focus]
+            </div>  // [!code focus]
+        @endauth   // [!code focus]
+    </div>
+    ```
 
 6. Bukan cara yang bagus untuk mengubah folder `vendor`, tapi untuk sekarang tolong abaikan saja. Buat file `generator.cache` di `vendor/evdigiina/generator` lalu _copy_ kode di bawah ini
 
@@ -195,8 +195,8 @@ Ubah `simple_version_publish_count` atau `full_version_publish_count` menjadi `1
 
 7. Ubah `config/generator.php` dari `image.path` menjadi `image.disk`
 
-  ```php
-    'image' => [
+    ```php
+    "image" => [
         /**
          * Path for store the image.
          *
@@ -204,10 +204,10 @@ Ubah `simple_version_publish_count` atau `full_version_publish_count` menjadi `1
          * 1. public
          * 2. storage
         */
-        'path' => 'storage', // [!code focus]
-        // ... another configuration
+        "path" => "storage", // [!code focus]
     ]
     ```
+
 
     ```php
     "image" => [
@@ -223,6 +223,7 @@ Ubah `simple_version_publish_count` atau `full_version_publish_count` menjadi `1
         // ... another configuration
     ]
     ```
+
 
    Untuk informasi tambahan tentang perubahan ini, [buka di sini](#fitur-terbaru)
 
