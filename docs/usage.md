@@ -66,41 +66,48 @@ Set column type to `string`, input type to `file`, select file type (for now onl
 
 Default image configuration:
 ```php
-'image' => [
+"image" => [
     /**
     * Path for store the image.
     *
     * Available options:
     * 1. public
     * 2. storage
+    * 3. s3
     */
-    'disk' => 'storage',  // [!code focus]
+    "disk" => "storage",  // [!code focus]
 
     /**
     * Will used if image is nullable and default value is null.
     */
-    'default' => 'https://via.placeholder.com/350?text=No+Image+available',  // [!code focus]
+    "default" => "https://via.placeholder.com/350?text=No+Image+available",  // [!code focus]
 
     /**
     * Crop the uploaded image using intervention image.
     */
-    'crop' => true,  // [!code focus]
+    "crop" => true,  // [!code focus]
 
     /**
     * When set to true the uploaded image aspect ratio will still original.
     */
-    'aspect_ratio' => true, // [!code focus]
+    "aspect_ratio" => true, // [!code focus]
 
     /**
     * Crop image size.
     */
-    'width' => 500, // [!code focus]
-    'height' => 500, // [!code focus]
+    "width" => 500, // [!code focus]
+    "height" => 500, // [!code focus]
 ],
 ```
 
 :::info
-if you are using `storage` for store the image, make sure you run `php artisan storage:link`
+If you are using `storage` for store the image, make sure you run 
+
+```sh
+php artisan storage:link
+```
+
+Or if you are using `s3` to store the image, make sure you read the [documentation](https://laravel.com/docs/11.x/filesystem#s3-driver-configuration)
 :::
 
 

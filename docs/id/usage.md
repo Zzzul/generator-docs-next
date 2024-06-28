@@ -66,45 +66,48 @@ Juga kami menggunakan [Intervention Image](https://image.intervention.io/v2) unt
 semua konfigurasi untuk gambar kamu dapat melihatnya di `config/generator.php`
 
 Konfigurasi gambar default:
+
 ```php
-'image' => [
+"image" => [
     /**
     * Path for store the image.
     *
     * Available options:
     * 1. public
     * 2. storage
+    * 3. s3
     */
-    'disk' => 'storage',  // [!code focus]
+    "disk" => "storage",  // [!code focus]
 
     /**
     * Will used if image is nullable and default value is null.
     */
-    'default' => 'https://via.placeholder.com/350?text=No+Image+available',  // [!code focus]
+    "default" => "https://via.placeholder.com/350?text=No+Image+available",  // [!code focus]
 
     /**
     * Crop the uploaded image using intervention image.
     */
-    'crop' => true,  // [!code focus]
+    "crop" => true,  // [!code focus]
 
     /**
     * When set to true the uploaded image aspect ratio will still original.
     */
-    'aspect_ratio' => true, // [!code focus]
+    "aspect_ratio" => true, // [!code focus]
 
     /**
     * Crop image size.
     */
-    'width' => 500, // [!code focus]
-    'height' => 500, // [!code focus]
+    "width" => 500, // [!code focus]
+    "height" => 500, // [!code focus]
 ],
 ```
-
 :::info
-Jika kamu menggunakan `storage` untuk menyimpan gambar, pastikan kamu menjalankan perintah dibawah ini yaa 
+Jika kamu menggunakan `storage` untuk menyimpan gambar, pastikan kamu menjalankan perintah dibawah ini 
+
 ```sh
 php artisan storage:link
 ```
+Atau jika kamu ingin menggunakan `s3` untuk menyimpan gambar, pastikan kamu melihat dokumentasinya [disini](https://laravel.com/docs/10.x/filesystem#s3-driver-configuration)
 :::
 
 
