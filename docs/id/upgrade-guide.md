@@ -183,7 +183,7 @@ Untuk daftar perubahan terbaru dan lebih lengkap, silakan kunjungi [GitHub Rilis
     </div>
     ```
 
-6. Bukan cara yang bagus untuk mengubah folder `vendor`, tapi untuk sekarang tolong abaikan saja. Buat file `generator.cache` di `vendor/evdigiina/generator` lalu _copy_ kode di bawah ini
+6. Buat file `generator.cache` di `vendor/evdigiina/generator` lalu _copy_ kode di bawah ini
 
    ```json
    { "simple_version_publish_count": 0, "full_version_publish_count": 1 }

@@ -174,7 +174,7 @@ For the most recent and complete changelog, please visit [Github Releases](https
     </div>
     ```
 
-6. It's not the best technique to alter the vendor folder, but let's ignore it. Create a file `generator.cache` in `vendor/evdigiina/generator` then copy the code below
+6. Create a file `generator.cache` in `vendor/evdigiina/generator` then copy the code below
 
     ```json
     {"simple_version_publish_count":0,"full_version_publish_count":1}
