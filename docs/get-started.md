@@ -10,7 +10,7 @@ Here are some minimum requirements you need to consider:
 ## Installation
 
 ```sh
-composer require evdigiina/generator:^0.3.0 --dev
+composer require evdigiina/generator --dev
 ```
 
 :::info
@@ -43,7 +43,7 @@ _Generator + Starter App_, which includes: [Yajra Datatables](https://yajrabox.c
 [See available features.](features.md#full-version)
 
 ::: warning
-If you want to use the full version, it is highly recommended to install this library after setting up a new Laravel project, as some files will be overwritten.
+For the full version, it's recommended to install this library after setting up a new Laravel project to avoid overwriting files.
 :::
 
 Install [Laravel Fortify](https://laravel.com/docs/11.x/fortify) & [Spatie Permission](https://spatie.be/docs/laravel-permission/v6/installation-laravel)

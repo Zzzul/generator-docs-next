@@ -32,18 +32,22 @@ Untuk daftar perubahan terbaru dan lebih lengkap, silakan kunjungi [GitHub Rilis
 2. Ubah pustaka berikut pada `composer.json`
 
    ```json
-   "laravel/framework to": "^11.0",
-
-   // require-dev
-   "nunomaduro/collision": "^8.1",
-   "evdigiina/generator": "^0.3.0",
+   "require": {
+        "laravel/framework to": "^11.0", // [!code focus]
+   },
+   "require-dev": {
+        "nunomaduro/collision": "^8.1", // [!code focus]
+        "evdigiina/generator": "^0.3.0",  // [!code focus]
+   } 
    ```
 
-   Optional (if installed).
+  Opsional, jika kamu menggunakannya
 
    ```json
-   "spatie/laravel-permission": "^6.0",
-   "laravel/fortify": "^1.21"
+   "require": {
+        "spatie/laravel-permission": "^6.0", // [!code focus]
+        "laravel/fortify": "^1.21" // [!code focus]
+   },
    ```
 
    Lalu jalankan perintah berikut

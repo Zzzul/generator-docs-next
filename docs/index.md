@@ -4,7 +4,7 @@ layout: home
 hero:
   name: "Generator"
   text: "CRUD for Laravel"
-  tagline: Fast, lightweight, and easily adaptable code
+  tagline: Automate CRUD, Focus on Core Features
   image:
     src: https://github.com/SAWARATSUKI/KawaiiLogos/blob/main/Laravel/LaravelTransparent.png?raw=true
     alt: Laravel kawaii logo 
@@ -16,15 +16,17 @@ hero:
       text: View on GitHub 
       link: https://github.com/Evdigi-INA/generator
 features:
-  - title: (Hopefully) Simple yet powerful
+  - title: Simple yet powerful
     icon: ✨
-    details: Is designed to streamline your development process with simplicity and efficiency
+    details: Streamline your development process with simplicity and efficiency.
+    
   - title: Batteries Included
     icon: 🔋
-    details: Built-in with starter kit, user management, authentication and role permissions
+    details: Starter kit with user management, authentication, and role permissions.
+    
   - title: Easy to customize
     icon: 👌
-    details: It's easy to get started and customize the outcome code.
+    details: Get started quickly and easily customize the outcome code.
 ---
 
 <script setup>

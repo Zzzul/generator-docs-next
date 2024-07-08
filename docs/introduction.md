@@ -8,15 +8,14 @@ outline: deep
 
 ![Simple Version](/simple-version.png)
 
-[Generator](https://github.com/Evdigi-INA/generator) is a Laravel-based open-source toolkit for building basic needs for administration interface setup like Create, Read, Update, and Delete. It's the minimalistic template or a starting point for developing CMS system, admin panel, or any other web application that requires CRUD functionality.
+[Generator](https://github.com/Evdigi-INA/generator) is an open-source Laravel toolkit for building essential administration interfaces with ease. Featuring comprehensive CRUD operations, it acts as a minimalistic template or a robust starting point for developing CMS systems, admin panels, and other web applications requiring CRUD functionality.
 
 ## The Reason
-
-We have a bit of time to build <s>master</s> main data over and over again, therefore this package may let you focus on your core features application, Instead, you might use that time to sleep, play video games, or touch some grass.
+We've all spent too much time building <s>master</s> main data management systems repeatedly. This package allows you to focus on your application's core features instead. Use that saved time to sleep, play video games, or even touch some grass.
 
 ## Who We Are
 
-We're just bunch of people working on side project (freelance) developer based in Bekasi, Indonesia 🇮🇩. We want to make a difference in the world by helping people making their own projects via open source and free software such like our creation.
+We are a group of freelance developers based in Bekasi, Indonesia 🇮🇩, working on side projects. Our mission is to make a difference by helping people create their own projects through open-source and free software like our creations.
 
 ## Pricing
 

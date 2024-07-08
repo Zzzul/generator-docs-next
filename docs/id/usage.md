@@ -152,7 +152,7 @@ php artisan install:api
 ```
 
 2. Pastikan _file_ `routes/api.php` ada
-3. Tambahkan kode berikut pada `bootstrap/app.php` _file_
+3. Tambahkan atau hapus komentar kode berikut pada `bootstrap/app.php` _file_
 
 ```php
 ->withRouting(

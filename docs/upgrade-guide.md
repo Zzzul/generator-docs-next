@@ -29,18 +29,23 @@ For the most recent and complete changelog, please visit [Github Releases](https
 2. Update `composer.json` file
 
     ```json
-    "laravel/framework to": "^11.0",
+   "require": {
+        "laravel/framework to": "^11.0", // [!code focus]
+   },
+   "require-dev": {
+        "nunomaduro/collision": "^8.1", // [!code focus]
+        "evdigiina/generator": "^0.3.0",  // [!code focus]
+   } 
+   ```
 
-    // require-dev
-    "nunomaduro/collision": "^8.1",
-    "evdigiina/generator": "^0.3.0",
-    ```
     Optional (if installed).
 
-    ```json
-    "spatie/laravel-permission": "^6.0",
-    "laravel/fortify": "^1.21"
-    ```
+   ```json
+   "require": {
+        "spatie/laravel-permission": "^6.0", // [!code focus]
+        "laravel/fortify": "^1.21" // [!code focus]
+   },
+   ```
 
 3. Publish new files
 

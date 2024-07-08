@@ -40,9 +40,7 @@ After creating the new module, the `404` error may show, if this occurs, simply 
 
 ![Create Relation](https://user-images.githubusercontent.com/62506582/230761648-1ef36018-2486-424b-831f-ae5f74a66705.png)
 
-For now is only support [One To Many (Inverse) / Belongs To](https://laravel.com/docs/10.x/eloquent-relationships#one-to-many-inverse).
-
-There is rules you must be followed if you want create a a relation:
+Currently, only [One To Many (Inverse) / Belongs To](https://laravel.com/docs/10.x/eloquent-relationships#one-to-many-inverse) relationships are supported. There are specific rules you must follow to create a relation:
 
 - Field name: 
     - Must be the table name but in singular + `_id`, eg: if we have a `users` table then it must be a `user_id`.
@@ -55,14 +53,17 @@ There is rules you must be followed if you want create a a relation:
 
 
 :::warning
-Check that the related table and model are already present. If not, an `id` is the field that has been chosen to appear in the `<select>` or `<datalist> `by default and will produce an error when you access the page. The selected field is the second column in the relevant table.
+Ensure that the related table and model already exist. If they don't, attempting to display or use them in a `<select>` or `<datalist>` will result in an error. 
+By default, the `id` field is chosen to appear in the dropdown or autocomplete list, while the selected field typically corresponds to the second column in the relevant table.
 :::
 
 ## Create an Upload File
 
 ![Upload File](https://user-images.githubusercontent.com/62506582/231070943-cc1f13fd-0ee5-47f1-baaf-fb1e66e93ab5.png)
 
-Set column type to `string`, input type to `file`, select file type (for now only support image), fill the max size, and default value is optional (must be a valid link), also we use [Intervention Image](https://image.intervention.io/v2) for manipulating uploaded image. all setting for images are available at `config/generator.php`.
+Set the column type to `string`, the input type to `file`, and select the file type (currently only supporting images). Fill in the max size, and the default value is optional (must be a valid link). 
+We use [Intervention Image](https://image.intervention.io) for manipulating uploaded images. All settings for images are available in `config/generator.php`.
+
 
 Default image configuration:
 ```php
@@ -119,14 +120,14 @@ Or if you are using `s3` to store the image, make sure you read the [documentati
 This feature only available in full version.
 :::
 
-You can easily create a dynamic sidebar menu with just a few inputs. all sidebar menus configuration are placed in `config/generator.php`
+You can easily create a dynamic sidebar menu with just a few inputs. All sidebar menu configurations are placed in `config/generator.php`.
 
-How about I don't need a dynamic sidebar menu, I just want to create my menu in `blade`. yeah, we provide it, [click here how to do it](features.md#configure-the-menu-on-the-sidebar).
+What if you don't need a dynamic sidebar menu and prefer to create your menu in `blade`? No problem, we provide support for that too. [Click here to learn how to do it](features.md#configure-the-menu-on-the-sidebar).
 
 
 ## Role & Permissions
 
-While you are using the full version, after creating a new module will automatically generate some permissions and assign them to the role `admin`. all permissions are stored in `config/permission.php`
+When using the full version, creating a new module will automatically generate specific permissions and assign them to the `admin` role. All permissions are managed in `config/permission.php`.
 
 Here an example:
 ```php
@@ -150,8 +151,8 @@ Before you use this feature, make sure you have installed and read the latest do
 php artisan install:api
 ```
 
-2. Check if the `routes/api.php` file exists
-3. Go to `bootstrap/app.php` and add the following code
+2. Check if the `routes/api.php` file is exists
+3. Go to `bootstrap/app.php` and remove or add the following code
 
 ```php
 ->withRouting(
@@ -162,9 +163,8 @@ php artisan install:api
 )
 ```
 
-Then, for the [full version](get-started#full-version), go to `/generators-api/create`, and for the [simple version](get-started#simple-version), go to `/simple-generators/create`, then repeat the methods you used to create CRUD above.
-
+For the [full version](get-started#full-version), navigate to `/generators-api/create`. For the [simple version](get-started#simple-version), go to `/simple-generators/create`. Then, follow the same steps you used to create CRUD operations above.
 
 :::info
-If you use the API Generator and the [full version](get-started#full-version), you cannot create a Sidebar menu.
+If you are using the API Generator in the [full version](get-started#full-version), sidebar menu creation is not available.
 :::
