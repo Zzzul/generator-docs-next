@@ -89,7 +89,7 @@ kamu dapat berkontribusi pada proyek ini, dengan mengikuti langkah-langkah berik
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "EvdigiIna\\Generator\\": "packages/evdigi-ina/generator/src/"
+            "EvdigiIna\\Generator\\": "packages/evdigi-ina/generator/src/" // [!code focus]
         }
     },
     ```
@@ -104,7 +104,7 @@ kamu dapat berkontribusi pada proyek ini, dengan mengikuti langkah-langkah berik
 
     ```php
     ->withProviders([
-        \EvdigiIna\Generator\Providers\GeneratorServiceProvider::class,
+        \EvdigiIna\Generator\Providers\GeneratorServiceProvider::class, // [!code focus]
         //...
     ])
     ```
@@ -123,11 +123,11 @@ kamu dapat berkontribusi pada proyek ini, dengan mengikuti langkah-langkah berik
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "EvdigiIna\\Generator\\": "packages/evdigi-ina/generator/src/"
+            "EvdigiIna\\Generator\\": "packages/evdigi-ina/generator/src/" // [!code focus]
         },
-        "files": [
-            "App/Generators/helper.php"
-        ]
+        "files": [ // [!code focus]
+            "App/Generators/helper.php"// [!code focus] 
+        ] // [!code focus]
     },
     ```
 
@@ -135,7 +135,7 @@ kamu dapat berkontribusi pada proyek ini, dengan mengikuti langkah-langkah berik
 
     ```php
     ->withProviders([
-        \EvdigiIna\Generator\Providers\GeneratorServiceProvider::class,
+        \EvdigiIna\Generator\Providers\GeneratorServiceProvider::class, // [!code focus]
         //..
     ])
     ```

@@ -163,6 +163,14 @@ php artisan install:api
 )
 ```
 
+4. If you want an authentication module, such as login and register, please execute the following command
+
+```sh
+php artisan generator:publish-api
+```
+
+This command will generate some code in `app/Http/Controllers/Api/AuthController`, `app/Http/Requests/Auth`, and `routes/api.php`
+
 For the [full version](get-started#full-version), navigate to `/generators-api/create`. For the [simple version](get-started#simple-version), go to `/simple-generators/create`. Then, follow the same steps you used to create CRUD operations above.
 
 :::info
