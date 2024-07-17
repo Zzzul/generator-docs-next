@@ -163,13 +163,13 @@ php artisan install:api
 )
 ```
 
-4. Kalau kamu butuh modul autentikasi, seperti login dan register, jalankan perintah berikut
+4. Jika kamu butuh modul autentikasi, seperti login dan register, jalankan perintah berikut (opsional)
 
 ```sh
 php artisan generator:publish-api
 ```
 
-Perintah ini akan menghasilkan beberapa kode di `app/Http/Controllers/Api/AuthController`, `app/Http/Requests/Auth`, and `routes/api.php`
+Perintah ini akan menghasilkan beberapa kode di `app/Http/Controllers/Api/AuthController`, `app/Http/Requests/Auth`, dan `routes/api.php`
 
 Lalu menuju `/generators-api/create` untuk [versi lengkap](get-started#versi-lengkap) dan `/simple-generators/create` untuk [versi sederhana](get-started#versi-sederhana), sisanya lakukan hal yang sama seperti kamu membuat _CRUD_ diatas.
 
