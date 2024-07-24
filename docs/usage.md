@@ -46,7 +46,7 @@ Currently, only [One To Many (Inverse) / Belongs To](https://laravel.com/docs/10
     - Must be the table name but in singular + `_id`, eg: if we have a `users` table then it must be a `user_id`.
 - Column Type:
     - Change to `foreignId`.
-    - For constrain or related model name, you can fill with table name (automatically change to plural).
+    - For constrain or related model name, you can fill with Model name (automatically change to plural).
     - Action on update & delete:
         - On update: `nothing, cascade, restrict`
         - On delete: `nothing, cascade, restrict, null`
@@ -62,6 +62,7 @@ By default, the `id` field is chosen to appear in the dropdown or autocomplete l
 ![Upload File](https://user-images.githubusercontent.com/62506582/231070943-cc1f13fd-0ee5-47f1-baaf-fb1e66e93ab5.png)
 
 Set the column type to `string`, the input type to `file`, and select the file type (currently only supporting images). Fill in the max size, and the default value is optional (must be a valid link). 
+
 We use [Intervention Image](https://image.intervention.io) for manipulating uploaded images. All settings for images are available in `config/generator.php`.
 
 

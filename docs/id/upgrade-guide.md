@@ -13,7 +13,7 @@ Setiap perubahan itu pasti ada dan wajar, jadi kami harap kamu dapat menerima pe
    - [Yajra Datatable v11.x](https://yajrabox.com/docs/laravel-datatables/11.0)
    - [Spatie Permission v6.x](https://spatie.be/docs/laravel-permission/v6/introduction)
 
-   An Dan yang dibutuhkan untuk proses pengembangan:
+   Dan yang dibutuhkan untuk proses pengembangan:
 
    - [Larastan v2.x](https://github.com/larastan/larastan)
    - [PHPinsights v2.x](https://phpinsights.com/)
@@ -253,7 +253,7 @@ Ubah `simple_version_publish_count` atau `full_version_publish_count` menjadi `1
     }
     ```
 
-    And change to Laravel 10 like middleware
+    Ubah menjadi Laravel 10 _Middleware_ seperti di bawah ini
 
     ```php 
     public function __construct()
@@ -265,7 +265,7 @@ Ubah `simple_version_publish_count` atau `full_version_publish_count` menjadi `1
     }
     ```
 
-    From 
+    Dari 
 
     ```php 
     use Illuminate\Routing\Controllers\{HasMiddleware, Middleware}; // [!code focus]
@@ -275,7 +275,7 @@ Ubah `simple_version_publish_count` atau `full_version_publish_count` menjadi `1
         //...
     }
     ```
-    To
+    Menjadi
 
     ```php
     // use Illuminate\Routing\Controllers\{HasMiddleware, Middleware}; // [!code focus]
@@ -306,7 +306,7 @@ Fitur terbaru yang ditambahkan pada versi _Generator ^0.3.x_:
 
    Kelas ini digunakan untuk melakukan unggah gambar dan manipulasi gambar menggunakan [Intervention Image](https://image.intervention.io/v3)
 
-5. Menambahkan opsi baru ke konfigurasi `generator.image.disk`, yang sebelumnya adalah `generator.image.path`, kini kamu dapat menggunakan opsi `public, storage, atau s3`. Berikut ini contohnya
+5. Menambahkan opsi baru ke konfigurasi `generator.image.disk`, yang sebelumnya adalah `generator.image.path`, kini kamu dapat menggunakan opsi `public`, `storage`, atau `s3`. Berikut ini contohnya
 
 ```php
 "image" => [
@@ -496,4 +496,4 @@ return [
 
 6. Dokumentasi terbaru :book:
 
-   We found it challenging to generate documentation for many versions and languages using [MkDocs](https://www.mkdocs.org/), so we chose to build the new documentation using [Vitepress](https://vitepress.dev/).
+   Kami kesulitan ketika membuat dokumentasi untuk banyak versi dan bahasa menggunakan [MkDocs](https://www.mkdocs.org/), oleh karena itu kami memutuskan untuk membuat dokumentasi baru menggunakan [Vitepress](https://vitepress.dev/ ).

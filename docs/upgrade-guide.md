@@ -297,7 +297,7 @@ New features added in _Generator v0.3.x_:
 
     This class is used to upload and manipulate images via [Intervention Image](https://image.intervention.io/v3)
 
-5. Added a new option to the configuration `generator.image.disk`, previously known as `generator.image.path`, you can now select `public, storage, or s3`. Here's an example.
+5. Added a new option to the configuration `generator.image.disk`, previously known as `generator.image.path`, you can now select `public`, `storage` or `s3`. Here's an example.
 ```php
 "image" => [
     /**

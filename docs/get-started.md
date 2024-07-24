@@ -21,7 +21,11 @@ This package has two variants: [Simple Version](#simple-version) dan [Full Versi
 
 ![Simple Version](/simple-version.png)
 
-Which includes: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v2), dan [Bootstrap 5](https://getbootstrap.com/).
+Designed for developers who want a straightforward solution, this version focuses solely on generating CRUD operations, enabling you to quickly create, read, update, and delete functionalities with ease. 
+
+Streamline your workflow and concentrate on building your application’s core features without the hassle of repetitive coding tasks.
+
+Includes: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v2) & [Bootstrap 5](https://getbootstrap.com/).
 
 [See available features](features.md)
   
@@ -38,7 +42,11 @@ Run the local development server `php artisan serve` and then in your browser na
 
 ![Full Version](/full-version-2.png)
 
-_Generator + Starter App_, which includes: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v3), [Laravel Fortify](https://laravel.com/docs/11.x/fortify), [Spatie Permission](https://spatie.be/docs/laravel-permission/v6/installation-laravel), dan [Mazer Template](https://github.com/zuramai/mazer).
+This comprehensive version goes beyond basic CRUD operations, offering a complete starter app, robust authentication, and flexible role-based access control. 
+
+Perfect for developers seeking an all-in-one solution, the Full Version empowers you to kickstart your applications with essential features, focus on innovation and leave the groundwork to us.
+
+Includes: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v3), [Laravel Fortify](https://laravel.com/docs/11.x/fortify), [Spatie Permission](https://spatie.be/docs/laravel-permission/v6/installation-laravel) & [Mazer Template](https://github.com/zuramai/mazer).
 
 [See available features.](features.md#full-version)
 
@@ -63,7 +71,7 @@ php artisan generator:install full
 This command will overwrite some files, so you should be careful when running this command and avoid running it more than once.
 :::
  
-Run migration and Seeder commands
+Execute migration and seeder commands
 
 ```sh
 php artisan migrate --seed

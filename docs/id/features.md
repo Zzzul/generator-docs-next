@@ -25,7 +25,7 @@ Berikut adalah beberapa fitur yang tersedia saat ini dan dapat kamu coba.
 ## Perintah Tersedia
 
 ### Instalasi Generator
-#### Instalasi varian Generator: Sederhana (_Simple version_) / Lengkap (_Full version_)
+ Instalasi varian Generator: [Sederhana (_Simple version_)](/id/get-started#versi-sederhana) / [Lengkap (_Full version_)](/id/get-started#versi-lengkap)
 
 Untuk versi sederhana
 ```sh
@@ -47,8 +47,9 @@ php artisan generator:publish-utils
 ### Tetapkan menu _Sidebar_
 Tetapkan menu _Sidebar_ menjadi kode `.blade` (statis) atau gunakan daftar dari konfigurasi (dinamis)
 
-Tempat konfigurasi menu _Sidebar_ berada di ```config/generator.php```
+Kamu dapat melihat konfigurasi menu _Sidebar_  di ```config/generator.php```
 
+Gunakan konfigurasi menu _Sidebar_ dinamis
 ```sh
 php artisan generator:sidebar dynamic
 ```
@@ -69,7 +70,7 @@ Setelah kamu membuat modul baru menggunakan Generator, _Sidebar_ akan otomatis k
 Kelas `helper` ditempatkan di `App\Generators\helper.php`
 
 #### Periksa menu aktif pada _Sidebar_
-Memerikan menu pada _Sidebar_ apakah sesuai dengan _uri_ yang sedang diakses.
+Cek menu pada _Sidebar_ apakah sesuai dengan _url_ yang sedang diakses.
 ```php
 is_active_menu(string|array $menu): boolean;
 ```

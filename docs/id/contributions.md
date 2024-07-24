@@ -131,7 +131,7 @@ kamu dapat berkontribusi pada proyek ini, dengan mengikuti langkah-langkah berik
     },
     ```
 
-12. Ubah kode pada `bootstrap/app.php`
+12. Tambahkan kode berikut pada `bootstrap/app.php`
 
     ```php
     ->withProviders([

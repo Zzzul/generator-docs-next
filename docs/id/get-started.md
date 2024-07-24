@@ -20,7 +20,11 @@ Pustaka ini memiliki dua variasi, yaitu: [Versi Sederhana](#versi-sederhana) dan
 
 ![Versi Sederhana](/simple-version.png)
 
-_Generator_, yang sudah termasuk: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v2), dan [Bootstrap 5](https://getbootstrap.com/).
+Dirancang untuk para pengembang yang ingin solusi mudah, versi ini difokuskan pada pembuatan operasi CRUD, kamu bisa membuat _Create_, _Read_, _Update_, dan _Delete_ dengan mudah. 
+
+Membuat kamu lebih berkonsentrasi pada fitur utama aplikasi tanpa repot dengan tugas coding yang berulang-ulang.
+
+Didalamnya sudah terdapat: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v2), dan [Bootstrap 5](https://getbootstrap.com/).
 
 [Lihat fitur yang tersedia](features.md)
   
@@ -38,7 +42,11 @@ jalankan server pengembangan lokal `php artisan serve` lalu pada _browser_ kamu 
 
 ![Versi Lengkap](/full-version-2.png)
 
-_Generator + Starter App_, yang sudah termasuk: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v3), [Laravel Fortify](https://laravel.com/docs/11.x/fortify), [Spatie Permission](https://spatie.be/docs/laravel-permission/v6/installation-laravel), dan [Mazer Template](https://github.com/zuramai/mazer).
+Versi lengkap ini lebih dari sekedar membuat operasi CRUD, menawarkan _Starter App_ yang komplit, mulai dari autentikasi, admin panel, _User_ manajemen hingga hak akses (_Role & Permissions_) yang fleksibel. Cocok untuk kamu yang membutuhkan solusi _All-in-one_.
+
+Versi ini memberdayakan kamu untuk langsung memulai aplikasi dengan fitur-fitur esensial, fokus pada inovasi, dan biarkan kami yang urus hal-hal dasarnya.
+
+Pada versi ini kamu akan mendapatkan: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v3), [Laravel Fortify](https://laravel.com/docs/11.x/fortify), [Spatie Permission](https://spatie.be/docs/laravel-permission/v6/installation-laravel), dan [Mazer Template](https://github.com/zuramai/mazer).
 
 [Lihat fitur yang tersedia](features.md#full-version).
 
@@ -64,7 +72,7 @@ php artisan generator:install full
 Perintah ini akan menimpa beberapa berkas, jadi kamu harus berhati-hati saat menjalankan perintah ini dan hindari menjalankannya lebih dari sekali.
 :::
 
-Jalankan perintah migrasi dan _Seeder_
+Jalankan perintah migrasi dan _seeder_
 
 ```sh
 php artisan migrate --seed

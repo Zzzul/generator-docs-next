@@ -43,11 +43,11 @@ Sayangnya _Generator_ saat ini hanya mendukung [One To Many (Inverse) / Belongs 
 
 Terdapat beberapa aturan yang harus diikuti jika kamu ingin membuat relasi:
 
-- Nama Kolom: 
+- _Field name_: 
     - Harus merupakan nama tabel tetapi dalam bentuk tunggal + `_id`, misalnya: jika kamu memiliki tabel `users` maka harus `user_id`.
-- Jenis Kolom:
-    - Diubah menjadi `foreignId`.
-    - Untuk _constrains_ atau nama model terkait, kamu bisa mengisi dengan nama tabel (secara otomatis berubah menjadi jamak).
+- _Column Type_:
+    - Ubah menjadi `foreignId`.
+    - Untuk _constrains_ atau nama model terkait, kamu bisa mengisi dengan nama _Model_ (secara otomatis berubah menjadi jamak).
     - Aksi pada ubah/edit & penghapusan:
         - Pada ubah/edit: `nothing, cascade, restrict`
         - Pada penghapusan: `nothing, cascade, restrict, null`
@@ -60,7 +60,7 @@ Pastikan tabel & model terkait sudah ada, jika tidak maka kolom yang dipilih unt
 
 ![Unggah File](https://user-images.githubusercontent.com/62506582/231070943-cc1f13fd-0ee5-47f1-baaf-fb1e66e93ab5.png)
 
-Atur jenis kolom menjadi `string`, jenis input menjadi `file`, pilih jenis file (saat ini hanya mendukung gambar), isi ukuran maksimal, dan nilai _default_ bersifat opsional (harus berupa tautan yang valid)
+Atur _Column Type_ menjadi `string`, _Input Type_ menjadi `file`, pilih jenis file (saat ini hanya mendukung gambar), isi ukuran maksimal, dan nilai _default_ bersifat opsional dan harus berupa tautan yang valid
 
 Juga kami menggunakan [Intervention Image](https://image.intervention.io/v2) untuk memanipulasi gambar yang diunggah
 semua konfigurasi untuk gambar kamu dapat melihatnya di `config/generator.php`
@@ -116,7 +116,7 @@ Atau jika kamu ingin menggunakan `s3` untuk menyimpan gambar, pastikan kamu meli
 ![Membuat menu Sidebar](https://user-images.githubusercontent.com/62506582/230722893-f11aae2c-4407-4eaf-803e-3b8491269e40.png)
 
 :::info
-Fitur ini hanya tersedia di versi lengkap.
+Fitur ini hanya tersedia di [versi lengkap](/id/get-started#versi-lengkap).
 :::
 
 kamu dapat dengan mudah membuat menu _Sidebar_ dinamis dengan hanya beberapa input. semua konfigurasi menu _Sidebar_ berada di `config/generator.php`

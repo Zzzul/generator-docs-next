@@ -78,7 +78,7 @@ php artisan generator:sidebar static
 When you create a new module with the Generator, the Sidebar will automatically revert to dynamic. But don't panic, you may revert to the previous settings.
 :::
 
-## Utilitas/Helper
+## Utility Classes/Helper
 
 ### Helper
 The helper class is placed in `App\Generators\helper.php`

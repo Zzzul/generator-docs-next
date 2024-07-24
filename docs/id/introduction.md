@@ -25,7 +25,7 @@ Tak Kenal Maka Tak Sayang
 Ini adalah template awal yang sederhana yang kami harap dapat membantu kamu dalam pengembangan _CMS_, Admin Panel, atau aplikasi web lain yang membutuhkan fungsi _CRUD_.
 
 ## Alasan
-Kami sering kali memiliki waktu terbatas untuk membuat data utama berulang kali, oleh karena itu pustaka ini dapat membantu kamu untuk fokus pada fitur inti aplikasi kamu. 
+Kami sering kali memiliki waktu terbatas untuk membuat <s>master</s> main data berulang kali, oleh karena itu kami harap pustaka ini dapat membantu kamu untuk fokus pada fitur inti aplikasi kamu. 
 Alih-alih, kamu dapat menggunakan waktu tersebut untuk tidur, berkumpul dengan teman atau keluarga, bermain video game, atau "menyentuh rumput".
 
 ## Siapa Kami

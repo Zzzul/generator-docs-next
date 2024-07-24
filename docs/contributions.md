@@ -130,7 +130,7 @@ You can contribute to this project by following these steps:
     },
     ```
 
-12. Update the following code to `bootstrap/app.php`
+12. Add the following code to `bootstrap/app.php`
 
     ```php
     ->withProviders([
