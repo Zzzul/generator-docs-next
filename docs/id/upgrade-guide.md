@@ -19,7 +19,7 @@ Setiap perubahan itu pasti ada dan wajar, jadi kami harap kamu dapat menerima pe
    - [PHPinsights v2.x](https://phpinsights.com/)
    - [Testbench v9.x](https://packages.tools/testbench.html)
 
-3. Menghapus `App\Generators\GeneratorUtils` kelas dan melakukan perubahan pada _helper_ kelas, [Disini untuk lebih lanjut](#how-to-update)
+3. Menghapus (opsional) `App\Generators\GeneratorUtils` kelas dan melakukan perubahan pada _helper_ kelas, [Disini untuk lebih lanjut](#how-to-update)
 
 4. Memperbaiki _Bug_ dan _Error_
 

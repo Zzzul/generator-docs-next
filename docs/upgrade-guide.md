@@ -15,7 +15,7 @@
     - [PHPinsights v2.x](https://phpinsights.com/)
     - [Testbench v9.x](https://packages.tools/testbench.html)
 
-3. Remove `App\Generators\GeneratorUtils` class and update the helper class, [here for more info](#how-to-update)
+3. Remove (optionally) `App\Generators\GeneratorUtils` class and update the helper class, [here for more info](#how-to-update)
 
 4. Fix bug and error.
 
@@ -298,6 +298,7 @@ New features added in _Generator v0.3.x_:
     This class is used to upload and manipulate images via [Intervention Image](https://image.intervention.io/v3)
 
 5. Added a new option to the configuration `generator.image.disk`, previously known as `generator.image.path`, you can now select `public`, `storage` or `s3`. Here's an example.
+
 ```php
 "image" => [
     /**
