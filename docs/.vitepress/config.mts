@@ -88,7 +88,7 @@ export default defineConfig({
           {
             text: '🔖 Version',
             items: [
-              { text: '⚡ 0.3.x (Latest)', link: '/introduction' },
+              { text: '⚡ 0.3.x (Latest)', link: '/' },
               { text: '🔒 0.2.3', link: '/0.2.3/' },
             ]
           }
@@ -144,7 +144,7 @@ export default defineConfig({
           {
             text: '🔖 Versi',
             items: [
-              { text: '⚡ 0.3.x (Terbaru)', link: '/id/introduction' },
+              { text: '⚡ 0.3.x (Terbaru)', link: '/id/' },
               { text: '🔒 0.2.3', link: '/id/0.2.3/' },
             ]
           }
