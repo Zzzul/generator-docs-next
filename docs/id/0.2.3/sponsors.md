@@ -20,8 +20,9 @@ _Generator_ adalah proyek _Open-ource_ berlisensi _MIT_ dan sepenuhnya gratis un
 
 <hr>
 
-- [Rachmad Nur Hayat](https://rnh-is.me/)
+- [Rachmad Nur Hayat](https://rachmad.dev/)
   - [GitHub](https://github.com/rachyharkov)
+  - [Trakteer](https://trakteer.id/rachmadnh/tip)
 
 <script setup>
 import { VPTeamMembers } from 'vitepress/theme'

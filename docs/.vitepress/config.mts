@@ -1,10 +1,24 @@
 import { defineConfig } from 'vitepress'
 
+export const META_URL = 'https://zzzul.github.io/generator-docs-next/'
+export const META_TITLE = 'CRUD Generator 📦'
+export const META_DESCRIPTION =
+  'Automate CRUD, Focus on Core Features'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
-  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+  head: [
+    ['meta', { property: 'og:url', content: META_URL }],
+    ['meta', { property: 'og:description', content: META_DESCRIPTION }],
+    ['meta', { property: 'og:image', content: '/crud-generator-image-complete.png' }],
+    ['meta', { property: 'twitter:url', content: META_URL }],
+    ['meta', { property: 'twitter:title', content: META_TITLE }],
+    ['meta', { property: 'twitter:description', content: META_DESCRIPTION }],
+    ['meta', { property: 'twitter:image', content: '/crud-generator-image-complete.png' }],
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
+  ],
   base: '/generator-docs-next/',
   editLink: {
     pattern: 'https://github.com/Zzzul/generator-docs-next/edit/main/docs/:path'
@@ -13,6 +27,7 @@ export default defineConfig({
     lineNumbers: false
   },
   themeConfig: {
+    logo: '/crud-generator-image-complete.png',
     i18nRouting: true,
     ignoreDeadLinks: true,
     search: {
@@ -75,9 +90,14 @@ export default defineConfig({
 
   locales: {
     root: {
-      title: "Generator",
+      title: "CRUD",
+      head: [
+        ['title', { Text: 'CRUD Generator 📦' }],
+      ],
       description: "CRUD for Laravel",
       label: 'English',
+
+      // using image
       // lang: 'en',
       // link: '/',
       themeConfig: {
@@ -126,7 +146,7 @@ export default defineConfig({
         ],
         footer: {
           message: 'Released under the MIT License.',
-          copyright: 'Copyright © 2021-present Mohammad Zulfahmi & Evdigi-INA, "kawaii" logo by https://github.com/SAWARATSUKI/KawaiiLogos'
+          copyright: 'Copyright © 2021-present Mohammad Zulfahmi & Evdigi-INA, "php generator" logo by <a href="https://rachmad.dev">Rachmad Nur Hayat</a>'
         }
       },
     },
@@ -205,5 +225,6 @@ export default defineConfig({
         darkModeSwitchTitle: 'Beralih ke Mode Gelap',
       },
     }
-  }
+  },
+  titleTemplate: ':title - CRUD Generator',
 })

@@ -31,6 +31,7 @@ Generator is an MIT-licensed open-source project and is completely free to use. 
 
 - [Rachmad Nur Hayat](https://rnh-is.me/)
   - [GitHub](https://github.com/rachyharkov)
+  - [Trakteer](https://trakteer.id/rachmadnh/tip)
   <!-- - [Buymeacoffe](#)
   - [Ko-fi](#)
   - [Saweria](#) -->
@@ -45,6 +46,7 @@ const members = [
     title: 'Author',
     links: [
       { icon: 'github', link: 'https://github.com/Zzzul' },
+      { icon: 'linkedin', link: 'https://www.linkedin.com/in/mohammad-zulfahmi/' },
     ]
   },
    {
@@ -53,6 +55,7 @@ const members = [
     title: 'Core Team Member',
     links: [
       { icon: 'github', link: 'https://github.com/rachyharkov' },
+      { icon: 'linkedin', link: 'https://www.linkedin.com/in/rachmad-nur-hayat-731a391b2/' },
     ]
   },
 ]

@@ -20,11 +20,9 @@ Generator is an MIT-licensed open-source project and is completely free to use. 
 
 <hr>
 
-- [Rachmad Nur Hayat](https://rnh-is.me/)
+- [Rachmad Nur Hayat](https://rachmad.dev/)
   - [GitHub](https://github.com/rachyharkov)
-  - [Buymeacoffe](#)
-  - [Ko-fi](#)
-  - [Saweria](#)
+  - [Trakteer](https://trakteer.id/rachmadnh/tip)
 
 <script setup>
 import { VPTeamMembers } from 'vitepress/theme'
