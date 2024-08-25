@@ -11,13 +11,13 @@ export default defineConfig({
   head: [
     ['meta', { property: 'og:url', content: META_URL }],
     ['meta', { property: 'og:description', content: META_DESCRIPTION }],
-    ['meta', { property: 'og:image', content: '/crud-generator-image-complete.png' }],
+    ['meta', { property: 'og:image', content: 'https://zzzul.github.io/generator-docs-next/android-icon-192x192.png' }],
     ['meta', { property: 'twitter:url', content: META_URL }],
     ['meta', { property: 'twitter:title', content: META_TITLE }],
     ['meta', { property: 'twitter:description', content: META_DESCRIPTION }],
-    ['meta', { property: 'twitter:image', content: '/crud-generator-image-complete.png' }],
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
+    ['meta', { property: 'twitter:image', content: 'https://zzzul.github.io/generator-docs-next/android-icon-192x192.png' }],
+    ['link', { rel: 'icon', href: 'https://zzzul.github.io/generator-docs-next/favicon.ico' }],
+    ['link', { rel: 'shortcut icon', href: 'https://zzzul.github.io/generator-docs-next/favicon.ico' }],
   ],
   base: '/generator-docs-next/',
   editLink: {
