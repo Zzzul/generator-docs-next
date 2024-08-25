@@ -1,13 +1,16 @@
 ---
 layout: home
+title: CRUD Generator - Automate CRUD, Focus on Core Features
+titleTemplate: ':title'
 
 hero:
   name: "Generator"
   text: "CRUD for Laravel"
   tagline: Automate CRUD, Focus on Core Features
   image:
-    src: https://github.com/SAWARATSUKI/KawaiiLogos/blob/main/Laravel/LaravelTransparent.png?raw=true
+    src: /crud-generator-image-complete.png
     alt: Laravel kawaii logo 
+    # increase scale
   actions:
     - theme: brand
       text: Introduction
