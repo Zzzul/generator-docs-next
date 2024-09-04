@@ -9,7 +9,7 @@ hero:
   tagline: Automate CRUD, Focus on Core Features
   image:
     src: /crud-generator-image-complete.png
-    alt: Laravel kawaii logo 
+    alt: Generator logo 
     # increase scale
   actions:
     - theme: brand
@@ -25,18 +25,9 @@ features:
     
   - title: Batteries Included
     icon: 🔋
-    details: Starter kit with user management, authentication, and role permissions.
+    details: Starter kit with user management, authentication and role permissions.
     
   - title: Easy to customize
     icon: 👌
     details: Get started quickly and easily customize the outcome code.
 ---
-
-<script setup>
-// Heavily inspired by React
-// https://github.com/reactjs/react.dev/pull/6817
-import { onMounted } from 'vue'
-onMounted(() => {
-  console.log('logo credits to @sawaratsuki1004 via https://github.com/SAWARATSUKI/ServiceLogos');
-})
-</script>

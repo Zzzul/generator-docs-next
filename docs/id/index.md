@@ -6,8 +6,8 @@ hero:
   text: "CRUD untuk Laravel"
   tagline: Automatisasi CRUD, Fokus pada Fitur Utama
   image:
-    src: https://github.com/SAWARATSUKI/KawaiiLogos/blob/main/Laravel/LaravelTransparent.png?raw=true
-    alt: Laravel kawaii logo 
+    src: /crud-generator-image-complete.png
+    alt: Generator logo 
   actions:
     - theme: brand
       text: Pengenalan
@@ -28,13 +28,4 @@ features:
     icon: 👌
     details: Mudah digunakan dan kode yang dihasilkan dapat kamu ubah sesuai kebutuhanmu
 ---
-
-<script setup>
-// Heavily inspired by React
-// https://github.com/reactjs/react.dev/pull/6817
-import { onMounted } from 'vue'
-onMounted(() => {
-  console.log('logo credits to @sawaratsuki1004 via https://github.com/SAWARATSUKI/ServiceLogos');
-})
-</script>
 
