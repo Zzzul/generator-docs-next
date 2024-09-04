@@ -149,12 +149,15 @@ export default defineConfig({
         ],
         footer: {
           message: 'Released under the MIT License.',
-          copyright: 'Copyright © 2021-present Mohammad Zulfahmi & Evdigi-INA, "php generator" logo by <a href="https://rachmad.dev">Rachmad Nur Hayat</a>'
+          copyright: 'Copyright © 2021-Now <a href="https://github.com/Zzzul">Mohammad Zulfahmi</a> & Evdigi-INA, "php generator" logo by <a href="https://rachmad.dev">Rachmad Nur Hayat</a>'
         }
       },
     },
     id: {
-      title: "Generator",
+      title: "CRUD",
+      head: [
+        ['title', { Text: 'CRUD Generator 📦' }],
+      ],
       description: "CRUD untuk Laravel",
       label: 'Indonesia',
       // link: '/id/', 
@@ -204,7 +207,7 @@ export default defineConfig({
         ],
         footer: {
           message: 'Dirilis dibawah lisensi MIT.',
-          copyright: 'Hak cipta © 2021-sekarang Mohammad Zulfahmi & Evdigi-INA, "kawaii" logo oleh https://github.com/SAWARATSUKI/KawaiiLogos'
+          copyright: 'Hak cipta © 2021-Sekarang <a href="https://github.com/Zzzul">Mohammad Zulfahmi</a> & Evdigi-INA, "php generator" logo oleh <a href="https://rachmad.dev">Rachmad Nur Hayat</a>'
         },
         docFooter: {
           prev: 'Sebelumnya',
