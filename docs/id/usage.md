@@ -1,6 +1,20 @@
 ---
 outline: deep
+lastUpdated: true
+editLink: true
+title: Cara Pemakaian
+titleTemplate: Cara pakai Generator
+description: Cara pemakaian di Generator
+head:
+  - - meta
+    - name: description
+      content: Cara pemakaian di Generator
+  - - meta
+    - name: keywords
+      content: Cara Pakai Generator
+next: true
 ---
+
 
 # Cara Pakai yang <s>Semoga</s> Benar
 

@@ -1,10 +1,24 @@
 ---
 outline: deep
+lastUpdated: true
+editLink: true
+title: Cara berkontribusi
+titleTemplate: Mari ikut berkontribusi
+description: Cara berkontribusi di Generator
+head:
+  - - meta
+    - name: description
+      content: Cara berkontribusi di Generator
+  - - meta
+    - name: keywords
+      content: Cara berkontribusi di Generator
+next: true
 ---
 
 ::: warning
-kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbarui proyek kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
+Kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbarui proyek kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
 :::
+
 # Cara Berkontribusi
 
 ### kamu dapat berkontribusi pada proyek ini, dengan mengikuti langkah-langkah berikut:

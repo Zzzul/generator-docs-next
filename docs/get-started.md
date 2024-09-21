@@ -1,3 +1,20 @@
+---
+outline: deep
+lastUpdated: true
+editLink: true
+title: Getting Started
+titleTemplate: Let's get started
+description: Install your Generator for first time
+head:
+  - - meta
+    - name: description
+      content: Install your Generator for first time
+  - - meta
+    - name: keywords
+      content: Getting Started Generator
+next: true
+---
+
 # Getting Started
 
 ### Requirements

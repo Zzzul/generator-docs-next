@@ -12,7 +12,7 @@ head:
   - - meta
     - name: keywords
       content: Generator Features
-
+next: true
 ---
 
 # Available Features
@@ -87,7 +87,12 @@ The helper class is placed in `App\Generators\helper.php`
 Checks whether the menu on the Sidebar matches the accessed uri.
 
 ```php
-is_active_menu(string|array $menu): boolean;
+/**
+ * @param string|array $route
+ * @return string ('' || 'active')
+ */
+is_active_menu(string|array $route): string;
 ```
+
 #### `ImageService`
 This class is used to perform image upload and manipulation functions using [Intervention Image v3.x](https://image.intervention.io/v3), it's placed in `App\Generators\Services`

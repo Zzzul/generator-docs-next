@@ -4,14 +4,14 @@ lastUpdated: true
 editLink: true
 title: Cara berkontribusi
 titleTemplate: Mari ikut berkontribusi
-description: Cara berkontribusi pada proyek ini
+description: Cara berkontribusi di Generator
 head:
   - - meta
     - name: description
-      content: Cara berkontribusi pada proyek ini
+      content: Cara berkontribusi di Generator
   - - meta
     - name: keywords
-      content: Cara berkontribusi to Generator
+      content: Cara berkontribusi di Generator
 next: true
 ---
 
@@ -175,7 +175,7 @@ kamu dapat berkontribusi pada proyek ini, dengan mengikuti langkah-langkah berik
     ```
     
     ```bash
-    git commit -m "describe your changes"
+    git commit -m "add cool feature"
     ```
 
 20. _Push_ perubahan kamu ke repositori

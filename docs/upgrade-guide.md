@@ -1,3 +1,20 @@
+---
+outline: deep
+lastUpdated: true
+editLink: true
+title: Upgrade Guide
+titleTemplate: Update for better experience
+description: Update Generator to latest version
+head:
+  - - meta
+    - name: description
+      content: Update Generator to latest version
+  - - meta
+    - name: keywords
+      content: Upgrade Guide Generator
+next: true
+---
+
 # What's New?
 
 ## Changes in the Latest Version
@@ -30,7 +47,7 @@ For the most recent and complete changelog, please visit [Github Releases](https
 
     ```json
    "require": {
-        "laravel/framework to": "^11.0", // [!code focus]
+        "laravel/framework": "^11.0", // [!code focus]
    },
    "require-dev": {
         "nunomaduro/collision": "^8.1", // [!code focus]
@@ -179,7 +196,7 @@ For the most recent and complete changelog, please visit [Github Releases](https
     </div>
     ```
 
-6. Create a file `generator.cache` in `vendor/evdigiina/generator` then copy the code below
+6. Create a file `generator.cache` in `storage` folder then copy the code below
 
     ```json
     {"simple_version_publish_count":0,"full_version_publish_count":1}
@@ -332,13 +349,15 @@ return [
      */
     "image" => [  // [!code focus]
         /**
-         * Path for store the image.
+         * Image storage location
          *
          * Available options:
          * 1. public
          * 2. storage
          * 3. S3
-         */
+         *
+         * change path to disk
+        */
         "disk" => "storage",  // [!code focus]
 
         /**

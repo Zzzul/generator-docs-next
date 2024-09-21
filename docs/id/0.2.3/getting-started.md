@@ -1,9 +1,21 @@
 ---
 outline: deep
+lastUpdated: true
+editLink: true
+title: Mari Mulai
+titleTemplate: Instal Generator untuk pertam kalinya
+description: Cara meng-install Generator yang baik dan benar
+head:
+  - - meta
+    - name: description
+      content: Meng-instal Generator
+  - - meta
+    - name: keywords
+      content: Install Generator
 ---
 
 ::: warning
-kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbarui proyek kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
+Kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbarui proyek kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
 :::
 
 # Mari Mulai

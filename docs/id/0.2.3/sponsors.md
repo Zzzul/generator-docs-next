@@ -1,9 +1,23 @@
 ---
 outline: deep
+lastUpdated: true
+editLink: true
+title: Sponsor/supporter
+titleTemplate: Berikan Dukunganmu
+description: Berikkan dukunganmu kepada pada kontributor
+head:
+  - - meta
+    - name: description
+      content: Berikkan dukunganmu kepada pada kontributor
+  - - meta
+    - name: keywords
+      content: Berikan Dukungan di Generator
+next: false
 ---
 
+
 ::: warning
-kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbarui proyek kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
+Kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbarui proyek kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
 :::
 
 # Dukungan
@@ -12,7 +26,7 @@ _Generator_ adalah proyek _Open-ource_ berlisensi _MIT_ dan sepenuhnya gratis un
 
 ### Berikan dukunganmu kepada tim inti kami
 
-- [Mohammad Zulfahmi (Creator)](https://zzzul.me)
+- [Mohammad Zulfahmi (Creator)](https://github.com/Zzzul/)
   - [GitHub Sponsor](https://github.com/sponsors/Zzzul)
   - [Buymeacoffe](https://www.buymeacoffee.com/mzulfahmi)
   - [Ko-fi](https://ko-fi.com/mzulfahmi)
@@ -31,7 +45,7 @@ const members = [
   {
     avatar: 'https://www.github.com/Zzzul.png',
     name: 'Mohammad Zulfahmi',
-    title: 'Creator',
+    title: 'Author',
     links: [
       { icon: 'github', link: 'https://github.com/sponsors/Zzzul' },
       { icon: 'linkedin', link: 'https://www.linkedin.com/in/mohammad-zulfahmi/' },

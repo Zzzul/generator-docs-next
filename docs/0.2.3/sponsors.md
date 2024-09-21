@@ -12,7 +12,7 @@ Generator is an MIT-licensed open-source project and is completely free to use. 
 
 ### Give it personally to our core team member
 
-- [Mohammad Zulfahmi (Author)](https://zzzul.me)
+- [Mohammad Zulfahmi](https://github.com/Zzzul/) (Author)
   - [GitHub Sponsor](https://github.com/sponsors/Zzzul)
   - [Buymeacoffe](https://www.buymeacoffee.com/mzulfahmi)
   - [Ko-fi](https://ko-fi.com/mzulfahmi)
@@ -31,7 +31,7 @@ const members = [
   {
     avatar: 'https://www.github.com/Zzzul.png',
     name: 'Mohammad Zulfahmi',
-    title: 'Creator',
+    title: 'Author',
     links: [
       { icon: 'github', link: 'https://github.com/Zzzul' },
     ]

@@ -3,7 +3,7 @@ outline: deep
 lastUpdated: true
 editLink: true
 title: Berikan Dukungan
-titleTemplate: Berikan Dukunganmu
+titleTemplate: Dukunganmu sangat berarti
 description: Berikkan dukunganmu kepada pada kontributor
 head:
   - - meta
@@ -22,7 +22,7 @@ _Generator_ adalah proyek _Open-ource_ berlisensi _MIT_ dan sepenuhnya gratis un
 
 ### Berikan dukunganmu kepada tim inti kami
 
-- [Mohammad Zulfahmi (Creator)](https://zzzul.me)
+- [Mohammad Zulfahmi](https://github.com/Zzzul/) (Author)
   - [GitHub Sponsor](https://github.com/sponsors/Zzzul)
   - [Buymeacoffe](https://www.buymeacoffee.com/mzulfahmi)
   - [Ko-fi](https://ko-fi.com/mzulfahmi)
@@ -43,7 +43,7 @@ const members = [
     name: 'Mohammad Zulfahmi',
     title: 'Author',
     links: [
-      { icon: 'github', link: 'https://github.com/sponsors/Zzzul' },
+      { icon: 'github', link: 'https://github.com/Zzzul' },
       { icon: 'linkedin', link: 'https://www.linkedin.com/in/mohammad-zulfahmi/' },
     ]
   },
@@ -53,6 +53,7 @@ const members = [
     title: 'Core Team Member',
     links: [
       { icon: 'github', link: 'https://github.com/rachyharkov' },
+      { icon: 'linkedin', link: 'https://www.linkedin.com/in/rachmad-nur-hayat-731a391b2/' },
     ]
   },
 ]

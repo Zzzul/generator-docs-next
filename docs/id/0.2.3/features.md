@@ -1,11 +1,21 @@
 ---
 outline: deep
-title: Features
+lastUpdated: true
 editLink: true
+title: Fitur
+titleTemplate: Fitur apa aja sih yang ada?
+description: Mengetahui fitur-fitur yang ada pada Generator
+head:
+  - - meta
+    - name: description
+      content: Fitur apa aja sih yang ada?
+  - - meta
+    - name: keywords
+      content: Fitur Generator
 ---
 
 ::: warning
-kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbarui proyek kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
+Kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbarui proyek kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
 :::
 
 # Fitur

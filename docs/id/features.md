@@ -1,3 +1,19 @@
+---
+outline: deep
+lastUpdated: true
+editLink: true
+title: Fitur
+titleTemplate: Apa aja sih yang ada?
+description: Mengetahui fitur-fitur yang ada pada Generator
+head:
+  - - meta
+    - name: description
+      content: Fitur apa aja sih yang ada?
+  - - meta
+    - name: keywords
+      content: Fitur Generator
+---
+
 # Fitur yang Tersedia Saat Ini
 
 Berikut adalah beberapa fitur yang tersedia saat ini dan dapat kamu coba.
@@ -71,8 +87,13 @@ Kelas `helper` ditempatkan di `App\Generators\helper.php`
 
 #### Periksa menu aktif pada _Sidebar_
 Cek menu pada _Sidebar_ apakah sesuai dengan _url_ yang sedang diakses.
+
 ```php
-is_active_menu(string|array $menu): boolean;
+/**
+ * @param string|array $route
+ * @return string ('' || 'active')
+ */
+is_active_menu(string|array $route): string;
 ```
 
 #### `ImageService`

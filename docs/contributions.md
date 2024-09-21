@@ -4,11 +4,11 @@ lastUpdated: true
 editLink: true
 title: How to Contribute
 titleTemplate: Let's contribute
-description: How to contribute to this project
+description: How to contribute to Generator
 head:
   - - meta
     - name: description
-      content: How to contribute to this project
+      content: How to contribute to Generator
   - - meta
     - name: keywords
       content: How to contribute to Generator

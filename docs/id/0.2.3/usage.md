@@ -1,9 +1,22 @@
 ---
 outline: deep
+lastUpdated: true
+editLink: true
+title: Cara Pemakaian
+titleTemplate: Cara pakai Generator
+description: Cara pemakaian di Generator
+head:
+  - - meta
+    - name: description
+      content: Cara pemakaian di Generator
+  - - meta
+    - name: keywords
+      content: Cara Pakai Generator
+next: false
 ---
 
 ::: warning
-kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbarui proyek kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
+Kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbarui proyek kamu ke versi [Generator 0.3.x](/id/introduction) yaa.
 :::
 
 # Cara Pemakaian

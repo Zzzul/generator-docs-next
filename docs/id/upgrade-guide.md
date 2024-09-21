@@ -1,4 +1,22 @@
+---
+outline: deep
+lastUpdated: true
+editLink: true
+title: Pembaruan
+titleTemplate: Update untuk pengalaman yang lebih baik
+description: Update Generator ke versi terakhir
+head:
+  - - meta
+    - name: description
+      content: Update Generator ke versi terakhir
+  - - meta
+    - name: keywords
+      content: Pembaruan Generator
+next: true
+---
+
 # Apa aja sih yang baru?
+
 Setiap perubahan itu pasti ada dan wajar, jadi kami harap kamu dapat menerima perubahan ini yaa.
 
 ## Perubahan dengan versi terbau
@@ -33,28 +51,28 @@ Untuk daftar perubahan terbaru dan lebih lengkap, silakan kunjungi [GitHub Rilis
 
    ```json
    "require": {
-        "laravel/framework to": "^11.0", // [!code focus]
+        "laravel/framework": "^11.0", // [!code focus]
    },
    "require-dev": {
         "nunomaduro/collision": "^8.1", // [!code focus]
         "evdigiina/generator": "^0.3.0",  // [!code focus]
-   } 
+   }
    ```
 
-  Opsional, jika kamu menggunakannya
+Opsional, jika kamu menggunakannya
 
-   ```json
-   "require": {
-        "spatie/laravel-permission": "^6.0", // [!code focus]
-        "laravel/fortify": "^1.21" // [!code focus]
-   },
-   ```
+```json
+"require": {
+     "spatie/laravel-permission": "^6.0", // [!code focus]
+     "laravel/fortify": "^1.21" // [!code focus]
+},
+```
 
-   Lalu jalankan perintah berikut
+Lalu jalankan perintah berikut
 
-   ```sh
-   composer update
-   ```
+```sh
+composer update
+```
 
 3. Publikasikan berkas terbaru
 
@@ -131,63 +149,63 @@ Untuk daftar perubahan terbaru dan lebih lengkap, silakan kunjungi [GitHub Rilis
         @endauth // [!code focus]
     </ul>
 
-    ```    
+   ```
 
 5. Ubah kode pada `resources/views/layouts/header.blade.php` menjadi seperti dibawah ini
 
-    ```blade
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-lg-0">
-            {{-- Your code --}}
-        </ul>
+   ```blade
+   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav ms-auto mb-lg-0">
+           {{-- Your code --}}
+       </ul>
 
-        {{-- New code --}}
-        @auth // [!code focus]
-            <div class="dropdown"> // [!code focus]
-                <a href="#" data-bs-toggle="dropdown" aria-expanded="false"> // [!code focus]
-                    <div class="user-menu d-flex"> // [!code focus]
-                        <div class="user-name text-end me-3"> // [!code focus]
-                            <h6 class="mb-0 text-gray-600">{{ auth()?->user()?->name }}</h6> // [!code focus]
-                            <p class="mb-0 text-sm text-gray-600"> // [!code focus]
-                                {{ isset(auth()?->user()?->roles) ? implode(auth()?->user()?->roles?->map(fn ($role) => $role->name)->toArray()) : '-' }} // [!code focus]
-                            </p> // [!code focus]
-                        </div> // [!code focus]
-                        <div class="user-img d-flex align-items-center"> // [!code focus]
-                            <div class="avatar avatar-md"> // [!code focus]
-                                @if (auth()?->user()?->avatar == null) // [!code focus]
-                                    <img src="https://www.gravatar.com/avatar/{{ md5(strtolower(trim(auth()?->user()?->email))) }}&s=500" alt="Avatar"> // [!code focus]
-                                @else // [!code focus]
-                                    <img src="{{ asset('storage/uploads/avatars/' . auth()?->user()?->avatar) }}" alt="Avatar"> // [!code focus]
-                                @endif // [!code focus]
-                            </div> // [!code focus]
-                        </div> // [!code focus]
-                    </div> // [!code focus]
-                </a> // [!code focus]
-                
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="min-width: 11rem;"> // [!code focus]
-                    <li> // [!code focus]
-                        <h6 class="dropdown-header">{{ __('Hello') }}, {{ auth()?->user()?->name }}!</h6> // [!code focus]
-                    </li> // [!code focus]
-                    <li> // [!code focus]
-                        <a class="dropdown-item" href="{{ route('profile') }}"><i class="icon-mid bi bi-person-fill me-2"></i>{{ __('My Profile') }}</a> // [!code focus]
-                    </li> // [!code focus]
-                    <li> // [!code focus]
-                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form-nav').submit();"> // [!code focus]
-                            <i class="bi bi-door-open-fill"></i> // [!code focus]
-                            {{ __('Logout') }} // [!code focus]
-                        </a> // [!code focus]
+       {{-- New code --}}
+       @auth // [!code focus]
+           <div class="dropdown"> // [!code focus]
+               <a href="#" data-bs-toggle="dropdown" aria-expanded="false"> // [!code focus]
+                   <div class="user-menu d-flex"> // [!code focus]
+                       <div class="user-name text-end me-3"> // [!code focus]
+                           <h6 class="mb-0 text-gray-600">{{ auth()?->user()?->name }}</h6> // [!code focus]
+                           <p class="mb-0 text-sm text-gray-600"> // [!code focus]
+                               {{ isset(auth()?->user()?->roles) ? implode(auth()?->user()?->roles?->map(fn ($role) => $role->name)->toArray()) : '-' }} // [!code focus]
+                           </p> // [!code focus]
+                       </div> // [!code focus]
+                       <div class="user-img d-flex align-items-center"> // [!code focus]
+                           <div class="avatar avatar-md"> // [!code focus]
+                               @if (auth()?->user()?->avatar == null) // [!code focus]
+                                   <img src="https://www.gravatar.com/avatar/{{ md5(strtolower(trim(auth()?->user()?->email))) }}&s=500" alt="Avatar"> // [!code focus]
+                               @else // [!code focus]
+                                   <img src="{{ asset('storage/uploads/avatars/' . auth()?->user()?->avatar) }}" alt="Avatar"> // [!code focus]
+                               @endif // [!code focus]
+                           </div> // [!code focus]
+                       </div> // [!code focus]
+                   </div> // [!code focus]
+               </a> // [!code focus]
 
-                        <form id="logout-form-nav" action="{{ route('logout') }}" method="POST" class="d-none"> // [!code focus]
-                            @csrf // [!code focus]
-                        </form>  // [!code focus]
-                    </li>  // [!code focus]
-                </ul>  // [!code focus]
-            </div>  // [!code focus]
-        @endauth   // [!code focus]
-    </div>
-    ```
+               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="min-width: 11rem;"> // [!code focus]
+                   <li> // [!code focus]
+                       <h6 class="dropdown-header">{{ __('Hello') }}, {{ auth()?->user()?->name }}!</h6> // [!code focus]
+                   </li> // [!code focus]
+                   <li> // [!code focus]
+                       <a class="dropdown-item" href="{{ route('profile') }}"><i class="icon-mid bi bi-person-fill me-2"></i>{{ __('My Profile') }}</a> // [!code focus]
+                   </li> // [!code focus]
+                   <li> // [!code focus]
+                       <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form-nav').submit();"> // [!code focus]
+                           <i class="bi bi-door-open-fill"></i> // [!code focus]
+                           {{ __('Logout') }} // [!code focus]
+                       </a> // [!code focus]
 
-6. Buat file `generator.cache` di `vendor/evdigiina/generator` lalu _copy_ kode di bawah ini
+                       <form id="logout-form-nav" action="{{ route('logout') }}" method="POST" class="d-none"> // [!code focus]
+                           @csrf // [!code focus]
+                       </form>  // [!code focus]
+                   </li>  // [!code focus]
+               </ul>  // [!code focus]
+           </div>  // [!code focus]
+       @endauth   // [!code focus]
+   </div>
+   ```
+
+6. Buat file `generator.cache` di folder `storage` lalu _copy_ kode di bawah ini
 
    ```json
    { "simple_version_publish_count": 0, "full_version_publish_count": 1 }
@@ -199,35 +217,33 @@ Ubah `simple_version_publish_count` atau `full_version_publish_count` menjadi `1
 
 7. Ubah `config/generator.php` dari `image.path` menjadi `image.disk`
 
-    ```php
-    "image" => [
-        /**
-         * Path for store the image.
-         *
-         * available options:
-         * 1. public
-         * 2. storage
-        */
-        "path" => "storage", // [!code focus]
-    ]
-    ```
+   ```php
+   "image" => [
+       /**
+        * Path for store the image.
+        *
+        * available options:
+        * 1. public
+        * 2. storage
+       */
+       "path" => "storage", // [!code focus]
+   ]
+   ```
 
-
-    ```php
-    "image" => [
-        /**
-         * Image storage location
-         *
-         * Available options:
-         * 1. public
-         * 2. storage
-         * 3. S3
-        */
-        "disk" => "storage", // [!code focus]
-        // ... another configuration
-    ]
-    ```
-
+   ```php
+   "image" => [
+       /**
+        * Image storage location
+        *
+        * Available options:
+        * 1. public
+        * 2. storage
+        * 3. S3
+       */
+       "disk" => "storage", // [!code focus]
+       // ... another configuration
+   ]
+   ```
 
    Untuk informasi tambahan tentang perubahan ini, [buka di sini](#fitur-terbaru)
 
@@ -251,40 +267,41 @@ Ubah `simple_version_publish_count` atau `full_version_publish_count` menjadi `1
             // new Middleware('permission:permission_name delete', only: ['destroy']),
         ];
     }
-    ```
+   ```
 
-    Ubah menjadi Laravel 10 _Middleware_ seperti di bawah ini
+   Ubah menjadi Laravel 10 _Middleware_ seperti di bawah ini
 
-    ```php 
-    public function __construct()
-    {
-        $this->middleware('permission:permission_name view')->only('index', 'show');
-        $this->middleware('permission:permission_name create')->only('create', 'store');
-        $this->middleware('permission:permission_name edit')->only('edit', 'update');
-        $this->middleware('permission:permission_name delete')->only('destroy');
-    }
-    ```
+   ```php
+   public function __construct()
+   {
+       $this->middleware('permission:permission_name view')->only('index', 'show');
+       $this->middleware('permission:permission_name create')->only('create', 'store');
+       $this->middleware('permission:permission_name edit')->only('edit', 'update');
+       $this->middleware('permission:permission_name delete')->only('destroy');
+   }
+   ```
 
-    Dari 
+   Dari
 
-    ```php 
-    use Illuminate\Routing\Controllers\{HasMiddleware, Middleware}; // [!code focus]
+   ```php
+   use Illuminate\Routing\Controllers\{HasMiddleware, Middleware}; // [!code focus]
 
-    class YourController extends Controller implements HasMiddleware // [!code focus]
-    {
-        //...
-    }
-    ```
-    Menjadi
+   class YourController extends Controller implements HasMiddleware // [!code focus]
+   {
+       //...
+   }
+   ```
 
-    ```php
-    // use Illuminate\Routing\Controllers\{HasMiddleware, Middleware}; // [!code focus]
+   Menjadi
 
-    class YourController extends Controller  // [!code focus]
-    { 
-        //...
-    } 
-    ```
+   ```php
+   // use Illuminate\Routing\Controllers\{HasMiddleware, Middleware}; // [!code focus]
+
+   class YourController extends Controller  // [!code focus]
+   {
+       //...
+   }
+   ```
 
    Jangan lupa hapus atau berikan komentar pada kode `use Illuminate\Routing\Controllers\{HasMiddleware, Middleware};`
 
@@ -306,7 +323,7 @@ Fitur terbaru yang ditambahkan pada versi _Generator ^0.3.x_:
 
    Kelas ini digunakan untuk melakukan unggah gambar dan manipulasi gambar menggunakan [Intervention Image](https://image.intervention.io/v3)
 
-5. Menambahkan opsi baru ke konfigurasi `generator.image.disk`, yang sebelumnya adalah `generator.image.path`, kini kamu dapat menggunakan opsi `public`, `storage`, atau `s3`. Berikut ini contohnya
+5. Menambahkan opsi baru ke konfigurasi `generator.image.disk`, yang sebelumnya adalah `generator.image.path`, kini kamu dapat menggunakan opsi `public`, `storage` atau `s3`. Berikut ini contohnya
 
 ```php
 "image" => [
@@ -321,7 +338,7 @@ Fitur terbaru yang ditambahkan pada versi _Generator ^0.3.x_:
      * change path to disk
     */
     "disk" => "storage", // [!code focus]
-    
+
     // other configuration codes.
 ]
 ```
@@ -343,13 +360,15 @@ return [
      */
     "image" => [  // [!code focus]
         /**
-         * Path for store the image.
+         * Image storage location
          *
          * Available options:
          * 1. public
          * 2. storage
          * 3. S3
-         */
+         *
+         * change path to disk
+        */
         "disk" => "storage",  // [!code focus]
 
         /**
@@ -496,4 +515,4 @@ return [
 
 6. Dokumentasi terbaru :book:
 
-   Kami kesulitan ketika membuat dokumentasi untuk banyak versi dan bahasa menggunakan [MkDocs](https://www.mkdocs.org/), oleh karena itu kami memutuskan untuk membuat dokumentasi baru menggunakan [Vitepress](https://vitepress.dev/ ).
+   Kami kesulitan ketika membuat dokumentasi untuk banyak versi dan bahasa menggunakan [MkDocs](https://www.mkdocs.org/), oleh karena itu kami memutuskan untuk membuat dokumentasi baru menggunakan [Vitepress](https://vitepress.dev/).

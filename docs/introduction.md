@@ -1,5 +1,18 @@
 ---
 outline: deep
+lastUpdated: true
+editLink: true
+title: Introduction
+titleTemplate: What is Generator?
+description: Generator is an open-source Laravel toolkit for building essential administration interfaces with ease.
+head:
+  - - meta
+    - name: description
+      content: Generator is an open-source Laravel toolkit for building essential administration interfaces with ease.
+  - - meta
+    - name: keywords
+      content: Introduction Generator
+next: true
 ---
 
 # Introduction

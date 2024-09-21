@@ -1,5 +1,18 @@
 ---
 outline: deep
+lastUpdated: true
+editLink: true
+title: Usage
+titleTemplate: How to basic
+description: Create your first CRUD's with Generator
+head:
+  - - meta
+    - name: description
+      content: Create your first CRUD's with Generator
+  - - meta
+    - name: keywords
+      content: Usage Generator
+next: false
 ---
 
 ::: warning
