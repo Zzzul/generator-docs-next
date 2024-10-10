@@ -17,7 +17,7 @@ next: true
 
 # Getting Started
 
-### Requirements
+## Requirements
 
 Here are some minimum requirements you need to consider:
  - [Composer ^2.x](https://getcomposer.org/)
@@ -115,4 +115,4 @@ Account
 - [Intervention Image - ^3.x](https://image.intervention.io/v3)
 - [Laravel Forify - ^1.x](https://laravel.com/docs/11.x/fortify)
 - [Spatie permission - ^6.x](https://github.com/spatie/laravel-permission)
-- [Mazer template - ^2.x](https://github.com/zuramai/mazer/) 
+- [Mazer template - ^2.x](https://github.com/zuramai/mazer/)
