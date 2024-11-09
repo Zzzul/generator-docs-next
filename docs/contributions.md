@@ -15,11 +15,19 @@ head:
 next: true
 ---
 
-# How to Contribute
+# Contributions
 
-You can contribute to this project by following these steps:
+We are excited to have you contribute to Generator! We welcome all contributions. You can contribute to this project by following these steps:
 
-1. [Star & fork the repository](https://github.com/Evdigi-INA/generator)
+::: warning
+Make sure your PHP version is 8.2 or higher, check requirements [here](get-started.md#requirements).
+:::
+
+## Create local copy
+
+the repository before making any changes. This will allow you to test your changes before submitting a pull request. Every change should be tested using dev branch.
+
+1. Please fork the repository to your GitHub account by clicking the "Fork" button on the top right corner of the repository page, click [here](https://github.com/Evdigi-INA/generator)
 
 2. Create a new Laravel project:
 
@@ -33,7 +41,7 @@ You can contribute to this project by following these steps:
     laravel new generator-dev
     ```
 
-3. Install the required libraries:
+3. Move into the newly Laravel project and install the required libraries:
 
     ```sh
    composer require laravel/fortify spatie/laravel-permission intervention/image-laravel yajra/laravel-datatables-oracle
@@ -41,46 +49,41 @@ You can contribute to this project by following these steps:
 
 4. Create the `packages/evdigi-ina` folder in the main project directory
 
+    Manually or using command:
+
     ```sh
     mkdir packages/evdigi-ina
     ```
 
-5. CD into `packages/evdigi-ina` folder and clone the repository
+5. `cd` into `packages/evdigi-ina` folder and clone the repository
 
     ```sh
     cd packages/evdigi-ina
     ```
-    
+
     ```bash
-    git clone https://github.com/Evdigi-INA/generator.git
+    git clone https://github.com/{your-github-username}/generator.git
     ```
 
-6. CD into `/generator`and install the dependencies
+## Prepare the environment
+
+Have you cloned the repository? Great! Now let's prepare the environment.
+
+1. `cd` into `/generator`and install the dependencies
 
     ```sh
     cd generator
     ```
 
-    Checkout to `dev` branch for newest changes
-
-    ```bash
-    git checkout -b dev
-    ```
-
-    ```bash
-    git pull origin dev
-    ```
+2. install the dependencies
 
     ```sh
     composer i
     ```
-    then return to the main project directory
 
-    ```sh
-    cd ../../../
-    ```
+3. Return to the main project directory of the Laravel project.
 
-7. Add the following code to `composer.json`
+4. Add the following code to `composer.json`
 
     ```json
     "autoload": {
@@ -93,13 +96,19 @@ You can contribute to this project by following these steps:
     },
     ```
 
-8. Run the following command
+5. Run the following command
 
     ```sh
     composer dump-autoload
     ```
 
-9. Add the following code to `bootstrap/app.php`
+6. Add the following code to `bootstrap/app.php`
+
+    > [!IMPORTANT]
+    > If you don't have the `withProviders` method, you can add it manually..
+
+    > [!WARNING]
+    > If you can't add "withProviders" like the example below, most likely you are using an older version of Laravel.
 
     ```php
     ->withProviders([
@@ -108,13 +117,13 @@ You can contribute to this project by following these steps:
     ])
     ```
 
-10. Publish the necessary files for Generator
+7.  Publish the necessary files for Generator
 
     ```sh
     php artisan generator:install full
     ```
 
-11. Add the following code to `composer.json`
+8.  Add the following code to `composer.json` (same location as step 4)
 
     ```json
     "autoload": {
@@ -122,15 +131,15 @@ You can contribute to this project by following these steps:
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "EvdigiIna\\Generator\\": "packages/evdigi-ina/generator/src/"  // [!code focus]
-        }, // [!code focus]
+            "EvdigiIna\\Generator\\": "packages/evdigi-ina/generator/src/" 
+        },
         "files": [ // [!code focus]
             "App/Generators/helper.php" // [!code focus]
         ] // [!code focus]
     },
     ```
 
-12. Add the following code to `bootstrap/app.php`
+9.  Add the following code to `bootstrap/app.php` again, because the previous process overwrites the file
 
     ```php
     ->withProviders([
@@ -139,48 +148,37 @@ You can contribute to this project by following these steps:
     ])
     ```
 
-13. Then execute the following command again
+10. Then execute the following command again
+
     ```sh
     composer dump-autoload
     ```
 
-14. Migrate the database
+11. Migrate the database
+
     ```sh
     php artisan migrate --seed
     ```
 
-15. Run the local development server
+12. Run the local development server
+
     ```sh
     php artisan serve
     ```
 
-16. Make the desired code changes in `packages/evdigi-ina/generator`
+13. Make the desired code changes in `packages/evdigi-ina/generator`
 
-17. Ensure the code works well
+## Submit a Pull Request
 
-18. It would be better if you create unit tests as well
+Ensure the code works well
 
-19. Switch to a new branch
-    ```bash
-     git checkout -b update-generator
-    ```
+> [!TIP]
+> It would be better if you create unit tests as well (optional)
 
-    ```bash
-    git add .
-    ```
-    
-    ```bash
-    git pull origin dev
-    ```
-    
-    ```bash
-    git commit -m "describe your changes"
-    ```
-
-20. Push the code to the repository
+1. Push the code to your forked repository
 
     ```bash
-    git push origin update-generator
+    git push origin main
     ```
 
-21. Create a Pull Request to the repository
+2. Create a Pull Request with "dev" as the base branch to be merged into, we will review your code and merge your changes on the next release.
