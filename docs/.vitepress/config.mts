@@ -111,23 +111,54 @@ export default defineConfig({
           {
             text: '🔖 Version',
             items: [
-              { text: '⚡ 0.3.x (Latest)', link: '/' },
+              { text: '🥚 0.4.x (Latest)', link: '/' },
+              { text: '⚡ 0.3.x (Stable)', link: '/0.3.x' },
               { text: '🔒 0.2.3', link: '/0.2.3/' },
+            ]
+          },
+          {
+            text: '🥚 0.4.x',
+            items: [
+              { text: 'Changelog', link: 'https://github.com/Evdigi-INA/generator' },
+              { text: 'Contributing', link: 'https://github.com/Evdigi-INA/generator' },
             ]
           }
         ],
-
         sidebar: [
           {
-            text: '⚡  Latest (0.3.x)',
+            text: '🥚 0.4.x (Latest)',
             items: [
-              { text: 'Introduction 👋', link: '/introduction' },
-              { text: 'Get Started 🎬', link: '/get-started' },
-              { text: 'Usage 👀', link: '/usage' },
-              { text: 'Features 🕹', link: '/features' },
-              { text: 'Upgrade Guide 📢', link: '/upgrade-guide' },
-              { text: 'Contributions 🛠', link: '/contributions' },
+              {
+                text: 'Prologue 🎉',
+                collapsed: false,
+                items: [
+                  { text: 'Upgrade Guide 🏗️', link: '/upgrade-guide' },
+                  { text: 'Contribution Guide 🛂', link: '/contributions' },
+                ]
+              },
+              {
+                text: 'Getting Started 🚀',
+                collapsed: true,
+                items: [
+                  { text: 'Features 🎨', link: '/features' },
+                  { text: 'Usage ⚗️', link: '/usage' },
+                ]
+              },
               { text: 'Supports ☕', link: '/sponsors' },
+              // { text: 'To Do', link: '/todo' }
+            ]
+          },
+          {
+            text: '⚡ 0.3.x (Stable)',
+            collapsed: true,
+            items: [
+              { text: 'Introduction 👋', link: '/0.3.x' },
+              { text: 'Get Started 🎬', link: '/0.3.x/get-started' },
+              { text: 'Usage 👀', link: '/0.3.x/usage' },
+              { text: 'Features 🕹', link: '/0.3.x/features' },
+              { text: 'Upgrade Guide 📢', link: '/0.3.x/upgrade-guide' },
+              { text: 'Contributions 🛠', link: '/0.3.x/contributions' },
+              { text: 'Supports ☕', link: '/0.3.x/sponsors' },
               // { text: 'To Do', link: '/todo' }
             ]
           },
@@ -170,14 +201,15 @@ export default defineConfig({
           {
             text: '🔖 Versi',
             items: [
-              { text: '⚡ 0.3.x (Terbaru)', link: '/id/' },
+              { text: '🥚 0.4.x (Terbaru)', link: '/id/' },
+              { text: '⚡ 0.3.x (Stabil)', link: '/id/0.3.x/' },
               { text: '🔒 0.2.3', link: '/id/0.2.3/' },
             ]
           }
         ],
         sidebar: [
           {
-            text: '⚡  0.3.x (Terbaru)',
+            text: '🥚 0.4.x (Terbaru)',
             items: [
               { text: 'Pengenalan 👋', link: '/id/introduction' },
               { text: 'Mari Kita Mulai 🎬', link: '/id/get-started' },
@@ -186,6 +218,20 @@ export default defineConfig({
               { text: 'Pembaruan 📢', link: '/id/upgrade-guide' },
               { text: 'Kontribusi 🛠', link: '/id/contributions' },
               { text: 'Dukungan ☕', link: '/id/sponsors' },
+              // { text: 'Daftar Rencana', link: '/id/todo' }
+            ]
+          },
+          {
+            text: '⚡  0.3.x (Stabil)',
+            collapsed: true,
+            items: [
+              { text: 'Pengenalan 👋', link: '/id/0.3.x/introduction' },
+              { text: 'Mari Kita Mulai 🎬', link: '/id/0.3.x/get-started' },
+              { text: 'Cara Pemakaian 👀', link: '/id/0.3.x/usage' },
+              { text: 'Fitur yang Tersedia 🕹', link: '/id/0.3.x/features' },
+              { text: 'Pembaruan 📢', link: '/id/0.3.x/upgrade-guide' },
+              { text: 'Kontribusi 🛠', link: '/id/0.3.x/contributions' },
+              { text: 'Dukungan ☕', link: '/id/0.3.x/sponsors' },
               // { text: 'Daftar Rencana', link: '/id/todo' }
             ]
           },
