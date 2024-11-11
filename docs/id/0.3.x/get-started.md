@@ -1,3 +1,7 @@
+::: warning
+Kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbarui proyek kamu ke versi [Generator 0.4](/id/introduction) yaa.
+:::
+
 # Mari Kita Mulai
 
 ### Persyaratan

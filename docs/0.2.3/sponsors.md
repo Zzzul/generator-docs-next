@@ -3,7 +3,7 @@ outline: deep
 ---
 
 ::: warning
-You're browsing the documentation for an old version of Generator. Consider upgrading your project to [Generator 0.3.x](/).
+You're browsing the documentation for an old version of Generator. Consider upgrading your project to [Generator 0.4](/).
 :::
 
 # Sponsor/supporter

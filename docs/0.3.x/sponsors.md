@@ -15,6 +15,10 @@ head:
 next: false
 ---
 
+::: warning
+You're browsing the documentation for an old version of Generator. Consider upgrading your project to [Generator 0.4](/).
+:::
+
 # Sponsor/supporter
 
 Generator is an MIT-licensed open-source project and is completely free to use. The tremendous amount of effort needed to maintain and develop new features for the project is only made sustainable thanks to the generous financial backing of our sponsors or supporters.

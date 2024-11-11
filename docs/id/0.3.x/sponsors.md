@@ -15,8 +15,11 @@ head:
 next: false
 ---
 
-# Berikan Dukungan kamu
+::: warning
+Kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbarui proyek kamu ke versi [Generator 0.4](/id/introduction) yaa.
+:::
 
+# Berikan Dukungan kamu
 
 _Generator_ adalah proyek _Open-ource_ berlisensi _MIT_ dan sepenuhnya gratis untuk digunakan. Banyaknya tenaga dan waktu yang dibutuhkan untuk melakukan pemeliharaan serta mengembangkan fitur baru untuk proyek ini secara berkelanjutan berkat dukungan finansial yang dari para donatur atau pendukung kami.
 

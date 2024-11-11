@@ -3,8 +3,8 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-    --c-red-1: #D04848 ;
-    --c-red-2: #BF3131 ;
+    --c-red-1: #D04848;
+    --c-red-2: #BF3131;
     --c-red-3: #C70039;
     --c-red-soft-1: #D71313;
     --c-red-soft-2: #D83F31;
@@ -129,6 +129,7 @@ html.dark .DocSearch {
     :root {
         --vp-home-hero-image-filter: blur(56px);
     }
+
     .VPHero .VPImage.image-src {
         max-height: 256px;
     }
@@ -138,6 +139,7 @@ html.dark .DocSearch {
     :root {
         --vp-home-hero-image-filter: blur(72px);
     }
+
     .VPHero .VPImage.image-src {
         max-height: 320px;
     }
@@ -166,6 +168,7 @@ html.dark .DocSearch {
 .vp-doc a {
     text-decoration: none;
 }
+
 .vp-doc a:hover {
     text-decoration: underline;
 }
@@ -188,4 +191,65 @@ kbd {
     border-radius: 6px;
     box-shadow: inset 0 -1px 0 var(--vp-c-bg-soft-mute);
     line-height: 0.95em;
+}
+
+/* Style to get the cheat sheet link in the home page */
+
+a.cta {
+    text-align: center;
+    border-radius: 8px;
+}
+
+a.cta:hover {
+    border-color: var(--vp-c-brand);
+    background-color: var(--c-bg-accent);
+}
+
+a.cta.btn-orange {
+    height: 100%;
+    line-height: 100%;
+    display: flex;
+    justify-content: center;
+    white-space: pre;
+    min-height: 41px;
+    position: relative;
+    background-color: var(--c-yellow-1);
+    color: var(--c-black-light);
+    border: 1px solid var(--vp-button-brand-border);
+    border-radius: 20px;
+}
+
+a.cta.btn-orange::before {
+    content: '';
+    height: 100%;
+    display: inline-block;
+    line-height: normal;
+    transform: translateY(6px);
+}
+
+a.cta.btn-orange:hover {
+    animation: none;
+    background-color: var(--c-yellow-3);
+}
+
+a.cta.btn-orange::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: var(--vp-button-brand-border); */
+    border: 1px solid var(--vp-button-brand-border);
+    border-radius: 20px;
+    animation: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+    z-index: -1;
+}
+
+@keyframes ping {
+    15%,
+    to {
+        transform: scale(1.25, 2);
+        opacity: 0;
+    }
 }

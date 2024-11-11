@@ -2,7 +2,7 @@
 outline: deep
 lastUpdated: true
 editLink: true
-title: Getting Started
+title: Installation
 titleTemplate: Let's get started
 description: Install your Generator for first time
 head:
@@ -11,11 +11,11 @@ head:
       content: Install your Generator for first time
   - - meta
     - name: keywords
-      content: Getting Started Generator
+      content: Installation Generator
 next: true
 ---
 
-# Getting Started
+# Installation
 
 ## Requirements
 
@@ -106,13 +106,11 @@ Account
 ### Simple Version
 
 - [Yajra datatable - ^11.x](https://yajrabox.com/docs/laravel-datatables/master/installation)
-- [Intervention Image - ^3.x](https://image.intervention.io/v3)
 - [Bootstrap - ^5.x](https://getbootstrap.com/)
   
 ### Full Version
 
 - [Yajra datatable - ^11.x](https://yajrabox.com/docs/laravel-datatables/master/installation)
-- [Intervention Image - ^3.x](https://image.intervention.io/v3)
 - [Laravel Forify - ^1.x](https://laravel.com/docs/11.x/fortify)
 - [Spatie permission - ^6.x](https://github.com/spatie/laravel-permission)
 - [Mazer template - ^2.x](https://github.com/zuramai/mazer/)

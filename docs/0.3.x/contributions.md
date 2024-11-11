@@ -15,6 +15,10 @@ head:
 next: true
 ---
 
+::: warning
+You're browsing the documentation for an old version of Generator. Consider upgrading your project to [Generator 0.4](/).
+:::
+
 # How to Contribute
 
 You can contribute to this project by following these steps:

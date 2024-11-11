@@ -12,6 +12,9 @@ hero:
     - theme: brand
       text: Pengenalan
       link: /id/introduction
+    - theme: cta btn-orange
+      text: Mari Mulai
+      link: /installation
     - theme: alt
       text: Lihat di GitHub
       link: https://github.com/Evdigi-INA/generator

@@ -2,9 +2,8 @@ import { defineConfig } from 'vitepress'
 
 export const META_URL = 'https://zzzul.github.io/generator-docs-next/'
 export const META_TITLE = 'CRUD Generator 📦'
-export const META_DESCRIPTION =
-  'Automate CRUD, Focus on Core Features'
-// https://vitepress.dev/reference/site-config
+export const META_DESCRIPTION = 'Automate CRUD, Focus on Core Features'
+
 export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
@@ -93,16 +92,12 @@ export default defineConfig({
 
   locales: {
     root: {
-      title: "CRUD",
+      title: " ",
       head: [
         ['title', { Text: 'CRUD Generator 📦' }],
       ],
       description: "CRUD for Laravel",
       label: 'English',
-
-      // using image
-      // lang: 'en',
-      // link: '/',
       themeConfig: {
         editLink: {
           pattern: 'https://github.com/Zzzul/generator-docs-next/edit/main/docs/:path'
@@ -111,27 +106,28 @@ export default defineConfig({
           {
             text: '🔖 Version',
             items: [
-              { text: '🥚 0.4.x (Latest)', link: '/' },
-              { text: '⚡ 0.3.x (Stable)', link: '/0.3.x' },
-              { text: '🔒 0.2.3', link: '/0.2.3/' },
+              { text: '🥚 0.4 (Latest)', link: '/' },
+              { text: '⚡ 0.3', link: '/0.3.x' },
+              { text: '🔒 0.2', link: '/0.2.3/' },
             ]
           },
           {
-            text: '🥚 0.4.x',
+            text: '🥚 0.4',
             items: [
-              { text: 'Changelog', link: 'https://github.com/Evdigi-INA/generator' },
-              { text: 'Contributing', link: 'https://github.com/Evdigi-INA/generator' },
+              { text: 'Changelog', link: 'https://github.com/Evdigi-INA/generator/releases' },
+              { text: 'Contributing', link: '/contributions' },
             ]
           }
         ],
         sidebar: [
           {
-            text: '🥚 0.4.x (Latest)',
+            text: '🥚 0.4 (Latest)',
             items: [
               {
                 text: 'Prologue 🎉',
                 collapsed: false,
                 items: [
+                  { text: 'Introduction 👋', link: '/introduction' },
                   { text: 'Upgrade Guide 🏗️', link: '/upgrade-guide' },
                   { text: 'Contribution Guide 🛂', link: '/contributions' },
                 ]
@@ -140,8 +136,9 @@ export default defineConfig({
                 text: 'Getting Started 🚀',
                 collapsed: true,
                 items: [
+                  { text: 'Installation 🌱', link: '/installation' },
+                  { text: 'Usage ✨', link: '/usage' },
                   { text: 'Features 🎨', link: '/features' },
-                  { text: 'Usage ⚗️', link: '/usage' },
                 ]
               },
               { text: 'Supports ☕', link: '/sponsors' },
@@ -149,10 +146,10 @@ export default defineConfig({
             ]
           },
           {
-            text: '⚡ 0.3.x (Stable)',
+            text: '⚡ 0.3',
             collapsed: true,
             items: [
-              { text: 'Introduction 👋', link: '/0.3.x' },
+              { text: 'Introduction 👋', link: '/0.3.x/introduction' },
               { text: 'Get Started 🎬', link: '/0.3.x/get-started' },
               { text: 'Usage 👀', link: '/0.3.x/usage' },
               { text: 'Features 🕹', link: '/0.3.x/features' },
@@ -163,7 +160,7 @@ export default defineConfig({
             ]
           },
           {
-            text: '🔒 0.2.3',
+            text: '🔒 0.2',
             collapsed: true,
             items: [
               { text: 'Introduction', link: '/0.2.3/' },
@@ -185,7 +182,7 @@ export default defineConfig({
       },
     },
     id: {
-      title: "CRUD",
+      title: " ",
       head: [
         ['title', { Text: 'CRUD Generator 📦' }],
       ],
@@ -201,28 +198,47 @@ export default defineConfig({
           {
             text: '🔖 Versi',
             items: [
-              { text: '🥚 0.4.x (Terbaru)', link: '/id/' },
-              { text: '⚡ 0.3.x (Stabil)', link: '/id/0.3.x/' },
-              { text: '🔒 0.2.3', link: '/id/0.2.3/' },
+              { text: '🥚 0.4 (Terbaru)', link: '/id/' },
+              { text: '⚡ 0.3', link: '/id/0.3.x/' },
+              { text: '🔒 0.2', link: '/id/0.2.3/' },
+            ]
+          },
+          {
+            text: '🥚 0.4',
+            items: [
+              { text: 'Perubahan', link: 'https://github.com/Evdigi-INA/generator/releases' },
+              { text: 'Kontribusi', link: '/contributions' },
             ]
           }
         ],
         sidebar: [
           {
-            text: '🥚 0.4.x (Terbaru)',
+            text: '🥚 0.4 (Terbaru)',
             items: [
-              { text: 'Pengenalan 👋', link: '/id/introduction' },
-              { text: 'Mari Kita Mulai 🎬', link: '/id/get-started' },
-              { text: 'Cara Pemakaian 👀', link: '/id/usage' },
-              { text: 'Fitur yang Tersedia 🕹', link: '/id/features' },
-              { text: 'Pembaruan 📢', link: '/id/upgrade-guide' },
-              { text: 'Kontribusi 🛠', link: '/id/contributions' },
+              {
+                text: 'Prolog 🎉',
+                collapsed: false,
+                items: [
+                  { text: 'Pengenalan 👋', link: '/id/introduction' },
+                  { text: 'Pembaruan 🏗️', link: '/id/upgrade-guide' },
+                  { text: 'Kontribusi 🛂', link: '/id/contributions' },
+                ]
+              },
+              {
+                text: 'Mari Kita Mulai 🚀',
+                collapsed: true,
+                items: [
+                  { text: 'Instalasi 🌱', link: '/id/installation' },
+                  { text: 'Petunjuk Pemakaian ✨', link: '/id/usage' },
+                  { text: 'Fitur 🎨', link: '/id/features' },
+                ]
+              },
               { text: 'Dukungan ☕', link: '/id/sponsors' },
-              // { text: 'Daftar Rencana', link: '/id/todo' }
+              // { text: 'To Do', link: '/todo' }
             ]
           },
           {
-            text: '⚡  0.3.x (Stabil)',
+            text: '⚡  0.3',
             collapsed: true,
             items: [
               { text: 'Pengenalan 👋', link: '/id/0.3.x/introduction' },
@@ -236,7 +252,7 @@ export default defineConfig({
             ]
           },
           {
-            text: '🔒 0.2.3',
+            text: '🔒 0.2',
             collapsed: true,
             items: [
               { text: 'Pengenalan', link: '/id/0.2.3/' },
