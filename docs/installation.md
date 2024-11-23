@@ -42,7 +42,7 @@ Designed for developers who want a straightforward solution, this version focuse
 
 Streamline your workflow and concentrate on building your application’s core features without the hassle of repetitive coding tasks.
 
-Includes: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v2) & [Bootstrap 5](https://getbootstrap.com/).
+Includes: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation) & [Bootstrap 5](https://getbootstrap.com/).
 
 [See available features](features.md)
   
@@ -63,7 +63,7 @@ This comprehensive version goes beyond basic CRUD operations, offering a complet
 
 Perfect for developers seeking an all-in-one solution, the Full Version empowers you to kickstart your applications with essential features, focus on innovation and leave the groundwork to us.
 
-Includes: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v3), [Laravel Fortify](https://laravel.com/docs/11.x/fortify), [Spatie Permission](https://spatie.be/docs/laravel-permission/v6/installation-laravel) & [Mazer Template](https://github.com/zuramai/mazer).
+Includes: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Laravel Fortify](https://laravel.com/docs/11.x/fortify), [Spatie Permission](https://spatie.be/docs/laravel-permission/v6/installation-laravel) & [Mazer Template](https://github.com/zuramai/mazer).
 
 [See available features.](features.md#full-version)
 

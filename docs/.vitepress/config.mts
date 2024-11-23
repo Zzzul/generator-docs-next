@@ -106,22 +106,26 @@ export default defineConfig({
           {
             text: '🔖 Version',
             items: [
-              { text: '🥚 0.4 (Latest)', link: '/' },
+              { text: '🍉 0.4 (Latest)', link: '/' },
               { text: '⚡ 0.3', link: '/0.3.x' },
               { text: '🔒 0.2', link: '/0.2.3/' },
             ]
           },
           {
-            text: '🥚 0.4',
+            text: '🍉 0.4',
             items: [
               { text: 'Changelog', link: 'https://github.com/Evdigi-INA/generator/releases' },
               { text: 'Contributing', link: '/contributions' },
             ]
+          },
+          {
+            text: 'Free Palestine 🇵🇸',
+            link: '/free-palestine'
           }
         ],
         sidebar: [
           {
-            text: '🥚 0.4 (Latest)',
+            text: '🍉 0.4 (Latest)',
             items: [
               {
                 text: 'Prologue 🎉',
@@ -142,7 +146,7 @@ export default defineConfig({
                 ]
               },
               { text: 'Supports ☕', link: '/sponsors' },
-              // { text: 'To Do', link: '/todo' }
+              { text: 'Free Palestine 🇵🇸', link: '/free-palestine' }
             ]
           },
           {
@@ -198,13 +202,13 @@ export default defineConfig({
           {
             text: '🔖 Versi',
             items: [
-              { text: '🥚 0.4 (Terbaru)', link: '/id/' },
+              { text: '🍉 0.4 (Terbaru)', link: '/id/' },
               { text: '⚡ 0.3', link: '/id/0.3.x/' },
               { text: '🔒 0.2', link: '/id/0.2.3/' },
             ]
           },
           {
-            text: '🥚 0.4',
+            text: '🍉 0.4',
             items: [
               { text: 'Perubahan', link: 'https://github.com/Evdigi-INA/generator/releases' },
               { text: 'Kontribusi', link: '/contributions' },
@@ -213,7 +217,7 @@ export default defineConfig({
         ],
         sidebar: [
           {
-            text: '🥚 0.4 (Terbaru)',
+            text: '🍉 0.4 (Terbaru)',
             items: [
               {
                 text: 'Prolog 🎉',
