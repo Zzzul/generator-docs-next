@@ -23,7 +23,7 @@ Each small step counts. We can help bring hope to people who have endured far to
 
 > 🍉 Palestine needs our support. Every contribution makes an impact. Let's all stand together.
 
-#### How You Can Help
+<!-- #### How You Can Help
 
 1. **Medical Aid for Palestinians (MAP)**  
    Delivers essential medical supplies and health services to Palestinians in Gaza and the West Bank.  
@@ -38,6 +38,12 @@ Each small step counts. We can help bring hope to people who have endured far to
 9. https://www.islamic-relief.org.uk/giving/appeals/palestine/
 
 
-Your support matters. Together, we can make a difference for Palestine and stand for justice, humanity, and peace.
+Your support matters. Together, we can make a difference for Palestine and stand for justice, humanity, and peace. -->
+
+
+<div align="center"><a href="https://github.com/Safouene1/support-palestine-banner/blob/master/Markdown-pages/Support.md"><img src="https://raw.githubusercontent.com/Safouene1/support-palestine-banner/master/banner-project.svg" alt="Support Palestine" style="width: 100%;"></a></div>
+
+<!-- [![StandWithPalestine](https://raw.githubusercontent.com/Safouene1/support-palestine-banner/master/StandWithPalestine.svg)](https://github.com/Safouene1/support-palestine-banner/blob/master/Markdown-pages/Support.md) -->
 
 **🍉 #FreePalestine #StandWithPalestine**
+

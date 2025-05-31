@@ -17,7 +17,7 @@ next: true
 
 # Usage
 
-### Create your first CRUD
+### Create Your First CRUD
 
 Go to ```/generators/create``` if yo're using [Full Version](features.md#full-version) 
 
@@ -27,24 +27,24 @@ Below is table about supported input type & validation when you are using some c
 
 |Column Type|Input Type|Validation|
 |-----------|----------|----------|
-|`string`|`text, textarea, email, telephone, password, url, search, file, hidden`| `required, string, min, max`|
-|`boolean`|`radio, select, datalist`|`required, boolean`|
-|`char`|`text, color, week, email, telephone, password, url, search, file, hidden`|`required, string, min, max`|
-|`date`|`date, month`|`required, date`|
-|`time`|`time`|`required, date`|
-|`year, foreignId`|`select, datalist`|`required, numeric`|
-|`dateTime`|`datetime-local`|`required, date`|
-|`float, decimal, double`|`number, range, hidden`|`required, numeric`|
-|`enum`|`select, radio, datalist`|`required, in`|
-|`integer, tinyInteger, mediumInteger, bigInteger`|`number, range, hidden`|`required, numeric`|
-|`text, tinyText, mediumText, longText`|`text, textarea, email, telephone, password, url, search, file, hidden`|`required, string, min, max`|
+|`string`|`text` `textarea` `email` `telephone` `password` `url` `search` `file` `hidden`| `required` `string` `min` `max`|
+|`boolean`|`radio` `select` `datalist`|`required` `boolean`|
+|`char`|`text` `color` `week` `email` `telephone` `password` `url` `search` `file` `hidden`|`required` `string` `min` `max`|
+|`date`|`date` `month`|`required` `date`|
+|`time`|`time`|`required` `date`|
+|`year` `foreignId`|`select` `datalist`|`required` `numeric`|
+|`dateTime`|`datetime-local`|`required` `date`|
+|`float` `decimal` `double`|`number` `range` `hidden`|`required` `numeric`|
+|`enum`|`select` `radio` `datalist`|`required` `in`|
+|`integer` `tinyInteger` `mediumInteger` `bigInteger`|`number` `range` `hidden`|`required` `numeric`|
+|`text` `tinyText` `mediumText` `longText`|`text` `textarea` `email` `telephone` `password` `url` `search` `file` `hidden`|`required` `string` `min` `max`|
 
 :::info
 `required` validation will change to `nullable` if you uncheck required switch in the form, if any input type `password` will automatically added `confirmed` validation, `min:1|max:100` for supported length column and `email|unique` for `email` input type.
 :::
 
 :::info
-<img src="/404.png" alt="404 Laravel" style="display: block; margin-left: auto; margin-right: auto; width: 50%; border-radius: 5px"/>
+<img src="/404.png" alt="404 Laravel" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"/>
 
 After creating the new module, the `404` error may show, if this occurs, simply refresh the browser.
 :::
@@ -82,7 +82,7 @@ We use [Intervention Image](https://image.intervention.io) for manipulating uplo
 
 Default image configuration:
 ```php
-"image" => [
+"image" => [ // [!code focus]
     /**
     * Path for store the image.
     *
@@ -96,7 +96,7 @@ Default image configuration:
     /**
     * Will used if image is nullable and default value is null.
     */
-    "default" => "https://via.placeholder.com/350?text=No+Image+available",  // [!code focus]
+    "default" => "https://placehold.co/350?text=No+Image+available",  // [!code focus]
 
     /**
     * Crop the uploaded image using intervention image.
@@ -123,7 +123,7 @@ If you are using `storage` for store the image, make sure you run
 php artisan storage:link
 ```
 
-Or if you are using `s3` to store the image, make sure you read the [documentation](https://laravel.com/docs/11.x/filesystem#s3-driver-configuration)
+Or if you are using `s3` to store the image, make sure you read the [documentation](https://laravel.com/docs/12.x/filesystem#s3-driver-configuration)
 :::
 
 
@@ -157,17 +157,15 @@ Here an example:
 ],
 ```
 
-## Creating API CRUD
-Before you use this feature, make sure you have installed and read the latest documentation of [Laravel 11](https://laravel.com/docs/11.x/sanctum#introduction) regarding APIs.
-
-1. Execute the following command
+## Create an API CRUD
+1. Execute the following command (skip this step if you are already installed)
 
 ```sh
 php artisan install:api
 ```
 
 2. Check if the `routes/api.php` file is exists
-3. Go to `bootstrap/app.php` and remove or add the following code
+3. Make sure there is `api: __DIR__ . '/../routes/api.php'` in `bootstrap/app.php`
 
 ```php
 ->withRouting(
@@ -184,10 +182,22 @@ php artisan install:api
 php artisan generator:publish-api
 ```
 
-This command will generate some code in `app/Http/Controllers/Api/AuthController`, `app/Http/Requests/Auth`, and `routes/api.php`
-
 For the [full version](get-started#full-version), navigate to `/generators-api/create`. For the [simple version](get-started#simple-version), go to `/simple-generators/create`. Then, follow the same steps you used to create CRUD operations above.
 
 :::info
 If you are using the API Generator in the [full version](get-started#full-version), sidebar menu creation is not available.
 :::
+
+
+## Create a Export Excel File
+
+Make sure you have installed [Laravel Excel](https://laravel-excel.com/) to enable the export feature.
+
+```sh
+composer require maatwebsite/excel
+```
+
+Refresh your page, and then you can check the `Generate Export` checkbox in the form.
+
+
+

@@ -19,18 +19,19 @@ next: true
 
 Here are some features currently available for you to try.
 
-1. _CRUD Generator_
-    - Supports over 15 [migration column types](https://laravel.com/docs/11.x/migrations#available-column-types), such as `string, char, date, year`, etc.
+1. CRUD Generator
+    - Supports over 15 [migration column types](https://laravel.com/docs/11.x/migrations#available-column-types), such as `string`, `char`, `date`, `year`, etc.
     - Supports [HTML 5 Input](https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types)
-    - Supported _Request_ validation: `required, in, image, min, max, string, email, number, date, exists, nullable, unique, confirmed`  
-     - _Datatable_  - [Yajra Datatables](https://github.com/yajra/laravel-datatables)
+    - Supported Request validation: `required`, `in`, `image`, `min`, `max`, `string`, `email`, `number`, `date`, `exists`, `nullable`, `unique`, `confirmed`.  
+     - Datatable  - [Yajra Datatables](https://github.com/yajra/laravel-datatables)
     - Model Creation and relation [One To Many (Inverse) / Belongs To](https://laravel.com/docs/11.x/eloquent-relationships#one-to-many-inverse)
-    - Image Upload  - [Intervention Image](https://image.intervention.io) 
-    - _Single Form CRUD_
-    - _CRUD API Generator_
-    - _Seeder & Factory Generator_
-2. Configurable _Sidebar_ Menu ([full version](get-started.md#full-version))
-3. _CRUD User_ ([full version](get-started.md#full-version))
+    - Image Upload, Image Manipulation - [Intervention Image](https://image.intervention.io/v2)
+    - Single Form CRUD
+    - CRUD API Generator
+    - Seeder & Factory Generator
+    - Export excel Generator - [Maatwebsite](https://github.com/Maatwebsite/Laravel-Excel)
+2. Configurable Sidebar Menu ([full version](get-started.md#full-version))
+3. CRUD User ([full version](get-started.md#full-version))
 4. Role & permissions - [Spatie Permission](https://spatie.be/docs/laravel-permission/v5/introduction) ([full version](get-started.md#full-version))
 5. Authentication - [Laravel Fortify](https://laravel.com/docs/11.x/fortify) ([full version](get-started.md#full-version))
     - Login
@@ -57,7 +58,12 @@ php artisan generator:install full
 Both scripts will overwrite some files, so proceed with caution and avoid running them several times.
 :::
 
-#### Publish utility classes
+### Publish image service class
+```sh
+php artisan generator:publish-image-service-v2
+```
+
+### Publish utility classes
 ```sh
 php artisan generator:publish-utils
 ```
@@ -94,5 +100,5 @@ Checks whether the menu on the Sidebar matches the accessed uri.
 is_active_menu(string|array $route): string;
 ```
 
-#### `ImageService`
-This class is used to perform image upload and manipulation functions using [Intervention Image v3.x](https://image.intervention.io/v3), it's placed in `App\Generators\Services`
+#### `ImageServiceV2`
+This class is used to perform image upload and manipulation functions using [Intervention Image v3.x](https://image.intervention.io/v3) (optional), it's placed in `App\Generators\Services`

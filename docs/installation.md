@@ -20,8 +20,7 @@ next: true
 ## Requirements
 
 Here are some minimum requirements you need to consider:
- - [Composer ^2.x](https://getcomposer.org/)
- - [PHP ^8.2.x](https://www.php.net/releases/8.1/en.php)
+ - [PHP ^8.2.x](https://www.php.net/releases/8.2/en.php)
  - [Laravel ^11.x](http://laravel.com/)
 
 ## Installation
@@ -101,16 +100,3 @@ Account
 - Email: admin@example.com
 - Password: password
 
-## What's inside?
-
-### Simple Version
-
-- [Yajra datatable - ^11.x](https://yajrabox.com/docs/laravel-datatables/master/installation)
-- [Bootstrap - ^5.x](https://getbootstrap.com/)
-  
-### Full Version
-
-- [Yajra datatable - ^11.x](https://yajrabox.com/docs/laravel-datatables/master/installation)
-- [Laravel Forify - ^1.x](https://laravel.com/docs/11.x/fortify)
-- [Spatie permission - ^6.x](https://github.com/spatie/laravel-permission)
-- [Mazer template - ^2.x](https://github.com/zuramai/mazer/)

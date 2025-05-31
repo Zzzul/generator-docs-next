@@ -19,9 +19,7 @@ next: true
 
 We are excited to have you contribute to Generator! We welcome all contributions. You can contribute to this project by following these steps:
 
-::: warning
-Make sure your PHP version is 8.2 or higher, check requirements [here](installation.md#requirements).
-:::
+> Make sure your environment is setup correctly, check requirements [here](installation.md#requirements).
 
 ## Create local copy
 
