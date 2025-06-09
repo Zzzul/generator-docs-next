@@ -15,6 +15,10 @@ head:
 next: false
 ---
 
+::: info
+Dokumentasi Bahasa Indonesia akan segera tersedia, kamu dapat membantu kami menyusun dokumentasi [disini](https://github.com/Zzzul/generator-docs-next/tree/main/docs/id).
+:::
+
 # Free Palestine 🍉 🇵🇸
 
 <br>

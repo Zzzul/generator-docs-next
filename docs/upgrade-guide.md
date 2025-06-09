@@ -38,27 +38,40 @@ next: true
 
 - ⚙️ Added new `generator.image` config for image settings.
 
-For the most recent and complete changelog, please visit [Github Releases](https://github.com/evdigiina/generator/releases)
+- 📸 Change default image configuration from [placeholder.com](https://via.placeholder.com/350?text=No+Image+Available) to [placehold.co](https://placehold.co/300?text=No+Image+Available).
+
+For the most recent and complete changelog, please visit [Github Releases](https://github.com/Evdigi-INA/generator/releases)
 
 ## How to Update
 
-2. Update `composer.json` file
+1. Update `Generator`
 
-   ```json
-   "require-dev": { // [!code focus]
-       "evdigiina/generator": "^0.4.0",  // [!code focus]
-   } // [!code focus]
-   ```
+    ```sh
+    composer update evdigiina/generator:^0.4.0
+    ```
 
-3. Publish new `ImageService` class.
+2. Publish new `ImageService` class.
 
    ```sh
    php artisan generator:publish-image-service-v2
    ```
 
-4.Changes in `generator.image.disk` config.
+3. Install latest version of Intervention Image.
 
-   For additional information on these changes, [go here](#new-features)
+   ```sh
+   composer require intervention/image-laravel
+   ```
+
+4. In `App\Providers\ViewComposerServiceProvider.php` import `ViewContract`
+    ```php
+    use Illuminate\Contracts\View\View as ViewContract;
+    ```
+
+5. Changes in `generator.image` config.
+    - `generator.image.disk` from `public` to `storage`.
+    - `generator.image.default` from [https://via.placeholder.com/350?text=No+Image+Available](https://via.placeholder.com/350?text=No+Image+Available) to [https://placehold.co/300?text=No+Image+Available](https://placehold.co/300?text=No+Image+Available)
+
+For additional information on these changes, [go here](#new-features).
 
 ## New Features :fire:
 
@@ -85,7 +98,9 @@ New features added in Generator v0.4.x:
 - 🖼️ Image Casting on Model  
   Adds native support for handling images using custom model casts.
 
-5. Update option in the configuration `generator.image.disk`, previously known as `public`, `storage`, `s3`, you can now select `public`, `local`,`public_path` or `s3`. Here's an example.
+- 🩹 Update option in the configuration `generator.image.disk`, previously known as `public`, `storage`, `s3`, you can now select `public`, `local`,`public_path` or `s3`. 
+
+  Here's an example.
 
 ```php
  /**

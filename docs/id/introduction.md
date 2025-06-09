@@ -2,39 +2,42 @@
 outline: deep
 lastUpdated: true
 editLink: true
-title: Pengenalan
-titleTemplate: Mari mengenal Generator lebih jauh
-description: Tak kenal maka tak sayang
+title: Introduction
+titleTemplate: What is Generator?
+description: Generator is an open-source Laravel toolkit for building essential administration interfaces with ease.
 head:
   - - meta
     - name: description
-      content: Mari mengenal Generator lebih jauh
+      content: Generator is an open-source Laravel toolkit for building essential administration interfaces with ease.
   - - meta
     - name: keywords
-      content: Pengenalan Generator
+      content: Introduction Generator
+next: true
 ---
 
-# Pengenalan
-Tak Kenal Maka Tak Sayang
+::: info
+Dokumentasi Bahasa Indonesia akan segera tersedia, kamu dapat membantu kami menyusun dokumentasi [disini](https://github.com/Zzzul/generator-docs-next/tree/main/docs/id).
+:::
 
-![Versi Lengkap](/full-version-2.png)
+# Introduction
 
-![Versi Sederhana](/simple-version.png)
+![Full Version](/full-version.png)
 
-[Generator](https://github.com/Evdigi-INA/generator) adalah sebuah pustaka berbasis Laravel yang digunakan untuk membangun kebutuhan dasar aplikasi seperti _Create, Read, Update, dan Delete (CRUD)_. 
-Ini adalah template awal yang sederhana yang kami harap dapat membantu kamu dalam pengembangan _CMS_, Admin Panel atau aplikasi web lain yang membutuhkan fungsi _CRUD_.
+![Simple Version](/simple-version.png)
 
-## Alasan
-Kami sering kali memiliki waktu terbatas untuk membuat <s>master</s> main data berulang kali, oleh karena itu kami harap pustaka ini dapat membantu kamu untuk fokus pada fitur inti aplikasi kamu. 
-Alih-alih, kamu dapat menggunakan waktu tersebut untuk tidur, berkumpul dengan teman atau keluarga, bermain video game atau "menyentuh rumput".
+[Generator](https://github.com/Evdigi-INA/generator) is an open-source Laravel toolkit for building essential administration interfaces with ease. Featuring comprehensive CRUD operations, it acts as a minimalistic template or a robust starting point for developing CMS systems, admin panels, and other web applications requiring CRUD functionality.
 
-## Siapa Kami
-Kami adalah sekelompok orang yang terkadang bekerja sebagai _Freelance Developer_ di Bekasi, Indonesia 🇮🇩. Kami ingin membantu pengembang lain mempercepat pembuatan proyek mereka melalui perangkat lunak gratis yang kami buat.
+## The Reason
+We've all spent too much time building <s>master</s> main data management systems repeatedly. This package allows you to focus on your application's core features instead. Use that saved time to sleep, play video games, or even touch some grass.
 
-## Harga
-Tidak perlu khawatir, semua ini gratis dan bersifat _Open Source_.
+## Who We Are
 
-## Lisensi
+We are a group of freelance developers based in Bekasi, Indonesia 🇮🇩, working on side projects. Our mission is to make a difference by helping people create their own projects through open-source and free software like our creations.
 
-MIT
+## Pricing
 
+Dont worry, it's 100% free & open source.
+
+## License
+
+[MIT](https://github.com/Evdigi-INA/generator/blob/main/LICENSE)

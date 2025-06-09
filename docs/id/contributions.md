@@ -2,86 +2,90 @@
 outline: deep
 lastUpdated: true
 editLink: true
-title: Cara berkontribusi
-titleTemplate: Mari ikut berkontribusi
-description: Cara berkontribusi di Generator
+title: How to Contribute
+titleTemplate: Let's contribute
+description: How to contribute to Generator
 head:
   - - meta
     - name: description
-      content: Cara berkontribusi di Generator
+      content: How to contribute to Generator
   - - meta
     - name: keywords
-      content: Cara berkontribusi di Generator
+      content: How to contribute to Generator
 next: true
 ---
 
-# Cara berkontribusi
+::: info
+Dokumentasi Bahasa Indonesia akan segera tersedia, kamu dapat membantu kami menyusun dokumentasi [disini](https://github.com/Zzzul/generator-docs-next/tree/main/docs/id).
+:::
 
-kamu dapat berkontribusi pada proyek ini, dengan mengikuti langkah-langkah berikut:
+# Contributions
 
-1. _[Star & fork the repositori](https://github.com/Evdigi-INA/generator)_
+We are excited to have you contribute to Generator! We welcome all contributions. You can contribute to this project by following these steps:
 
-2. Buat proyek Laravel baru
+> Make sure your environment is setup correctly, check requirements [here](installation.md#requirements).
+
+## Create local copy
+
+the repository before making any changes. This will allow you to test your changes before submitting a pull request. Every change should be tested using dev branch.
+
+1. Please fork the repository to your GitHub account by clicking the "Fork" button on the top right corner of the repository page, click [here](https://github.com/Evdigi-INA/generator)
+
+2. Create a new Laravel project:
 
     ```sh
     composer create-project laravel/laravel generator-dev
     ```
 
-    atau
+    or
 
     ```sh
     laravel new generator-dev
     ```
 
-3. _Instal_ pustaka yang diperlukan
+3. Move into the newly Laravel project and install the required libraries:
 
     ```sh
    composer require laravel/fortify spatie/laravel-permission intervention/image-laravel yajra/laravel-datatables-oracle
     ```
 
-4. Buat folder `packages/evdigi-ina` pada folder utama
+4. Create the `packages/evdigi-ina` folder in the main project directory
+
+    Manually or using command:
 
     ```sh
     mkdir packages/evdigi-ina
     ```
 
-5. Pindah ke folder `packages/evdigi-ina` dan _Clone_ repositori 
+5. `cd` into `packages/evdigi-ina` folder and clone the repository
 
     ```sh
     cd packages/evdigi-ina
     ```
-    
+
     ```bash
-    git clone https://github.com/Evdigi-INA/generator.git
+    git clone https://github.com/{your-github-username}/generator.git
     ```
 
-6. Pindah ke folder `/generator`dan _Instal_ pustaka yang diperlukan
+## Prepare the environment
+
+Have you cloned the repository? Great! Now let's prepare the environment.
+
+1. `cd` into `/generator`and install the dependencies
 
     ```sh
     cd generator
     ```
 
-    Pindah ke _Branch_ `dev` untuk perubahan terbaru
-
-    ```bash
-    git checkout -b dev
-    ```
-
-    ```bash
-    git pull origin dev
-    ```
-    _Instal_ pustaka yang dibutuhkan
+2. install the dependencies
 
     ```sh
     composer i
     ```
-    Kembali ke folder utama
 
-    ```sh
-    cd ../../../
-    ```
+3. Return to the main project directory of the Laravel project.
 
-7. Tambahkan kode berikut ini pada `composer.json`
+4. Add the following code to `composer.json`
 
     ```json
     "autoload": {
@@ -89,33 +93,39 @@ kamu dapat berkontribusi pada proyek ini, dengan mengikuti langkah-langkah berik
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "EvdigiIna\\Generator\\": "packages/evdigi-ina/generator/src/" // [!code focus]
+            "EvdigiIna\\Generator\\": "packages/evdigi-ina/generator/src/"  // [!code focus]
         }
     },
     ```
 
-8. Jalankan perintah dibawah ini
+5. Run the following command
 
     ```sh
     composer dump-autoload
     ```
 
-9. Tambahkan kode berikut ke `bootstrap/app.php`
+6. Add the following code to `bootstrap/app.php`
+
+    > [!IMPORTANT]
+    > If you don't have the `withProviders` method, you can add it manually.
+
+    > [!WARNING]
+    > If you can't add "withProviders" like the example below, most likely you are using an older version of Laravel.
 
     ```php
     ->withProviders([
-        \EvdigiIna\Generator\Providers\GeneratorServiceProvider::class, // [!code focus]
+        \EvdigiIna\Generator\Providers\GeneratorServiceProvider::class,  // [!code focus]
         //...
     ])
     ```
 
-10. Publikasikan berkasi yang diperlukan
+7.  Publish the necessary files for Generator
 
     ```sh
     php artisan generator:install full
     ```
 
-11. Tambahkan kode berikut pada `composer.json` _(folder utama/root)_
+8.  Add the following code to `composer.json` (same location as step 4)
 
     ```json
     "autoload": {
@@ -123,15 +133,15 @@ kamu dapat berkontribusi pada proyek ini, dengan mengikuti langkah-langkah berik
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "EvdigiIna\\Generator\\": "packages/evdigi-ina/generator/src/" // [!code focus]
+            "EvdigiIna\\Generator\\": "packages/evdigi-ina/generator/src/" 
         },
         "files": [ // [!code focus]
-            "App/Generators/helper.php"// [!code focus] 
+            "App/Generators/helper.php" // [!code focus]
         ] // [!code focus]
     },
     ```
 
-12. Tambahkan kode berikut pada `bootstrap/app.php`
+9.  Add the following code to `bootstrap/app.php` again, because the previous process overwrites the file
 
     ```php
     ->withProviders([
@@ -140,48 +150,37 @@ kamu dapat berkontribusi pada proyek ini, dengan mengikuti langkah-langkah berik
     ])
     ```
 
-13. Jalankan perintah berikut sekali lagi
+10. Then execute the following command again
+
     ```sh
     composer dump-autoload
     ```
 
-14. Migrasi basis data
+11. Migrate the database
+
     ```sh
     php artisan migrate --seed
     ```
 
-15. Jalankan _Server_ pengembangan lokal
+12. Run the local development server
+
     ```sh
     php artisan serve
     ```
 
-16. Lakukan perubahan pada `packages/evdigi-ina/generator`
+13. Make the desired code changes in `packages/evdigi-ina/generator`
 
-17. Pastikan kode kamu berjalan dengan normal
+## Submit a Pull Request
 
-18. Akan lebih baik jika kamu membuat _Unit Tests_
+Ensure the code works well
 
-19. Pindah ke branch baru
-    ```bash
-     git checkout -b update-generator
-    ```
+> [!TIP]
+> It would be better if you create unit tests as well (optional)
 
-    ```bash
-    git add .
-    ```
-    
-    ```bash
-    git pull origin dev
-    ```
-    
-    ```bash
-    git commit -m "add cool feature"
-    ```
-
-20. _Push_ perubahan kamu ke repositori
+1. Push the code to your forked repository
 
     ```bash
-    git push origin update-generator
+    git push origin main
     ```
 
-21. Buat _Pull Request_ pada [Repositori](https://github.com/Evdigi-INA/generator)
+2. Create a Pull Request with "dev" as the base branch to be merged into, we will review your code and merge your changes on the next release.

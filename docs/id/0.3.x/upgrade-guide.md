@@ -378,7 +378,7 @@ return [
         /**
          * Will be used if image is nullable and default value is null.
          */
-        "default" => "https://via.placeholder.com/350?text=No+Image+Avaiable",  // [!code focus]
+        "default" => "https://via.placeholder.com/350?text=No+Image+Available",  // [!code focus]
 
         /**
          * Crop the uploaded image using intervention image.

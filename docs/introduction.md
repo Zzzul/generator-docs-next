@@ -17,7 +17,7 @@ next: true
 
 # Introduction
 
-![Full Version](/full-version-2.png)
+![Full Version](/full-version.png)
 
 ![Simple Version](/simple-version.png)
 
@@ -36,4 +36,4 @@ Dont worry, it's 100% free & open source.
 
 ## License
 
-MIT.
+[MIT](https://github.com/Evdigi-INA/generator/blob/main/LICENSE)

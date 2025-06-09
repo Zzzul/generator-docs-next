@@ -30,10 +30,10 @@ Here are some features currently available for you to try.
     - CRUD API Generator
     - Seeder & Factory Generator
     - Export excel Generator - [Maatwebsite](https://github.com/Maatwebsite/Laravel-Excel)
-2. Configurable Sidebar Menu ([full version](get-started.md#full-version))
-3. CRUD User ([full version](get-started.md#full-version))
-4. Role & permissions - [Spatie Permission](https://spatie.be/docs/laravel-permission/v5/introduction) ([full version](get-started.md#full-version))
-5. Authentication - [Laravel Fortify](https://laravel.com/docs/11.x/fortify) ([full version](get-started.md#full-version))
+2. Configurable Sidebar Menu ([full version](installation#full-version))
+3. CRUD User ([full version](installation#full-version))
+4. Role & permissions - [Spatie Permission](https://spatie.be/docs/laravel-permission/v5/introduction) ([full version](installation#full-version))
+5. Authentication - [Laravel Fortify](https://laravel.com/docs/11.x/fortify) ([full version](installation#full-version))
     - Login
     - Register
     - Forgot Password
@@ -56,6 +56,10 @@ php artisan generator:install full
 ```
 ::: danger
 Both scripts will overwrite some files, so proceed with caution and avoid running them several times.
+:::
+
+::: info
+For different between simple and full version, refer to [Getting Started](/installation#simple-version)
 :::
 
 ### Publish image service class

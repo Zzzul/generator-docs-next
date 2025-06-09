@@ -21,7 +21,7 @@ next: true
 
 Go to ```/generators/create``` if yo're using [Full Version](features.md#full-version) 
 
-```/simple-generators/create``` for [Simple Version](features.md)
+And ```/simple-generators/create``` for [Simple Version](features.md)
 
 Below is table about supported input type & validation when you are using some column type.
 
@@ -62,8 +62,8 @@ Currently, only [One To Many (Inverse) / Belongs To](https://laravel.com/docs/10
     - Change to `foreignId`.
     - For constrain or related model name, you can fill with Model name (automatically change to plural).
     - Action on update & delete:
-        - On update: `nothing, cascade, restrict`
-        - On delete: `nothing, cascade, restrict, null`
+        - On update: `nothing`, `cascade`, `restrict`.
+        - On delete: `nothing`, `cascade`, `restrict`, `null`.
 
 
 :::warning
@@ -77,8 +77,13 @@ By default, the `id` field is chosen to appear in the dropdown or autocomplete l
 
 Set the column type to `string`, the input type to `file`, and select the file type (currently only supporting images). Fill in the max size, and the default value is optional (must be a valid link). 
 
-We use [Intervention Image](https://image.intervention.io) for manipulating uploaded images. All settings for images are available in `config/generator.php`.
+We use [Intervention Image](https://image.intervention.io/v3/getting-started/frameworks#laravel) for manipulating uploaded images. All settings for images are available in `config/generator.php`.
 
+Install `intervention/image` if you want to use manipulation image.
+
+```sh
+composer require intervention/image-laravel
+```
 
 Default image configuration:
 ```php
@@ -117,13 +122,13 @@ Default image configuration:
 ```
 
 :::info
-If you are using `storage` for store the image, make sure you run 
+If you are using `storage` for store the image, make sure you run.
 
 ```sh
 php artisan storage:link
 ```
 
-Or if you are using `s3` to store the image, make sure you read the [documentation](https://laravel.com/docs/12.x/filesystem#s3-driver-configuration)
+Or if you are using `s3` to store the image, make sure you read the [documentation](https://laravel.com/docs/12.x/filesystem#s3-driver-configuration).
 :::
 
 
@@ -132,17 +137,17 @@ Or if you are using `s3` to store the image, make sure you read the [documentati
 ![Create sidebar menu](https://user-images.githubusercontent.com/62506582/230722893-f11aae2c-4407-4eaf-803e-3b8491269e40.png)
 
 :::info
-This feature only available in full version.
+This feature only available in [full version](installation#full-version).
 :::
 
 You can easily create a dynamic sidebar menu with just a few inputs. All sidebar menu configurations are placed in `config/generator.php`.
 
-What if you don't need a dynamic sidebar menu and prefer to create your menu in `blade`? No problem, we provide support for that too. [Click here to learn how to do it](features.md#configure-the-menu-on-the-sidebar).
+What if you don't need a dynamic sidebar menu and prefer to create your menu in `.blade`? No problem, we provide support for that too. [Click here to learn how to do it](features.md#configure-the-menu-on-the-sidebar).
 
 
 ## Role & Permissions
 
-When using the full version, creating a new module will automatically generate specific permissions and assign them to the `admin` role. All permissions are managed in `config/permission.php`.
+When using the [full version](installation#full-version), creating a new module will automatically generate specific permissions and assign them to the `admin` role. All permissions are managed in `config/permission.php`.
 
 Here an example:
 ```php
@@ -182,20 +187,27 @@ php artisan install:api
 php artisan generator:publish-api
 ```
 
-For the [full version](get-started#full-version), navigate to `/generators-api/create`. For the [simple version](get-started#simple-version), go to `/simple-generators/create`. Then, follow the same steps you used to create CRUD operations above.
+For the [full version](installation#full-version), navigate to `/generators-api/create`. 
+
+For the [simple version](installation#simple-version), go to `/simple-generators/create`. 
+
+Then, follow the same steps you used to create CRUD operations above.
 
 :::info
-If you are using the API Generator in the [full version](get-started#full-version), sidebar menu creation is not available.
+If you are using the API Generator in the [full version](installation#full-version), sidebar menu creation is not available.
 :::
 
 
-## Create a Export Excel File
+## Create an Export Excel File
 
 Make sure you have installed [Laravel Excel](https://laravel-excel.com/) to enable the export feature.
 
 ```sh
 composer require maatwebsite/excel
 ```
+
+<img src="/generate-export.png" alt="Generate Export" style="display: block; margin-left: auto; margin-right: auto; width: 30%;"/>
+
 
 Refresh your page, and then you can check the `Generate Export` checkbox in the form.
 

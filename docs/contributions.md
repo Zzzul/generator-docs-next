@@ -103,7 +103,7 @@ Have you cloned the repository? Great! Now let's prepare the environment.
 6. Add the following code to `bootstrap/app.php`
 
     > [!IMPORTANT]
-    > If you don't have the `withProviders` method, you can add it manually..
+    > If you don't have the `withProviders` method, you can add it manually.
 
     > [!WARNING]
     > If you can't add "withProviders" like the example below, most likely you are using an older version of Laravel.

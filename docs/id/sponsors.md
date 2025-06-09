@@ -15,6 +15,10 @@ head:
 next: false
 ---
 
+::: info
+Dokumentasi Bahasa Indonesia akan segera tersedia, kamu dapat membantu kami menyusun dokumentasi [disini](https://github.com/Zzzul/generator-docs-next/tree/main/docs/id).
+:::
+
 # Berikan Dukungan kamu
 
 
@@ -50,7 +54,7 @@ const members = [
    {
     avatar: 'https://www.github.com/rachyharkov.png',
     name: 'Rachmad Nur Hayat',
-    title: 'Core Team Member',
+    title: 'Tim Inti',
     links: [
       { icon: 'github', link: 'https://github.com/rachyharkov' },
       { icon: 'linkedin', link: 'https://www.linkedin.com/in/rachmad-nur-hayat-731a391b2/' },
@@ -61,13 +65,13 @@ const members = [
 
 ## Tim kami
 
-Berikut adalah tim terbaik kami
+Berikut adalah tim terbaik kami.
 
 <VPTeamMembers size="small" :members="members" />
 
 ## Para Kontributor
 
-Terima kasih kepada semua rekan kontributor kami
+Terima kasih kepada semua rekan kontributor kami.
 
 <a  href="https://github.com/Evdigi-INA/generator/graphs/contributors">
 <img  src="https://contrib.rocks/image?repo=Evdigi-INA/generator&anon=1&columns=10"  />

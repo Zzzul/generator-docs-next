@@ -51,12 +51,16 @@ Publish files
 php artisan generator:install simple
 ```
 
-Run the local development server `php artisan serve` and then in your browser navigate to  `/simple-generators/create/`
+Run the local development server 
+```sh
+php artisan serve
+```
+And then in your browser navigate to  `/simple-generators/create/`
   
 
 ### Full Version
 
-![Full Version](/full-version-2.png)
+![Full Version](/full-version.png)
 
 This comprehensive version goes beyond basic CRUD operations, offering a complete starter app, robust authentication, and flexible role-based access control. 
 
@@ -93,10 +97,20 @@ Execute migration and seeder commands
 php artisan migrate --seed
 ```
 
-Start the local development server `php artisan serve`
+Start the local development server 
+```sh
+php artisan serve
+```
 
-Account
+#### Credentials
 
-- Email: admin@example.com
-- Password: password
+Email: 
+```txt
+admin@example.com
+```
+
+Password: 
+```txt
+password
+```
 

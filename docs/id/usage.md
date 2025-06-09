@@ -2,87 +2,96 @@
 outline: deep
 lastUpdated: true
 editLink: true
-title: Cara Pemakaian
-titleTemplate: Cara pakai Generator
-description: Cara pemakaian di Generator
+title: Usage
+titleTemplate: How to basic
+description: Create your first CRUD's with Generator
 head:
   - - meta
     - name: description
-      content: Cara pemakaian di Generator
+      content: Create your first CRUD's with Generator
   - - meta
     - name: keywords
-      content: Cara Pakai Generator
+      content: Usage Generator
 next: true
 ---
 
+::: info
+Dokumentasi Bahasa Indonesia akan segera tersedia, kamu dapat membantu kami menyusun dokumentasi [disini](https://github.com/Zzzul/generator-docs-next/tree/main/docs/id).
+:::
 
-# Cara Pakai yang <s>Semoga</s> Benar
+# Usage
 
-### Buat _CRUD_ untuk pertama kalinya
+### Create Your First CRUD
 
-Akses pada _browser_ kamu `/generators/create` jika kamu menggunkan [versi lengkap](features.md#versi-lengkap) `/simple-generators/create` untuk [versi sederhana](features.md#versi-sederhana)
+Go to ```/generators/create``` if yo're using [Full Version](features.md#full-version) 
 
-Di bawah ini adalah tabel tentang jenis input & validasi yang didukung saat kamu menggunakan beberapa jenis kolom.
+And ```/simple-generators/create``` for [Simple Version](features.md)
 
-|Jenis Kolom|Jenis Input|Validasi|
+Below is table about supported input type & validation when you are using some column type.
+
+|Column Type|Input Type|Validation|
 |-----------|----------|----------|
-|`string`|`text, textarea, email, telephone, password, url, search, file, hidden`| `required, string, min, max`|
-|`boolean`|`radio, select, datalist`|`required, boolean`|
-|`char`|`text, color, week, email, telephone, password, url, search, file, hidden`|`required, string, min, max`|
-|`date`|`date, month`|`required, date`|
-|`time`|`time`|`required, date`|
-|`year, foreignId`|`select, datalist`|`required, numeric`|
-|`dateTime`|`datetime-local`|`required, date`|
-|`float, decimal, double`|`number, range, hidden`|`required, numeric`|
-|`enum`|`select, radio, datalist`|`required, in`|
-|`integer, tinyInteger, mediumInteger, bigInteger`|`number, range, hidden`|`required, numeric`|
-|`text, tinyText, mediumText, longText`|`text, textarea, email, telephone, password, url, search, file, hidden`|`required, string, min, max`|
+|`string`|`text` `textarea` `email` `telephone` `password` `url` `search` `file` `hidden`| `required` `string` `min` `max`|
+|`boolean`|`radio` `select` `datalist`|`required` `boolean`|
+|`char`|`text` `color` `week` `email` `telephone` `password` `url` `search` `file` `hidden`|`required` `string` `min` `max`|
+|`date`|`date` `month`|`required` `date`|
+|`time`|`time`|`required` `date`|
+|`year` `foreignId`|`select` `datalist`|`required` `numeric`|
+|`dateTime`|`datetime-local`|`required` `date`|
+|`float` `decimal` `double`|`number` `range` `hidden`|`required` `numeric`|
+|`enum`|`select` `radio` `datalist`|`required` `in`|
+|`integer` `tinyInteger` `mediumInteger` `bigInteger`|`number` `range` `hidden`|`required` `numeric`|
+|`text` `tinyText` `mediumText` `longText`|`text` `textarea` `email` `telephone` `password` `url` `search` `file` `hidden`|`required` `string` `min` `max`|
 
 :::info
-Validasi `required` akan berubah menjadi `nullable` jika kamu tidak mencentang _checkbox_ yang terdapat pada _form_, jika ada jenis input `password` akan otomatis ditambahkan validasi `confirmed`, `min:1|max:100` untuk teks dan `email|unique` untuk jenis input `email`.
+`required` validation will change to `nullable` if you uncheck required switch in the form, if any input type `password` will automatically added `confirmed` validation, `min:1|max:100` for supported length column and `email|unique` for `email` input type.
 :::
 
 :::info
-<img src="/404.png" alt="404 Laravel" style="display: block; margin-left: auto; margin-right: auto; width: 50%; border-radius: 5px"/>
+<img src="/404.png" alt="404 Laravel" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"/>
 
-Setelah membuat modul baru terkadang mungkin kamu akan mendapati `404`, jika iya, kamu hanya perlu melakukan _refresh_ pada _browser_ mu.
+After creating the new module, the `404` error may show, if this occurs, simply refresh the browser.
 :::
 
 
-## Membuat relasi model
+## Create a Relation
 
-![Pembuatan Relasi](https://user-images.githubusercontent.com/62506582/230761648-1ef36018-2486-424b-831f-ae5f74a66705.png)
+![Create Relation](https://user-images.githubusercontent.com/62506582/230761648-1ef36018-2486-424b-831f-ae5f74a66705.png)
 
-Sayangnya _Generator_ saat ini hanya mendukung [One To Many (Inverse) / Belongs To](https://laravel.com/docs/10.x/eloquent-relationships#one-to-many-inverse).
+Currently, only [One To Many (Inverse) / Belongs To](https://laravel.com/docs/10.x/eloquent-relationships#one-to-many-inverse) relationships are supported. There are specific rules you must follow to create a relation:
 
-Terdapat beberapa aturan yang harus diikuti jika kamu ingin membuat relasi:
+- Field name: 
+    - Must be the table name but in singular + `_id`, eg: if we have a `users` table then it must be a `user_id`.
+- Column Type:
+    - Change to `foreignId`.
+    - For constrain or related model name, you can fill with Model name (automatically change to plural).
+    - Action on update & delete:
+        - On update: `nothing`, `cascade`, `restrict`.
+        - On delete: `nothing`, `cascade`, `restrict`, `null`.
 
-- _Field name_: 
-    - Harus merupakan nama tabel tetapi dalam bentuk tunggal + `_id`, misalnya: jika kamu memiliki tabel `users` maka harus `user_id`.
-- _Column Type_:
-    - Ubah menjadi `foreignId`.
-    - Untuk _constrains_ atau nama model terkait, kamu bisa mengisi dengan nama _Model_ (secara otomatis berubah menjadi jamak).
-    - Aksi pada ubah/edit & penghapusan:
-        - Pada ubah/edit: `nothing, cascade, restrict`
-        - Pada penghapusan: `nothing, cascade, restrict, null`
 
-:::info
-Pastikan tabel & model terkait sudah ada, jika tidak maka kolom yang dipilih untuk ditampilkan di `<select>` atau `<datalist>` adalah `id` dan akan mendapati error ketika kamu mengakses halaman terkait, secara _default_ kolom yang dipilih adalah kolom kedua di tabel relasi.
+:::warning
+Ensure that the related table and model already exist. If they don't, attempting to display or use them in a `<select>` or `<datalist>` will result in an error. 
+By default, the `id` field is chosen to appear in the dropdown or autocomplete list, while the selected field typically corresponds to the second column in the relevant table.
 :::
 
-## Membuat Unggah File
+## Create an Upload File
 
-![Unggah File](https://user-images.githubusercontent.com/62506582/231070943-cc1f13fd-0ee5-47f1-baaf-fb1e66e93ab5.png)
+![Upload File](https://user-images.githubusercontent.com/62506582/231070943-cc1f13fd-0ee5-47f1-baaf-fb1e66e93ab5.png)
 
-Atur _Column Type_ menjadi `string`, _Input Type_ menjadi `file`, pilih jenis file (saat ini hanya mendukung gambar), isi ukuran maksimal, dan nilai _default_ bersifat opsional dan harus berupa tautan yang valid
+Set the column type to `string`, the input type to `file`, and select the file type (currently only supporting images). Fill in the max size, and the default value is optional (must be a valid link). 
 
-Juga kami menggunakan [Intervention Image](https://image.intervention.io/v2) untuk memanipulasi gambar yang diunggah
-semua konfigurasi untuk gambar kamu dapat melihatnya di `config/generator.php`
+We use [Intervention Image](https://image.intervention.io/v3/getting-started/frameworks#laravel) for manipulating uploaded images. All settings for images are available in `config/generator.php`.
 
-Konfigurasi gambar default:
+Install `intervention/image` if you want to use manipulation image.
 
+```sh
+composer require intervention/image-laravel
+```
+
+Default image configuration:
 ```php
-"image" => [
+"image" => [ // [!code focus]
     /**
     * Path for store the image.
     *
@@ -96,7 +105,7 @@ Konfigurasi gambar default:
     /**
     * Will used if image is nullable and default value is null.
     */
-    "default" => "https://via.placeholder.com/350?text=No+Image+available",  // [!code focus]
+    "default" => "https://placehold.co/350?text=No+Image+available",  // [!code focus]
 
     /**
     * Crop the uploaded image using intervention image.
@@ -115,35 +124,36 @@ Konfigurasi gambar default:
     "height" => 500, // [!code focus]
 ],
 ```
+
 :::info
-Jika kamu menggunakan `storage` untuk menyimpan gambar, pastikan kamu menjalankan perintah dibawah ini 
+If you are using `storage` for store the image, make sure you run.
 
 ```sh
 php artisan storage:link
 ```
-Atau jika kamu ingin menggunakan `s3` untuk menyimpan gambar, pastikan kamu melihat dokumentasinya [disini](https://laravel.com/docs/10.x/filesystem#s3-driver-configuration)
+
+Or if you are using `s3` to store the image, make sure you read the [documentation](https://laravel.com/docs/12.x/filesystem#s3-driver-configuration).
 :::
 
 
-## Membuat menu _Sidebar_
+## Create a Sidebar Menu
 
-![Membuat menu Sidebar](https://user-images.githubusercontent.com/62506582/230722893-f11aae2c-4407-4eaf-803e-3b8491269e40.png)
+![Create sidebar menu](https://user-images.githubusercontent.com/62506582/230722893-f11aae2c-4407-4eaf-803e-3b8491269e40.png)
 
 :::info
-Fitur ini hanya tersedia di [versi lengkap](/id/get-started#versi-lengkap).
+This feature only available in [full version](installation#full-version).
 :::
 
-kamu dapat dengan mudah membuat menu _Sidebar_ dinamis dengan hanya beberapa input. semua konfigurasi menu _Sidebar_ berada di `config/generator.php`
+You can easily create a dynamic sidebar menu with just a few inputs. All sidebar menu configurations are placed in `config/generator.php`.
+
+What if you don't need a dynamic sidebar menu and prefer to create your menu in `.blade`? No problem, we provide support for that too. [Click here to learn how to do it](features.md#configure-the-menu-on-the-sidebar).
 
 
-Bagaimana jika kamu tidak membutuhkan menu _Sidebar_ dinamis?, kamu hanya ingin membuat menu langusng pada kode `.blade`. ya, tenang kami sudah menyediakannya, [kamu dapat melihatnya disni](features.md#tetapkan-menu-sidebar).
+## Role & Permissions
 
+When using the [full version](installation#full-version), creating a new module will automatically generate specific permissions and assign them to the `admin` role. All permissions are managed in `config/permission.php`.
 
-## Hak Akses (Role & Permissions)
-
-Saat kamu menggunakan versi lengkap, setelah membuat modul baru akan secara otomatis membuatkan beberapa _Permissions_ dan mengaitkannya ke _Role_ admin. semua konfigurasi _permissions_ disimpan di `config/permission.php`
-
-Berikut contohnya:
+Here an example:
 ```php
 [
     'group' => 'products',  // [!code focus]
@@ -152,21 +162,19 @@ Berikut contohnya:
         'product create',  // [!code focus]
         'product edit',  // [!code focus]
         'product delete'  // [!code focus]
-    ]// [!code focus]
+    ] // [!code focus]
 ],
 ```
-## Membuat _API CRUD_
 
-Sebelum kamu menggunakan fitur ini, pastikan kamu sudah meng-_install_ dan membaca dokumentasi terbaru [Laravel 11](https://laravel.com/) mengenai _API_
-
-1. Jalankan perintah berikut
+## Create an API CRUD
+1. Execute the following command (skip this step if you are already installed)
 
 ```sh
 php artisan install:api
 ```
 
-2. Pastikan _file_ `routes/api.php` ada
-3. Tambahkan atau hapus komentar kode berikut pada `bootstrap/app.php` _file_
+2. Check if the `routes/api.php` file is exists
+3. Make sure there is `api: __DIR__ . '/../routes/api.php'` in `bootstrap/app.php`
 
 ```php
 ->withRouting(
@@ -177,16 +185,35 @@ php artisan install:api
 )
 ```
 
-4. Jika kamu butuh modul autentikasi, seperti login dan register, jalankan perintah berikut (opsional)
+4. If you want an authentication module, such as login and register, please execute the following command
 
 ```sh
 php artisan generator:publish-api
 ```
 
-Perintah ini akan menghasilkan beberapa kode di `app/Http/Controllers/Api/AuthController`, `app/Http/Requests/Auth`, dan `routes/api.php`
+For the [full version](installation#full-version), navigate to `/generators-api/create`. 
 
-Lalu menuju `/generators-api/create` untuk [versi lengkap](get-started#versi-lengkap) dan `/simple-generators/create` untuk [versi sederhana](get-started#versi-sederhana), sisanya lakukan hal yang sama seperti kamu membuat _CRUD_ diatas.
+For the [simple version](installation#simple-version), go to `/simple-generators/create`. 
+
+Then, follow the same steps you used to create CRUD operations above.
 
 :::info
-Jika kamu menggunakan _Generator API_ dan [versi lengkap](get-started#versi-lengkap), kamu tidak dapat membuat menu _Sidebar_
+If you are using the API Generator in the [full version](installation#full-version), sidebar menu creation is not available.
 :::
+
+
+## Create an Export Excel File
+
+Make sure you have installed [Laravel Excel](https://laravel-excel.com/) to enable the export feature.
+
+```sh
+composer require maatwebsite/excel
+```
+
+<img src="/generate-export.png" alt="Generate Export" style="display: block; margin-left: auto; margin-right: auto; width: 30%;"/>
+
+
+Refresh your page, and then you can check the `Generate Export` checkbox in the form.
+
+
+

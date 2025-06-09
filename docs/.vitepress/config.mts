@@ -138,7 +138,7 @@ export default defineConfig({
               },
               {
                 text: 'Getting Started 🚀',
-                collapsed: true,
+                collapsed: false,
                 items: [
                   { text: 'Installation 🌱', link: '/installation' },
                   { text: 'Usage ✨', link: '/usage' },
@@ -211,12 +211,12 @@ export default defineConfig({
             text: '🍉 0.4',
             items: [
               { text: 'Perubahan', link: 'https://github.com/Evdigi-INA/generator/releases' },
-              { text: 'Kontribusi', link: '/contributions' },
+              { text: 'Cara berkontribusi', link: '/id/contributions' },
             ]
           }
         ],
         sidebar: [
-          {
+           {
             text: '🍉 0.4 (Terbaru)',
             items: [
               {
@@ -225,22 +225,23 @@ export default defineConfig({
                 items: [
                   { text: 'Pengenalan 👋', link: '/id/introduction' },
                   { text: 'Pembaruan 🏗️', link: '/id/upgrade-guide' },
-                  { text: 'Kontribusi 🛂', link: '/id/contributions' },
+                  { text: 'Cara Berkontribusi 🛂', link: '/id/contributions' },
                 ]
               },
               {
                 text: 'Mari Kita Mulai 🚀',
-                collapsed: true,
+                collapsed: false,
                 items: [
                   { text: 'Instalasi 🌱', link: '/id/installation' },
-                  { text: 'Petunjuk Pemakaian ✨', link: '/id/usage' },
+                  { text: 'Cara Pemakaian ✨', link: '/id/usage' },
                   { text: 'Fitur 🎨', link: '/id/features' },
                 ]
               },
               { text: 'Dukungan ☕', link: '/id/sponsors' },
-              // { text: 'To Do', link: '/todo' }
+              { text: 'Free Palestine 🇵🇸', link: '/id/free-palestine' }
             ]
           },
+
           {
             text: '⚡  0.3',
             collapsed: true,
