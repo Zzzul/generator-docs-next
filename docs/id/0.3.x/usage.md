@@ -133,7 +133,7 @@ Atau jika kamu ingin menggunakan `s3` untuk menyimpan gambar, pastikan kamu meli
 ![Membuat menu Sidebar](https://user-images.githubusercontent.com/62506582/230722893-f11aae2c-4407-4eaf-803e-3b8491269e40.png)
 
 :::info
-Fitur ini hanya tersedia di [versi lengkap](/id/get-started#versi-lengkap).
+Fitur ini hanya tersedia di [versi lengkap](/id/0.3.x/get-started#versi-lengkap).
 :::
 
 kamu dapat dengan mudah membuat menu _Sidebar_ dinamis dengan hanya beberapa input. semua konfigurasi menu _Sidebar_ berada di `config/generator.php`

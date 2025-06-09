@@ -45,7 +45,7 @@ Berikut adalah beberapa fitur yang tersedia saat ini dan dapat kamu coba.
 ## Perintah Tersedia
 
 ### Instalasi Generator
- Instalasi varian Generator: [Sederhana (_Simple version_)](/id/get-started#versi-sederhana) / [Lengkap (_Full version_)](/id/get-started#versi-lengkap)
+ Instalasi varian Generator: [Sederhana (_Simple version_)](/id/0.3.x/get-started#versi-sederhana) / [Lengkap (_Full version_)](/id/0.3.x/get-started#versi-lengkap)
 
 Untuk versi sederhana
 ```sh
