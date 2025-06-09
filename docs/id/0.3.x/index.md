@@ -1,7 +1,5 @@
 ---
 layout: home
-title: CRUD Generator - Automate CRUD, Focus on Core Features
-titleTemplate: ':title'
 
 hero:
   name: "Generator"
@@ -14,11 +12,8 @@ hero:
     - theme: brand
       text: Pengenalan
       link: /id/introduction
-    - theme: cta btn-orange
-      text: Mari Mulai
-      link: /id/installation
     - theme: alt
-      text: Lihat di GitHub 
+      text: Lihat di GitHub
       link: https://github.com/Evdigi-INA/generator
 features:
   - title: Sederhana namun powerful

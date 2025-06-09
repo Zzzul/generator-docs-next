@@ -15,40 +15,40 @@ head:
 next: true
 ---
 
-::: info
-Dokumentasi Bahasa Indonesia akan segera tersedia, kamu dapat membantu kami menyusun dokumentasi [disini](https://github.com/Zzzul/generator-docs-next/tree/main/docs/id).
+::: warning
+You're browsing the documentation for an old version of Generator. Consider upgrading your project to [Generator 0.4](/).
 :::
 
 # Usage
 
-### Create Your First CRUD
+### Create your first CRUD
 
 Go to ```/generators/create``` if yo're using [Full Version](features.md#full-version) 
 
-And ```/simple-generators/create``` for [Simple Version](features.md)
+```/simple-generators/create``` for [Simple Version](features.md)
 
 Below is table about supported input type & validation when you are using some column type.
 
 |Column Type|Input Type|Validation|
 |-----------|----------|----------|
-|`string`|`text` `textarea` `email` `telephone` `password` `url` `search` `file` `hidden`| `required` `string` `min` `max`|
-|`boolean`|`radio` `select` `datalist`|`required` `boolean`|
-|`char`|`text` `color` `week` `email` `telephone` `password` `url` `search` `file` `hidden`|`required` `string` `min` `max`|
-|`date`|`date` `month`|`required` `date`|
-|`time`|`time`|`required` `date`|
-|`year` `foreignId`|`select` `datalist`|`required` `numeric`|
-|`dateTime`|`datetime-local`|`required` `date`|
-|`float` `decimal` `double`|`number` `range` `hidden`|`required` `numeric`|
-|`enum`|`select` `radio` `datalist`|`required` `in`|
-|`integer` `tinyInteger` `mediumInteger` `bigInteger`|`number` `range` `hidden`|`required` `numeric`|
-|`text` `tinyText` `mediumText` `longText`|`text` `textarea` `email` `telephone` `password` `url` `search` `file` `hidden`|`required` `string` `min` `max`|
+|`string`|`text, textarea, email, telephone, password, url, search, file, hidden`| `required, string, min, max`|
+|`boolean`|`radio, select, datalist`|`required, boolean`|
+|`char`|`text, color, week, email, telephone, password, url, search, file, hidden`|`required, string, min, max`|
+|`date`|`date, month`|`required, date`|
+|`time`|`time`|`required, date`|
+|`year, foreignId`|`select, datalist`|`required, numeric`|
+|`dateTime`|`datetime-local`|`required, date`|
+|`float, decimal, double`|`number, range, hidden`|`required, numeric`|
+|`enum`|`select, radio, datalist`|`required, in`|
+|`integer, tinyInteger, mediumInteger, bigInteger`|`number, range, hidden`|`required, numeric`|
+|`text, tinyText, mediumText, longText`|`text, textarea, email, telephone, password, url, search, file, hidden`|`required, string, min, max`|
 
 :::info
 `required` validation will change to `nullable` if you uncheck required switch in the form, if any input type `password` will automatically added `confirmed` validation, `min:1|max:100` for supported length column and `email|unique` for `email` input type.
 :::
 
 :::info
-<img src="/404.png" alt="404 Laravel" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"/>
+<img src="/404.png" alt="404 Laravel" style="display: block; margin-left: auto; margin-right: auto; width: 50%; border-radius: 5px"/>
 
 After creating the new module, the `404` error may show, if this occurs, simply refresh the browser.
 :::
@@ -66,8 +66,8 @@ Currently, only [One To Many (Inverse) / Belongs To](https://laravel.com/docs/10
     - Change to `foreignId`.
     - For constrain or related model name, you can fill with Model name (automatically change to plural).
     - Action on update & delete:
-        - On update: `nothing`, `cascade`, `restrict`.
-        - On delete: `nothing`, `cascade`, `restrict`, `null`.
+        - On update: `nothing, cascade, restrict`
+        - On delete: `nothing, cascade, restrict, null`
 
 
 :::warning
@@ -81,17 +81,12 @@ By default, the `id` field is chosen to appear in the dropdown or autocomplete l
 
 Set the column type to `string`, the input type to `file`, and select the file type (currently only supporting images). Fill in the max size, and the default value is optional (must be a valid link). 
 
-We use [Intervention Image](https://image.intervention.io/v3/getting-started/frameworks#laravel) for manipulating uploaded images. All settings for images are available in `config/generator.php`.
+We use [Intervention Image](https://image.intervention.io) for manipulating uploaded images. All settings for images are available in `config/generator.php`.
 
-Install `intervention/image` if you want to use manipulation image.
-
-```sh
-composer require intervention/image-laravel
-```
 
 Default image configuration:
 ```php
-"image" => [ // [!code focus]
+"image" => [
     /**
     * Path for store the image.
     *
@@ -105,7 +100,7 @@ Default image configuration:
     /**
     * Will used if image is nullable and default value is null.
     */
-    "default" => "https://placehold.co/350?text=No+Image+available",  // [!code focus]
+    "default" => "https://via.placeholder.com/350?text=No+Image+available",  // [!code focus]
 
     /**
     * Crop the uploaded image using intervention image.
@@ -126,13 +121,13 @@ Default image configuration:
 ```
 
 :::info
-If you are using `storage` for store the image, make sure you run.
+If you are using `storage` for store the image, make sure you run 
 
 ```sh
 php artisan storage:link
 ```
 
-Or if you are using `s3` to store the image, make sure you read the [documentation](https://laravel.com/docs/12.x/filesystem#s3-driver-configuration).
+Or if you are using `s3` to store the image, make sure you read the [documentation](https://laravel.com/docs/11.x/filesystem#s3-driver-configuration)
 :::
 
 
@@ -141,17 +136,17 @@ Or if you are using `s3` to store the image, make sure you read the [documentati
 ![Create sidebar menu](https://user-images.githubusercontent.com/62506582/230722893-f11aae2c-4407-4eaf-803e-3b8491269e40.png)
 
 :::info
-This feature only available in [full version](installation#full-version).
+This feature only available in full version.
 :::
 
 You can easily create a dynamic sidebar menu with just a few inputs. All sidebar menu configurations are placed in `config/generator.php`.
 
-What if you don't need a dynamic sidebar menu and prefer to create your menu in `.blade`? No problem, we provide support for that too. [Click here to learn how to do it](features.md#configure-the-menu-on-the-sidebar).
+What if you don't need a dynamic sidebar menu and prefer to create your menu in `blade`? No problem, we provide support for that too. [Click here to learn how to do it](features.md#configure-the-menu-on-the-sidebar).
 
 
 ## Role & Permissions
 
-When using the [full version](installation#full-version), creating a new module will automatically generate specific permissions and assign them to the `admin` role. All permissions are managed in `config/permission.php`.
+When using the full version, creating a new module will automatically generate specific permissions and assign them to the `admin` role. All permissions are managed in `config/permission.php`.
 
 Here an example:
 ```php
@@ -166,15 +161,17 @@ Here an example:
 ],
 ```
 
-## Create an API CRUD
-1. Execute the following command (skip this step if you are already installed)
+## Creating API CRUD
+Before you use this feature, make sure you have installed and read the latest documentation of [Laravel 11](https://laravel.com/docs/11.x/sanctum#introduction) regarding APIs.
+
+1. Execute the following command
 
 ```sh
 php artisan install:api
 ```
 
 2. Check if the `routes/api.php` file is exists
-3. Make sure there is `api: __DIR__ . '/../routes/api.php'` in `bootstrap/app.php`
+3. Go to `bootstrap/app.php` and remove or add the following code
 
 ```php
 ->withRouting(
@@ -191,29 +188,10 @@ php artisan install:api
 php artisan generator:publish-api
 ```
 
-For the [full version](installation#full-version), navigate to `/generators-api/create`. 
+This command will generate some code in `app/Http/Controllers/Api/AuthController`, `app/Http/Requests/Auth`, and `routes/api.php`
 
-For the [simple version](installation#simple-version), go to `/simple-generators/create`. 
-
-Then, follow the same steps you used to create CRUD operations above.
+For the [full version](get-started#full-version), navigate to `/generators-api/create`. For the [simple version](get-started#simple-version), go to `/simple-generators/create`. Then, follow the same steps you used to create CRUD operations above.
 
 :::info
-If you are using the API Generator in the [full version](installation#full-version), sidebar menu creation is not available.
+If you are using the API Generator in the [full version](get-started#full-version), sidebar menu creation is not available.
 :::
-
-
-## Create an Export Excel File
-
-Make sure you have installed [Laravel Excel](https://laravel-excel.com/) to enable the export feature.
-
-```sh
-composer require maatwebsite/excel
-```
-
-<img src="/generate-export.png" alt="Generate Export" style="display: block; margin-left: auto; margin-right: auto; width: 30%;"/>
-
-
-Refresh your page, and then you can check the `Generate Export` checkbox in the form.
-
-
-

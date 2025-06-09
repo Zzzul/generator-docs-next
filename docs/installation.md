@@ -2,7 +2,7 @@
 outline: deep
 lastUpdated: true
 editLink: true
-title: Getting Started
+title: Installation
 titleTemplate: Let's get started
 description: Install your Generator for first time
 head:
@@ -11,17 +11,16 @@ head:
       content: Install your Generator for first time
   - - meta
     - name: keywords
-      content: Getting Started Generator
+      content: Installation Generator
 next: true
 ---
 
-# Getting Started
+# Installation
 
 ## Requirements
 
 Here are some minimum requirements you need to consider:
- - [Composer ^2.x](https://getcomposer.org/)
- - [PHP ^8.2.x](https://www.php.net/releases/8.1/en.php)
+ - [PHP ^8.2.x](https://www.php.net/releases/8.2/en.php)
  - [Laravel ^11.x](http://laravel.com/)
 
 ## Installation
@@ -42,7 +41,7 @@ Designed for developers who want a straightforward solution, this version focuse
 
 Streamline your workflow and concentrate on building your application’s core features without the hassle of repetitive coding tasks.
 
-Includes: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v2) & [Bootstrap 5](https://getbootstrap.com/).
+Includes: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation) & [Bootstrap 5](https://getbootstrap.com/).
 
 [See available features](features.md)
   
@@ -52,18 +51,22 @@ Publish files
 php artisan generator:install simple
 ```
 
-Run the local development server `php artisan serve` and then in your browser navigate to  `/simple-generators/create/`
+Run the local development server 
+```sh
+php artisan serve
+```
+And then in your browser navigate to  `/simple-generators/create/`
   
 
 ### Full Version
 
-![Full Version](/full-version-2.png)
+![Full Version](/full-version.png)
 
 This comprehensive version goes beyond basic CRUD operations, offering a complete starter app, robust authentication, and flexible role-based access control. 
 
 Perfect for developers seeking an all-in-one solution, the Full Version empowers you to kickstart your applications with essential features, focus on innovation and leave the groundwork to us.
 
-Includes: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v3), [Laravel Fortify](https://laravel.com/docs/11.x/fortify), [Spatie Permission](https://spatie.be/docs/laravel-permission/v6/installation-laravel) & [Mazer Template](https://github.com/zuramai/mazer).
+Includes: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Laravel Fortify](https://laravel.com/docs/11.x/fortify), [Spatie Permission](https://spatie.be/docs/laravel-permission/v6/installation-laravel) & [Mazer Template](https://github.com/zuramai/mazer).
 
 [See available features.](features.md#full-version)
 
@@ -94,25 +97,20 @@ Execute migration and seeder commands
 php artisan migrate --seed
 ```
 
-Start the local development server `php artisan serve`
+Start the local development server 
+```sh
+php artisan serve
+```
 
-Account
+#### Credentials
 
-- Email: admin@example.com
-- Password: password
+Email: 
+```txt
+admin@example.com
+```
 
-## What's inside?
+Password: 
+```txt
+password
+```
 
-### Simple Version
-
-- [Yajra datatable - ^11.x](https://yajrabox.com/docs/laravel-datatables/master/installation)
-- [Intervention Image - ^3.x](https://image.intervention.io/v3)
-- [Bootstrap - ^5.x](https://getbootstrap.com/)
-  
-### Full Version
-
-- [Yajra datatable - ^11.x](https://yajrabox.com/docs/laravel-datatables/master/installation)
-- [Intervention Image - ^3.x](https://image.intervention.io/v3)
-- [Laravel Forify - ^1.x](https://laravel.com/docs/11.x/fortify)
-- [Spatie permission - ^6.x](https://github.com/spatie/laravel-permission)
-- [Mazer template - ^2.x](https://github.com/zuramai/mazer/)

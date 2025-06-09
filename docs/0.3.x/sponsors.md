@@ -2,30 +2,30 @@
 outline: deep
 lastUpdated: true
 editLink: true
-title: Sponsor/supporter
-titleTemplate: Berikan Dukunganmu
-description: Berikkan dukunganmu kepada pada kontributor
+title: Support
+titleTemplate: Your support is important
+description: Support to this project
 head:
   - - meta
     - name: description
-      content: Berikkan dukunganmu kepada pada kontributor
+      content: Support to this project
   - - meta
     - name: keywords
-      content: Berikan Dukungan di Generator
+      content: Support to Generator
 next: false
 ---
 
 ::: warning
-Kamu sedang menjelajahi dokumentasi untuk versi _Generator_ yang lama nih. Tolong pertimbangkan untuk memperbarui proyek kamu ke versi [Generator 0.4](/id/introduction) yaa.
+You're browsing the documentation for an old version of Generator. Consider upgrading your project to [Generator 0.4](/).
 :::
 
-# Dukungan
+# Sponsor/supporter
 
-_Generator_ adalah proyek _Open-ource_ berlisensi _MIT_ dan sepenuhnya gratis untuk digunakan. Banyaknya tenaga dan waktu yang dibutuhkan untuk melakukan pemeliharaan serta mengembangkan fitur baru untuk proyek ini secara berkelanjutan berkat dukungan finansial yang dari para donatur atau pendukung kami.
+Generator is an MIT-licensed open-source project and is completely free to use. The tremendous amount of effort needed to maintain and develop new features for the project is only made sustainable thanks to the generous financial backing of our sponsors or supporters.
 
-### Berikan dukunganmu kepada tim inti kami
+### Give it personally to our core team member
 
-- [Mohammad Zulfahmi (Creator)](https://github.com/Zzzul/)
+- [Mohammad Zulfahmi](https://github.com/Zzzul/) (Author)
   - [GitHub Sponsor](https://github.com/sponsors/Zzzul)
   - [Buymeacoffe](https://www.buymeacoffee.com/mzulfahmi)
   - [Ko-fi](https://ko-fi.com/mzulfahmi)
@@ -33,9 +33,12 @@ _Generator_ adalah proyek _Open-ource_ berlisensi _MIT_ dan sepenuhnya gratis un
 
 <hr>
 
-- [Rachmad Nur Hayat](https://rachmad.dev/)
+- [Rachmad Nur Hayat](https://rnh-is.me/)
   - [GitHub](https://github.com/rachyharkov)
   - [Trakteer](https://trakteer.id/rachmadnh/tip)
+  <!-- - [Buymeacoffe](#)
+  - [Ko-fi](#)
+  - [Saweria](#) -->
 
 <script setup>
 import { VPTeamMembers } from 'vitepress/theme'
@@ -46,7 +49,7 @@ const members = [
     name: 'Mohammad Zulfahmi',
     title: 'Author',
     links: [
-      { icon: 'github', link: 'https://github.com/sponsors/Zzzul' },
+      { icon: 'github', link: 'https://github.com/Zzzul' },
       { icon: 'linkedin', link: 'https://www.linkedin.com/in/mohammad-zulfahmi/' },
     ]
   },
@@ -56,22 +59,22 @@ const members = [
     title: 'Core Team Member',
     links: [
       { icon: 'github', link: 'https://github.com/rachyharkov' },
+      { icon: 'linkedin', link: 'https://www.linkedin.com/in/rachmad-nur-hayat-731a391b2/' },
     ]
   },
 ]
 </script>
 
-## Tim kami
+## Our Teams
 
-Berikut adalah tim terbaik kami
+Say hello to our awesome team.
 
 <VPTeamMembers size="small" :members="members" />
 
-## Para Kontributor
+## Contributors
 
-Terima kasih kepada semua rekan kontributor kami
+Thank you to all our fellow contributors.
 
 <a  href="https://github.com/Evdigi-INA/generator/graphs/contributors">
 <img  src="https://contrib.rocks/image?repo=Evdigi-INA/generator&anon=1&columns=10"  />
 </a>
-

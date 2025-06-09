@@ -19,9 +19,7 @@ next: true
 
 We are excited to have you contribute to Generator! We welcome all contributions. You can contribute to this project by following these steps:
 
-::: warning
-Make sure your PHP version is 8.2 or higher, check requirements [here](get-started.md#requirements).
-:::
+> Make sure your environment is setup correctly, check requirements [here](installation.md#requirements).
 
 ## Create local copy
 
@@ -105,7 +103,7 @@ Have you cloned the repository? Great! Now let's prepare the environment.
 6. Add the following code to `bootstrap/app.php`
 
     > [!IMPORTANT]
-    > If you don't have the `withProviders` method, you can add it manually..
+    > If you don't have the `withProviders` method, you can add it manually.
 
     > [!WARNING]
     > If you can't add "withProviders" like the example below, most likely you are using an older version of Laravel.

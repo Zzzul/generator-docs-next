@@ -15,13 +15,13 @@ head:
 next: true
 ---
 
-::: info
-Dokumentasi Bahasa Indonesia akan segera tersedia, kamu dapat membantu kami menyusun dokumentasi [disini](https://github.com/Zzzul/generator-docs-next/tree/main/docs/id).
+::: warning
+You're browsing the documentation for an old version of Generator. Consider upgrading your project to [Generator 0.4](/).
 :::
 
 # Introduction
 
-![Full Version](/full-version.png)
+![Full Version](/full-version-2.png)
 
 ![Simple Version](/simple-version.png)
 
@@ -40,4 +40,4 @@ Dont worry, it's 100% free & open source.
 
 ## License
 
-[MIT](https://github.com/Evdigi-INA/generator/blob/main/LICENSE)
+MIT.

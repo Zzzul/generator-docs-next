@@ -2,9 +2,8 @@ import { defineConfig } from 'vitepress'
 
 export const META_URL = 'https://zzzul.github.io/generator-docs-next/'
 export const META_TITLE = 'CRUD Generator 📦'
-export const META_DESCRIPTION =
-  'Automate CRUD, Focus on Core Features'
-// https://vitepress.dev/reference/site-config
+export const META_DESCRIPTION = 'Automate CRUD, Focus on Core Features'
+
 export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
@@ -93,16 +92,12 @@ export default defineConfig({
 
   locales: {
     root: {
-      title: "CRUD",
+      title: " ",
       head: [
         ['title', { Text: 'CRUD Generator 📦' }],
       ],
       description: "CRUD for Laravel",
       label: 'English',
-
-      // using image
-      // lang: 'en',
-      // link: '/',
       themeConfig: {
         editLink: {
           pattern: 'https://github.com/Zzzul/generator-docs-next/edit/main/docs/:path'
@@ -111,28 +106,65 @@ export default defineConfig({
           {
             text: '🔖 Version',
             items: [
-              { text: '⚡ 0.3.x (Latest)', link: '/' },
-              { text: '🔒 0.2.3', link: '/0.2.3/' },
+              { text: '🍉 0.4 (Latest)', link: '/' },
+              { text: '⚡ 0.3', link: '/0.3.x' },
+              { text: '🔒 0.2', link: '/0.2.3/' },
             ]
+          },
+          {
+            text: '🍉 0.4',
+            items: [
+              { text: 'Changelog', link: 'https://github.com/Evdigi-INA/generator/releases' },
+              { text: 'Contributing', link: '/contributions' },
+            ]
+          },
+          {
+            text: 'Free Palestine 🇵🇸',
+            link: '/free-palestine'
           }
         ],
-
         sidebar: [
           {
-            text: '⚡  Latest (0.3.x)',
+            text: '🍉 0.4 (Latest)',
             items: [
-              { text: 'Introduction 👋', link: '/introduction' },
-              { text: 'Get Started 🎬', link: '/get-started' },
-              { text: 'Usage 👀', link: '/usage' },
-              { text: 'Features 🕹', link: '/features' },
-              { text: 'Upgrade Guide 📢', link: '/upgrade-guide' },
-              { text: 'Contributions 🛠', link: '/contributions' },
+              {
+                text: 'Prologue 🎉',
+                collapsed: false,
+                items: [
+                  { text: 'Introduction 👋', link: '/introduction' },
+                  { text: 'Upgrade Guide 🏗️', link: '/upgrade-guide' },
+                  { text: 'Contribution Guide 🛂', link: '/contributions' },
+                ]
+              },
+              {
+                text: 'Getting Started 🚀',
+                collapsed: false,
+                items: [
+                  { text: 'Installation 🌱', link: '/installation' },
+                  { text: 'Usage ✨', link: '/usage' },
+                  { text: 'Features 🎨', link: '/features' },
+                ]
+              },
               { text: 'Supports ☕', link: '/sponsors' },
+              { text: 'Free Palestine 🇵🇸', link: '/free-palestine' }
+            ]
+          },
+          {
+            text: '⚡ 0.3',
+            collapsed: true,
+            items: [
+              { text: 'Introduction 👋', link: '/0.3.x/introduction' },
+              { text: 'Get Started 🎬', link: '/0.3.x/get-started' },
+              { text: 'Usage 👀', link: '/0.3.x/usage' },
+              { text: 'Features 🕹', link: '/0.3.x/features' },
+              { text: 'Upgrade Guide 📢', link: '/0.3.x/upgrade-guide' },
+              { text: 'Contributions 🛠', link: '/0.3.x/contributions' },
+              { text: 'Supports ☕', link: '/0.3.x/sponsors' },
               // { text: 'To Do', link: '/todo' }
             ]
           },
           {
-            text: '🔒 0.2.3',
+            text: '🔒 0.2',
             collapsed: true,
             items: [
               { text: 'Introduction', link: '/0.2.3/' },
@@ -154,7 +186,7 @@ export default defineConfig({
       },
     },
     id: {
-      title: "CRUD",
+      title: " ",
       head: [
         ['title', { Text: 'CRUD Generator 📦' }],
       ],
@@ -170,27 +202,62 @@ export default defineConfig({
           {
             text: '🔖 Versi',
             items: [
-              { text: '⚡ 0.3.x (Terbaru)', link: '/id/' },
-              { text: '🔒 0.2.3', link: '/id/0.2.3/' },
+              { text: '🍉 0.4 (Terbaru)', link: '/id/' },
+              { text: '⚡ 0.3', link: '/id/0.3.x/' },
+              { text: '🔒 0.2', link: '/id/0.2.3/' },
+            ]
+          },
+          {
+            text: '🍉 0.4',
+            items: [
+              { text: 'Perubahan', link: 'https://github.com/Evdigi-INA/generator/releases' },
+              { text: 'Cara berkontribusi', link: '/id/contributions' },
             ]
           }
         ],
         sidebar: [
-          {
-            text: '⚡  0.3.x (Terbaru)',
+           {
+            text: '🍉 0.4 (Terbaru)',
             items: [
-              { text: 'Pengenalan 👋', link: '/id/introduction' },
-              { text: 'Mari Kita Mulai 🎬', link: '/id/get-started' },
-              { text: 'Cara Pemakaian 👀', link: '/id/usage' },
-              { text: 'Fitur yang Tersedia 🕹', link: '/id/features' },
-              { text: 'Pembaruan 📢', link: '/id/upgrade-guide' },
-              { text: 'Kontribusi 🛠', link: '/id/contributions' },
+              {
+                text: 'Prolog 🎉',
+                collapsed: false,
+                items: [
+                  { text: 'Pengenalan 👋', link: '/id/introduction' },
+                  { text: 'Pembaruan 🏗️', link: '/id/upgrade-guide' },
+                  { text: 'Cara Berkontribusi 🛂', link: '/id/contributions' },
+                ]
+              },
+              {
+                text: 'Mari Kita Mulai 🚀',
+                collapsed: false,
+                items: [
+                  { text: 'Instalasi 🌱', link: '/id/installation' },
+                  { text: 'Cara Pemakaian ✨', link: '/id/usage' },
+                  { text: 'Fitur 🎨', link: '/id/features' },
+                ]
+              },
               { text: 'Dukungan ☕', link: '/id/sponsors' },
+              { text: 'Free Palestine 🇵🇸', link: '/id/free-palestine' }
+            ]
+          },
+
+          {
+            text: '⚡  0.3',
+            collapsed: true,
+            items: [
+              { text: 'Pengenalan 👋', link: '/id/0.3.x/introduction' },
+              { text: 'Mari Kita Mulai 🎬', link: '/id/0.3.x/get-started' },
+              { text: 'Cara Pemakaian 👀', link: '/id/0.3.x/usage' },
+              { text: 'Fitur yang Tersedia 🕹', link: '/id/0.3.x/features' },
+              { text: 'Pembaruan 📢', link: '/id/0.3.x/upgrade-guide' },
+              { text: 'Kontribusi 🛠', link: '/id/0.3.x/contributions' },
+              { text: 'Dukungan ☕', link: '/id/0.3.x/sponsors' },
               // { text: 'Daftar Rencana', link: '/id/todo' }
             ]
           },
           {
-            text: '🔒 0.2.3',
+            text: '🔒 0.2',
             collapsed: true,
             items: [
               { text: 'Pengenalan', link: '/id/0.2.3/' },
