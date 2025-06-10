@@ -47,7 +47,7 @@ For the most recent and complete changelog, please visit [Github Releases](https
 1. Update `Generator`
 
     ```sh
-    composer update evdigiina/generator:^0.4.0
+    composer require evdigiina/generator:^0.4.0 --dev
     ```
 
 2. Publish new `ImageService` class.
